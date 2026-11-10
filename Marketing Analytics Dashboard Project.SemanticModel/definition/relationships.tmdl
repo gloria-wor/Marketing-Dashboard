@@ -1,0 +1,107 @@
+relationship c9361690-d140-4664-9a26-80a2ee5e0793
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_campaign.first_report_date
+	toColumn: LocalDateTable_03ef0bda-9c67-4fc7-9511-f600d247fb6e.Date
+
+relationship 57b2a1e8-7710-4ebf-9030-c30491579fc8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_campaign.last_report_date
+	toColumn: LocalDateTable_aad0607c-17e0-4e07-8109-8e66a8d3f3f3.Date
+
+relationship 28a20787-0ca3-4e9c-99bb-d2907cce4d34
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ad_performance_daily.gold_built_at
+	toColumn: LocalDateTable_cbf2e68c-a80f-43ab-970d-6bcb87b0ab1b.Date
+
+relationship AutoDetected_a22101e4-aeaa-4998-bc07-40b30425f060
+	isActive: false
+	fromColumn: dim_campaign.account_key
+	toColumn: dim_account.account_key
+
+relationship AutoDetected_331be850-8909-4b0d-a292-f4938a40239d
+	fromColumn: fact_ad_performance_daily.account_key
+	toColumn: dim_account.account_key
+
+relationship AutoDetected_574275e0-a490-43e4-ad93-ccc188b2c2f6
+	fromColumn: fact_campaign_budget_daily.account_key
+	toColumn: dim_account.account_key
+
+relationship AutoDetected_4add90f4-9459-4280-81c3-ce72d461d42b
+	isActive: false
+	fromColumn: dim_account.platform_key
+	toColumn: dim_platform.platform_key
+
+relationship AutoDetected_5b1d33a0-da15-439d-a1b6-e9e02d857dd5
+	fromColumn: fact_ad_performance_daily.platform_key
+	toColumn: dim_platform.platform_key
+
+relationship AutoDetected_0dc3dad6-c2dd-456c-9066-c39f49ed3a04
+	fromColumn: fact_campaign_budget_daily.platform_key
+	toColumn: dim_platform.platform_key
+
+relationship AutoDetected_ec75a707-b40b-490b-9669-8ff54844a16d
+	isActive: false
+	fromColumn: dim_account.client_key
+	toColumn: dim_client.client_key
+
+relationship AutoDetected_3aeef3e5-350e-471a-8fd6-893261601801
+	fromColumn: fact_ad_performance_daily.client_key
+	toColumn: dim_client.client_key
+
+relationship AutoDetected_c0b6c7db-a214-40d4-b4be-2a9b50874d12
+	isActive: false
+	fromColumn: fact_campaign_budget_daily.client_key
+	toColumn: dim_client.client_key
+
+relationship AutoDetected_754f1ce8-2e42-4ad1-aaff-52614851dfd4
+	fromColumn: fact_ad_performance_daily.ad_key
+	toColumn: dim_ad.ad_key
+
+relationship AutoDetected_d3aed2cc-8497-4e16-9662-dd65800f7e3b
+	isActive: false
+	fromColumn: dim_ad.ad_group_key
+	toColumn: dim_ad_group.ad_group_key
+
+relationship AutoDetected_8ca2dd41-7882-4e47-a525-a5572c7721fe
+	fromColumn: fact_ad_performance_daily.ad_group_key
+	toColumn: dim_ad_group.ad_group_key
+
+relationship AutoDetected_8d56328b-c837-4272-aa24-a854725e60fc
+	isActive: false
+	fromColumn: dim_ad_group.campaign_key
+	toColumn: dim_campaign.campaign_key
+
+relationship AutoDetected_53456cde-648d-458d-9150-944634cb6dd3
+	fromColumn: fact_ad_performance_daily.campaign_key
+	toColumn: dim_campaign.campaign_key
+
+relationship AutoDetected_97ba8797-82ca-47f9-aa2c-e24ea807bcac
+	fromColumn: fact_campaign_budget_daily.campaign_key
+	toColumn: dim_campaign.campaign_key
+
+relationship AutoDetected_d0bd0a7d-f817-4df6-86e9-ddf1e13efdb9
+	fromColumn: fact_ad_performance_daily.date_key
+	toColumn: dim_date.date_key
+
+relationship AutoDetected_eadc9df1-9544-4f1b-951f-03d459ef5336
+	fromColumn: fact_campaign_budget_daily.date_key
+	toColumn: dim_date.date_key
+
+relationship AutoDetected_119a0f45-2e30-4d95-89cf-11b5de226b92
+	fromColumn: fact_ad_performance_daily.geo_key
+	toColumn: dim_geo.geo_key
+
+relationship AutoDetected_434290d9-ca86-4f2f-b726-e151c1dc171b
+	fromColumn: fact_campaign_budget_daily.geo_key
+	toColumn: dim_geo.geo_key
+
+relationship 0a37cca3-97c3-434f-92a0-2cb98efe39be
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ad_performance_daily.source_ingested_at
+	toColumn: LocalDateTable_cc42fcd2-7286-48af-94f0-5f499c01c303.Date
+
+relationship ad752336-0528-47c0-999e-60fa5dbcf30d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Matrix Cols'.MonthStart
+	toColumn: LocalDateTable_9137a033-5fdf-4818-8b3c-5275b91352d6.Date
+

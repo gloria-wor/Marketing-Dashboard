@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "8c401d113b1b2a0b0b88",
+  "position": {
+    "x": 0.7178196297398074,
+    "y": 288.89677109316005,
+    "z": 2000,
+    "height": 92.7948007963569,
+    "width": 649.5636055744983,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "The headline view of spend, revenue and return, measured against budget.",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#5b6086"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "cbb5debc7a593a374ee6"
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "392e793f15ea97ca6663",
+  "position": {
+    "x": 2095.3547855956622,
+    "y": 1390.1202254048912,
+    "z": 19000,
+    "height": 37.209407957303654,
+    "width": 393.02437154901986,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": " ●",
+                    "textStyle": {
+                      "fontSize": "18pt",
+                      "color": "#1d6ff2"
+                    }
+                  },
+                  {
+                    "value": " Meta   ",
+                    "textStyle": {
+                      "fontSize": "18pt"
+                    }
+                  },
+                  {
+                    "value": "●",
+                    "textStyle": {
+                      "fontSize": "18pt",
+                      "color": "#34a853"
+                    }
+                  },
+                  {
+                    "value": " Google   ",
+                    "textStyle": {
+                      "fontSize": "18pt"
+                    }
+                  },
+                  {
+                    "value": "●",
+                    "textStyle": {
+                      "fontSize": "18pt",
+                      "color": "#ff0000"
+                    }
+                  },
+                  {
+                    "value": " TikTok ",
+                    "textStyle": {
+                      "fontSize": "18pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

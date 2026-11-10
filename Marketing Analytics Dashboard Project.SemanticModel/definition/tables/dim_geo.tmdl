@@ -1,0 +1,48 @@
+table dim_geo
+	lineageTag: f303d247-8068-4349-b957-c3f447059d55
+
+	column geo_key
+		dataType: string
+		lineageTag: c7bab05e-bbb4-42f2-a1d0-c10a53e38932
+		summarizeBy: none
+		sourceColumn: geo_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_code
+		dataType: string
+		lineageTag: c26554a8-9601-4dd6-9d4f-e3ca3f6a7124
+		summarizeBy: none
+		sourceColumn: country_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_name
+		dataType: string
+		lineageTag: 11f34b56-911c-43a3-9183-a943fe851437
+		summarizeBy: none
+		sourceColumn: country_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 5b87432c-f2a7-40de-aeec-e4ec3ac8c3b3
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_geo = m
+		mode: import
+		source =
+				let
+				  Source = PostgreSQL.Database("localhost", "marketing_analytics"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_geo"]}[Data]
+				in
+				  #"Navigation 1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

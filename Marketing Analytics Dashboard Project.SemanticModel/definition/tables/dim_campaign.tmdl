@@ -1,0 +1,443 @@
+table dim_campaign
+	lineageTag: 9da9a7c2-06b9-4446-bbdd-fcac8a3666be
+
+	column campaign_key
+		dataType: string
+		lineageTag: ded9c9e8-2ff4-4b17-9ee1-27fcfe9edca6
+		summarizeBy: none
+		sourceColumn: campaign_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_key
+		dataType: string
+		isHidden
+		lineageTag: 075d3632-73b6-46bb-b92e-185b42300c7a
+		summarizeBy: none
+		sourceColumn: account_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_campaign_id
+		dataType: string
+		isHidden
+		lineageTag: b3ce2eb5-3140-43e4-a189-27ffddad7f50
+		summarizeBy: none
+		sourceColumn: source_campaign_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_name
+		dataType: string
+		lineageTag: a23a0ae6-d042-4098-9e66-b7d6a0b7c8f5
+		summarizeBy: none
+		sourceColumn: campaign_name
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"dim_campaign","TableItemName":"campaign_name (groups)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column objective
+		dataType: string
+		lineageTag: 30f92b14-692c-4e5e-9a61-7aa8b639887c
+		summarizeBy: none
+		sourceColumn: objective
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_report_date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: eb9fa747-6808-426b-ba74-b0fdd429fb71
+		summarizeBy: none
+		sourceColumn: first_report_date
+
+		variation Variation
+			isDefault
+			relationship: c9361690-d140-4664-9a26-80a2ee5e0793
+			defaultHierarchy: LocalDateTable_03ef0bda-9c67-4fc7-9511-f600d247fb6e.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column last_report_date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 45d262d4-4a74-4744-bf6c-be2b48e3ee08
+		summarizeBy: none
+		sourceColumn: last_report_date
+
+		variation Variation
+			isDefault
+			relationship: 57b2a1e8-7710-4ebf-9030-c30491579fc8
+			defaultHierarchy: LocalDateTable_aad0607c-17e0-4e07-8109-8e66a8d3f3f3.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'campaign_name (groups)' =
+			SWITCH(
+				TRUE,
+				ISBLANK('dim_campaign'[campaign_name]),
+				"(Blank)",
+				'dim_campaign'[campaign_name] IN {"App Install Push - Acme #9"},
+				"App Install Push - Acme #9",
+				'dim_campaign'[campaign_name] IN {"App Install Push - Bright #4"},
+				"App Install Push - Bright #4",
+				'dim_campaign'[campaign_name] IN {"App Install Push - Bright #6"},
+				"App Install Push - Bright #6",
+				'dim_campaign'[campaign_name] IN {"App Install Push - Lush #4"},
+				"App Install Push - Lush #4",
+				'dim_campaign'[campaign_name] IN {"App Install Push - Pawsome #2"},
+				"App Install Push - Pawsome #2",
+				'dim_campaign'[campaign_name] IN {"App Install Push - Pawsome #4"},
+				"App Install Push - Pawsome #4",
+				'dim_campaign'[campaign_name] IN {"Back To School - Acme #5"},
+				"Back To School - Acme #5",
+				'dim_campaign'[campaign_name] IN {"Back To School - Bright #3"},
+				"Back To School - Bright #3",
+				'dim_campaign'[campaign_name] IN {"Back To School - Nova #6"},
+				"Back To School - Nova #6",
+				'dim_campaign'[campaign_name] IN {"Back To School - Urban #7"},
+				"Back To School - Urban #7",
+				'dim_campaign'[campaign_name] IN {"Black Friday Blitz - Acme #7"},
+				"Black Friday Blitz - Acme #7",
+				'dim_campaign'[campaign_name] IN {"Black Friday Blitz - Bright #2"},
+				"Black Friday Blitz - Bright #2",
+				'dim_campaign'[campaign_name] IN {"Black Friday Blitz - Nova #5"},
+				"Black Friday Blitz - Nova #5",
+				'dim_campaign'[campaign_name] IN {"Black Friday Blitz - Nova #6"},
+				"Black Friday Blitz - Nova #6",
+				'dim_campaign'[campaign_name] IN {"Black Friday Blitz - Pawsome #1"},
+				"Black Friday Blitz - Pawsome #1",
+				'dim_campaign'[campaign_name] IN {"Black Friday Blitz - Pawsome #5"},
+				"Black Friday Blitz - Pawsome #5",
+				'dim_campaign'[campaign_name] IN {"Black Friday Blitz - Urban #10"},
+				"Black Friday Blitz - Urban #10",
+				'dim_campaign'[campaign_name] IN {"Brand Awareness - Acme #1"},
+				"Brand Awareness - Acme #1",
+				'dim_campaign'[campaign_name] IN {"Brand Awareness - Lush #5"},
+				"Brand Awareness - Lush #5",
+				'dim_campaign'[campaign_name] IN {"Brand Awareness - Pawsome #5"},
+				"Brand Awareness - Pawsome #5",
+				'dim_campaign'[campaign_name] IN {"Brand Awareness - Pawsome #6"},
+				"Brand Awareness - Pawsome #6",
+				'dim_campaign'[campaign_name] IN {"Brand Awareness - Urban #7"},
+				"Brand Awareness - Urban #7",
+				'dim_campaign'[campaign_name] IN {"Cart Abandonment - Acme #11"},
+				"Cart Abandonment - Acme #11",
+				'dim_campaign'[campaign_name] IN {"Cart Abandonment - Acme #6"},
+				"Cart Abandonment - Acme #6",
+				'dim_campaign'[campaign_name] IN {"Cart Abandonment - Bright #9"},
+				"Cart Abandonment - Bright #9",
+				'dim_campaign'[campaign_name] IN {"Cart Abandonment - Nova #1"},
+				"Cart Abandonment - Nova #1",
+				'dim_campaign'[campaign_name] IN {"Cart Abandonment - Nova #3"},
+				"Cart Abandonment - Nova #3",
+				'dim_campaign'[campaign_name] IN {"Cart Abandonment - Nova #5"},
+				"Cart Abandonment - Nova #5",
+				'dim_campaign'[campaign_name] IN {"Cart Abandonment - Nova #8"},
+				"Cart Abandonment - Nova #8",
+				'dim_campaign'[campaign_name] IN {"Cart Abandonment - Pawsome #3"},
+				"Cart Abandonment - Pawsome #3",
+				'dim_campaign'[campaign_name] IN {"Category - Best Sellers - Acme #1"},
+				"Category - Best Sellers - Acme #1",
+				'dim_campaign'[campaign_name] IN {"Category - Best Sellers - Bright #5"},
+				"Category - Best Sellers - Bright #5",
+				'dim_campaign'[campaign_name] IN {"Category - Best Sellers - Bright #8"},
+				"Category - Best Sellers - Bright #8",
+				'dim_campaign'[campaign_name] IN {"Category - Best Sellers - Nova #2"},
+				"Category - Best Sellers - Nova #2",
+				'dim_campaign'[campaign_name] IN {"Category - Best Sellers - Nova #9"},
+				"Category - Best Sellers - Nova #9",
+				'dim_campaign'[campaign_name] IN {"Category - Best Sellers - Urban #2"},
+				"Category - Best Sellers - Urban #2",
+				'dim_campaign'[campaign_name] IN {"Category - Best Sellers - Urban #4"},
+				"Category - Best Sellers - Urban #4",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Bright #1"},
+				"Competitor Conquest - Bright #1",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Lush #3"},
+				"Competitor Conquest - Lush #3",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Lush #6"},
+				"Competitor Conquest - Lush #6",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Nova #3"},
+				"Competitor Conquest - Nova #3",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Nova #7"},
+				"Competitor Conquest - Nova #7",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Pawsome #2"},
+				"Competitor Conquest - Pawsome #2",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Pawsome #3"},
+				"Competitor Conquest - Pawsome #3",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Pawsome #6"},
+				"Competitor Conquest - Pawsome #6",
+				'dim_campaign'[campaign_name] IN {"Competitor Conquest - Urban #1"},
+				"Competitor Conquest - Urban #1",
+				'dim_campaign'[campaign_name] IN {"End of Season Clearance - Acme #6"},
+				"End of Season Clearance - Acme #6",
+				'dim_campaign'[campaign_name] IN {"End of Season Clearance - Bright #3"},
+				"End of Season Clearance - Bright #3",
+				'dim_campaign'[campaign_name] IN {"End of Season Clearance - Lush #2"},
+				"End of Season Clearance - Lush #2",
+				'dim_campaign'[campaign_name] IN {"End of Season Clearance - Lush #4"},
+				"End of Season Clearance - Lush #4",
+				'dim_campaign'[campaign_name] IN {"End of Season Clearance - Pawsome #9"},
+				"End of Season Clearance - Pawsome #9",
+				'dim_campaign'[campaign_name] IN {"Evergreen - Prospecting - Bright #1"},
+				"Evergreen - Prospecting - Bright #1",
+				'dim_campaign'[campaign_name] IN {"Evergreen - Prospecting - Bright #6"},
+				"Evergreen - Prospecting - Bright #6",
+				'dim_campaign'[campaign_name] IN {"Evergreen - Prospecting - Bright #7"},
+				"Evergreen - Prospecting - Bright #7",
+				'dim_campaign'[campaign_name] IN {"Evergreen - Prospecting - Lush #9"},
+				"Evergreen - Prospecting - Lush #9",
+				'dim_campaign'[campaign_name] IN {"Evergreen - Prospecting - Pawsome #10"},
+				"Evergreen - Prospecting - Pawsome #10",
+				'dim_campaign'[campaign_name] IN {"Evergreen - Prospecting - Pawsome #2"},
+				"Evergreen - Prospecting - Pawsome #2",
+				'dim_campaign'[campaign_name] IN {"Evergreen - Prospecting - Urban #5"},
+				"Evergreen - Prospecting - Urban #5",
+				'dim_campaign'[campaign_name] IN {"Evergreen - Prospecting - Urban #6"},
+				"Evergreen - Prospecting - Urban #6",
+				'dim_campaign'[campaign_name] IN {"Flash Sale - Acme #4"},
+				"Flash Sale - Acme #4",
+				'dim_campaign'[campaign_name] IN {"Flash Sale - Lush #2"},
+				"Flash Sale - Lush #2",
+				'dim_campaign'[campaign_name] IN {"Flash Sale - Nova #1"},
+				"Flash Sale - Nova #1",
+				'dim_campaign'[campaign_name] IN {"Flash Sale - Nova #4"},
+				"Flash Sale - Nova #4",
+				'dim_campaign'[campaign_name] IN {"Flash Sale - Nova #8"},
+				"Flash Sale - Nova #8",
+				'dim_campaign'[campaign_name] IN {"Holiday Promo - Acme #1"},
+				"Holiday Promo - Acme #1",
+				'dim_campaign'[campaign_name] IN {"Holiday Promo - Bright #10"},
+				"Holiday Promo - Bright #10",
+				'dim_campaign'[campaign_name] IN {"Holiday Promo - Lush #1"},
+				"Holiday Promo - Lush #1",
+				'dim_campaign'[campaign_name] IN {"Holiday Promo - Lush #5"},
+				"Holiday Promo - Lush #5",
+				'dim_campaign'[campaign_name] IN {"Holiday Promo - Nova #3"},
+				"Holiday Promo - Nova #3",
+				'dim_campaign'[campaign_name] IN {"Holiday Promo - Nova #7"},
+				"Holiday Promo - Nova #7",
+				'dim_campaign'[campaign_name] IN {"Holiday Promo - Urban #6"},
+				"Holiday Promo - Urban #6",
+				'dim_campaign'[campaign_name] IN {"Lead Gen - Local - Acme #4"},
+				"Lead Gen - Local - Acme #4",
+				'dim_campaign'[campaign_name] IN {"Lead Gen - Local - Bright #6"},
+				"Lead Gen - Local - Bright #6",
+				'dim_campaign'[campaign_name] IN {"Lead Gen - Local - Bright #7"},
+				"Lead Gen - Local - Bright #7",
+				'dim_campaign'[campaign_name] IN {"Lead Gen - Local - Lush #5"},
+				"Lead Gen - Local - Lush #5",
+				'dim_campaign'[campaign_name] IN {"Lead Gen - Local - Pawsome #11"},
+				"Lead Gen - Local - Pawsome #11",
+				'dim_campaign'[campaign_name] IN {"Lead Gen - Local - Urban #2"},
+				"Lead Gen - Local - Urban #2",
+				'dim_campaign'[campaign_name] IN {"Lead Gen - Local - Urban #6"},
+				"Lead Gen - Local - Urban #6",
+				'dim_campaign'[campaign_name] IN {"Lead Gen - Local - Urban #9"},
+				"Lead Gen - Local - Urban #9",
+				'dim_campaign'[campaign_name] IN {"Lookalike - Purchasers - Acme #5"},
+				"Lookalike - Purchasers - Acme #5",
+				'dim_campaign'[campaign_name] IN {"Lookalike - Purchasers - Acme #8"},
+				"Lookalike - Purchasers - Acme #8",
+				'dim_campaign'[campaign_name] IN {"Lookalike - Purchasers - Bright #5"},
+				"Lookalike - Purchasers - Bright #5",
+				'dim_campaign'[campaign_name] IN {"Lookalike - Purchasers - Lush #7"},
+				"Lookalike - Purchasers - Lush #7",
+				'dim_campaign'[campaign_name] IN {"Lookalike - Purchasers - Nova #2"},
+				"Lookalike - Purchasers - Nova #2",
+				'dim_campaign'[campaign_name] IN {"Lookalike - Purchasers - Urban #7"},
+				"Lookalike - Purchasers - Urban #7",
+				'dim_campaign'[campaign_name] IN {"Loyalty Program - Bright #4"},
+				"Loyalty Program - Bright #4",
+				'dim_campaign'[campaign_name] IN {"Loyalty Program - Lush #7"},
+				"Loyalty Program - Lush #7",
+				'dim_campaign'[campaign_name] IN {"Loyalty Program - Nova #10"},
+				"Loyalty Program - Nova #10",
+				'dim_campaign'[campaign_name] IN {"Loyalty Program - Nova #7"},
+				"Loyalty Program - Nova #7",
+				'dim_campaign'[campaign_name] IN {"Loyalty Program - Pawsome #3"},
+				"Loyalty Program - Pawsome #3",
+				'dim_campaign'[campaign_name] IN {"Loyalty Program - Urban #9"},
+				"Loyalty Program - Urban #9",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Acme #2"},
+				"New Product Launch - Acme #2",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Acme #3"},
+				"New Product Launch - Acme #3",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Acme #9"},
+				"New Product Launch - Acme #9",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Bright #11"},
+				"New Product Launch - Bright #11",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Nova #2"},
+				"New Product Launch - Nova #2",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Nova #4"},
+				"New Product Launch - Nova #4",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Pawsome #12"},
+				"New Product Launch - Pawsome #12",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Urban #1"},
+				"New Product Launch - Urban #1",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Urban #3"},
+				"New Product Launch - Urban #3",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Urban #4"},
+				"New Product Launch - Urban #4",
+				'dim_campaign'[campaign_name] IN {"New Product Launch - Urban #8"},
+				"New Product Launch - Urban #8",
+				'dim_campaign'[campaign_name] IN {"Q3 Growth Push - Acme #10"},
+				"Q3 Growth Push - Acme #10",
+				'dim_campaign'[campaign_name] IN {"Q3 Growth Push - Bright #3"},
+				"Q3 Growth Push - Bright #3",
+				'dim_campaign'[campaign_name] IN {"Q3 Growth Push - Lush #1"},
+				"Q3 Growth Push - Lush #1",
+				'dim_campaign'[campaign_name] IN {"Q3 Growth Push - Nova #1"},
+				"Q3 Growth Push - Nova #1",
+				'dim_campaign'[campaign_name] IN {"Q3 Growth Push - Pawsome #1"},
+				"Q3 Growth Push - Pawsome #1",
+				'dim_campaign'[campaign_name] IN {"Q3 Growth Push - Pawsome #7"},
+				"Q3 Growth Push - Pawsome #7",
+				'dim_campaign'[campaign_name] IN {"Q3 Growth Push - Urban #5"},
+				"Q3 Growth Push - Urban #5",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Acme #2"},
+				"Retargeting - Website Visitors - Acme #2",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Acme #3"},
+				"Retargeting - Website Visitors - Acme #3",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Bright #4"},
+				"Retargeting - Website Visitors - Bright #4",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Lush #3"},
+				"Retargeting - Website Visitors - Lush #3",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Lush #4"},
+				"Retargeting - Website Visitors - Lush #4",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Lush #7"},
+				"Retargeting - Website Visitors - Lush #7",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Nova #10"},
+				"Retargeting - Website Visitors - Nova #10",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Pawsome #4"},
+				"Retargeting - Website Visitors - Pawsome #4",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Urban #10"},
+				"Retargeting - Website Visitors - Urban #10",
+				'dim_campaign'[campaign_name] IN {"Retargeting - Website Visitors - Urban #2"},
+				"Retargeting - Website Visitors - Urban #2",
+				'dim_campaign'[campaign_name] IN {"Spring Refresh - Acme #10"},
+				"Spring Refresh - Acme #10",
+				'dim_campaign'[campaign_name] IN {"Spring Refresh - Acme #2"},
+				"Spring Refresh - Acme #2",
+				'dim_campaign'[campaign_name] IN {"Spring Refresh - Acme #5"},
+				"Spring Refresh - Acme #5",
+				'dim_campaign'[campaign_name] IN {"Spring Refresh - Acme #7"},
+				"Spring Refresh - Acme #7",
+				'dim_campaign'[campaign_name] IN {"Spring Refresh - Lush #2"},
+				"Spring Refresh - Lush #2",
+				'dim_campaign'[campaign_name] IN {"Spring Refresh - Pawsome #6"},
+				"Spring Refresh - Pawsome #6",
+				'dim_campaign'[campaign_name] IN {"Spring Refresh - Pawsome #8"},
+				"Spring Refresh - Pawsome #8",
+				'dim_campaign'[campaign_name] IN {"Spring Refresh - Urban #8"},
+				"Spring Refresh - Urban #8",
+				'dim_campaign'[campaign_name] IN {"Summer Sale - Acme #3"},
+				"Summer Sale - Acme #3",
+				'dim_campaign'[campaign_name] IN {"Summer Sale - Bright #2"},
+				"Summer Sale - Bright #2",
+				'dim_campaign'[campaign_name] IN {"Summer Sale - Bright #5"},
+				"Summer Sale - Bright #5",
+				'dim_campaign'[campaign_name] IN {"Summer Sale - Lush #6"},
+				"Summer Sale - Lush #6",
+				'dim_campaign'[campaign_name] IN {"Summer Sale - Nova #9"},
+				"Summer Sale - Nova #9",
+				'dim_campaign'[campaign_name] IN {"Summer Sale - Urban #5"},
+				"Summer Sale - Urban #5",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Acme #7"},
+				"UGC Testimonials - Acme #7",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Lush #1"},
+				"UGC Testimonials - Lush #1",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Lush #3"},
+				"UGC Testimonials - Lush #3",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Nova #6"},
+				"UGC Testimonials - Nova #6",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Pawsome #1"},
+				"UGC Testimonials - Pawsome #1",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Pawsome #10"},
+				"UGC Testimonials - Pawsome #10",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Pawsome #8"},
+				"UGC Testimonials - Pawsome #8",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Pawsome #9"},
+				"UGC Testimonials - Pawsome #9",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Urban #1"},
+				"UGC Testimonials - Urban #1",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Urban #3"},
+				"UGC Testimonials - Urban #3",
+				'dim_campaign'[campaign_name] IN {"UGC Testimonials - Urban #4"},
+				"UGC Testimonials - Urban #4",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Acme #4"},
+				"Video Views Campaign - Acme #4",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Acme #6"},
+				"Video Views Campaign - Acme #6",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Acme #8"},
+				"Video Views Campaign - Acme #8",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Bright #1"},
+				"Video Views Campaign - Bright #1",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Bright #2"},
+				"Video Views Campaign - Bright #2",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Lush #6"},
+				"Video Views Campaign - Lush #6",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Lush #8"},
+				"Video Views Campaign - Lush #8",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Pawsome #7"},
+				"Video Views Campaign - Pawsome #7",
+				'dim_campaign'[campaign_name] IN {"Video Views Campaign - Urban #3"},
+				"Video Views Campaign - Urban #3",
+				'dim_campaign'[campaign_name]
+			)
+		lineageTag: 8f1cd1f5-0e3b-44e9-92a7-f302f48d2b1d
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "dim_campaign"
+				          }
+				        },
+				        "Property": "campaign_name"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"g","Entity":"dim_campaign"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"GroupItems":[{"DisplayName":"(Blank)","BlankDefaultPlaceholder":true},{"DisplayName":"App Install Push - Acme #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'App Install Push - Acme #9'"}}]]}}},{"DisplayName":"App Install Push - Bright #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'App Install Push - Bright #4'"}}]]}}},{"DisplayName":"App Install Push - Bright #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'App Install Push - Bright #6'"}}]]}}},{"DisplayName":"App Install Push - Lush #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'App Install Push - Lush #4'"}}]]}}},{"DisplayName":"App Install Push - Pawsome #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'App Install Push - Pawsome #2'"}}]]}}},{"DisplayName":"App Install Push - Pawsome #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'App Install Push - Pawsome #4'"}}]]}}},{"DisplayName":"Back To School - Acme #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Back To School - Acme #5'"}}]]}}},{"DisplayName":"Back To School - Bright #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Back To School - Bright #3'"}}]]}}},{"DisplayName":"Back To School - Nova #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Back To School - Nova #6'"}}]]}}},{"DisplayName":"Back To School - Urban #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Back To School - Urban #7'"}}]]}}},{"DisplayName":"Black Friday Blitz - Acme #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Black Friday Blitz - Acme #7'"}}]]}}},{"DisplayName":"Black Friday Blitz - Bright #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Black Friday Blitz - Bright #2'"}}]]}}},{"DisplayName":"Black Friday Blitz - Nova #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Black Friday Blitz - Nova #5'"}}]]}}},{"DisplayName":"Black Friday Blitz - Nova #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Black Friday Blitz - Nova #6'"}}]]}}},{"DisplayName":"Black Friday Blitz - Pawsome #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Black Friday Blitz - Pawsome #1'"}}]]}}},{"DisplayName":"Black Friday Blitz - Pawsome #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Black Friday Blitz - Pawsome #5'"}}]]}}},{"DisplayName":"Black Friday Blitz - Urban #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Black Friday Blitz - Urban #10'"}}]]}}},{"DisplayName":"Brand Awareness - Acme #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Brand Awareness - Acme #1'"}}]]}}},{"DisplayName":"Brand Awareness - Lush #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Brand Awareness - Lush #5'"}}]]}}},{"DisplayName":"Brand Awareness - Pawsome #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Brand Awareness - Pawsome #5'"}}]]}}},{"DisplayName":"Brand Awareness - Pawsome #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Brand Awareness - Pawsome #6'"}}]]}}},{"DisplayName":"Brand Awareness - Urban #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Brand Awareness - Urban #7'"}}]]}}},{"DisplayName":"Cart Abandonment - Acme #11","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Cart Abandonment - Acme #11'"}}]]}}},{"DisplayName":"Cart Abandonment - Acme #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Cart Abandonment - Acme #6'"}}]]}}},{"DisplayName":"Cart Abandonment - Bright #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Cart Abandonment - Bright #9'"}}]]}}},{"DisplayName":"Cart Abandonment - Nova #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Cart Abandonment - Nova #1'"}}]]}}},{"DisplayName":"Cart Abandonment - Nova #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Cart Abandonment - Nova #3'"}}]]}}},{"DisplayName":"Cart Abandonment - Nova #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Cart Abandonment - Nova #5'"}}]]}}},{"DisplayName":"Cart Abandonment - Nova #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Cart Abandonment - Nova #8'"}}]]}}},{"DisplayName":"Cart Abandonment - Pawsome #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Cart Abandonment - Pawsome #3'"}}]]}}},{"DisplayName":"Category - Best Sellers - Acme #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Category - Best Sellers - Acme #1'"}}]]}}},{"DisplayName":"Category - Best Sellers - Bright #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Category - Best Sellers - Bright #5'"}}]]}}},{"DisplayName":"Category - Best Sellers - Bright #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Category - Best Sellers - Bright #8'"}}]]}}},{"DisplayName":"Category - Best Sellers - Nova #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Category - Best Sellers - Nova #2'"}}]]}}},{"DisplayName":"Category - Best Sellers - Nova #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Category - Best Sellers - Nova #9'"}}]]}}},{"DisplayName":"Category - Best Sellers - Urban #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Category - Best Sellers - Urban #2'"}}]]}}},{"DisplayName":"Category - Best Sellers - Urban #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Category - Best Sellers - Urban #4'"}}]]}}},{"DisplayName":"Competitor Conquest - Bright #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Bright #1'"}}]]}}},{"DisplayName":"Competitor Conquest - Lush #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Lush #3'"}}]]}}},{"DisplayName":"Competitor Conquest - Lush #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Lush #6'"}}]]}}},{"DisplayName":"Competitor Conquest - Nova #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Nova #3'"}}]]}}},{"DisplayName":"Competitor Conquest - Nova #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Nova #7'"}}]]}}},{"DisplayName":"Competitor Conquest - Pawsome #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Pawsome #2'"}}]]}}},{"DisplayName":"Competitor Conquest - Pawsome #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Pawsome #3'"}}]]}}},{"DisplayName":"Competitor Conquest - Pawsome #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Pawsome #6'"}}]]}}},{"DisplayName":"Competitor Conquest - Urban #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Competitor Conquest - Urban #1'"}}]]}}},{"DisplayName":"End of Season Clearance - Acme #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'End of Season Clearance - Acme #6'"}}]]}}},{"DisplayName":"End of Season Clearance - Bright #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'End of Season Clearance - Bright #3'"}}]]}}},{"DisplayName":"End of Season Clearance - Lush #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'End of Season Clearance - Lush #2'"}}]]}}},{"DisplayName":"End of Season Clearance - Lush #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'End of Season Clearance - Lush #4'"}}]]}}},{"DisplayName":"End of Season Clearance - Pawsome #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'End of Season Clearance - Pawsome #9'"}}]]}}},{"DisplayName":"Evergreen - Prospecting - Bright #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Evergreen - Prospecting - Bright #1'"}}]]}}},{"DisplayName":"Evergreen - Prospecting - Bright #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Evergreen - Prospecting - Bright #6'"}}]]}}},{"DisplayName":"Evergreen - Prospecting - Bright #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Evergreen - Prospecting - Bright #7'"}}]]}}},{"DisplayName":"Evergreen - Prospecting - Lush #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Evergreen - Prospecting - Lush #9'"}}]]}}},{"DisplayName":"Evergreen - Prospecting - Pawsome #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Evergreen - Prospecting - Pawsome #10'"}}]]}}},{"DisplayName":"Evergreen - Prospecting - Pawsome #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Evergreen - Prospecting - Pawsome #2'"}}]]}}},{"DisplayName":"Evergreen - Prospecting - Urban #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Evergreen - Prospecting - Urban #5'"}}]]}}},{"DisplayName":"Evergreen - Prospecting - Urban #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Evergreen - Prospecting - Urban #6'"}}]]}}},{"DisplayName":"Flash Sale - Acme #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Flash Sale - Acme #4'"}}]]}}},{"DisplayName":"Flash Sale - Lush #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Flash Sale - Lush #2'"}}]]}}},{"DisplayName":"Flash Sale - Nova #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Flash Sale - Nova #1'"}}]]}}},{"DisplayName":"Flash Sale - Nova #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Flash Sale - Nova #4'"}}]]}}},{"DisplayName":"Flash Sale - Nova #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Flash Sale - Nova #8'"}}]]}}},{"DisplayName":"Holiday Promo - Acme #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Holiday Promo - Acme #1'"}}]]}}},{"DisplayName":"Holiday Promo - Bright #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Holiday Promo - Bright #10'"}}]]}}},{"DisplayName":"Holiday Promo - Lush #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Holiday Promo - Lush #1'"}}]]}}},{"DisplayName":"Holiday Promo - Lush #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Holiday Promo - Lush #5'"}}]]}}},{"DisplayName":"Holiday Promo - Nova #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Holiday Promo - Nova #3'"}}]]}}},{"DisplayName":"Holiday Promo - Nova #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Holiday Promo - Nova #7'"}}]]}}},{"DisplayName":"Holiday Promo - Urban #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Holiday Promo - Urban #6'"}}]]}}},{"DisplayName":"Lead Gen - Local - Acme #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lead Gen - Local - Acme #4'"}}]]}}},{"DisplayName":"Lead Gen - Local - Bright #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lead Gen - Local - Bright #6'"}}]]}}},{"DisplayName":"Lead Gen - Local - Bright #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lead Gen - Local - Bright #7'"}}]]}}},{"DisplayName":"Lead Gen - Local - Lush #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lead Gen - Local - Lush #5'"}}]]}}},{"DisplayName":"Lead Gen - Local - Pawsome #11","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lead Gen - Local - Pawsome #11'"}}]]}}},{"DisplayName":"Lead Gen - Local - Urban #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lead Gen - Local - Urban #2'"}}]]}}},{"DisplayName":"Lead Gen - Local - Urban #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lead Gen - Local - Urban #6'"}}]]}}},{"DisplayName":"Lead Gen - Local - Urban #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lead Gen - Local - Urban #9'"}}]]}}},{"DisplayName":"Lookalike - Purchasers - Acme #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lookalike - Purchasers - Acme #5'"}}]]}}},{"DisplayName":"Lookalike - Purchasers - Acme #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lookalike - Purchasers - Acme #8'"}}]]}}},{"DisplayName":"Lookalike - Purchasers - Bright #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lookalike - Purchasers - Bright #5'"}}]]}}},{"DisplayName":"Lookalike - Purchasers - Lush #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lookalike - Purchasers - Lush #7'"}}]]}}},{"DisplayName":"Lookalike - Purchasers - Nova #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lookalike - Purchasers - Nova #2'"}}]]}}},{"DisplayName":"Lookalike - Purchasers - Urban #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Lookalike - Purchasers - Urban #7'"}}]]}}},{"DisplayName":"Loyalty Program - Bright #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Loyalty Program - Bright #4'"}}]]}}},{"DisplayName":"Loyalty Program - Lush #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Loyalty Program - Lush #7'"}}]]}}},{"DisplayName":"Loyalty Program - Nova #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Loyalty Program - Nova #10'"}}]]}}},{"DisplayName":"Loyalty Program - Nova #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Loyalty Program - Nova #7'"}}]]}}},{"DisplayName":"Loyalty Program - Pawsome #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Loyalty Program - Pawsome #3'"}}]]}}},{"DisplayName":"Loyalty Program - Urban #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Loyalty Program - Urban #9'"}}]]}}},{"DisplayName":"New Product Launch - Acme #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Acme #2'"}}]]}}},{"DisplayName":"New Product Launch - Acme #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Acme #3'"}}]]}}},{"DisplayName":"New Product Launch - Acme #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Acme #9'"}}]]}}},{"DisplayName":"New Product Launch - Bright #11","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Bright #11'"}}]]}}},{"DisplayName":"New Product Launch - Nova #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Nova #2'"}}]]}}},{"DisplayName":"New Product Launch - Nova #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Nova #4'"}}]]}}},{"DisplayName":"New Product Launch - Pawsome #12","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Pawsome #12'"}}]]}}},{"DisplayName":"New Product Launch - Urban #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Urban #1'"}}]]}}},{"DisplayName":"New Product Launch - Urban #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Urban #3'"}}]]}}},{"DisplayName":"New Product Launch - Urban #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Urban #4'"}}]]}}},{"DisplayName":"New Product Launch - Urban #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'New Product Launch - Urban #8'"}}]]}}},{"DisplayName":"Q3 Growth Push - Acme #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Q3 Growth Push - Acme #10'"}}]]}}},{"DisplayName":"Q3 Growth Push - Bright #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Q3 Growth Push - Bright #3'"}}]]}}},{"DisplayName":"Q3 Growth Push - Lush #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Q3 Growth Push - Lush #1'"}}]]}}},{"DisplayName":"Q3 Growth Push - Nova #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Q3 Growth Push - Nova #1'"}}]]}}},{"DisplayName":"Q3 Growth Push - Pawsome #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Q3 Growth Push - Pawsome #1'"}}]]}}},{"DisplayName":"Q3 Growth Push - Pawsome #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Q3 Growth Push - Pawsome #7'"}}]]}}},{"DisplayName":"Q3 Growth Push - Urban #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Q3 Growth Push - Urban #5'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Acme #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Acme #2'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Acme #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Acme #3'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Bright #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Bright #4'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Lush #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Lush #3'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Lush #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Lush #4'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Lush #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Lush #7'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Nova #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Nova #10'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Pawsome #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Pawsome #4'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Urban #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Urban #10'"}}]]}}},{"DisplayName":"Retargeting - Website Visitors - Urban #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Retargeting - Website Visitors - Urban #2'"}}]]}}},{"DisplayName":"Spring Refresh - Acme #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Spring Refresh - Acme #10'"}}]]}}},{"DisplayName":"Spring Refresh - Acme #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Spring Refresh - Acme #2'"}}]]}}},{"DisplayName":"Spring Refresh - Acme #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Spring Refresh - Acme #5'"}}]]}}},{"DisplayName":"Spring Refresh - Acme #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Spring Refresh - Acme #7'"}}]]}}},{"DisplayName":"Spring Refresh - Lush #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Spring Refresh - Lush #2'"}}]]}}},{"DisplayName":"Spring Refresh - Pawsome #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Spring Refresh - Pawsome #6'"}}]]}}},{"DisplayName":"Spring Refresh - Pawsome #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Spring Refresh - Pawsome #8'"}}]]}}},{"DisplayName":"Spring Refresh - Urban #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Spring Refresh - Urban #8'"}}]]}}},{"DisplayName":"Summer Sale - Acme #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Summer Sale - Acme #3'"}}]]}}},{"DisplayName":"Summer Sale - Bright #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Summer Sale - Bright #2'"}}]]}}},{"DisplayName":"Summer Sale - Bright #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Summer Sale - Bright #5'"}}]]}}},{"DisplayName":"Summer Sale - Lush #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Summer Sale - Lush #6'"}}]]}}},{"DisplayName":"Summer Sale - Nova #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Summer Sale - Nova #9'"}}]]}}},{"DisplayName":"Summer Sale - Urban #5","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Summer Sale - Urban #5'"}}]]}}},{"DisplayName":"UGC Testimonials - Acme #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Acme #7'"}}]]}}},{"DisplayName":"UGC Testimonials - Lush #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Lush #1'"}}]]}}},{"DisplayName":"UGC Testimonials - Lush #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Lush #3'"}}]]}}},{"DisplayName":"UGC Testimonials - Nova #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Nova #6'"}}]]}}},{"DisplayName":"UGC Testimonials - Pawsome #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Pawsome #1'"}}]]}}},{"DisplayName":"UGC Testimonials - Pawsome #10","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Pawsome #10'"}}]]}}},{"DisplayName":"UGC Testimonials - Pawsome #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Pawsome #8'"}}]]}}},{"DisplayName":"UGC Testimonials - Pawsome #9","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Pawsome #9'"}}]]}}},{"DisplayName":"UGC Testimonials - Urban #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Urban #1'"}}]]}}},{"DisplayName":"UGC Testimonials - Urban #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Urban #3'"}}]]}}},{"DisplayName":"UGC Testimonials - Urban #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'UGC Testimonials - Urban #4'"}}]]}}},{"DisplayName":"Video Views Campaign - Acme #4","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Acme #4'"}}]]}}},{"DisplayName":"Video Views Campaign - Acme #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Acme #6'"}}]]}}},{"DisplayName":"Video Views Campaign - Acme #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Acme #8'"}}]]}}},{"DisplayName":"Video Views Campaign - Bright #1","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Bright #1'"}}]]}}},{"DisplayName":"Video Views Campaign - Bright #2","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Bright #2'"}}]]}}},{"DisplayName":"Video Views Campaign - Lush #6","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Lush #6'"}}]]}}},{"DisplayName":"Video Views Campaign - Lush #8","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Lush #8'"}}]]}}},{"DisplayName":"Video Views Campaign - Pawsome #7","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Pawsome #7'"}}]]}}},{"DisplayName":"Video Views Campaign - Urban #3","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"g"}},"Property":"campaign_name"}}],"Values":[[{"Literal":{"Value":"'Video Views Campaign - Urban #3'"}}]]}}}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_campaign = m
+		mode: import
+		source =
+				let
+				  Source = PostgreSQL.Database("localhost", "marketing_analytics"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_campaign"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(#"Navigation 1",{{"objective", "broad stage"}, {"funnel_stage", "objective"}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns",{"campaign_key", "account_key", "source_campaign_id", "campaign_name", "objective", "first_report_date", "last_report_date"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4375f125db83c020a86d",
+  "position": {
+    "x": 120.93057586123687,
+    "y": 1386.6318434088939,
+    "z": 18000,
+    "height": 44.186171949298092,
+    "width": 744.18815914607308,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Marketing Ads Analytics",
+                    "textStyle": {
+                      "fontSize": "18pt",
+                      "color": "#7a7fa6"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

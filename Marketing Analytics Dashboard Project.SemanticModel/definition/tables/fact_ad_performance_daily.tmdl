@@ -1,0 +1,337 @@
+table fact_ad_performance_daily
+	lineageTag: 2f7ea668-2484-4792-9948-d81f78baa0b7
+
+	measure ROAS = DIVIDE([Total Revenue],[Total Spend],0)
+		displayFolder: Main measures
+		lineageTag: 91857585-775a-43e7-9deb-e01d3a5bf7d3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ROI = DIVIDE([Total Revenue]-[Total Spend],[Total Spend],0)
+		displayFolder: Main measures
+		lineageTag: df7cfff3-24dd-4d6d-abff-738b1b7bae6f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Spend PY' =
+			
+			// Latest date that actually has fact rows in the current selection
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			// The dates currently selected (by Year / Month / Date range slicers),
+			// cut off at the last date with data so a partial year is compared
+			// like-for-like instead of against a full prior year
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			// The same dates, each moved back exactly 12 months
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        [Total Spend],
+			        // drop the Year/Month/Date-range filters on dim_date...
+			        REMOVEFILTERS ( 'dim_date' ),
+			        // ...and filter to the shifted dates instead
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Main measures
+		lineageTag: f963a76e-10f8-4612-8cc1-c28ce1efe233
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure CTR = DIVIDE('fact_ad_performance_daily'[Total clicks],'fact_ad_performance_daily'[Total Impressions])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Main measures
+		lineageTag: 46a08846-1399-4883-b139-c7481db3a28a
+
+	measure CPA = DIVIDE('fact_ad_performance_daily'[Total Spend],'fact_ad_performance_daily'[Total Conversions])
+		displayFolder: Main measures
+		lineageTag: cdddbf3f-2774-4a2f-a2c5-fafba4a9ba8b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Spend' = SUM('fact_ad_performance_daily'[spend_kes])
+		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
+		displayFolder: Main measures
+		lineageTag: 0eb4f829-2ac0-4306-94a8-f5793fea9d8b
+
+		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
+
+	measure 'Total Revenue' = SUM('fact_ad_performance_daily'[conversion_value_kes])
+		formatString: #,0
+		displayFolder: Main measures
+		lineageTag: 0077606f-812b-4db7-97c2-f0169930a5ff
+
+	measure 'Total Impressions' = SUM('fact_ad_performance_daily'[impressions])
+		formatString: #,0
+		displayFolder: Main measures
+		lineageTag: 28024c16-1bb7-4585-97fe-228f15831df8
+
+	measure 'Total Engagements' = SUM('fact_ad_performance_daily'[engagements])
+		displayFolder: Main measures
+		lineageTag: 234df262-315d-415d-9529-2a642b275d4a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Conversions' = SUM('fact_ad_performance_daily'[conversions])
+		displayFolder: Main measures
+		lineageTag: d505c84a-86b1-416e-af86-049b884a217a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total clicks' = SUM('fact_ad_performance_daily'[clicks])
+		formatString: #,0
+		displayFolder: Main measures
+		lineageTag: 42b98881-46e1-4301-9fbb-b750afe2479a
+
+	column fact_id
+		dataType: string
+		lineageTag: 62e60efd-ced7-4d60-a0b2-f0084f90cbc5
+		summarizeBy: none
+		sourceColumn: fact_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		lineageTag: a8594c2b-9592-400b-b8d5-695223923aaa
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform_key
+		dataType: string
+		lineageTag: af52e888-25f3-4cbc-ad84-c98c71b94b4c
+		summarizeBy: none
+		sourceColumn: platform_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_key
+		dataType: string
+		lineageTag: 41a9a560-ad52-40d5-9b59-72fdf8149785
+		summarizeBy: none
+		sourceColumn: client_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_key
+		dataType: string
+		lineageTag: 50461400-e1ba-4f61-a3b2-07f7eea66ab7
+		summarizeBy: none
+		sourceColumn: account_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_key
+		dataType: string
+		lineageTag: ef7b0aff-c660-452e-88a7-8d7136d87662
+		summarizeBy: none
+		sourceColumn: campaign_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column ad_group_key
+		dataType: string
+		lineageTag: a8bf45ee-eecc-4b15-bd86-a7c016f20e17
+		summarizeBy: none
+		sourceColumn: ad_group_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column ad_key
+		dataType: string
+		lineageTag: 1cf1f4f8-5fea-4256-82db-ac1229a162d0
+		summarizeBy: none
+		sourceColumn: ad_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column geo_key
+		dataType: string
+		lineageTag: 5bcc1e2e-c95f-4e81-bdf9-10ae7f655c29
+		summarizeBy: none
+		sourceColumn: geo_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column impressions
+		dataType: double
+		lineageTag: e3201a18-4a3b-48c7-9291-3cf584ad0cce
+		summarizeBy: sum
+		sourceColumn: impressions
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column clicks
+		dataType: double
+		lineageTag: 1b06f392-5945-4d23-a44d-f8b73402802b
+		summarizeBy: sum
+		sourceColumn: clicks
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column video_views
+		dataType: double
+		lineageTag: cc1bd609-f32b-4d79-a8b0-6c07726d59de
+		summarizeBy: sum
+		sourceColumn: video_views
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column engagements
+		dataType: double
+		lineageTag: 8ec8a801-93b7-43bc-a619-0d4e92909fa9
+		summarizeBy: sum
+		sourceColumn: engagements
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column spend_kes
+		dataType: double
+		lineageTag: 56567109-ff77-4aed-ad5c-1ecdafd29df9
+		summarizeBy: sum
+		sourceColumn: spend_kes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column conversions
+		dataType: double
+		lineageTag: 2b97cc5a-3cbe-4e4c-a9fb-b94bcd854ea2
+		summarizeBy: sum
+		sourceColumn: conversions
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column conversion_value_kes
+		dataType: double
+		lineageTag: b54537bd-a9a4-4557-833e-06ea951ea454
+		summarizeBy: sum
+		sourceColumn: conversion_value_kes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column reach
+		dataType: double
+		formatString: #,0
+		lineageTag: 8e004f45-3487-4028-859f-e0de92486977
+		summarizeBy: sum
+		sourceColumn: reach
+
+		annotation SummarizationSetBy = Automatic
+
+	column frequency
+		dataType: double
+		lineageTag: 31fb64ee-a889-4474-9f86-5b37b72d1c62
+		summarizeBy: sum
+		sourceColumn: frequency
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'ctr num'
+		dataType: double
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: df391911-532f-454f-9d40-9afa9e4a7e90
+		summarizeBy: sum
+		sourceColumn: ctr num
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpc_kes
+		dataType: double
+		lineageTag: 2ca98dd3-2447-4377-8eeb-f837f7689077
+		summarizeBy: sum
+		sourceColumn: cpc_kes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cpm_kes
+		dataType: double
+		lineageTag: b008500f-f6f1-4228-8b56-c75d5466109c
+		summarizeBy: sum
+		sourceColumn: cpm_kes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column source_batch_id
+		dataType: string
+		lineageTag: 4105fca6-2e20-4db9-a2e8-07aa88c2bf6e
+		summarizeBy: none
+		sourceColumn: source_batch_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column gold_built_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a02d6443-8ba7-4eb6-b80c-1103ae9800cf
+		summarizeBy: none
+		sourceColumn: gold_built_at
+
+		variation Variation
+			isDefault
+			relationship: 28a20787-0ca3-4e9c-99bb-d2907cce4d34
+			defaultHierarchy: LocalDateTable_cbf2e68c-a80f-43ab-970d-6bcb87b0ab1b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_ingested_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dd791557-a660-4e04-9128-8ffa51471e8b
+		summarizeBy: none
+		sourceColumn: source_ingested_at
+
+		variation Variation
+			isDefault
+			relationship: 0a37cca3-97c3-434f-92a0-2cb98efe39be
+			defaultHierarchy: LocalDateTable_cc42fcd2-7286-48af-94f0-5f499c01c303.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_ad_performance_daily = m
+		mode: import
+		source =
+				let
+				  Source = PostgreSQL.Database("localhost", "marketing_analytics"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "fact_ad_performance_daily"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(#"Navigation 1",{{"ctr", "ctr num"}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns",{"fact_id", "date_key", "platform_key", "client_key", "account_key", "campaign_key", "ad_group_key", "ad_key", "geo_key", "impressions", "clicks", "video_views", "engagements", "spend_kes", "conversions", "conversion_value_kes", "reach", "frequency", "ctr num", "cpc_kes", "cpm_kes", "source_batch_id", "source_ingested_at", "gold_built_at"})
+				in
+				  #"Removed Other Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

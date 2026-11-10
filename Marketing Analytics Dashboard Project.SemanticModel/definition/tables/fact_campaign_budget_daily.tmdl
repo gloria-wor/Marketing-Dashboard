@@ -1,0 +1,107 @@
+table fact_campaign_budget_daily
+	lineageTag: 5c1b1d3c-15de-43a3-ba5b-4b4da72e0d98
+
+	measure 'Total Campaign Spend' = SUM('fact_campaign_budget_daily'[spend_kes])
+		displayFolder: Main measures
+		lineageTag: f94e7cda-1d3f-4b33-89d3-0dc5228b1ffb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Campaign Budget' = SUM('fact_campaign_budget_daily'[daily_budget_kes])
+		lineageTag: 53475cb4-89c2-4e06-ad40-73e98f7a9b06
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column campaign_budget_id
+		dataType: string
+		lineageTag: 99d19680-fbcf-4aad-b214-f3a08c801318
+		summarizeBy: none
+		sourceColumn: campaign_budget_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 7445bd68-0773-4c5f-9edd-2b0509202e47
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform_key
+		dataType: string
+		lineageTag: fc6fd8b0-1b1f-4d86-bfdb-e34d869ea012
+		summarizeBy: none
+		sourceColumn: platform_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_key
+		dataType: string
+		lineageTag: e3df5241-1ca7-486e-9d88-905dac179d97
+		summarizeBy: none
+		sourceColumn: client_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_key
+		dataType: string
+		lineageTag: a0a47ccc-1a37-49e4-a13e-8da634a0a2f4
+		summarizeBy: none
+		sourceColumn: account_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_key
+		dataType: string
+		lineageTag: b16acd6f-8554-4f79-b49e-7340be790418
+		summarizeBy: none
+		sourceColumn: campaign_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column geo_key
+		dataType: string
+		lineageTag: f293951e-de13-429a-9da0-f3deb48d727c
+		summarizeBy: none
+		sourceColumn: geo_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column daily_budget_kes
+		dataType: double
+		lineageTag: a034c232-a0f9-4d67-89a6-a336810c7dfb
+		summarizeBy: sum
+		sourceColumn: daily_budget_kes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column spend_kes
+		dataType: double
+		lineageTag: 217ef5a5-de1c-47d7-b5cd-f52610b1d4ba
+		summarizeBy: sum
+		sourceColumn: spend_kes
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_campaign_budget_daily = m
+		mode: import
+		source =
+				let
+				  Source = PostgreSQL.Database("localhost", "marketing_analytics"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "fact_campaign_budget_daily"]}[Data],
+				    #"Removed Other Columns" = Table.SelectColumns(#"Navigation 1",{"campaign_budget_id", "date_key", "platform_key", "client_key", "account_key", "campaign_key", "geo_key", "daily_budget_kes", "spend_kes"})
+				in
+				  #"Removed Other Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

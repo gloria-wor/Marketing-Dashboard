@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "00ea1440d236ddc39e0b",
+  "position": {
+    "x": 120.21144648618962,
+    "y": 156.06398315750934,
+    "z": 1000,
+    "height": 255.18570218998147,
+    "width": 1136.7363097553721,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Marketing performance",
+                    "textStyle": {
+                      "fontSize": "72pt",
+                      "color": "#14163b"
+                    }
+                  },
+                  {
+                    "value": ", ",
+                    "textStyle": {
+                      "fontSize": "72pt"
+                    }
+                  },
+                  {
+                    "value": "in three views.",
+                    "textStyle": {
+                      "fontSize": "72pt",
+                      "color": "#6c47ff"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

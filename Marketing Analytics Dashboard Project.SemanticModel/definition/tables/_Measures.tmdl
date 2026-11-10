@@ -1,0 +1,690 @@
+table _Measures
+	lineageTag: f81a5887-0499-405c-9e9c-fc295f66824c
+
+	measure 'Budget Utilization %' =
+			
+			DIVIDE('fact_ad_performance_daily'[Total Spend],
+			    'fact_campaign_budget_daily'[Total Campaign Budget],BLANK()
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Campaign measures
+		lineageTag: 11f1c0ab-f20d-49e5-a30e-2430ff5d540f
+
+	measure 'C budget PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        'fact_campaign_budget_daily'[Total Campaign Budget],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Campaign measures
+		lineageTag: e80452ac-0ee7-41b7-8508-5e6ea57aab9c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Campaign spend PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        'fact_campaign_budget_daily'[Total Campaign Spend],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Campaign measures
+		lineageTag: d3e5434f-9a2c-4075-abff-65c2aade38bc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CBudget CF' =
+			
+			VAR _currentcbudg = [Total Campaign Budget]
+			VAR _priorcbudg = [C budget PY]
+			VAR _change = DIVIDE(_currentcbudg - _priorcbudg,_priorcbudg)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		displayFolder: Campaign measures
+		lineageTag: d012d4d6-6a76-4888-85aa-204e14797060
+
+	measure 'CBudget YoY %' =
+			
+			VAR Currentcbudg = [Total Campaign Budget]
+			VAR Priorcbudg   = [C budget PY]
+			VAR _perc = DIVIDE ( Currentcbudg - Priorcbudg, Priorcbudg )
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Campaign measures
+		lineageTag: 3b48a3b8-6065-40c0-8b4a-3a2e50f75412
+
+	measure 'Clicks CF' =
+			
+			VAR _currentclicks = [Total clicks]
+			VAR _priorclicks = [Clicks PY]
+			VAR _change = DIVIDE(_currentclicks - _priorclicks,_priorclicks)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		displayFolder: Conditional formatting
+		lineageTag: 88d6a711-289a-4b59-aed2-f01729291292
+
+	measure 'Clicks PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        [Total clicks],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Ad measures
+		lineageTag: 1c34c82b-daab-4609-9c25-f9b8a03d7e2d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Clicks YoY %' =
+			
+			VAR Currentclicks= [Total clicks]
+			VAR Priorclicks  = [Clicks PY]
+			VAR _perc = DIVIDE ( Currentclicks- Priorclicks, Priorclicks)
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Ad measures
+		lineageTag: 40ffadb1-9d95-4e49-abb6-7d933de8e385
+
+	measure 'Conversions CF' =
+			
+			VAR _currentconv = [Total Conversions]
+			VAR _priorconv = [Conversions PY]
+			VAR _change = DIVIDE(_currentconv - _priorconv,_priorconv)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		displayFolder: Conditional formatting
+		lineageTag: c5ad64c0-b98c-4204-ac57-b19fc3b39b33
+
+	measure 'Conversions PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        [Total Conversions],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Ad measures
+		lineageTag: 7c21fa26-0174-4106-865c-3a686d405308
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Conversions YoY %' =
+			
+			VAR Currentconv = [Total Conversions]
+			VAR Priorconv   = [Conversions PY]
+			VAR _perc = DIVIDE ( Currentconv- Priorconv, Priorconv)
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Ad measures
+		lineageTag: 58bc7fad-ddb0-47cb-a9b9-f2beb09bf814
+
+	measure CPM = DIVIDE([Total Spend],[Total Impressions],0)*1000
+		displayFolder: Ad measures
+		lineageTag: 81a1ce2b-a094-40a3-a43f-839d2a75c9b9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CSpend CF' =
+			
+			VAR _currentcspend = [Total Campaign Spend]
+			VAR _priorcspend = [Campaign spend PY]
+			VAR _change = DIVIDE(_currentcspend - _priorcspend,_priorcspend)
+			RETURN
+			SWITCH(TRUE(), _change>0, "red",_change<0, "green", "grey")
+		displayFolder: Conditional formatting
+		lineageTag: aec169d3-7074-4fdc-b3d6-082466a598ca
+
+	measure 'CSpend YoY %' =
+			
+			VAR Currentcspend = [Total Campaign Spend]
+			VAR Priorcspend   = [Campaign spend PY]
+			VAR _perc = DIVIDE ( Currentcspend - Priorcspend, Priorcspend )
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Campaign measures
+		lineageTag: eb561d73-25f8-458c-8d07-90c545a19e62
+
+	measure 'CTR CF' =
+			
+			VAR _currentCTR = [CTR]
+			VAR _priorCTR = [CTR PY]
+			VAR _change = DIVIDE(_currentCTR - _priorCTR,_priorCTR)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		displayFolder: Conditional formatting
+		lineageTag: e836b4f9-fc53-4192-99b9-8c1b8583006f
+
+	measure 'CTR PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE ('fact_ad_performance_daily'[CTR],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Ad measures
+		lineageTag: cbae6d08-d4cb-48fd-ad50-552a11ee6e10
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CTR YoY %' =
+			
+			VAR CurrentCTR = [CTR]
+			VAR PriorCTR  = [CTR PY]
+			VAR _perc = DIVIDE ( CurrentCTR - PriorCTR, PriorCTR )
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Ad measures
+		lineageTag: 63005f2d-1de8-4a94-bec5-3ce56f369dbc
+
+	measure 'Engagements CF' =
+			
+			VAR _currenteng = [Total Engagements]
+			VAR _prioreng = [Engagements PY]
+			VAR _change = DIVIDE(_currenteng - _prioreng,_prioreng)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		displayFolder: Conditional formatting
+		lineageTag: 865ac014-1c97-41ea-845a-b86cd5a9467b
+
+	measure 'Engagements PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        [Total Engagements],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Ad measures
+		lineageTag: ac02ceee-d729-4d25-834f-60296da17fd0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Engagements YoY %' =
+			
+			VAR Currenteng = [Total Engagements]
+			VAR Prioreng   = [Engagements PY]
+			VAR _perc = DIVIDE ( Currenteng - Prioreng, Prioreng)
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Ad measures
+		lineageTag: 33ec363f-01a8-4c0f-a1e5-d0fe0cd08cf2
+
+	measure 'Impressions CF' =
+			
+			VAR _currentimp = [Total Impressions]
+			VAR _priorimp = [Impressions PY]
+			VAR _change = DIVIDE(_currentimp - _priorimp,_priorimp)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		displayFolder: Conditional formatting
+		lineageTag: dae0311b-0e62-4c76-89a8-ed706c79f1d2
+
+	measure 'Impressions PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        [Total Impressions],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Ad measures
+		lineageTag: a813900f-93de-47e6-81a1-30b12e89ece0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Impressions YoY %' =
+			
+			VAR Currentimp = [Total Impressions]
+			VAR Priorimp   = [Impressions PY]
+			VAR _perc = DIVIDE ( Currentimp - Priorimp, Priorimp)
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Ad measures
+		lineageTag: b5d20d9c-f039-4aae-a89b-e9368da9e542
+
+	measure 'Revenue CF' =
+			
+			VAR _currentrevenue = [Total Revenue]
+			VAR _priorrev = [Revenue PY]
+			VAR _change = DIVIDE(_currentrevenue - _priorrev,_priorrev)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		formatString: Text
+		displayFolder: Conditional formatting
+		lineageTag: 89fc466b-e856-4572-aab8-88476ba0c90f
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Revenue PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        [Total Revenue],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Ad measures
+		lineageTag: a18f820c-c7a9-4c72-8a6b-02ef40f19e25
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue YoY %' =
+			
+			VAR CurrentRevenue = [Total Revenue]
+			VAR PriorRevenue   = [Revenue PY]
+			VAR _perc = DIVIDE ( CurrentRevenue - PriorRevenue, PriorRevenue )
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Ad measures
+		lineageTag: ce681e77-3adc-4887-92cc-79cf2f7d1755
+
+	measure 'ROAS CF' =
+			
+			VAR _currentROAS = [ROAS]
+			VAR _priorROAS = [ROAS PY]
+			VAR _change = DIVIDE(_currentROAS - _priorROAS,_priorROAS)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		displayFolder: Conditional formatting
+		lineageTag: 746c9224-3ec7-48f0-927b-11844e940eb9
+
+	measure 'ROAS PY' =
+			
+			VAR LastDataDate =
+			    CALCULATE (
+			        MAX ( 'dim_date'[full_date] ),
+			        'fact_ad_performance_daily'
+			    )
+			VAR CurrentDates =
+			    FILTER (
+			        VALUES ( 'dim_date'[full_date] ),
+			        'dim_date'[full_date] <= LastDataDate
+			    )
+			VAR PriorYearDates =
+			    SELECTCOLUMNS (
+			        CurrentDates,
+			        "full_date", EDATE ( 'dim_date'[full_date], -12 )
+			    )
+			RETURN
+			    CALCULATE (
+			        [ROAS],
+			        REMOVEFILTERS ( 'dim_date' ),
+			        TREATAS ( PriorYearDates, 'dim_date'[full_date] )
+			    )
+		displayFolder: Ad measures
+		lineageTag: edb9686b-a44f-464c-9001-b9cd477be7d8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ROAS YoY %' =
+			
+			VAR Currentroas= [ROAS]
+			VAR Priorroas   = [ROAS PY]
+			VAR _perc = DIVIDE ( Currentroas- Priorroas, Priorroas)
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Ad measures
+		lineageTag: b2bae2c2-7dd6-4943-99e7-d56157709191
+
+	measure 'Spend CF' =
+			
+			VAR _currentspend = [Total Spend]
+			VAR _priorspend = [Spend PY]
+			VAR _change = DIVIDE(_currentspend - _priorspend,_priorspend)
+			RETURN
+			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
+		displayFolder: Conditional formatting
+		lineageTag: 5ac514a2-4282-4258-9111-2e953ef7c252
+
+	measure 'Spend YoY %' =
+			
+			VAR CurrentSpend = [Total Spend]
+			VAR PriorSpend   = [Spend PY]
+			VAR _perc = DIVIDE ( CurrentSpend - PriorSpend, PriorSpend )
+			VAR _percformat = FORMAT(_perc, "+0.0%;-0.0%;0.0%")
+			RETURN
+			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
+		displayFolder: Ad measures
+		lineageTag: c36862b7-b0cf-4260-9692-481417bf67cc
+
+	measure CPC = DIVIDE('fact_ad_performance_daily'[Total Spend],'fact_ad_performance_daily'[Total clicks])
+		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
+		displayFolder: Ad measures
+		lineageTag: efdef6f5-d1e3-41c2-b104-a18787a3cdd8
+
+		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
+
+	measure Spacer = " "
+		displayFolder: Matrix
+		lineageTag: 133f6e9c-0748-4b0d-b1b9-a9074d30f86c
+
+	measure 'Chip Period' = SELECTEDVALUE(PeriodTable[PeriodName], "YTD")
+		displayFolder: Chip
+		lineageTag: 19a60241-7404-44d8-a7ed-b79ebefd6069
+
+	measure 'Chip Year' = IF(HASONEVALUE('dim_date'[year]), SELECTEDVALUE('dim_date'[year]), "All")
+		displayFolder: Chip
+		lineageTag: 730085e6-232d-42dd-baef-34406c814c99
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Chip Geography' =
+			
+			IF(
+			    ISFILTERED('dim_geo'[country_name]),
+			    CONCATENATEX(VALUES('dim_geo'[country_name]), 'dim_geo'[country_name], ", "),
+			    "All"
+			)
+		displayFolder: Chip
+		lineageTag: 913b6098-de5d-4cb8-bea5-b682afc015d2
+
+	measure 'Chip Platform' =
+			
+			IF(
+			    ISFILTERED(dim_platform[platform_name]),
+			    CONCATENATEX(VALUES(dim_platform[platform_name]), dim_platform[platform_name], ", "),
+			    "All"
+			)
+		displayFolder: Chip
+		lineageTag: 1e021580-1997-423c-a8e4-88683625fa60
+
+	measure 'Chip Month' = IF(HASONEVALUE(dim_date[month_short]), SELECTEDVALUE(dim_date[month_short]), "All")
+		displayFolder: Chip
+		lineageTag: c21b7cb6-886e-4444-9520-610d120530e4
+
+	measure 'Chip Objective' =
+			
+			IF(
+			    ISFILTERED('dim_campaign'[objective]),
+			    CONCATENATEX(VALUES('dim_campaign'[objective]), 'dim_campaign'[objective], ", "),
+			    "All"
+			)
+		displayFolder: Chip
+		lineageTag: f9b72ef9-1bd7-4f4f-9255-c35547f6b74e
+
+	measure 'Latest Date' =
+			
+			CALCULATE (
+			    MAXX ( FILTER ( VALUES ( dim_date[full_date] ), [Total Spend] > 0 ), dim_date[full_date] ),
+			    ALLSELECTED ( dim_date ),
+			    REMOVEFILTERS ( dim_platform )
+			)
+		formatString: General Date
+		displayFolder: Matrix
+		lineageTag: 3b0c5483-e346-4a4a-adb3-2e3fb1e94bc3
+
+	measure 'Spend Prev Period' =
+			
+			VAR g = SELECTEDVALUE ( 'Trend Granularity '[Trend Granularity ], "Monthly" )
+			RETURN
+			SWITCH (
+			    g,
+			    "Daily",  CALCULATE ( [Total Spend], DATEADD ( dim_date[full_date], -1, DAY ) ),
+			    "Weekly", CALCULATE ( [Total Spend], DATEADD ( dim_date[full_date], -7, DAY ) ),
+			    CALCULATE ( [Total Spend], DATEADD ( dim_date[full_date], -1, MONTH ) )
+			)
+		displayFolder: Matrix
+		lineageTag: 0ca4d7e3-3a7c-466d-b21b-2db6d1ea42a5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Growth %' = DIVIDE ( [Total Spend] - [Spend Prev Period], [Spend Prev Period] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Matrix
+		lineageTag: 641b27f9-aba7-46b5-9785-ec7e974bb852
+
+	measure 'YTD Spend' = ```
+			
+			VAR ld = [Latest Date]
+			RETURN
+			CALCULATE (
+			    [Total Spend],
+			    REMOVEFILTERS ( dim_date ),
+			    DATESBETWEEN ( dim_date[full_date], DATE ( YEAR ( ld ), 1, 1 ), ld )
+			)
+			
+			```
+		displayFolder: Matrix
+		lineageTag: 8dee01b6-4a62-4933-a4c7-b508e089143c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure YoY% =
+			
+			VAR ld = [Latest Date]
+			VAR cur = [YTD Spend]
+			VAR py =
+			    CALCULATE (
+			        [Total Spend],
+			        REMOVEFILTERS ( dim_date ),
+			        DATESBETWEEN ( dim_date[full_date], DATE ( YEAR ( ld ) - 1, 1, 1 ), EDATE ( ld, -12 ) )
+			    )
+			RETURN DIVIDE ( cur - py, py )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Matrix
+		lineageTag: b609f1d8-ce34-420d-bc97-f987af6c847a
+
+	measure 'Matrix Value' =
+			
+			VAR t  = SELECTEDVALUE ( 'Matrix Cols'[Type] )
+			VAR ms = SELECTEDVALUE ( 'Matrix Cols'[MonthStart] )
+			RETURN
+			SWITCH (
+			    t,
+			    "YTD", DIVIDE ( [YTD Spend], 1000000 ),
+			    "YoY", [YoY%],
+			    "M",   DIVIDE ( CALCULATE ( [Total Spend], dim_date[month_start_date] = ms ), 1000000 )
+			)
+		displayFolder: Matrix
+		lineageTag: 29d7f3de-3052-4c99-bb13-fedccfc2b116
+
+		formatStringDefinition =
+				SWITCH (
+				    SELECTEDVALUE ( 'Matrix Cols'[Type] ),
+				    "YoY", "+0%;-0%;0%",
+				    """Ksh""#,0.0""M"""
+				)
+
+	measure 'Show Col' =
+			
+			VAR t = SELECTEDVALUE ( 'Matrix Cols'[Type] )
+			VAR ms = SELECTEDVALUE ( 'Matrix Cols'[MonthStart] )
+			VAR lm = DATE ( YEAR ( [Latest Date] ), MONTH ( [Latest Date] ), 1 )
+			RETURN IF ( t <> "M" || ( ms >= EDATE ( lm, -5 ) && ms <= lm ), 1, 0 )
+		formatString: 0
+		displayFolder: Matrix
+		lineageTag: f103a368-f530-4a1f-9485-9fd6c6871eb5
+
+	measure 'Heat Value' =
+			
+			IF (
+			    ISINSCOPE ( dim_platform[platform_name] ) && SELECTEDVALUE ( 'Matrix Cols'[Type] ) = "M",
+			    [Matrix Value]
+			)
+		lineageTag: 1e751388-6f42-468e-8e3f-8c33ae53f2b9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg MoM 12M' =
+			
+			VAR ld = [Latest Date]
+			VAR m =
+			    CALCULATETABLE (
+			        VALUES ( dim_date[month_start_date] ),
+			        REMOVEFILTERS ( dim_date ),
+			        DATESBETWEEN ( dim_date[full_date], EDATE ( DATE ( YEAR ( ld ), MONTH ( ld ), 1 ), -11 ), ld )
+			    )
+			RETURN
+			CALCULATE (
+			    AVERAGEX (
+			        m,
+			        VAR cur  = [Total Spend]
+			        VAR prev = CALCULATE ( [Total Spend], DATEADD ( dim_date[full_date], -1, MONTH ) )
+			        RETURN DIVIDE ( cur - prev, prev )
+			    ),
+			    REMOVEFILTERS ( dim_date )
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: matrix
+		lineageTag: fcb52158-e288-4ef9-b2d9-b72f9be4e1e1
+
+	measure 'YoY Color' =
+			
+			IF (
+			    SELECTEDVALUE ( 'Matrix Cols'[Type] ) = "YoY",
+			    IF ( [YoY%] >= 0, "#12A06B", "#E5484D" )
+			)
+		displayFolder: Matrix
+		lineageTag: cdde0e62-118e-492e-99bb-5fe957e451da
+
+	measure 'Matrix Title' = "Revenue Performance Matrix: MTD " & YEAR ( [Latest Date] )
+		lineageTag: e2725e53-aef4-4e4a-ac93-9c19527e59af
+
+	column Value
+		formatString: 0
+		lineageTag: 77acfa64-3739-4565-87a6-5b1c67a34a52
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = {BLANK()}
+
+	annotation PBI_Id = 41f82e12b56547e5b6346afb16d41b07
+

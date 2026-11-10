@@ -1,0 +1,41 @@
+table dim_client
+	lineageTag: 504374ba-ef14-4094-8e93-76fcfd187890
+
+	column client_key
+		dataType: string
+		lineageTag: ca08cd98-c94c-4a50-8eeb-ee0fc0c07bd8
+		summarizeBy: none
+		sourceColumn: client_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_name
+		dataType: string
+		lineageTag: 66ee086e-3190-4aac-ab07-c8cdad8a0099
+		summarizeBy: none
+		sourceColumn: client_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column industry
+		dataType: string
+		lineageTag: 87e2be63-1667-4c52-a131-54538836d363
+		summarizeBy: none
+		sourceColumn: industry
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_client = m
+		mode: import
+		source =
+				let
+				  Source = PostgreSQL.Database("localhost", "marketing_analytics"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_client"]}[Data],
+				    #"Removed Other Columns" = Table.SelectColumns(#"Navigation 1",{"client_key", "client_name", "industry"})
+				in
+				  #"Removed Other Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

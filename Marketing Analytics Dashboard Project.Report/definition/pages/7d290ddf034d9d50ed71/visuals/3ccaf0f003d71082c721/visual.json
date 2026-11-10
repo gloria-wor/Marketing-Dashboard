@@ -1,0 +1,88 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "3ccaf0f003d71082c721",
+  "position": {
+    "x": 0.7178196297398074,
+    "y": 463.94150895901521,
+    "z": 4000,
+    "height": 145.51911943065059,
+    "width": 649.5636055744983,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "●",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#6c47ff"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#ff6b4a"
+                    }
+                  },
+                  {
+                    "value": "Spend, ROAS and conversion KPIs",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#2a2d55"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "● ",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#6c47ff"
+                    }
+                  },
+                  {
+                    "value": "Spend vs revenue trend",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#2a2d55"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "● ",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#6c47ff"
+                    }
+                  },
+                  {
+                    "value": "Budget pacing and top campaigns",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#2a2d55"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "cbb5debc7a593a374ee6"
+}

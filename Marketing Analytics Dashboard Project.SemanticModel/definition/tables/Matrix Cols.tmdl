@@ -1,0 +1,61 @@
+table 'Matrix Cols'
+	lineageTag: dab63f4b-bb20-4013-ac70-19ad13da5784
+
+	column Label
+		lineageTag: de917830-960e-4913-b15d-52b889931b28
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Label]
+		sortByColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		lineageTag: 8422dea3-acc1-451f-8d35-3f259b77bb27
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Type]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthStart
+		formatString: General Date
+		lineageTag: 50cd3862-e5e7-459f-80d0-bf80e714927b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthStart]
+
+		variation Variation
+			isDefault
+			relationship: ad752336-0528-47c0-999e-60fa5dbcf30d
+			defaultHierarchy: LocalDateTable_9137a033-5fdf-4818-8b3c-5275b91352d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sort
+		formatString: 0
+		lineageTag: c516ebb2-be6d-4ed5-98ea-f055c9143e6b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Sort]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Matrix Cols' = calculated
+		mode: import
+		source =
+				
+				UNION (
+				    SELECTCOLUMNS (
+				        DISTINCT ( dim_date[month_start_date] ),
+				        "Label", FORMAT ( dim_date[month_start_date], "MMM yy" ),
+				        "Type", "M",
+				        "MonthStart", dim_date[month_start_date],
+				        "Sort", INT ( dim_date[month_start_date] )
+				    ),
+				    ROW ( "Label", "YTD", "Type", "YTD", "MonthStart", DATE ( 1900, 1, 1 ), "Sort", 100000 ),
+				    ROW ( "Label", "YoY", "Type", "YoY", "MonthStart", DATE ( 1900, 1, 1 ), "Sort", 100001 )
+				)
+
+	annotation PBI_Id = 9047d4e454244ce6a02f3a259218d3f3
+

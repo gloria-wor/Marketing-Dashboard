@@ -1,0 +1,60 @@
+table dim_account
+	lineageTag: b9a462f4-573e-4310-8ee4-7c28cf0fbd6b
+
+	column account_key
+		dataType: string
+		lineageTag: eac3078f-6343-4811-a352-7d3f9380cecf
+		summarizeBy: none
+		sourceColumn: account_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform_key
+		dataType: string
+		lineageTag: e54a1628-4490-4a84-a944-c4b0dc6f1d16
+		summarizeBy: none
+		sourceColumn: platform_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_key
+		dataType: string
+		isHidden
+		lineageTag: 54cb008a-dec6-44d6-8ba3-1f5fd864babe
+		summarizeBy: none
+		sourceColumn: client_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_name
+		dataType: string
+		lineageTag: aec14e0f-75b5-42a9-8794-3242c355e62f
+		summarizeBy: none
+		sourceColumn: account_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency_code
+		dataType: string
+		lineageTag: 4762fc41-a157-457a-a15b-5ebcd1909c69
+		summarizeBy: none
+		sourceColumn: currency_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_account = m
+		mode: import
+		source =
+				let
+				  Source = PostgreSQL.Database("localhost", "marketing_analytics"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_account"]}[Data],
+				    #"Removed Other Columns" = Table.SelectColumns(#"Navigation 1",{"account_key", "platform_key", "client_key", "account_name", "currency_code"})
+				in
+				  #"Removed Other Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

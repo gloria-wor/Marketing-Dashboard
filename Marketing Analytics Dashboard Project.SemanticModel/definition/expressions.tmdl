@@ -1,0 +1,21 @@
+expression 'Errors in gold fact_ad_performance_daily' =
+		let
+		Source = fact_ad_performance_daily,
+		  #"Detected Type Mismatches" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "The type of the value does not match the type of the column.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Source, pairs),
+		  #"Added Index" = Table.AddIndexColumn(#"Detected Type Mismatches", "Row Number" ,1),
+		  #"Kept Errors" = Table.SelectRowsWithErrors(#"Added Index", {"fact_id", "date_key", "platform_key", "client_key", "account_key", "campaign_key", "ad_group_key", "ad_key", "geo_key", "impressions", "clicks", "video_views", "engagements", "spend_local", "spend_kes", "conversions", "conversion_value_local", "conversion_value_kes", "reach", "frequency", "ctr", "cpc_local", "cpc_kes", "cpm_local", "cpm_kes", "spend_sign", "revenue_tracking_status", "source_batch_id", "gold_built_at"}),
+		  #"Reordered Columns" = Table.ReorderColumns(#"Kept Errors", {"Row Number", "fact_id", "date_key", "platform_key", "client_key", "account_key", "campaign_key", "ad_group_key", "ad_key", "geo_key", "impressions", "clicks", "video_views", "engagements", "spend_local", "spend_kes", "conversions", "conversion_value_local", "conversion_value_kes", "reach", "frequency", "ctr", "cpc_local", "cpc_kes", "cpm_local", "cpm_kes", "spend_sign", "revenue_tracking_status", "source_batch_id", "gold_built_at"})
+		in
+		  #"Reordered Columns"
+	lineageTag: 3d1e6b10-63f7-4238-9961-1d6251b8e23e
+	queryGroup: 'Query Errors - 13/10/2026 15:49:22'
+
+	annotation PBI_ResultType = Table
+

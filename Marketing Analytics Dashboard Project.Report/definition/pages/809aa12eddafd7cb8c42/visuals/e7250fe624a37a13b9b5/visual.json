@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "e7250fe624a37a13b9b5",
+  "position": {
+    "x": 667,
+    "y": 938,
+    "z": 24000,
+    "height": 44,
+    "width": 586,
+    "tabOrder": 24000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Open Platform Analysis  →",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#EECC0B",
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "Center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "dacbbab78ecb04181bde",
+  "position": {
+    "x": 0,
+    "y": 181.33916107920095,
+    "z": 1000,
+    "height": 88.5768553056134,
+    "width": 648.84705918099212,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Campaign Intelligence",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "44pt",
+                      "color": "#14163b"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "6ee9a33b94adb978c6db"
+}

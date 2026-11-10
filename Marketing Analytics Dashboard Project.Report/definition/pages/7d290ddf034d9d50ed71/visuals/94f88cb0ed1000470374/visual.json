@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "94f88cb0ed1000470374",
+  "position": {
+    "x": 0,
+    "y": 288.89677109316005,
+    "z": 2000,
+    "height": 92.7948007963569,
+    "width": 648.84705918099212,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Every campaign scored and ranked, so winners and underperformers stand out.",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#5b6086"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "6ee9a33b94adb978c6db"
+}

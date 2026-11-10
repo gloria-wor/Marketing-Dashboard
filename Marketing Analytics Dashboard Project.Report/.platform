@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Marketing Analytics Dashboard Project"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6ec1b1fa-6ab4-481e-912d-a9ab05fb7482"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "72eecb07061d2705cd30",
+  "position": {
+    "x": 0,
+    "y": 289.22094383650722,
+    "z": 2000,
+    "height": 92.898926380830147,
+    "width": 650.00963264898439,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Meta, Google, and TikTok compared month by month on spend, mix and growth.",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#5b6086"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "d50336c2e8799ab68745"
+}

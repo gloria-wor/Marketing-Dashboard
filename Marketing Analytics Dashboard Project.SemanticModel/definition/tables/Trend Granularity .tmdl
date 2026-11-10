@@ -1,0 +1,49 @@
+table 'Trend Granularity '
+	lineageTag: fe58c89c-696f-4412-bf6b-aaa189fe1b9d
+
+	column 'Trend Granularity '
+		dataType: string
+		lineageTag: 19b56b2d-3189-4c87-bb80-bc5254713bc2
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Trend Granularity  Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Trend Granularity  Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trend Granularity  Fields'
+		lineageTag: 1ce121e3-f02e-4018-9b8f-66e4e3420cee
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Trend Granularity  Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trend Granularity  Order'
+		isHidden
+		formatString: 0
+		lineageTag: 587ac1ef-1897-4579-bb96-d765dd87d370
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Trend Granularity ' = calculated
+		mode: import
+		source =
+				{
+				    ("Daily", NAMEOF('dim_date'[full_date]), 0),
+				    ("Monthly", NAMEOF('dim_date'[Month Start]), 1),
+				    ("Weekly", NAMEOF('dim_date'[Week Start]), 2)
+				}
+
+	annotation PBI_Id = e1054ebc0bb2499b91cce5b5a6b9f96f
+

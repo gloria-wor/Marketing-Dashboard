@@ -1,0 +1,44 @@
+table dim_ad_group
+	lineageTag: c43e6c96-75ac-49b8-a20c-d6a7aab64291
+
+	column ad_group_key
+		dataType: string
+		lineageTag: d98fb2ae-26fb-420c-b026-c88c71630285
+		summarizeBy: none
+		sourceColumn: ad_group_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_key
+		dataType: string
+		isHidden
+		lineageTag: d30d2876-d324-49ee-aa7d-641f918492ea
+		summarizeBy: none
+		sourceColumn: campaign_key
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ad_group_name
+		dataType: string
+		lineageTag: 6b3b44e3-38e8-41dc-af17-696b76e85b42
+		summarizeBy: none
+		sourceColumn: ad_group_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_ad_group = m
+		mode: import
+		source =
+				let
+				  Source = PostgreSQL.Database("localhost", "marketing_analytics"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_ad_group"]}[Data],
+				    #"Removed Other Columns" = Table.SelectColumns(#"Navigation 1",{"ad_group_key", "campaign_key", "ad_group_name"})
+				in
+				  #"Removed Other Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

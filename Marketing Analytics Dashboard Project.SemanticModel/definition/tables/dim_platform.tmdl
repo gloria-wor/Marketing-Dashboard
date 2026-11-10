@@ -1,0 +1,40 @@
+table dim_platform
+	lineageTag: dfcb7f9f-e9cc-43f7-b5f8-12dcd20e3c17
+
+	column platform_key
+		dataType: string
+		lineageTag: b7d08a77-4146-4e71-8548-8b15984e1bac
+		summarizeBy: none
+		sourceColumn: platform_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform_code
+		dataType: string
+		lineageTag: 6bb2fac6-9dcf-4dcd-8410-035955a6700a
+		summarizeBy: none
+		sourceColumn: platform_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform_name
+		dataType: string
+		lineageTag: d36375a5-2315-4086-a646-951e826b5192
+		summarizeBy: none
+		sourceColumn: platform_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_platform = m
+		mode: import
+		source =
+				let
+				  Source = PostgreSQL.Database("localhost", "marketing_analytics"),
+				  #"Navigation 1" = Source{[Schema = "gold", Item = "dim_platform"]}[Data]
+				in
+				  #"Navigation 1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

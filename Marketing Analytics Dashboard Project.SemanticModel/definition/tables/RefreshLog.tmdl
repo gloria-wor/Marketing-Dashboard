@@ -1,0 +1,23 @@
+table RefreshLog
+	lineageTag: c12542f2-44cc-4997-848f-bdfaa42de93c
+
+	column Refreshed
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 42374bab-e2bd-4e91-abc3-c888fb72e54f
+		summarizeBy: none
+		sourceColumn: Refreshed
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RefreshLog = m
+		mode: import
+		source =
+				let
+				    Source = #table(type table [Refreshed = datetime],
+				        {{DateTime.From(DateTimeZone.SwitchZone(DateTimeZone.UtcNow(), 3))}})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "9e34d6a16080d4d111cb",
+  "position": {
+    "x": 0,
+    "y": 463.94150895901521,
+    "z": 4000,
+    "height": 145.51911943065059,
+    "width": 648.84705918099212,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "●",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#0ea5a0"
+                    }
+                  },
+                  {
+                    "value": " Top, steady and underperforming tiers",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#2a2d55"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "●",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#0ea5a0"
+                    }
+                  },
+                  {
+                    "value": " Portfolio health score",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#2a2d55"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "● ",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#0ea5a0"
+                    }
+                  },
+                  {
+                    "value": "Searchable campaign register",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "color": "#2a2d55"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "6ee9a33b94adb978c6db"
+}
