@@ -1,0 +1,46 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-KE
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Errors in queries that were loaded on 13/10/2026 15:49:22.
+queryGroup 'Query Errors - 13/10/2026 15:49:22'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["dim_account","dim_ad","dim_ad_group","dim_campaign","dim_client","dim_date","dim_geo","dim_platform","fact_ad_performance_daily","fact_campaign_budget_daily","Errors in gold fact_ad_performance_daily","PeriodTable"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_account
+ref table DateTableTemplate_a9aecfc4-8f62-4f12-ae7a-13185986d6f3
+ref table dim_ad
+ref table dim_ad_group
+ref table dim_campaign
+ref table LocalDateTable_03ef0bda-9c67-4fc7-9511-f600d247fb6e
+ref table LocalDateTable_aad0607c-17e0-4e07-8109-8e66a8d3f3f3
+ref table dim_client
+ref table dim_date
+ref table dim_geo
+ref table dim_platform
+ref table fact_ad_performance_daily
+ref table LocalDateTable_cbf2e68c-a80f-43ab-970d-6bcb87b0ab1b
+ref table fact_campaign_budget_daily
+ref table 'Trend Granularity '
+ref table LocalDateTable_cc42fcd2-7286-48af-94f0-5f499c01c303
+ref table _Measures
+ref table PeriodTable
+ref table 'Matrix Cols'
+ref table LocalDateTable_9137a033-5fdf-4818-8b3c-5275b91352d6
+ref table 'Metrics Table'
+ref table RefreshLog
+ref table _Measures2
+
+ref cultureInfo en-US
+

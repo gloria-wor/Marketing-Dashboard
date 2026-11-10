@@ -1,0 +1,1056 @@
+table _Measures2
+	lineageTag: 6b7027f3-f78c-43dd-b8bd-164c468ebb41
+
+	measure 'Icon Total Spend' = ```
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
+			    <!-- The light background box -->
+			    <rect width='40' height='40' rx='10' fill='#F3F0FF' />
+			    
+			    <!-- The blue wallet icon centered inside -->
+			    <g transform='translate(8, 8) scale(1)' fill='none' stroke='#0F2B84' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+			        <rect x='2' y='6' width='20' height='14' rx='2' />
+			        <path d='M2 10h20' />
+			        <path d='M16 14a2 2 0 0 0-2 2' />
+			        <path d='M6 6V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2' />
+			    </g>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: svg
+		lineageTag: c68893da-da63-491f-9981-f4776de265bd
+		dataCategory: ImageUrl
+
+	measure 'Icon Impressions' =
+			
+			VAR _SVG = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z'/><circle cx='12' cy='12' r='3'/></svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+		displayFolder: svg
+		lineageTag: ed822b9c-825d-4ea3-9930-9d6415a5b36d
+		dataCategory: ImageUrl
+
+	measure 'Icon Clicks' = ```
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
+			    <!-- The light background box -->
+			    <rect width='40' height='40' rx='10' fill='#F3F0FF' />
+			    <!-- The blue click icon centered inside -->
+			    <g transform='translate(6, 6) scale(1.15)'>
+			        <path d='m9 9 5 12 1.8-5.2L21 14Z' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>
+			        <path d='M7.2 2.2 8 5.1' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>
+			        <path d='m5.1 8-2.9-.8' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>
+			        <path d='M14 4.1 12 6' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>
+			        <path d='m6 12-1.9 2' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/>
+			    </g>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: svg
+		lineageTag: ca2a5b95-5173-4a1d-8758-df18535ac22d
+		dataCategory: ImageUrl
+
+	measure 'Icon Conversions' = ```
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
+			    <!-- The light background box -->
+			    <rect width='40' height='40' rx='10' fill='#F3F0FF' />
+			    
+			    <!-- The blue target icon centered inside -->
+			    <g transform='translate(8, 8) scale(1)' fill='none' stroke='#0F2B84' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+			        <circle cx='12' cy='12' r='10' />
+			        <circle cx='12' cy='12' r='6' />
+			        <circle cx='12' cy='12' r='2' fill='#0F2B84' />
+			    </g>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: svg
+		lineageTag: 8977d691-9a11-4f80-8465-75111fea64d2
+		dataCategory: ImageUrl
+
+	measure 'Icon ROAS' = ```
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
+			    <!-- The light background box -->
+			    <rect width='40' height='40' rx='10' fill='#F3F0FF' />
+			    
+			    <!-- The blue trending arrow icon centered inside -->
+			    <g transform='translate(8, 8) scale(1)' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'>
+			        <polyline points='22 7 13.5 15.5 8.5 10.5 2 17'/>
+			        <polyline points='16 7 22 7 22 13'/>
+			    </g>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: svg
+		lineageTag: d5035520-0b7a-4e47-96af-a2c04733617b
+		dataCategory: ImageUrl
+
+	measure 'Icon Avg Cost' = ```
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
+			    <!-- The light background box -->
+			    <rect width='40' height='40' rx='10' fill='#F3F0FF' />
+			    
+			    <!-- The blue tag icon centered inside -->
+			    <g transform='translate(8, 8) scale(1)' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'>
+			        <path d='M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z'/>
+			        <circle cx='7.5' cy='7.5' r='0.5' fill='#0F2B84'/>
+			    </g>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: svg
+		lineageTag: 89ab2662-aac1-4e48-8815-e8fe3c8d2814
+		dataCategory: ImageUrl
+
+	measure 'vs Last Month' =
+			
+			VAR CurrentSpend = [Total Spend]
+			VAR PriorSpend =
+			    CALCULATE(
+			        [Total Spend],
+			        REMOVEFILTERS('gold dim_date'),
+			        TREATAS(
+			            SELECTCOLUMNS(
+			                VALUES('gold dim_date'[full_date]),
+			                "full_date", EDATE('gold dim_date'[full_date], -1)
+			            ),
+			            'gold dim_date'[full_date]
+			        )
+			    )
+			VAR _perc = DIVIDE(CurrentSpend - PriorSpend, PriorSpend)
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, UNICHAR(11165) & " " & FORMAT(_perc, "0.0%"),
+			        _perc < 0, UNICHAR(11167) & " " & FORMAT(_perc * -1, "0.0%"),
+			        FORMAT(_perc, "0.0%")
+			    )
+		displayFolder: Monthly Comparisons
+		lineageTag: 30d4e77e-9fb7-43fd-b92c-d914a93c63d4
+
+	measure 'vs Last Year' = ```
+			
+			VAR CurrentSpend = [Total Spend]
+			VAR PriorSpend   = [Spend PY]
+			VAR _perc = DIVIDE ( CurrentSpend - PriorSpend, PriorSpend )
+			VAR _percformat = 
+			SWITCH(
+			    TRUE(),
+			    _perc > 0, UNICHAR(11165) & " " & FORMAT(_perc, "0.0%"),
+			    _perc < 0, UNICHAR(11167) & " " & FORMAT(_perc*-1, "0.0%"),
+			    FORMAT(_perc, "0.0%")
+			)
+			RETURN
+			_percformat
+			```
+		displayFolder: Monthly Comparisons
+		lineageTag: d725d5be-73c2-4b9f-ba7a-03a156f0a73f
+
+	measure 'Card FooterImpressions' = ```
+			
+			// 1. Calculate YoY for Impressions
+			VAR CurrentImpressions = [Total Impressions]
+			VAR PriorImpressions   = [Impressions PY]
+			VAR _perc = DIVIDE(CurrentImpressions - PriorImpressions, PriorImpressions)
+			
+			// 2. Get your CPM measure
+			VAR _CPM = [CPM]
+			
+			// 3. Determine color and arrow
+			VAR _Color = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "#10B981", // Green
+			        _perc < 0, "#EF4444", // Red
+			        "#6B7280"             // Grey for 0
+			    )
+			VAR _Arrow = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "▲",
+			        _perc < 0, "▼",
+			        ""
+			    )
+			VAR _PercText = FORMAT(ABS(_perc), "0.0%")
+			
+			// 4. Build the SVG (Centered properly)
+			VAR _SVG = 
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			        _Arrow & " " & _PercText & 
+			    "</text>" &
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			        " · " & _CPM & 
+			    "</text>" &
+			    "</svg>"
+			
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Monthly Comparisons
+		lineageTag: e95ba88b-61c7-41a6-b882-38e5bf68fdbe
+		dataCategory: ImageUrl
+
+	measure 'Card Footer Clicks' = ```
+			
+			VAR CurrentClicks = [Total Clicks] // Replace with your actual Clicks column
+			VAR PriorClicks   = [Clicks PY]    // Replace with your actual Prior Year Clicks measure
+			VAR _perc = DIVIDE(CurrentClicks - PriorClicks, PriorClicks)
+			
+			VAR _CTR = DIVIDE([Total Clicks], [Total Impressions], 0) // Replace with your actual CTR formula
+			VAR _FormattedCTR = FORMAT(_CTR, "0.00%")
+			
+			VAR _Color = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "#10B981", // Green
+			        _perc < 0, "#EF4444", // Red
+			        "#6B7280"             // Grey
+			    )
+			VAR _Arrow = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "▲",
+			        _perc < 0, "▼",
+			        ""
+			    )
+			VAR _PercText = FORMAT(ABS(_perc), "0.0%")
+			
+			// The SVG Footer
+			VAR _SVG = 
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			        _Arrow & " +" & _PercText & 
+			    "</text>" &
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			        " · CTR " & _FormattedCTR & 
+			    "</text>" &
+			    "</svg>"
+			
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Monthly Comparisons
+		lineageTag: b37a64a4-4f89-4e77-8fae-fd2dd965b8c2
+		dataCategory: ImageUrl
+
+	measure 'Card Footer Conversions' = ```
+			
+			// 1. Calculate YoY for Conversions
+			VAR CurrentConv = [Total Conversions]
+			VAR PriorConv   = [Conversions PY]
+			VAR _perc = DIVIDE(CurrentConv - PriorConv, PriorConv)
+			
+			// 2. Get your CVR measure and format it
+			VAR _CVR = [CVR]
+			VAR _FormattedCVR = FORMAT(_CVR, "0.00%")
+			
+			// 3. Determine color and arrow based on positive/negative
+			VAR _Color = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "#10B981", // Green
+			        _perc < 0, "#EF4444", // Red
+			        "#6B7280"             // Grey
+			    )
+			VAR _Arrow = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "▲",
+			        _perc < 0, "▼",
+			        ""
+			    )
+			VAR _PercText = FORMAT(ABS(_perc), "0.0%")
+			
+			// 4. Build the SVG Footer
+			VAR _SVG = 
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			        _Arrow & " +" & _PercText & 
+			    "</text>" &
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			        " · CVR " & _FormattedCVR & 
+			    "</text>" &
+			    "</svg>"
+			
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Monthly Comparisons
+		lineageTag: 9334bb67-aee1-437d-803c-ebdb1a3588af
+		dataCategory: ImageUrl
+
+	measure 'Card Footer ROAS' = ```
+			
+			// 1. Calculate YoY for ROAS
+			VAR CurrentROAS = [ROAS]
+			VAR PriorROAS   = [ROAS PY] 
+			VAR _perc = DIVIDE(CurrentROAS - PriorROAS, PriorROAS)
+			
+			// 2. Get Revenue formatted in Millions/Billions
+			VAR _Rev = [Total Revenue]
+			VAR _FormattedRev = 
+			    SWITCH(
+			        TRUE(),
+			        _Rev >= 1000000000, "Ksh " & FORMAT(_Rev / 1000000000, "#,##0.00,,,bn") & " revenue",
+			        _Rev >= 1000000, "Ksh " & FORMAT(_Rev / 1000000, "#,##0.00,,.M") & " revenue",
+			        "Ksh " & FORMAT(_Rev, "#,##0.00") & " revenue"
+			    )
+			
+			// 3. Determine color and arrow
+			VAR _Color = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "#10B981", // Green
+			        _perc < 0, "#EF4444", // Red
+			        "#6B7280"             // Grey for 0
+			    )
+			VAR _Arrow = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "▲",
+			        _perc < 0, "▼",
+			        ""
+			    )
+			VAR _PercText = FORMAT(ABS(_perc), "0.0%")
+			
+			// 4. Build the SVG (Centered properly)
+			VAR _SVG = 
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			        _Arrow & " +" & _PercText & 
+			    "</text>" &
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			        " · " & _FormattedRev & 
+			    "</text>" &
+			    "</svg>"
+			
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Monthly Comparisons
+		lineageTag: 287239e9-1d13-4936-a1f4-3105a17a6a4f
+		dataCategory: ImageUrl
+
+	measure 'ROAS Formatted' = ```
+			
+			VAR _ROASValue = DIVIDE([Total Revenue], [Total Spend], 0)
+			RETURN 
+			    FORMAT(_ROASValue, "0.00") & "x"
+			```
+		displayFolder: Monthly Comparisons
+		lineageTag: 6c18e717-bae7-44f1-87f4-b215caf87971
+
+	measure 'Card Footer CPA' = ```
+			
+			// 1. Calculate YoY for CPA (Avg Cost / Acquisition)
+			VAR CurrentCPA = [Avg Cost]
+			VAR PriorCPA   = [Avg Cost PY]
+			VAR _perc = DIVIDE(CurrentCPA - PriorCPA, PriorCPA)
+			
+			// 2. Get your CPC measure formatted
+			VAR _CPC = [CPC]
+			VAR _FormattedCPC = "CPC Ksh " & FORMAT(_CPC, "#,##0.00")
+			
+			// 3. Determine color and arrow
+			// Note: For costs, a negative % is GOOD (Green), a positive % is BAD (Red)
+			VAR _Color = 
+			    SWITCH(
+			        TRUE(),
+			        _perc < 0, "#10B981", // Green (Cost went down)
+			        _perc > 0, "#EF4444", // Red (Cost went up)
+			        "#6B7280"             // Grey for 0
+			    )
+			VAR _Arrow = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "▲",
+			        _perc < 0, "▼",
+			        ""
+			    )
+			VAR _PercText = FORMAT(ABS(_perc), "0.0%")
+			
+			// 4. Build the SVG (Centered properly)
+			VAR _SVG = 
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			        _Arrow & " " & _PercText & 
+			    "</text>" &
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			        " · " & _FormattedCPC & 
+			    "</text>" &
+			    "</svg>"
+			
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Monthly Comparisons
+		lineageTag: 7525b31c-160e-45d7-ad3d-28e0b8c77c11
+
+	measure 'Selected Period Value' =
+			
+			VAR SelectedID = SELECTEDVALUE('PeriodTable'[PeriodID], 4) // Default to YTD
+			VAR CurrentDate = MAX('gold dim_date'[full_date])
+			VAR StartOfWeek = CurrentDate - WEEKDAY(CurrentDate, 2) + 1 // Monday as start of week
+			RETURN
+			SWITCH(
+			    SelectedID,
+			    1, CALCULATE([Total Spend], DATESBETWEEN('gold dim_date'[full_date], StartOfWeek, CurrentDate)),
+			    2, CALCULATE([Total Spend], DATESMTD('gold dim_date'[full_date])),
+			    3, CALCULATE([Total Spend], DATESQTD('gold dim_date'[full_date])),
+			    4, CALCULATE([Total Spend], DATESYTD('gold dim_date'[full_date]))
+			)
+		displayFolder: Filters
+		lineageTag: 745e59d0-4152-447e-9e10-e38e56b8501d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dynamic Title' = ```
+			
+			VAR SelectedPeriod = SELECTEDVALUE('PeriodTable'[ PeriodName], "YTD")
+			VAR SelectedYear = SELECTEDVALUE('gold dim_date'[Year], "All Years")
+			VAR SelectedMonth = SELECTEDVALUE('gold dim_date'[month_name], "")
+			
+			// If a specific month is selected, show it (e.g., "Aug 2025"). Otherwise, just show the year.
+			VAR DateText = 
+			    IF(
+			        ISBLANK(SelectedMonth) || SelectedMonth = "All", 
+			        SelectedYear, 
+			        SelectedMonth & " " & SelectedYear
+			    )
+			
+			RETURN 
+			    "Executive Summary — " & SelectedPeriod & " " & DateText
+			```
+		displayFolder: Filters
+		lineageTag: 042e86ab-c902-4282-b299-71d2d8c8818a
+
+	measure 'Chip Period2' = ```
+			
+			VAR _Text = SELECTEDVALUE('PeriodTable'[ PeriodName], "YTD")
+			VAR _Color = "#4A4458"
+			VAR _BgColor = "#FFFFFF"
+			VAR _IconColor = "#7C3AED"
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' width='150' height='40' viewBox='0 0 200 40'>
+			    <rect width='140' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
+			    
+			    <g transform='translate(24, 7) scale(1.4)'>
+			        <path d='M5 2h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z M4 5h10 M7 1v2 M11 1v2' fill='none' stroke='" & _IconColor & "' stroke-width='1.5' stroke-linecap='round'/>
+			    </g>
+			    
+			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: status_chip
+		lineageTag: 55495946-d736-4a44-b22a-1b27b0a91484
+		dataCategory: ImageUrl
+
+	measure 'Chip Year2' = ```
+			
+			VAR _Text = SELECTEDVALUE('gold dim_date'[Year], "All")
+			VAR _Color = "#4A4458"
+			VAR _BgColor = "#FFFFFF"
+			VAR _IconColor = "#7C3AED"
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40' viewBox='0 0 200 40'>
+			    <rect width='140' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
+			    
+			    <g transform='translate(24, 7) scale(1.4)'>
+			        <path d='M5 2h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z M4 5h10 M7 1v2 M11 1v2' fill='none' stroke='" & _IconColor & "' stroke-width='1.5' stroke-linecap='round'/>
+			    </g>
+			    
+			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: status_chip
+		lineageTag: 9806cdc5-efca-4787-8a78-95a8c7a6a207
+		dataCategory: ImageUrl
+
+	measure 'Chip Month2' = ```
+			
+			VAR _Text = SELECTEDVALUE('gold dim_date'[month_name], "All")
+			VAR _Color = "#4A4458"
+			VAR _BgColor = "#FFFFFF"
+			VAR _IconColor = "#7C3AED"
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40' viewBox='0 0 200 40'>
+			    <rect width='150' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
+			    
+			    <g transform='translate(24, 7) scale(1.4)'>
+			        <path d='M5 2h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z M4 5h10 M7 1v2 M11 1v2' fill='none' stroke='" & _IconColor & "' stroke-width='1.5' stroke-linecap='round'/>
+			    </g>
+			    
+			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: status_chip
+		lineageTag: efbf26c2-63f4-46e0-ad7d-4ea344e4d499
+		dataCategory: ImageUrl
+
+	measure 'Chip Region2' = ```
+			
+			VAR _Text = SELECTEDVALUE('gold dim_geo'[region], "All") 
+			VAR _Color = "#4A4458"
+			VAR _BgColor = "#FFFFFF"
+			VAR _IconColor = "#7C3AED"
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' width='200' height='40' viewBox='0 0 200 40'>
+			    <rect width='190' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
+			    
+			    <!-- The <g> tag groups the icon and scales it by 1.4x. 
+			         translate(24, 7) moves the scaled icon into the right position -->
+			    <g transform='translate(24, 7) scale(1.4)'>
+			        <path d='M5 3a4 4 0 0 0-4 4c0 3 4 7 4 7s4-4 4-7a4 4 0 0 0-4-4z' fill='" & _IconColor & "'/>
+			        <circle cx='5' cy='7' r='1.5' fill='white'/>
+			    </g>
+			    
+			    <!-- Shifted text slightly to the right to accommodate the bigger icon -->
+			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: status_chip
+		lineageTag: cd3b23f2-361a-4902-94f5-299062b7b15f
+		dataCategory: ImageUrl
+
+	measure 'Chip Objective2' = ```
+			
+			VAR _Text = SELECTEDVALUE('gold dim_campaign'[funnel_stage], "All") // Replace with your Objective column
+			VAR _Color = "#4A4458"
+			VAR _BgColor = "#FFFFFF"
+			VAR _IconColor = "#7C3AED"
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' width='200' height='40' viewBox='0 0 200 40'>
+			    <rect width='190' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
+			    
+			    <g transform='translate(24, 7) scale(1.4)'>
+			        <path d='M5 2L1 4l4 2 4-2-4-2z M1 7l4 2 4-2 M1 10l4 2 4-2' fill='none' stroke='" & _IconColor & "' stroke-width='1.5' stroke-linejoin='round'/>
+			    </g>
+			    
+			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: status_chip
+		lineageTag: b25dfafa-6d63-49b7-83f0-f0858ace7df5
+		dataCategory: ImageUrl
+
+	measure 'Rolling 12M Spend Chart' =
+			
+			VAR CurrentDate = EOMONTH(MAX('gold dim_date'[full_date]), 0) // Finds the END of the month
+			VAR StartDate = EDATE(CurrentDate, -11)
+			VAR StartMonth = DATE(YEAR(StartDate), MONTH(StartDate), 1)
+			
+			RETURN
+			CALCULATE(
+			    [Total Spend],
+			    'gold dim_date'[full_date] >= StartMonth && 'gold dim_date'[full_date] <= CurrentDate
+			)
+		displayFolder: Filters
+		lineageTag: 6da1f3c4-59ce-4af9-a7f6-2a307629ec8f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Rolling 12M Revenue Chart' =
+			
+			VAR CurrentDate = EOMONTH(MAX('gold dim_date'[full_date]), 0) // Finds the END of the month
+			VAR StartDate = EDATE(CurrentDate, -11)
+			VAR StartMonth = DATE(YEAR(StartDate), MONTH(StartDate), 1)
+			
+			RETURN
+			CALCULATE(
+			    [Total Revenue],
+			    'gold dim_date'[full_date] >= StartMonth && 'gold dim_date'[full_date] <= CurrentDate
+			)
+		displayFolder: Filters
+		lineageTag: 771d7803-3b58-4244-ae38-82900d6db451
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Chart Title' =
+			
+			VAR SelectedYear = SELECTEDVALUE('gold dim_date'[Year], "All Years")
+			RETURN "Spend & Revenue Trend — YTD " & SelectedYear
+		displayFolder: Filters
+		lineageTag: 1b0e656b-4a10-4ab4-bc90-b61694922d1d
+
+	measure 'Chart Subtitle' =
+			
+			VAR DateLast = MAX('gold dim_date'[full_date])
+			VAR FormattedDate = FORMAT(DateLast, "MMM YYYY")
+			RETURN "Rolling 12 months to " & FormattedDate
+		displayFolder: Filters
+		lineageTag: c92fa549-c1a4-4c65-aecb-9897387a18df
+
+	measure 'BarChart Subtitle' =
+			
+			VAR SelectedYear = SELECTEDVALUE('gold dim_date'[Year], "All Years")
+			VAR SelectedPeriod = SELECTEDVALUE('PeriodTable'[ PeriodName], "YTD")
+			RETURN SelectedPeriod & " " & SelectedYear
+		displayFolder: Filters
+		lineageTag: e2eea146-c678-44a6-9ae8-399a37ee6987
+
+	measure 'Status Healthy' = ```
+			
+			VAR _BgColor = "#D1FAE5" // Light Green
+			VAR _TextColor = "#065F46" // Dark Green
+			VAR _Text = "Healthy"
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' width='80' height='24' viewBox='0 0 80 24'>
+			    <rect width='70' height='20' x='5' y='2' rx='10' fill='" & _BgColor & "' />
+			    <text x='40' y='15' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='11' font-weight='600' fill='" & _TextColor & "'>" & _Text & "</text>
+			</svg>"
+			
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Matrix Visuals
+		lineageTag: e3b539d8-25fc-47a9-87ad-16fa73e0359e
+		dataCategory: ImageUrl
+
+	measure 'Spend Change %' = ```
+			
+			VAR _Current = [Total Spend]
+			VAR _Prior = [Spend PY]
+			VAR _Perc = DIVIDE(_Current - _Prior, _Prior)
+			RETURN 
+			    // Adding the "+" sign for positive numbers
+			    IF(_Perc > 0, "+", "") & FORMAT(_Perc, "0.0%")
+			```
+		displayFolder: Matrix Visuals
+		lineageTag: f78b74cf-892b-4861-affd-be3fe1baa3c9
+
+	measure 'Impressions Change %' = ```
+			
+			VAR _Current = [Total Impressions]
+			VAR _Prior = [Impressions PY]
+			VAR _Perc = DIVIDE(_Current - _Prior, _Prior)
+			RETURN 
+			    IF(_Perc > 0, "+", "") & FORMAT(_Perc, "0.0%")
+			```
+		displayFolder: Matrix Visuals
+		lineageTag: ecf579cf-246c-4765-96fd-8034c7cf7e0d
+
+	measure 'CTR Change %' = ```
+			
+			VAR _Current = [CTR]
+			VAR _Prior = [CTR PY]
+			VAR _Perc = DIVIDE(_Current - _Prior, _Prior)
+			RETURN 
+			    IF(_Perc > 0, "+", "") & FORMAT(_Perc, "0.0%")
+			```
+		displayFolder: Matrix Visuals
+		lineageTag: 341769cc-c697-4792-affc-b6df704e79d8
+
+	measure 'Conversions Change %' = ```
+			
+			VAR _Current = [Total Conversions]
+			VAR _Prior = [Conversions PY]
+			VAR _Perc = DIVIDE(_Current - _Prior, _Prior)
+			RETURN 
+			    IF(_Perc > 0, "+", "") & FORMAT(_Perc, "0.0%")
+			```
+		displayFolder: Matrix Visuals
+		lineageTag: 9d013a3b-8cb7-44de-b7c7-387bddc94398
+
+	measure 'ROAS Change %' = ```
+			
+			VAR _Current = [ROAS]
+			VAR _Prior = [ROAS PY]
+			VAR _Perc = DIVIDE(_Current - _Prior, _Prior)
+			RETURN 
+			    IF(_Perc > 0, "+", "") & FORMAT(_Perc, "0.0%")
+			```
+		displayFolder: Matrix Visuals
+		lineageTag: d66e583d-6dba-4606-b3fd-368508f9cb27
+
+	measure 'Cost Change %' = ```
+			
+			VAR _Current = [Avg Cost]
+			VAR _Prior = [Avg Cost PY]
+			VAR _Perc = DIVIDE(_Current - _Prior, _Prior)
+			RETURN 
+			    IF(_Perc > 0, "+", "") & FORMAT(_Perc, "0.0%")
+			```
+		displayFolder: Matrix Visuals
+		lineageTag: 48434197-26ba-4903-bf3b-d781aad719cd
+
+	measure 'Dynamic Prior' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Metrics Table'[Metric]),
+			    "Ad Spend", [Spend PY],
+			    "Impressions", [Impressions PY],
+			    "Click-through Rate", [CTR PY],
+			    "Conversions", [Conversions PY],
+			    "Return on Ad Spend", [ROAS PY],
+			    "Cost / Acquisition", [Avg Cost PY]
+			)
+		displayFolder: Matrix Visuals
+		lineageTag: 38ae11fc-a964-4dfc-a4e5-191d3fe98c95
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dynamic Change' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Metrics Table'[Metric]),
+			    "Ad Spend", [Spend Change %],
+			    "Impressions", [Impressions Change %],
+			    "Click-through Rate", [CTR Change %],
+			    "Conversions", [Conversions Change %],
+			    "Return on Ad Spend", [ROAS Change %],
+			    "Cost / Acquisition", [Cost Change %]
+			)
+		displayFolder: Matrix Visuals
+		lineageTag: a512b82a-da87-4bd6-8193-75ffe1a74114
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Dynamic Status' = ```
+			
+			// This forces the SVG to only show if a metric is selected
+			IF(
+			    ISBLANK([Dynamic Current]), 
+			    BLANK(), 
+			    [Status Healthy] 
+			)
+			```
+		displayFolder: Matrix Visuals
+		lineageTag: 01ffad41-4845-4b3c-bdef-c49aff210d42
+		dataCategory: ImageUrl
+
+	measure 'Dynamic Current' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Metrics Table'[Metric]),
+			    "Ad Spend", [Total Spend],
+			    "Impressions", [Total Impressions],
+			    "Click-through Rate", [CTR],
+			    "Conversions", [Total Conversions],
+			    "Return on Ad Spend", [ROAS],
+			    "Cost / Acquisition", [Avg Cost]
+			)
+		displayFolder: Matrix Visuals
+		lineageTag: 9f604a9e-d938-4a48-8e68-30595a55f613
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dynamic Current Formatted' =
+			
+			VAR MetricName = SELECTEDVALUE('Metrics Table'[Metric])
+			VAR Val = [Dynamic Current]
+			
+			RETURN
+			SWITCH(
+			    MetricName,
+			    "Ad Spend", "$" & FORMAT(Val / 1000000, "#,##0.0") & "M",
+			    "Impressions", FORMAT(Val / 1000000, "#,##0.0") & "M",
+			    "Conversions", FORMAT(Val / 1000, "#,##0.0") & "K",
+			    "Return on Ad Spend", FORMAT(Val, "0.00") & "x",
+			    "Click-through Rate", FORMAT(Val, "0.00%"),
+			    "Cost / Acquisition", "$" & FORMAT(Val, "#,##0.00"),
+			    FORMAT(Val, "#,##0.00") // Default fallback
+			)
+		displayFolder: Matrix Visuals
+		lineageTag: d4481005-cc79-4a44-bec9-b19443c176b7
+
+	measure 'Dynamic Prior Formatted' =
+			
+			VAR MetricName = SELECTEDVALUE('Metrics Table'[Metric])
+			VAR Val = [Dynamic Prior]
+			
+			RETURN
+			SWITCH(
+			    MetricName,
+			    "Ad Spend", "$" & FORMAT(Val / 1000000, "#,##0.0") & "M",
+			    "Impressions", FORMAT(Val / 1000000, "#,##0.0") & "M",
+			    "Conversions", FORMAT(Val / 1000, "#,##0.0") & "K",
+			    "Return on Ad Spend", FORMAT(Val, "0.00") & "x",
+			    "Click-through Rate", FORMAT(Val, "0.00%"),
+			    "Cost / Acquisition", "$" & FORMAT(Val, "#,##0.00"),
+			    FORMAT(Val, "#,##0.00")
+			)
+		displayFolder: Matrix Visuals
+		lineageTag: b4adbd23-f47d-48ea-b263-98603798f277
+
+	measure 'Budget Filtered' =
+			
+			SUMX(
+			    FILTER(
+			        'gold fact_campaign_budget_daily',
+			        RELATED('gold dim_platform'[platform_name]) IN {"Google Ads", "Meta Ads", "TikTok Ads"}
+			    ),
+			    'gold fact_campaign_budget_daily'[daily_budget_kes]
+			)
+		displayFolder: Budget
+		lineageTag: 8c0e2a81-bdab-4609-986f-fa7cf7c2754b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Spent Filtered' =
+			
+			SUMX(
+			    FILTER(
+			        'gold fact_campaign_budget_daily',
+			        RELATED('gold dim_platform'[platform_name]) IN {"Google Ads", "Meta Ads", "TikTok Ads"}
+			    ),
+			    'gold fact_campaign_budget_daily'[spend_kes]
+			)
+		displayFolder: Budget
+		lineageTag: 3c4a5c46-5239-4f9b-8341-dbcd2a62f8e7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Remaining Budget' = [Budget Filtered] - [Spent Filtered]
+		displayFolder: Budget
+		lineageTag: 7d2843ba-a159-433c-97d7-15d13c429c82
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Pacing %' = DIVIDE([Spent Filtered], [Budget Filtered], 0)
+		displayFolder: Budget
+		lineageTag: 74559514-4fd7-4e36-a75f-268c4f9bc5fc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Platform Pacing Bar' = ```
+			
+			VAR _Spent = [Spent Filtered]
+			VAR _Budget = [Budget Filtered]
+			VAR _Perc = DIVIDE(_Spent, _Budget, 0)
+			VAR _PercText = FORMAT(_Perc, "0%")
+			
+			// Shorter number format to save space
+			VAR _SpentFormatted = FORMAT(_Spent / 1000000000, "Ksh 0.0B")
+			VAR _BudgetFormatted = FORMAT(_Budget / 1000000000, "Ksh 0.0B")
+			
+			// Width of the progress bar fill (max 250)
+			VAR _FillWidth = IF(_Perc > 1, 250, _Perc * 250) 
+			VAR _Color = IF(_Perc > 1, "#EF4444", "#10B981") // Red if >100%, Green if under
+			
+			// The SVG (Platform name removed, bar shifted to start at x='0')
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' width='500' height='40' viewBox='0 0 500 40'>
+			    
+			    <!-- Background track -->
+			    <rect x='0' y='15' width='250' height='8' rx='4' fill='#F3F4F6' />
+			    
+			    <!-- Filled track -->
+			    <rect x='0' y='15' width='" & _FillWidth & "' height='8' rx='4' fill='" & _Color & "' />
+			    
+			    <!-- Spent / Budget Text -->
+			    <text x='260' y='23' font-family='Segoe UI, sans-serif' font-size='12' fill='#6B7280'>" & _SpentFormatted & " / " & _BudgetFormatted & "</text>
+			    
+			    <!-- Percentage Text -->
+			    <text x='480' y='23' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='13' font-weight='bold' fill='#111827'>" & _PercText & "</text>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Budget
+		lineageTag: f46b7c6e-9a31-42d9-8d46-87cd3b0431fb
+		dataCategory: ImageUrl
+
+	measure 'Pacing Header Combined' = ```
+			
+			VAR _Pacing = [Pacing %]
+			VAR _PercText = FORMAT(_Pacing, "0%")
+			VAR _StatusText = 
+			    SWITCH(
+			        TRUE(),
+			        _Pacing > 1.0, "Over Budget",
+			        _Pacing >= 0.95 && _Pacing <= 1.0, "On Pace",
+			        "Under Budget"
+			    )
+			VAR _Color = 
+			    SWITCH(
+			        TRUE(),
+			        _Pacing > 1.0, "#EF4444", // Red
+			        _Pacing >= 0.95 && _Pacing <= 1.0, "#10B981", // Green
+			        "#6B7280" // Grey
+			    )
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' width='150' height='70' viewBox='0 0 150 70'>
+			    <!-- The Big Number -->
+			    <text x='75' y='35' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='28' font-weight='bold' fill='" & _Color & "'>" & _PercText & "</text>
+			    <!-- The Small Status Text -->
+			    <text x='75' y='55' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='12' font-weight='600' fill='" & _Color & "'>" & _StatusText & "</text>
+			</svg>"
+			
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Budget
+		lineageTag: 95f33d03-1b7e-4850-a3ed-6716351c3d69
+		dataCategory: ImageUrl
+
+	measure 'Top 5 Campaign Spend' = ```
+			
+			VAR CampaignSpend = [Total Spend] // Use your main Spend measure
+			VAR CampaignRank = 
+			    RANKX(
+			        ALL('gold dim_campaign'[campaign_name]), // Use your exact campaign name column
+			        [Total Spend],
+			        ,
+			        DESC,
+			        Dense
+			    )
+			RETURN
+			    IF(
+			        CampaignRank <= 5,
+			        CampaignSpend,
+			        BLANK() // Hides anything ranked 6 or higher
+			    )
+			```
+		displayFolder: Campaign
+		lineageTag: 984c37ce-9851-43ec-821e-556f5340c92f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Campaign Chart Subtitle' = ```
+			
+			VAR SelectedYear = SELECTEDVALUE('gold dim_date'[Year], "All Years")
+			VAR SelectedPeriod = SELECTEDVALUE('PeriodTable'[ PeriodName], "YTD")
+			RETURN 
+			    SelectedPeriod & " " & SelectedYear
+			```
+		displayFolder: Campaign
+		lineageTag: 786b1ab9-80dd-4cbb-8bc4-b8d5d6ec9a7a
+
+	measure 'Card Footer Spend' = ```
+			
+			VAR CurrentSpend = [Total Spend]
+			VAR PriorSpend   = [Spend PY]
+			VAR _perc = DIVIDE ( CurrentSpend - PriorSpend, PriorSpend )
+			
+			VAR _FormattedPY = 
+			    SWITCH(
+			        TRUE(),
+			        PriorSpend >= 1000000000, "Ksh " & FORMAT(PriorSpend / 1000000000, "#,##0.00,,,") & "bn",
+			        PriorSpend >= 1000000, "Ksh " & FORMAT(PriorSpend / 1000000, "#,##0.00,,") & "M",
+			        "Ksh " & FORMAT(PriorSpend, "#,##0.00")
+			    )
+			
+			VAR _Color = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "#10B981", 
+			        _perc < 0, "#EF4444", 
+			        "#6B7280"             
+			    )
+			VAR _Arrow = 
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "▲",
+			        _perc < 0, "▼",
+			        ""
+			    )
+			VAR _PercText = FORMAT(ABS(_perc), "0.0%")
+			
+			// FIXED SVG: Removed bold, size 12, and adjusted x coordinates so they don't overlap
+			VAR _SVG = 
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' fill='" & _Color & "'>" & 
+			        _Arrow & " " & _PercText & 
+			    "</text>" &
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			        " · vs " & _FormattedPY & " PY" & 
+			    "</text>" &
+			    "</svg>"
+			
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Monthly Comparisons
+		lineageTag: 14c6ffd2-be16-4b44-b9e9-18cc6d1220f0
+		dataCategory: ImageUrl
+
+	measure 'Icon Campaigns Card' = ```
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
+			    <!-- The purple background box -->
+			    <rect width='56' height='56' rx='16' fill='#0EA5A0' />
+			    
+			    <!-- The white target icon centered inside -->
+			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+			        <circle cx='12' cy='12' r='9'/>
+			        <circle cx='12' cy='12' r='5'/>
+			        <circle cx='12' cy='12' r='1.5'/>
+			    </g>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Home
+		lineageTag: fcc9efc9-052d-4373-88f0-22aab50c8a32
+		dataCategory: ImageUrl
+
+	measure 'Icon Channels Card' = ```
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
+			    <!-- The purple background box -->
+			    <rect width='56' height='56' rx='16' fill='#FF6B4A' />
+			    
+			    <!-- The white layers icon centered inside -->
+			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+			        <path d='M12 2 2 7l10 5 10-5-10-5Z'/>
+			        <path d='m2 12 10 5 10-5'/>
+			        <path d='m2 17 10 5 10-5'/>
+			    </g>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Home
+		lineageTag: cefc8c89-2eba-4f35-adb7-1a5b0adb35fb
+		dataCategory: ImageUrl
+
+	measure 'Icon Dashboard Card' = ```
+			
+			VAR _SVG = 
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
+			    <!-- The purple background box with rounded corners -->
+			    <rect width='56' height='56' rx='16' fill='#6C47FF' />
+			    
+			    <!-- The white icon centered inside, scaled to fit nicely -->
+			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+			        <rect x='3' y='3' width='7' height='9' rx='1.5'/>
+			        <rect x='14' y='3' width='7' height='5' rx='1.5'/>
+			        <rect x='14' y='12' width='7' height='9' rx='1.5'/>
+			        <rect x='3' y='16' width='7' height='5' rx='1.5'/>
+			    </g>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+			```
+		displayFolder: Home
+		lineageTag: 7874c94d-b81b-4964-87c1-bc282561418a
+		dataCategory: ImageUrl
+
+	measure 'Last Refreshed' = FORMAT(MAX(RefreshLog[Refreshed]), "dd mmm yyyy · HH:mm") & " EAT"
+		lineageTag: 6cd916ff-c2b8-4f8c-8672-e1f4a78d3c8f
+
+	column Value
+		formatString: 0
+		lineageTag: 8a1967b8-173b-4b8e-8e37-72588a89682f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures2 = calculated
+		mode: import
+		source = {BLANK()}
+
+	annotation PBI_Id = e5ac3ea95b6f4cd7aa267c1bea67d4e6
+
