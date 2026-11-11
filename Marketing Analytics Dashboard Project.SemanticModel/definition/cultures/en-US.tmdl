@@ -2681,7 +2681,10 @@ cultureInfo en-US
 			            "Weight": 0.582
 			          }
 			        }
-			      ]
+			      ],
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_ad.creative_type": {
 			      "Definition": {
@@ -3207,7 +3210,10 @@ cultureInfo en-US
 			            "Weight": 0.475
 			          }
 			        }
-			      ]
+			      ],
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_ad_group.ad_group_name": {
 			      "Definition": {
@@ -3707,7 +3713,10 @@ cultureInfo en-US
 			            "Weight": 0.475
 			          }
 			        }
-			      ]
+			      ],
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.source_campaign_id": {
 			      "Definition": {
@@ -3842,7 +3851,10 @@ cultureInfo en-US
 			            "Weight": 0.5
 			          }
 			        }
-			      ]
+			      ],
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.campaign_name": {
 			      "Definition": {
@@ -3905,7 +3917,8 @@ cultureInfo en-US
 			            "Weight": 0.727
 			          }
 			        }
-			      ]
+			      ],
+			      "NameType": "Name"
 			    },
 			    "dim_campaign.funnel_stage": {
 			      "Definition": {
@@ -4170,7 +4183,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.first_report_date.date_hierarchy": {
 			      "Definition": {
@@ -4201,7 +4217,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.first_report_date.year": {
 			      "Definition": {
@@ -4349,7 +4368,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.first_report_date.quarter": {
 			      "Definition": {
@@ -4497,7 +4519,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.first_report_date.month": {
 			      "Definition": {
@@ -4645,7 +4670,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.first_report_date.day": {
 			      "Definition": {
@@ -4793,7 +4821,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.last_report_date": {
 			      "Definition": {
@@ -4929,7 +4960,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.last_report_date.date_hierarchy": {
 			      "Definition": {
@@ -4960,7 +4994,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.last_report_date.year": {
 			      "Definition": {
@@ -5108,7 +5145,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.last_report_date.quarter": {
 			      "Definition": {
@@ -5256,7 +5296,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.last_report_date.month": {
 			      "Definition": {
@@ -5404,7 +5447,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.last_report_date.day": {
 			      "Definition": {
@@ -5552,7 +5598,10 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time"
+			      "SemanticType": "Time",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      }
 			    },
 			    "dim_campaign.campaign_name_groups": {
 			      "Definition": {
@@ -17826,7 +17875,19 @@ cultureInfo en-US
 			          "ConceptualProperty": "Avg Cost"
 			        }
 			      },
-			      "State": "Generated"
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Avg Cost /  Acquisition": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    },
 			    "gold_dim_platform.platform_name": {
 			      "Definition": {
@@ -17835,7 +17896,19 @@ cultureInfo en-US
 			          "ConceptualProperty": "platform_name"
 			        }
 			      },
-			      "State": "Generated"
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Platform": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    },
 			    "table_measures.remaining_budget": {
 			      "Definition": {
@@ -18043,6 +18116,1700 @@ cultureInfo en-US
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "refresh_log.refreshed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RefreshLog",
+			          "ConceptualProperty": "Refreshed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "refreshed": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "refresh_log": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "RefreshLog"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "refresh log": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RefreshLog": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "log": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "refresh journal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refresh diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refresh daybook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "refresh logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "journal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "daybook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "refresh record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "refresh calendar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "dim_campaign.objective": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_campaign",
+			          "ConceptualProperty": "objective"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "objective": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "neutral": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "independent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fair": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fact-based": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "actual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "tangible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "period_table": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PeriodTable"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period table": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeriodTable": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "period tabletop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "period bench": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period board": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period counter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period stand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period slab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period desk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period stall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period table top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period spreadsheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "period_table.period_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PeriodTable",
+			          "ConceptualProperty": "PeriodName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeriodName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "period": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "period title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "period label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "period tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "period_table.period_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "PeriodTable",
+			          "ConceptualProperty": "PeriodID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PeriodID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "period": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "period credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "metrics_table.metric": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metrics Table",
+			          "ConceptualProperty": "Metric"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "metric": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "metrics_table": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metrics Table"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "metrics table": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "metrics tabletop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "metrics bench": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "metrics board": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "metrics counter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "metrics stand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "metrics slab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "metrics desk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "metrics stall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "metrics table top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "metrics spreadsheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.top_bar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Top Bar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top bar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "best bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "first bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "leading bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "maximum bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "peak bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "upper bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.top_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Top Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "top tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "top decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "top name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "best label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "leading label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "maximum label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "peak label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "upper label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.steady_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Steady Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "steady share": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "steady part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "steady portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "steady segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "steady cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "steady stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "steady bit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "steady piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.steady_spend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Steady Spend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "steady spend": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.steady_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Steady Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "steady count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "steady amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.top_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Top Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top share": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "share": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "leading share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "maximum share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "peak share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "upper share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "top part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "top portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "top segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "top cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.top_spend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Top Spend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top spend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "best spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "first spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "leading spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "maximum spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "peak spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "upper spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.top_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Top Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "top amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "best count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "leading count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "maximum count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "peak count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "upper count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Top Performer": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.lower_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Lower threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lower threshold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "threshold": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "lower brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lower onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lower inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lower verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "lower edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "lower dawn": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "lower beginning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.top_threshold": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Top threshold"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top threshold": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "threshold": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "leading threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "maximum threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "peak threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "upper threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "top brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "top onset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "top inception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "brink": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.steady_bar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Steady Bar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "steady bar": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.steady_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Steady Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "steady label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "steady sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "steady tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "steady decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "steady name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
 			          }
 			        }
 			      ]
@@ -26084,6 +27851,997 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "month_start_date_hierarchies_have_month_start_days"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_steady_label": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.steady_label": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_steady_label"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_steady_label": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.steady_label": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_steady_label"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_steady_bar": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.steady_bar": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_bar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_bar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_steady_bar"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Verbs": [
+			              {
+			                "steady": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "bar": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "entity__measure.steady_bar"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "fact_campaign_budget_dailies_steady_bar_steady_bar"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_steady_bar": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.steady_bar": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_bar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_bar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_steady_bar"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Verbs": [
+			              {
+			                "steady": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "bar": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "entity__measure.steady_bar"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "dim_campaigns_steady_bar_steady_bar"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_top_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.top_threshold": {
+			          "Target": {
+			            "Entity": "entity__measure.top_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_top_threshold"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_lower_threshold": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.lower_threshold": {
+			          "Target": {
+			            "Entity": "entity__measure.lower_threshold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.lower_threshold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_lower_threshold"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_top_count": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.top_count": {
+			          "Target": {
+			            "Entity": "entity__measure.top_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_top_count"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_top_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.top_spend": {
+			          "Target": {
+			            "Entity": "entity__measure.top_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_top_spend"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_top_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.top_spend": {
+			          "Target": {
+			            "Entity": "entity__measure.top_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_top_spend"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_top_share": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.top_share": {
+			          "Target": {
+			            "Entity": "entity__measure.top_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_top_share"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_top_share": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.top_share": {
+			          "Target": {
+			            "Entity": "entity__measure.top_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_top_share"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_steady_count": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.steady_count": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_steady_count"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_steady_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.steady_spend": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_steady_spend"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_steady_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.steady_spend": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_steady_spend"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_steady_share": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.steady_share": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_steady_share"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_steady_share": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.steady_share": {
+			          "Target": {
+			            "Entity": "entity__measure.steady_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.steady_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_steady_share"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_top_label": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.top_label": {
+			          "Target": {
+			            "Entity": "entity__measure.top_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_top_label"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_top_label": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.top_label": {
+			          "Target": {
+			            "Entity": "entity__measure.top_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_top_label"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_top_bar": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.top_bar": {
+			          "Target": {
+			            "Entity": "entity__measure.top_bar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_bar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_top_bar"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Verbs": [
+			              {
+			                "top": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "bar": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "entity__measure.top_bar"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "fact_campaign_budget_dailies_top_bar_top_bar"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_top_bar": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.top_bar": {
+			          "Target": {
+			            "Entity": "entity__measure.top_bar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.top_bar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_top_bar"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Verbs": [
+			              {
+			                "top": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "bar": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "entity__measure.top_bar"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "dim_campaigns_top_bar_top_bar"
+			        }
+			      ]
+			    },
+			    "metrics_table_has_metric": {
+			      "Binding": {
+			        "ConceptualEntity": "Metrics Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics_table": {
+			          "Target": {
+			            "Entity": "metrics_table"
+			          }
+			        },
+			        "metrics_table.metric": {
+			          "Target": {
+			            "Entity": "metrics_table.metric"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics_table"
+			            },
+			            "Object": {
+			              "Role": "metrics_table.metric"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_tables_have_metrics"
+			        }
+			      ]
+			    },
+			    "period_table_has_period_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "PeriodTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "period_table": {
+			          "Target": {
+			            "Entity": "period_table"
+			          }
+			        },
+			        "period_table.period_ID": {
+			          "Target": {
+			            "Entity": "period_table.period_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "period_table"
+			            },
+			            "Object": {
+			              "Role": "period_table.period_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "period_tables_have_period_ID"
+			        }
+			      ]
+			    },
+			    "period_table_has_period_name": {
+			      "Binding": {
+			        "ConceptualEntity": "PeriodTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "period_table": {
+			          "Target": {
+			            "Entity": "period_table"
+			          }
+			        },
+			        "period_table.period_name": {
+			          "Target": {
+			            "Entity": "period_table.period_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "period_table"
+			            },
+			            "Object": {
+			              "Role": "period_table.period_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "period_tables_have_period_names"
+			        }
+			      ]
+			    },
+			    "period_table_has_entity__measure_chip_period": {
+			      "Binding": {
+			        "ConceptualEntity": "PeriodTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "period_table": {
+			          "Target": {
+			            "Entity": "period_table"
+			          }
+			        },
+			        "entity__measure.chip_period": {
+			          "Target": {
+			            "Entity": "entity__measure.chip_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "period_table"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.chip_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "period_tables_have_chip_period"
+			        }
+			      ]
+			    },
+			    "refresh_log_has_refreshed": {
+			      "Binding": {
+			        "ConceptualEntity": "RefreshLog"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "refresh_log": {
+			          "Target": {
+			            "Entity": "refresh_log"
+			          }
+			        },
+			        "refresh_log.refreshed": {
+			          "Target": {
+			            "Entity": "refresh_log.refreshed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "refresh_log"
+			            },
+			            "Object": {
+			              "Role": "refresh_log.refreshed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "refresh_logs_have_refreshed"
+			        }
+			      ]
+			    },
+			    "refresh_log_is_refreshed_on_refreshed": {
+			      "Binding": {
+			        "ConceptualEntity": "RefreshLog"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "refresh_log": {
+			          "Target": {
+			            "Entity": "refresh_log"
+			          }
+			        },
+			        "refresh_log.refreshed": {
+			          "Target": {
+			            "Entity": "refresh_log.refreshed"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "refresh_log.refreshed"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "refresh": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "refresh_log"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "refresh_logs_are_refreshed_on_refreshed"
 			        }
 			      ]
 			    }
