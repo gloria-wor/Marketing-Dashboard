@@ -8,6 +8,7 @@ table fact_campaign_budget_daily
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Total Campaign Budget' = SUM('fact_campaign_budget_daily'[daily_budget_kes])
+		displayFolder: Main measures
 		lineageTag: 53475cb4-89c2-4e06-ad40-73e98f7a9b06
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
