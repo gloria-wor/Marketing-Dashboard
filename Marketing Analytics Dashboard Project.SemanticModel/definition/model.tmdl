@@ -14,7 +14,7 @@ queryGroup 'Query Errors - 13/10/2026 15:49:22'
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["dim_account","dim_ad","dim_ad_group","dim_campaign","dim_client","dim_date","dim_geo","dim_platform","fact_ad_performance_daily","fact_campaign_budget_daily","Errors in gold fact_ad_performance_daily","PeriodTable"]
+annotation PBI_QueryOrder = ["dim_account","dim_ad","dim_ad_group","dim_campaign","dim_client","dim_date","dim_geo","dim_platform","fact_ad_performance_daily","fact_campaign_budget_daily","Errors in gold fact_ad_performance_daily","PeriodTable","Metrics Table","RefreshLog"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
