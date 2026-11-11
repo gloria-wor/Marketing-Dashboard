@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "a2f4cd4203b062541c0c",
   "position": {
-    "x": 1360.2874207647774,
-    "y": 584.18545046797408,
-    "z": 9000,
+    "x": 1406.6848211629558,
+    "y": 523.02524085219341,
+    "z": 6000,
     "height": 428.12146731046477,
     "width": 542.00599556053919,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "donutChart",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold dim_platform"
+                      "Entity": "dim_platform"
                     }
                   },
                   "Property": "platform_name"
                 }
               },
-              "queryRef": "gold dim_platform.platform_name",
+              "queryRef": "dim_platform.platform_name",
               "nativeQueryRef": "platform_name",
               "active": true
             }
@@ -39,13 +39,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold fact_ad_performance_daily"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
                   "Property": "Total Spend"
                 }
               },
-              "queryRef": "gold fact_ad_performance_daily.Total Spend",
+              "queryRef": "fact_ad_performance_daily.Total Spend",
               "nativeQueryRef": "Total Spend"
             }
           ]
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "gold fact_ad_performance_daily"
+                    "Entity": "fact_ad_performance_daily"
                   }
                 },
                 "Property": "Total Spend"
@@ -85,6 +85,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
@@ -149,7 +156,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "gold dim_platform"
+                            "Entity": "dim_platform"
                           }
                         },
                         "Property": "platform_name"
@@ -190,7 +197,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "gold dim_platform"
+                            "Entity": "dim_platform"
                           }
                         },
                         "Property": "platform_name"
@@ -231,7 +238,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "gold dim_platform"
+                            "Entity": "dim_platform"
                           }
                         },
                         "Property": "platform_name"
@@ -278,6 +285,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
             }
           }
         }
@@ -301,6 +315,13 @@
                       "Percent": -0.5
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }

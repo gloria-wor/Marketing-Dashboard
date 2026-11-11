@@ -34,7 +34,5 @@ table dim_platform
 				in
 				  #"Navigation 1"
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

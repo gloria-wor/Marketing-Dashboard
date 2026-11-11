@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "983f144e0ee1b6a03208",
   "position": {
-    "x": 0,
-    "y": 0,
+    "x": 1520,
+    "y": 18,
     "z": 4000,
-    "height": 144.24694700150326,
-    "width": 509.33865359253116,
+    "height": 120,
+    "width": 1010,
     "tabOrder": 4000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "PeriodTable"
                     }
                   },
-                  "Property": " PeriodName"
+                  "Property": "PeriodName"
                 }
               },
-              "queryRef": "PeriodTable. PeriodName",
-              "nativeQueryRef": " PeriodName"
+              "queryRef": "PeriodTable.PeriodName",
+              "nativeQueryRef": "PERIOD"
             }
           ]
         }
@@ -59,7 +59,7 @@
                                   "Source": "p"
                                 }
                               },
-                              "Property": " PeriodName"
+                              "Property": "PeriodName"
                             }
                           }
                         ],
@@ -197,7 +197,25 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }
@@ -235,6 +253,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "17D"
+                }
+              }
             }
           },
           "selector": {
@@ -247,11 +272,17 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "17D"
                 }
               }
             }
@@ -453,7 +484,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "' Period'"
+                  "Value": "'PERIOD'"
                 }
               }
             },
@@ -467,7 +498,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "16D"
                 }
               }
             },
@@ -475,9 +506,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }

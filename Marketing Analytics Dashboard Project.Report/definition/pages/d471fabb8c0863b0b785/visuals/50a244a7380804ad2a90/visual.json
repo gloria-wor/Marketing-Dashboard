@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold fact_ad_performance_daily"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
-                  "Property": "Avg Cost"
+                  "Property": "CPA"
                 }
               },
-              "queryRef": "gold fact_ad_performance_daily.Avg Cost",
+              "queryRef": "fact_ad_performance_daily.CPA",
               "nativeQueryRef": "Avg Cost /  Acquisition",
               "displayName": "Avg Cost /  Acquisition"
             }
@@ -40,10 +40,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "gold fact_ad_performance_daily"
+                    "Entity": "fact_ad_performance_daily"
                   }
                 },
-                "Property": "Avg Cost"
+                "Property": "CPA"
               }
             },
             "direction": "Descending"

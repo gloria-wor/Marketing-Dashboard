@@ -12882,6 +12882,16 @@ cultureInfo en-US
 			          "cpa": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Avg Cost /  Acquisition": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -17809,6 +17819,24 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "gold_fact_ad_performance_daily.avg_cost": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold fact_ad_performance_daily",
+			          "ConceptualProperty": "Avg Cost"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "gold_dim_platform.platform_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "gold dim_platform",
+			          "ConceptualProperty": "platform_name"
+			        }
+			      },
+			      "State": "Generated"
+			    },
 			    "table_measures.remaining_budget": {
 			      "Definition": {
 			        "Binding": {
@@ -18009,48 +18037,6 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "Pacing": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "gold_fact_ad_performance_daily.avg_cost": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "gold fact_ad_performance_daily",
-			          "ConceptualProperty": "Avg Cost"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Avg Cost /  Acquisition": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "gold_dim_platform.platform_name": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "gold dim_platform",
-			          "ConceptualProperty": "platform_name"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Platform": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

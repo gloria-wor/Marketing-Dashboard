@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold fact_ad_performance_daily"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
                   "Property": "Total Spend"
                 }
               },
-              "queryRef": "gold fact_ad_performance_daily.Total Spend",
+              "queryRef": "fact_ad_performance_daily.Total Spend",
               "nativeQueryRef": "Total Spend"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "gold fact_ad_performance_daily"
+                    "Entity": "fact_ad_performance_daily"
                   }
                 },
                 "Property": "Total Spend"
@@ -92,7 +92,7 @@
                 }
               }
             ],
-            "metadata": "gold fact_ad_performance_daily.Total Spend",
+            "metadata": "fact_ad_performance_daily.Total Spend",
             "id": "field-ad406707-b12c-1b14-954c-68979d8d64f1",
             "order": 0
           }
@@ -107,7 +107,7 @@
                 }
               }
             ],
-            "metadata": "gold fact_ad_performance_daily.Total Spend",
+            "metadata": "fact_ad_performance_daily.Total Spend",
             "id": "field-deeed470-15d7-f4af-4198-dff968eef7a8",
             "order": 0
           }
@@ -122,7 +122,7 @@
                 }
               }
             ],
-            "metadata": "gold fact_ad_performance_daily.Total Spend",
+            "metadata": "fact_ad_performance_daily.Total Spend",
             "id": "field-c41abf82-8b2e-3f81-2365-d3ac09138dbb",
             "order": 0
           }
@@ -137,7 +137,7 @@
                 }
               }
             ],
-            "metadata": "gold fact_ad_performance_daily.Total Spend",
+            "metadata": "fact_ad_performance_daily.Total Spend",
             "id": "field-9b4b635f-d994-da07-061c-a1de1e6f234e",
             "order": 0
           }
@@ -211,68 +211,6 @@
       "referenceLabelValue": [
         {
           "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "gold fact_ad_performance_daily"
-                        }
-                      },
-                      "Property": "CF Last Month"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "gold fact_ad_performance_daily.Total Spend",
-            "id": "field-ad406707-b12c-1b14-954c-68979d8d64f1"
-          }
-        },
-        {
-          "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "gold fact_ad_performance_daily"
-                        }
-                      },
-                      "Property": "CF Last Year"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "gold fact_ad_performance_daily.Total Spend",
-            "id": "field-deeed470-15d7-f4af-4198-dff968eef7a8"
-          }
-        },
-        {
-          "properties": {
             "valueFontFamily": {
               "expr": {
                 "Literal": {
@@ -308,7 +246,7 @@
             }
           },
           "selector": {
-            "metadata": "gold fact_ad_performance_daily.Total Spend"
+            "metadata": "fact_ad_performance_daily.Total Spend"
           }
         }
       ],
@@ -572,7 +510,7 @@
             }
           },
           "selector": {
-            "metadata": "gold fact_ad_performance_daily.Total Spend",
+            "metadata": "fact_ad_performance_daily.Total Spend",
             "id": "field-deeed470-15d7-f4af-4198-dff968eef7a8"
           }
         },
@@ -627,7 +565,7 @@
             }
           },
           "selector": {
-            "metadata": "gold fact_ad_performance_daily.Total Spend"
+            "metadata": "fact_ad_performance_daily.Total Spend"
           }
         },
         {
@@ -669,7 +607,7 @@
             }
           },
           "selector": {
-            "metadata": "gold fact_ad_performance_daily.Total Spend"
+            "metadata": "fact_ad_performance_daily.Total Spend"
           }
         }
       ],
@@ -797,7 +735,7 @@
             }
           },
           "selector": {
-            "metadata": "gold fact_ad_performance_daily.Total Spend"
+            "metadata": "fact_ad_performance_daily.Total Spend"
           }
         },
         {
@@ -823,7 +761,7 @@
                 }
               }
             ],
-            "metadata": "gold fact_ad_performance_daily.Total Spend"
+            "metadata": "fact_ad_performance_daily.Total Spend"
           }
         }
       ]

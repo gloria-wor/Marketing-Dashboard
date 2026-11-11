@@ -3,10 +3,10 @@
   "name": "3e2488c31d40aba6804d",
   "position": {
     "x": 27.41664568983272,
-    "y": 86.467882560241662,
+    "y": 67.487127851895934,
     "z": 3000,
-    "height": 48.5063731435502,
-    "width": 773.99299755143147,
+    "height": 61.160209615780687,
+    "width": 603.16620517631986,
     "tabOrder": 2000
   },
   "visual": {
@@ -96,7 +96,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "22D"
+                  "Value": "24D"
                 }
               }
             },
@@ -111,6 +111,17 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }

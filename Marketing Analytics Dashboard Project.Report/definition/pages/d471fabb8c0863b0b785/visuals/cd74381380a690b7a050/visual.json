@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "cd74381380a690b7a050",
   "position": {
-    "x": 877.43604454816023,
-    "y": 15.146567566130415,
+    "x": 650,
+    "y": 15,
     "z": 3000,
-    "height": 113.95381186924244,
-    "width": 246.51232771713671,
+    "height": 118,
+    "width": 155,
     "tabOrder": 2000
   },
   "visual": {
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold dim_date"
+                      "Entity": "dim_date"
                     }
                   },
                   "Property": "month_name"
                 }
               },
-              "queryRef": "gold dim_date.month_name",
+              "queryRef": "dim_date.month_name",
               "nativeQueryRef": "month_name",
               "active": true
             }
@@ -72,7 +72,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "16D"
                 }
               }
             },
@@ -160,9 +160,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -178,7 +177,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "16D"
                 }
               }
             }
