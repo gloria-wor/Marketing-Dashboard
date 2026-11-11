@@ -54,10 +54,11 @@ table fact_ad_performance_daily
 		lineageTag: 46a08846-1399-4883-b139-c7481db3a28a
 
 	measure CPA = DIVIDE('fact_ad_performance_daily'[Total Spend],'fact_ad_performance_daily'[Total Conversions])
+		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
 		displayFolder: Main measures
 		lineageTag: cdddbf3f-2774-4a2f-a2c5-fafba4a9ba8b
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
 
 	measure 'Total Spend' = SUM('fact_ad_performance_daily'[spend_kes])
 		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
@@ -92,6 +93,19 @@ table fact_ad_performance_daily
 		formatString: #,0
 		displayFolder: Main measures
 		lineageTag: 42b98881-46e1-4301-9fbb-b750afe2479a
+
+	measure CVR = ```
+			
+			DIVIDE(
+			    [Total Conversions], 
+			    [Total Clicks], 
+			    0
+			)
+			```
+		displayFolder: Main measures
+		lineageTag: fa807d80-342b-4048-803a-23bb989492d2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column fact_id
 		dataType: string

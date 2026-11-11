@@ -3,11 +3,11 @@
   "name": "e9594cab9498a4c550b4",
   "position": {
     "x": 0,
-    "y": 170.67626784142817,
+    "y": 196.11386941577231,
     "z": 20000,
-    "height": 198.24343806494429,
-    "width": 695.96100597267684,
-    "tabOrder": 0
+    "height": 227.78965240394905,
+    "width": 702.287924208792,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold dim_platform"
+                      "Entity": "dim_platform"
                     }
                   },
                   "Property": "platform_name"
                 }
               },
-              "queryRef": "gold dim_platform.platform_name",
+              "queryRef": "dim_platform.platform_name",
               "nativeQueryRef": "Platform",
               "active": true,
               "displayName": "Platform"

@@ -40,7 +40,7 @@ ref table 'Matrix Cols'
 ref table LocalDateTable_9137a033-5fdf-4818-8b3c-5275b91352d6
 ref table 'Metrics Table'
 ref table RefreshLog
-ref table _Measures2
+ref table LocalDateTable_f14454b3-7cd3-4df3-9534-96d52e700be4
 
 ref cultureInfo en-US
 

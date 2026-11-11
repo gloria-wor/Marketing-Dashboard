@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "bc14a6b353106820ad87",
   "position": {
-    "x": 1938.1459529966362,
-    "y": 601.05723243094815,
-    "z": 13000,
-    "height": 409.30348753034019,
-    "width": 560.46670735688633,
-    "tabOrder": 10000
+    "x": 1969.7805441772123,
+    "y": 512.48037712533471,
+    "z": 10000,
+    "height": 415,
+    "width": 561,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold dim_geo"
+                      "Entity": "dim_geo"
                     }
                   },
                   "Property": "region"
                 }
               },
-              "queryRef": "gold dim_geo.region",
+              "queryRef": "dim_geo.region",
               "nativeQueryRef": "Count of region",
               "active": true
             }
@@ -39,13 +39,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold fact_ad_performance_daily"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
                   "Property": "Total Spend"
                 }
               },
-              "queryRef": "gold fact_ad_performance_daily.Total Spend",
+              "queryRef": "fact_ad_performance_daily.Total Spend",
               "nativeQueryRef": "Total Spend"
             }
           ]
@@ -58,7 +58,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "gold fact_ad_performance_daily"
+                    "Entity": "fact_ad_performance_daily"
                   }
                 },
                 "Property": "Total Spend"
@@ -89,7 +89,15 @@
       ],
       "labels": [
         {
-          "properties": {}
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
         }
       ],
       "valueAxis": [
@@ -112,6 +120,13 @@
               "expr": {
                 "Literal": {
                   "Value": "61L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
                 }
               }
             }
@@ -169,6 +184,13 @@
                   "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
             }
           }
         }
@@ -185,6 +207,13 @@
                     }
                   },
                   "Property": "BarChart Subtitle"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }

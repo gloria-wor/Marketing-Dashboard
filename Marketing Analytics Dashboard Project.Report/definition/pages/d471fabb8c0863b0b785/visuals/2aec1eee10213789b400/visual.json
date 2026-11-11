@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "2aec1eee10213789b400",
   "position": {
-    "x": 63.269182361152431,
-    "y": 596.8392869402046,
+    "x": 9.9797884568849184,
+    "y": 5.8145495320259215,
     "z": 7000,
-    "height": 397.09570957095707,
-    "width": 1252.5412541254125,
-    "tabOrder": 5000
+    "height": 414,
+    "width": 1321.963993453355,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineChart",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold dim_date"
+                      "Entity": "dim_date"
                     }
                   },
-                  "Property": "Month Short Year"
+                  "Property": "year_month"
                 }
               },
-              "queryRef": "gold dim_date.Month Short Year",
+              "queryRef": "dim_date.year_month",
               "nativeQueryRef": "Month Short Year",
               "active": true
             }
@@ -117,7 +117,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "13D"
                 }
               }
             },
@@ -165,7 +165,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -217,7 +217,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "13D"
                 }
               }
             },
@@ -417,6 +417,13 @@
                   "Property": "Chart Title"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
             }
           }
         }
@@ -433,6 +440,13 @@
                     }
                   },
                   "Property": "Chart Subtitle"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
@@ -467,5 +481,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "c5da6b9e2100e6a808eb"
 }

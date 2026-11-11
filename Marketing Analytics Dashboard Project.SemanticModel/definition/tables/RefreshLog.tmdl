@@ -8,6 +8,11 @@ table RefreshLog
 		summarizeBy: none
 		sourceColumn: Refreshed
 
+		variation Variation
+			isDefault
+			relationship: aa4365af-468e-4183-ad1e-73df1f2eede3
+			defaultHierarchy: LocalDateTable_f14454b3-7cd3-4df3-9534-96d52e700be4.'Date Hierarchy'
+
 		annotation SummarizationSetBy = Automatic
 
 	partition RefreshLog = m

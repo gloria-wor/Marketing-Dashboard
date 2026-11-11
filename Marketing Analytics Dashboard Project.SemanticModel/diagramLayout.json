@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 913.24571096777129,
-        "y": 67.131535922909279
+        "x": 534.06578732481944,
+        "y": 61.333332061767578
       },
       "nodes": [
         {
@@ -175,19 +175,6 @@
           "nodeIndex": "PeriodTable",
           "size": {
             "height": 128,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 2412.3469084185508,
-            "y": 499.73592772241204
-          },
-          "nodeIndex": "_Measures2",
-          "nodeLineageTag": "6b7027f3-f78c-43dd-b8bd-164c468ebb41",
-          "size": {
-            "height": 300,
             "width": 234
           },
           "zIndex": 0

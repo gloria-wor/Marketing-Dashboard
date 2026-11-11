@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold fact_ad_performance_daily"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
                   "Property": "Total Impressions"
                 }
               },
-              "queryRef": "gold fact_ad_performance_daily.Total Impressions",
+              "queryRef": "fact_ad_performance_daily.Total Impressions",
               "nativeQueryRef": "Total Impressions"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "gold fact_ad_performance_daily"
+                    "Entity": "fact_ad_performance_daily"
                   }
                 },
                 "Property": "Total Impressions"
@@ -397,7 +397,7 @@
                 }
               }
             ],
-            "metadata": "gold fact_ad_performance_daily.Total Impressions"
+            "metadata": "fact_ad_performance_daily.Total Impressions"
           }
         }
       ],

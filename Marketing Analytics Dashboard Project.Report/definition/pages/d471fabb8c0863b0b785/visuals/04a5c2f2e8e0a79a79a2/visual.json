@@ -20,13 +20,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold fact_ad_performance_daily"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
                   "Property": "Total clicks"
                 }
               },
-              "queryRef": "gold fact_ad_performance_daily.Total clicks",
+              "queryRef": "fact_ad_performance_daily.Total clicks",
               "nativeQueryRef": "Total clicks"
             }
           ]
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "gold fact_ad_performance_daily"
+                    "Entity": "fact_ad_performance_daily"
                   }
                 },
                 "Property": "Total clicks"
@@ -211,7 +211,7 @@
             }
           },
           "selector": {
-            "metadata": "gold fact_ad_performance_daily.Total clicks"
+            "metadata": "fact_ad_performance_daily.Total clicks"
           }
         },
         {
@@ -237,7 +237,7 @@
                 }
               }
             ],
-            "metadata": "gold fact_ad_performance_daily.Total clicks"
+            "metadata": "fact_ad_performance_daily.Total clicks"
           }
         }
       ],

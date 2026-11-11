@@ -105,3 +105,8 @@ relationship ad752336-0528-47c0-999e-60fa5dbcf30d
 	fromColumn: 'Matrix Cols'.MonthStart
 	toColumn: LocalDateTable_9137a033-5fdf-4818-8b3c-5275b91352d6.Date
 
+relationship aa4365af-468e-4183-ad1e-73df1f2eede3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RefreshLog.Refreshed
+	toColumn: LocalDateTable_f14454b3-7cd3-4df3-9534-96d52e700be4.Date
+

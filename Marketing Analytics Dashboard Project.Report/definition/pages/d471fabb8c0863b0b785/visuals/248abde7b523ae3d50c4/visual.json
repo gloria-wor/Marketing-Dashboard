@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "248abde7b523ae3d50c4",
   "position": {
-    "x": 2169.7736015102691,
-    "y": 15.146567566130415,
+    "x": 1330,
+    "y": 15,
     "z": 12000,
-    "height": 113.95381186924244,
-    "width": 246.51232771713671,
+    "height": 118,
+    "width": 155,
     "tabOrder": 12000
   },
   "visual": {
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold dim_campaign"
+                      "Entity": "dim_campaign"
                     }
                   },
-                  "Property": "funnel_stage"
+                  "Property": "objective"
                 }
               },
-              "queryRef": "gold dim_campaign.funnel_stage",
+              "queryRef": "dim_campaign.objective",
               "nativeQueryRef": "funnel_stage",
               "active": true
             }
@@ -72,7 +72,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "16D"
                 }
               }
             },
@@ -160,9 +160,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -178,7 +177,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "16D"
                 }
               }
             }

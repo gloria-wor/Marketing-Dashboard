@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "41e2e79995169eb1b586",
   "position": {
-    "x": 780.31991578754662,
-    "y": 1041.8325362136434,
-    "z": 17000,
-    "height": 381.72406691228633,
-    "width": 953.25568090803,
-    "tabOrder": 17000
+    "x": 784.53786127829017,
+    "y": 995.435135815465,
+    "z": 15000,
+    "height": 428.12146731046477,
+    "width": 949.03773541728651,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "gold dim_campaign"
+                      "Entity": "dim_campaign"
                     }
                   },
                   "Property": "campaign_name"
                 }
               },
-              "queryRef": "gold dim_campaign.campaign_name",
+              "queryRef": "dim_campaign.campaign_name",
               "nativeQueryRef": "campaign_name",
               "active": true
             }
@@ -107,7 +107,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "13D"
                 }
               }
             },
@@ -159,7 +159,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "12D"
                 }
               }
             }
@@ -215,6 +215,13 @@
                   }
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
             }
           }
         }
@@ -249,6 +256,13 @@
                       "Value": "'#6B7280'"
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
