@@ -634,6 +634,7 @@ table _Measures
 			    ISINSCOPE ( dim_platform[platform_name] ) && SELECTEDVALUE ( 'Matrix Cols'[Type] ) = "M",
 			    [Matrix Value]
 			)
+		displayFolder: Matrix
 		lineageTag: 1e751388-6f42-468e-8e3f-8c33ae53f2b9
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -671,7 +672,120 @@ table _Measures
 		lineageTag: cdde0e62-118e-492e-99bb-5fe957e451da
 
 	measure 'Matrix Title' = "Revenue Performance Matrix: MTD " & YEAR ( [Latest Date] )
+		displayFolder: Matrix
 		lineageTag: e2725e53-aef4-4e4a-ac93-9c19527e59af
+
+	measure 'Top threshold' = 5
+		formatString: 0
+		displayFolder: Budget Status
+		lineageTag: 07135f1f-6da9-41c6-8f4d-5aa3fad4e6fe
+
+	measure 'Lower threshold' = 2
+		formatString: 0
+		displayFolder: Budget Status
+		lineageTag: 2f388cca-14d9-425f-ad17-0993a8c1f12c
+
+	measure 'Top Count' =
+			
+			COUNTROWS (
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] >= [Top Threshold] )
+			)
+		formatString: 0
+		displayFolder: Budget Status
+		lineageTag: 1d1bb73a-4352-42da-948f-c8aa5bf54956
+
+	measure 'Top Spend' = ```
+			
+			SUMX (
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] >= [Top Threshold] ),
+			    [Total Campaign Spend]
+			)
+			
+			```
+		displayFolder: Budget Status
+		lineageTag: a05952b9-4c84-47e5-808e-6c6ce47964af
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top Share' = DIVIDE ( [Top Spend], [Total Campaign Spend] )
+		displayFolder: Budget Status
+		lineageTag: 6221981e-06eb-4ca5-aeb9-7f1b5aa9740c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Steady Count' =
+			COUNTROWS (
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold] ))
+		formatString: 0
+		displayFolder: Budget Status
+		lineageTag: 4466463d-3afc-4a2b-9361-da54b2cfb062
+
+	measure 'Steady Spend' =
+			
+			SUMX (
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold]),
+			    [Total Campaign Spend]
+			)
+		displayFolder: Budget Status
+		lineageTag: 918d2d13-6754-4e82-bfa0-1b3696fa2aeb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Steady Share' = DIVIDE ( [Steady Spend], [Total Campaign Spend] )
+		displayFolder: Budget Status
+		lineageTag: d9caf538-6da8-400d-ab79-c2f1f5745706
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Top Label' =
+			
+			VAR s = [Top Spend]
+			VAR spendText =
+			    SWITCH (
+			        TRUE (),
+			        s >= 1000000, FORMAT ( s / 1000000, "##0.0" ) & "M",
+			        s >= 1000, FORMAT ( s / 1000, "##0.0" ) & "K",
+			        FORMAT ( s, "##0" )
+			    )
+			RETURN
+			    spendText & " spend · " & FORMAT ( [Top Share], "0%" ) & " of budget"
+		displayFolder: Budget Status
+		lineageTag: 3b5ec194-8ea4-4f2d-a9fa-5314759f51bc
+
+	measure 'Top Bar' =
+			
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
+			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
+			"<rect width='" & ROUND ( 300 * [Top Share], 0 ) & "' height='8' rx='4' fill='#10B981'/></svg>"
+		displayFolder: Budget Status
+		lineageTag: e39f916d-3c00-4667-bdb2-bd18e3c1f1c8
+		dataCategory: ImageUrl
+
+	measure 'Steady Label' =
+			
+			VAR s = [Steady Spend]
+			VAR spendText =
+			    SWITCH (
+			        TRUE (),
+			        s >= 1000000, FORMAT ( s / 1000000, "$#,##0.0" ) & "M",
+			        s >= 1000, FORMAT ( s / 1000, "$#,##0.0" ) & "K",
+			        FORMAT ( s, "$#,##0" )
+			    )
+			RETURN
+			    spendText & " spend · " & FORMAT ( [Steady Share], "0%" ) & " of budget"
+		displayFolder: Budget Status
+		lineageTag: bb0aec2d-a23f-461c-a1fd-e4b2cd293b88
+
+	measure 'Steady Bar' =
+			
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
+			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
+			"<rect width='" & ROUND ( 300 * [Steady Share], 0 ) & "' height='8' rx='4' fill='#F59E0B'/></svg>"
+		displayFolder: Budget Status
+		lineageTag: 85b51423-f350-4349-8266-88027a1cad64
+		dataCategory: ImageUrl
 
 	measure 'Budget Filtered' =
 			
@@ -1721,65 +1835,32 @@ table _Measures
 
 		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
 
-	measure 'Top threshold' = 5
-		formatString: 0
-		displayFolder: Budget Status
-		lineageTag: 07135f1f-6da9-41c6-8f4d-5aa3fad4e6fe
-
-	measure 'Lower threshold' = 2
-		formatString: 0
-		displayFolder: Budget Status
-		lineageTag: 2f388cca-14d9-425f-ad17-0993a8c1f12c
-
-	measure 'Top Count' =
-
+	measure 'Underperforming Count' =
+			
 			COUNTROWS (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] >= [Top Threshold] )
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] )
 			)
 		formatString: 0
-		lineageTag: 1d1bb73a-4352-42da-948f-c8aa5bf54956
+		lineageTag: 87a6cf13-98db-4353-bf99-a81f1f5112a6
 
-	measure 'Top Spend' = ```
-
+	measure 'Underperforming Spend' =
+			
 			SUMX (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] >= [Top Threshold] ),
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] ),
 			    [Total Campaign Spend]
 			)
-
-			```
-		lineageTag: a05952b9-4c84-47e5-808e-6c6ce47964af
+		lineageTag: db261eb0-92ad-4270-ba9b-e1d03c76c37a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Top Share' = DIVIDE ( [Top Spend], [Total Campaign Spend] )
-		lineageTag: 6221981e-06eb-4ca5-aeb9-7f1b5aa9740c
+	measure 'Underperforming Share' = DIVIDE ( [Underperforming Spend], [Total Campaign Spend] )
+		lineageTag: 599bbcf7-1741-46ed-8866-4a091eb96f7d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Steady Count' =
-			COUNTROWS (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold] ))
-		formatString: 0
-		lineageTag: 4466463d-3afc-4a2b-9361-da54b2cfb062
-
-	measure 'Steady Spend' =
-
-			SUMX (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold]),
-			    [Total Campaign Spend]
-			)
-		lineageTag: 918d2d13-6754-4e82-bfa0-1b3696fa2aeb
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Steady Share' = DIVIDE ( [Steady Spend], [Total Campaign Spend] )
-		lineageTag: d9caf538-6da8-400d-ab79-c2f1f5745706
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Top Label' =
-
-			VAR s = [Top Spend]
+	measure 'Underperforming Label' =
+			
+			VAR s = [Underperforming Spend]
 			VAR spendText =
 			    SWITCH (
 			        TRUE (),
@@ -1788,40 +1869,35 @@ table _Measures
 			        FORMAT ( s, "##0" )
 			    )
 			RETURN
-			    spendText & " spend · " & FORMAT ( [Top Share], "0%" ) & " of budget"
-		lineageTag: 3b5ec194-8ea4-4f2d-a9fa-5314759f51bc
+			    spendText & " spend · " & FORMAT ( [Underperforming Share], "0%" ) & " of budget"
+		lineageTag: acce68c6-335b-4309-9419-1254b2202654
 
-	measure 'Top Bar' =
-
+	measure 'Underperforming Bar' =
+			
 			"data:image/svg+xml;utf8," &
 			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
 			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
-			"<rect width='" & ROUND ( 300 * [Top Share], 0 ) & "' height='8' rx='4' fill='#10B981'/></svg>"
-		lineageTag: e39f916d-3c00-4667-bdb2-bd18e3c1f1c8
-		dataCategory: ImageUrl
+			"<rect width='" & ROUND ( 300 * [Underperforming Share], 0 ) & "' height='8' rx='4' fill='#EF4444'/></svg>"
+		lineageTag: 965a5772-d9b1-485f-bd57-46ec0449f2a4
 
-	measure 'Steady Label' =
-
-			VAR s = [Steady Spend]
-			VAR spendText =
-			    SWITCH (
-			        TRUE (),
-			        s >= 1000000, FORMAT ( s / 1000000, "$#,##0.0" ) & "M",
-			        s >= 1000, FORMAT ( s / 1000, "$#,##0.0" ) & "K",
-			        FORMAT ( s, "$#,##0" )
+	measure 'Bar Color' =
+			
+			VAR _rank =
+			    RANKX (
+			        ALLSELECTED ( dim_campaign[campaign_name (groups)] ),
+			        [Total Revenue],
+			        ,
+			        DESC,
+			        DENSE
 			    )
 			RETURN
-			    spendText & " spend · " & FORMAT ( [Steady Share], "0%" ) & " of budget"
-		lineageTag: bb0aec2d-a23f-461c-a1fd-e4b2cd293b88
-
-	measure 'Steady Bar' =
-
-			"data:image/svg+xml;utf8," &
-			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
-			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
-			"<rect width='" & ROUND ( 300 * [Steady Share], 0 ) & "' height='8' rx='4' fill='#10B981'/></svg>"
-		lineageTag: 85b51423-f350-4349-8266-88027a1cad64
-		dataCategory: ImageUrl
+			    SWITCH (
+			        MOD ( _rank - 1, 3 ),
+			        0, "#EC3026",
+			        1, "#2983D6",
+			        "#259F13"
+			    )
+		lineageTag: 09dcedcd-1688-40eb-9b07-dd64b3d9ec98
 
 	column Value
 		formatString: 0

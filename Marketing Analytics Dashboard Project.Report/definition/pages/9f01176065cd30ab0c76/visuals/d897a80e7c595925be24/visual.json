@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "d897a80e7c595925be24",
   "position": {
-    "x": 0,
-    "y": 181.32965136347946,
-    "z": 3000,
-    "height": 206.77942699344146,
-    "width": 671.23783224024851,
-    "tabOrder": 3000
+    "x": 9.9933013975858671,
+    "y": 0,
+    "z": 5000,
+    "height": 186.20140059242661,
+    "width": 670.78819670389839
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,8 +26,8 @@
                 }
               },
               "queryRef": "_Measures.Top Count",
-              "nativeQueryRef": "Top Performer",
-              "displayName": "Top Performer"
+              "nativeQueryRef": "Top Performers",
+              "displayName": "Top Performers"
             }
           ]
         }
@@ -444,7 +443,7 @@
             "rectangleRoundedCurve": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "30L"
                 }
               }
             }
@@ -507,7 +506,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -609,39 +608,68 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "imageType": {
               "expr": {
                 "Literal": {
-                  "Value": "'imageData'"
-                }
-              }
-            },
-            "imageData": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Top Bar"
+                  "Value": "'image'"
                 }
               }
             },
             "imageDataFit": {
               "expr": {
                 "Literal": {
-                  "Value": "'Normal'"
+                  "Value": "'Fit'"
+                }
+              }
+            },
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Trophy_icon.svg'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "Trophy_icon14949112983877444.svg"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Fit'"
+                    }
+                  }
                 }
               }
             }
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Top Count"
           }
         }
       ],
@@ -659,6 +687,13 @@
               "expr": {
                 "Literal": {
                   "Value": "8L"
+                }
+              }
+            },
+            "contentOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "'image_callout_referenceLabel'"
                 }
               }
             }
@@ -759,5 +794,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "feb9f941c2dd4ec438c9"
 }

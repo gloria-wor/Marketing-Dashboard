@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "15ff0a5a57477543785b",
   "position": {
-    "x": 944.82292026234029,
-    "y": 181.32965136347946,
-    "z": 4001,
-    "height": 206.77942699344146,
-    "width": 671.23783224024851,
-    "tabOrder": 4001
+    "x": 15,
+    "y": 0,
+    "z": 6000,
+    "height": 187.72727272727272,
+    "width": 671
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,7 +26,8 @@
                 }
               },
               "queryRef": "_Measures.Steady Count",
-              "nativeQueryRef": "Steady Count"
+              "nativeQueryRef": "Steady Performers",
+              "displayName": "Steady Performers"
             }
           ]
         }
@@ -301,7 +301,7 @@
             "rectangleRoundedCurve": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "30L"
                 }
               }
             },
@@ -324,7 +324,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -335,7 +335,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "83D"
                 }
               }
             },
@@ -478,6 +478,13 @@
                   "Value": "8L"
                 }
               }
+            },
+            "contentOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "'image_callout_referenceLabel'"
+                }
+              }
             }
           }
         }
@@ -608,5 +615,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "c50a1bc434cbb82bd473"
 }
