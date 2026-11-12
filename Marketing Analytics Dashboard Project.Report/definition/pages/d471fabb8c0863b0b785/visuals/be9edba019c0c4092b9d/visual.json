@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "7b5028dc97d345413761",
+  "name": "be9edba019c0c4092b9d",
   "position": {
-    "x": 27.41664568983272,
-    "y": 16.871781962973984,
-    "z": 2000,
+    "x": 23.198700199089224,
+    "y": 18.980754708345728,
+    "z": 19000,
     "height": 50.615345888921944,
-    "width": 569.42264125037184,
-    "tabOrder": 0
+    "width": 691.7430604819333,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "textbox",
@@ -22,7 +22,7 @@
                     "value": "MARKETING ADS ANALYTICS",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "24pt",
+                      "fontSize": "28pt",
                       "color": "#ffffff"
                     }
                   }

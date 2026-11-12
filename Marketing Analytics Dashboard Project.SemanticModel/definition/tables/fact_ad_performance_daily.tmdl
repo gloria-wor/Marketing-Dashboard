@@ -68,9 +68,11 @@ table fact_ad_performance_daily
 		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
 
 	measure 'Total Revenue' = SUM('fact_ad_performance_daily'[conversion_value_kes])
-		formatString: #,0
+		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
 		displayFolder: Main measures
 		lineageTag: 0077606f-812b-4db7-97c2-f0169930a5ff
+
+		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
 
 	measure 'Total Impressions' = SUM('fact_ad_performance_daily'[impressions])
 		formatString: #,0
