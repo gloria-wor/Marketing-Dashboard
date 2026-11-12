@@ -3,11 +3,11 @@
   "name": "94f88cb0ed1000470374",
   "position": {
     "x": 0,
-    "y": 288.89677109316005,
+    "y": 281.70230604268681,
     "z": 2000,
-    "height": 92.7948007963569,
-    "width": 648.84705918099212,
-    "tabOrder": 3000
+    "height": 80.12396652468037,
+    "width": 649.12750413375761,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Every campaign scored and ranked, so winners and underperformers stand out.",
+                    "value": "Rank campaign results and quickly spot the strongest opportunities.",
                     "textStyle": {
-                      "fontSize": "20pt",
+                      "fontSize": "18pt",
                       "color": "#5b6086"
                     }
                   }

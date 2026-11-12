@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "1a8a3cbf419a09dd3670",
   "position": {
-    "x": 0,
-    "y": 644,
+    "x": 315.37286646165393,
+    "y": 1144.3351558778068,
     "z": 5000,
-    "height": 104,
-    "width": 650,
-    "tabOrder": 5000
+    "height": 67.487127851895934,
+    "width": 411.24968534749081,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "actionButton",
@@ -46,14 +46,14 @@
             "rightMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "60L"
+                  "Value": "42L"
                 }
               }
             },
             "iconSize": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "24D"
                 }
               }
             }
@@ -107,7 +107,7 @@
             "roundEdge": {
               "expr": {
                 "Literal": {
-                  "Value": "28L"
+                  "Value": "20L"
                 }
               }
             }
@@ -134,14 +134,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Open page'"
+                  "Value": "'View Executive Summary'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "20D"
                 }
               }
             },
@@ -174,7 +174,7 @@
             "leftMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "18L"
                 }
               }
             }
@@ -188,7 +188,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Open page'"
+                  "Value": "'View Executive Summary'"
                 }
               }
             },
@@ -237,6 +237,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "1a8bfcd95668500cc071",
   "howCreated": "InsertVisualButton"
 }

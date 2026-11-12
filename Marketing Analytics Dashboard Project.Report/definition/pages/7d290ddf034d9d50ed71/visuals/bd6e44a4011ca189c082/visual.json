@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "bd6e44a4011ca189c082",
   "position": {
-    "x": 120.21144648618962,
-    "y": 411.24968534749081,
+    "x": 183.48062884734205,
+    "y": 463.97400398178451,
     "z": 4000,
-    "height": 94.903773541728654,
-    "width": 1299.1272111489966,
+    "height": 115.99350099544613,
+    "width": 1577.5116135380672,
     "tabOrder": 4000
   },
   "visual": {
@@ -19,9 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Start with the executive picture, compare every channel, then go campaign by campaign. Choose a page to begin.",
+                    "value": "Unified cross-platform analytics for monitoring spend efficiency, campaign performance, return on ad spend (ROAS), and budget allocation across your entire paid media portfolio.",
                     "textStyle": {
-                      "fontSize": "24pt",
+                      "fontSize": "20pt",
                       "color": "#5b6086"
                     }
                   }

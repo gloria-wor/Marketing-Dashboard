@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "00ea1440d236ddc39e0b",
   "position": {
-    "x": 120.21144648618962,
+    "x": 160.28192864825283,
     "y": 156.06398315750934,
     "z": 1000,
-    "height": 255.18570218998147,
-    "width": 1136.7363097553721,
+    "height": 261.5126204260967,
+    "width": 1062.9222636673608,
     "tabOrder": 1000
   },
   "visual": {
@@ -21,20 +21,23 @@
                   {
                     "value": "Marketing performance",
                     "textStyle": {
-                      "fontSize": "72pt",
+                      "fontWeight": "bold",
+                      "fontSize": "66pt",
                       "color": "#14163b"
                     }
                   },
                   {
                     "value": ", ",
                     "textStyle": {
-                      "fontSize": "72pt"
+                      "fontWeight": "bold",
+                      "fontSize": "66pt"
                     }
                   },
                   {
                     "value": "in three views.",
                     "textStyle": {
-                      "fontSize": "72pt",
+                      "fontWeight": "bold",
+                      "fontSize": "66pt",
                       "color": "#6c47ff"
                     }
                   }

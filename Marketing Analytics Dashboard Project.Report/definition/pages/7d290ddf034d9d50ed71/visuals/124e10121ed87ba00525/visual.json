@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "124e10121ed87ba00525",
   "position": {
-    "x": 0,
-    "y": 644.72263613721134,
+    "x": 94.90377354172864,
+    "y": 444.5467618712039,
     "z": 5000,
-    "height": 104.11669900352481,
-    "width": 650.44632672755688,
+    "height": 73.814046088011168,
+    "width": 415.4676308382343,
     "tabOrder": 0
   },
   "visual": {
@@ -46,14 +46,14 @@
             "rightMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "60L"
+                  "Value": "42L"
                 }
               }
             },
             "iconSize": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "24D"
                 }
               }
             }
@@ -107,7 +107,7 @@
             "roundEdge": {
               "expr": {
                 "Literal": {
-                  "Value": "28L"
+                  "Value": "20L"
                 }
               }
             }
@@ -134,14 +134,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Open page'"
+                  "Value": "'Compare Channels'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "20D"
                 }
               }
             },
@@ -174,7 +174,7 @@
             "leftMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "18L"
                 }
               }
             }
@@ -188,7 +188,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Open page'"
+                  "Value": "'Compare Channels'"
                 }
               }
             },
@@ -227,7 +227,7 @@
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'d471fabb8c0863b0b785'"
+                  "Value": "'56cb9d8c5d46174634ce'"
                 }
               }
             }

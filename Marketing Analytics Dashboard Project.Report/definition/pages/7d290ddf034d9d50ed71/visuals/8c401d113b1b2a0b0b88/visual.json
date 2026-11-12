@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "8c401d113b1b2a0b0b88",
   "position": {
-    "x": 0.7178196297398074,
-    "y": 288.89677109316005,
+    "x": 0.74213733613147337,
+    "y": 259.42679135260329,
     "z": 2000,
-    "height": 92.7948007963569,
-    "width": 649.5636055744983,
-    "tabOrder": 2000
+    "height": 83.328925185667572,
+    "width": 671.56899019848561,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "The headline view of spend, revenue and return, measured against budget.",
+                    "value": "Track spend, revenue, return and budget pacing at a glance.",
                     "textStyle": {
-                      "fontSize": "20pt",
+                      "fontSize": "18pt",
                       "color": "#5b6086"
                     }
                   }
