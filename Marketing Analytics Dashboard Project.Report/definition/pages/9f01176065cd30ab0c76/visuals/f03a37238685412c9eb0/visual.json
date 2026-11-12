@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 903.467034863652,
-    "z": 4006,
+    "z": 8000,
     "height": 537.62651018294787,
     "width": 2560.8836727649291,
-    "tabOrder": 4006
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "tableEx",
@@ -143,10 +143,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "fact_campaign_budget_daily"
+                    "Entity": "fact_ad_performance_daily"
                   }
                 },
-                "Property": "Total Campaign Spend"
+                "Property": "Total Revenue"
               }
             },
             "direction": "Descending"
@@ -178,13 +178,6 @@
                   "Value": "20D"
                 }
               }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
-                }
-              }
             }
           }
         }
@@ -195,7 +188,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "755.9933971254495D"
+                  "Value": "612.7873121935995D"
                 }
               }
             }
@@ -251,7 +244,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "268.39573634124D"
+                  "Value": "188.76423611185342D"
                 }
               }
             }
@@ -317,18 +310,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Left'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
                 }
               }
             }
@@ -486,19 +467,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'None'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
                 }
               }
             }

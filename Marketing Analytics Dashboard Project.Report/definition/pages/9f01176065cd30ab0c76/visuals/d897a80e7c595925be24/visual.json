@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 181.32965136347946,
-    "z": 3000,
+    "z": 2000,
     "height": 206.77942699344146,
     "width": 671.23783224024851,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "_Measures.Top Count",
-              "nativeQueryRef": "Top Performers",
-              "displayName": "Top Performers"
+              "nativeQueryRef": "Top Performer",
+              "displayName": "Top Performer"
             }
           ]
         }
@@ -444,7 +444,7 @@
             "rectangleRoundedCurve": {
               "expr": {
                 "Literal": {
-                  "Value": "30L"
+                  "Value": "0L"
                 }
               }
             }
@@ -507,7 +507,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -609,68 +609,39 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "imageType": {
               "expr": {
                 "Literal": {
-                  "Value": "'image'"
+                  "Value": "'imageData'"
+                }
+              }
+            },
+            "imageData": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Top Bar"
                 }
               }
             },
             "imageDataFit": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fit'"
-                }
-              }
-            },
-            "image": {
-              "image": {
-                "name": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'Trophy_icon.svg'"
-                    }
-                  }
-                },
-                "url": {
-                  "expr": {
-                    "ResourcePackageItem": {
-                      "PackageName": "RegisteredResources",
-                      "PackageType": 1,
-                      "ItemName": "Trophy_icon14949112983877444.svg"
-                    }
-                  }
-                },
-                "scaling": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'Fit'"
-                    }
-                  }
+                  "Value": "'Normal'"
                 }
               }
             }
           },
           "selector": {
             "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Top Count"
           }
         }
       ],
@@ -688,13 +659,6 @@
               "expr": {
                 "Literal": {
                   "Value": "8L"
-                }
-              }
-            },
-            "contentOrder": {
-              "expr": {
-                "Literal": {
-                  "Value": "'image_callout_referenceLabel'"
                 }
               }
             }
@@ -795,6 +759,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "feb9f941c2dd4ec438c9"
+  }
 }

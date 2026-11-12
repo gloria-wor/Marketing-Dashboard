@@ -5,8 +5,8 @@
     "x": 2008.9416637901279,
     "y": 248.1353123921298,
     "z": 17000,
-    "height": 935.27925440110459,
-    "width": 1832.3838453572662,
+    "height": 978.22575077666545,
+    "width": 1832.383845357266,
     "tabOrder": 12000
   },
   "visual": {
@@ -373,7 +373,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "0D"
                 }
               }
             }
@@ -420,7 +420,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -438,7 +438,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "8D"
                 }
               }
             },

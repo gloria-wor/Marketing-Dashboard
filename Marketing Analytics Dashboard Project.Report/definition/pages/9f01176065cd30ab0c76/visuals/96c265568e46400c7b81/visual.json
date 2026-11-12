@@ -4,10 +4,10 @@
   "position": {
     "x": 1888.7621677597515,
     "y": 181.32965136347946,
-    "z": 4002,
+    "z": 4000,
     "height": 206.77942699344146,
     "width": 671.23783224024851,
-    "tabOrder": 4002
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Underperforming Count"
+                  "Property": "Steady Count"
                 }
               },
-              "queryRef": "_Measures.Underperforming Count",
-              "nativeQueryRef": "Underperformers ",
-              "displayName": "Underperformers "
+              "queryRef": "_Measures.Steady Count",
+              "nativeQueryRef": "Steady Count"
             }
           ]
         }
@@ -43,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Underperforming Count"
+                "Property": "Steady Count"
               }
             },
             "direction": "Descending"
@@ -201,7 +200,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Underperforming Label"
+                  "Property": "Steady Label"
                 }
               }
             }
@@ -214,8 +213,8 @@
                 }
               }
             ],
-            "metadata": "_Measures.Underperforming Count",
-            "id": "field-fd9c7814-f31a-eb92-715b-0f05efee7c9a",
+            "metadata": "_Measures.Steady Count",
+            "id": "field-9c1e2332-c7ab-e7a4-74b7-477ee3fbe91e",
             "order": 0
           }
         }
@@ -302,7 +301,7 @@
             "rectangleRoundedCurve": {
               "expr": {
                 "Literal": {
-                  "Value": "30L"
+                  "Value": "0L"
                 }
               }
             },
@@ -336,7 +335,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "83D"
+                  "Value": "0D"
                 }
               }
             },
@@ -396,13 +395,6 @@
                 }
               }
             },
-            "padding": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
             "imageData": {
               "expr": {
                 "Measure": {
@@ -411,7 +403,14 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Underperforming Bar"
+                  "Property": "Steady Bar"
+                }
+              }
+            },
+            "padding": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
                 }
               }
             }
@@ -511,7 +510,7 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Underperforming Count"
+            "metadata": "_Measures.Steady Count"
           }
         }
       ],
@@ -527,7 +526,7 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Underperforming Count"
+            "metadata": "_Measures.Steady Count"
           }
         }
       ]
@@ -609,6 +608,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "619c5931d0466e7603c1"
+  }
 }
