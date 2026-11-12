@@ -3,9 +3,9 @@
   "name": "2aec1eee10213789b400",
   "position": {
     "x": 9.9797884568849184,
-    "y": 5.8145495320259215,
+    "y": 6.6493115935543949,
     "z": 7000,
-    "height": 414,
+    "height": 473.43564356435638,
     "width": 1321.963993453355,
     "tabOrder": 0
   },
@@ -23,12 +23,13 @@
                       "Entity": "dim_date"
                     }
                   },
-                  "Property": "year_month"
+                  "Property": "month_start_date"
                 }
               },
-              "queryRef": "dim_date.year_month",
-              "nativeQueryRef": "Month Short Year",
-              "active": true
+              "queryRef": "dim_date.month_start_date",
+              "nativeQueryRef": "Month",
+              "active": true,
+              "displayName": "Month"
             }
           ]
         },
@@ -39,14 +40,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
-                  "Property": "Rolling 12M Spend Chart"
+                  "Property": "Total Spend"
                 }
               },
-              "queryRef": "_Measures.Rolling 12M Spend Chart",
-              "nativeQueryRef": "Spend",
+              "queryRef": "fact_ad_performance_daily.Total Spend",
+              "nativeQueryRef": "Total Spend",
               "displayName": "Spend"
             },
             {
@@ -54,14 +55,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
-                  "Property": "Rolling 12M Revenue Chart"
+                  "Property": "Total Revenue"
                 }
               },
-              "queryRef": "_Measures.Rolling 12M Revenue Chart",
-              "nativeQueryRef": "Revenue",
+              "queryRef": "fact_ad_performance_daily.Total Revenue",
+              "nativeQueryRef": "Total Revenue",
               "displayName": "Revenue"
             }
           ]
@@ -71,13 +72,13 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Measures"
+                    "Entity": "dim_date"
                   }
                 },
-                "Property": "Rolling 12M Spend Chart"
+                "Property": "month_start_date"
               }
             },
             "direction": "Ascending"
@@ -117,7 +118,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "16D"
                 }
               }
             },
@@ -132,6 +133,20 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Month'"
                 }
               }
             }
@@ -217,7 +232,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "16D"
                 }
               }
             },
@@ -225,6 +240,20 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Amount (KES)'"
                 }
               }
             }
@@ -263,7 +292,7 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Rolling 12M Spend Chart"
+            "metadata": "fact_ad_performance_daily.Total Spend"
           }
         },
         {
@@ -271,7 +300,7 @@
             "showMarker": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -295,7 +324,7 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Rolling 12M Revenue Chart"
+            "metadata": "fact_ad_performance_daily.Total Revenue"
           }
         }
       ],
@@ -341,7 +370,7 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Rolling 12M Spend Chart"
+            "metadata": "fact_ad_performance_daily.Total Spend"
           }
         },
         {
@@ -359,7 +388,7 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Rolling 12M Revenue Chart"
+            "metadata": "fact_ad_performance_daily.Total Revenue"
           }
         }
       ],
@@ -406,6 +435,13 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "text": {
               "expr": {
                 "Measure": {

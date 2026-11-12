@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ff3448f5bd070ad5e160",
   "position": {
-    "x": 480,
-    "y": 15,
-    "z": 16000,
-    "height": 118,
+    "x": 0,
+    "y": 7.4246173278174767,
+    "z": 22000,
+    "height": 103.85445314610166,
     "width": 155,
-    "tabOrder": 16000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -80,9 +80,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -92,6 +91,18 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -113,7 +124,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
+                      "ColorId": 0,
                       "Percent": 0
                     }
                   }
@@ -128,6 +139,11 @@
               }
             }
           }
+        }
+      ],
+      "selectionIcon": [
+        {
+          "properties": {}
         }
       ]
     },
@@ -200,5 +216,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "fb872799ac7b13006acb"
+  "parentGroupName": "8c414880bdcc8ada22e8"
 }

@@ -6,6 +6,9 @@ table PeriodTable
 		lineageTag: 0d194375-5915-40db-8841-65a0b946c2c5
 		summarizeBy: none
 		sourceColumn: PeriodName
+		sortByColumn: PeriodID
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -15,9 +18,6 @@ table PeriodTable
 		lineageTag: 1500de1b-b977-43bd-8f20-91fdfd59ded1
 		summarizeBy: sum
 		sourceColumn: PeriodID
-		sortByColumn: PeriodName
-
-		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

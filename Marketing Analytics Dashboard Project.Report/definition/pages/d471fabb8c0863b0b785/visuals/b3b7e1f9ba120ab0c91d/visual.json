@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "b3b7e1f9ba120ab0c91d",
   "position": {
-    "x": 1760.9922423854093,
-    "y": 1010.1979450330672,
-    "z": 12000,
-    "height": 409.14071260211904,
-    "width": 744.467379116227,
-    "tabOrder": 10000
+    "x": 1782.0819698391269,
+    "y": 906.85828050985151,
+    "z": 6000,
+    "height": 512.48037712533471,
+    "width": 723.37765166250949,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -211,7 +211,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             },
@@ -250,7 +250,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "13D"
                 }
               }
             },
@@ -387,6 +387,13 @@
                   "Value": "10D"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
             }
           }
         }
@@ -471,6 +478,47 @@
       ]
     },
     "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Current vs Prior Year Performance'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
       "visualHeader": [
         {
           "properties": {
