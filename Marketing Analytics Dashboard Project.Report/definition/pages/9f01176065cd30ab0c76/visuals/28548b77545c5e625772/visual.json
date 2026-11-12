@@ -4,8 +4,8 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 4000,
-    "height": 171.78598550224368,
+    "z": 1000,
+    "height": 181.32965136347946,
     "width": 2560.8836727649291,
     "tabOrder": 1000
   },
@@ -35,33 +35,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "fill": [
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#12239e'"
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ]

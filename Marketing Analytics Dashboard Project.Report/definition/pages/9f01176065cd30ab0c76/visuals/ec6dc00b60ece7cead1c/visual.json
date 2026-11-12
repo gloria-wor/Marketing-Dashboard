@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ec6dc00b60ece7cead1c",
   "position": {
-    "x": 28.630997583707281,
-    "y": 384.92785640317567,
-    "z": 3000,
+    "x": 0,
+    "y": 388.10907835692092,
+    "z": 0,
     "height": 493.0894028305143,
-    "width": 1196.1394546082154,
+    "width": 1132.5150155333101,
     "tabOrder": 0
   },
   "visual": {
@@ -89,54 +89,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dataPoint": [
-        {
-          "properties": {}
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Bar Color"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "gridlineShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "15D"
                 }
               }
             }
@@ -165,7 +118,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "24D"
                 }
               }
             },
@@ -191,19 +144,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
                 }
               }
             }

@@ -4,10 +4,10 @@
   "position": {
     "x": 944.82292026234029,
     "y": 181.32965136347946,
-    "z": 4001,
+    "z": 3000,
     "height": 206.77942699344146,
     "width": 671.23783224024851,
-    "tabOrder": 4001
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,8 +27,7 @@
                 }
               },
               "queryRef": "_Measures.Steady Count",
-              "nativeQueryRef": "Steady Performers",
-              "displayName": "Steady Performers"
+              "nativeQueryRef": "Steady Count"
             }
           ]
         }
@@ -302,7 +301,7 @@
             "rectangleRoundedCurve": {
               "expr": {
                 "Literal": {
-                  "Value": "30L"
+                  "Value": "0L"
                 }
               }
             },
@@ -325,7 +324,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -336,7 +335,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "83D"
+                  "Value": "0D"
                 }
               }
             },
@@ -479,13 +478,6 @@
                   "Value": "8L"
                 }
               }
-            },
-            "contentOrder": {
-              "expr": {
-                "Literal": {
-                  "Value": "'image_callout_referenceLabel'"
-                }
-              }
             }
           }
         }
@@ -616,6 +608,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "c50a1bc434cbb82bd473"
+  }
 }

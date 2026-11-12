@@ -50,17 +50,6 @@
           "type": "BaseTheme"
         }
       ]
-    },
-    {
-      "name": "RegisteredResources",
-      "type": "RegisteredResources",
-      "items": [
-        {
-          "name": "Trophy_icon14949112983877444.svg",
-          "path": "Trophy_icon14949112983877444.svg",
-          "type": "Image"
-        }
-      ]
     }
   ],
   "settings": {
