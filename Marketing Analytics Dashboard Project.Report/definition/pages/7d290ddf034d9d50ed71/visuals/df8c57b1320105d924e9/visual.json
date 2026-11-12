@@ -21,7 +21,8 @@
                   {
                     "value": "MARKETING ADS ANALYTICS",
                     "textStyle": {
-                      "fontSize": "20pt",
+                      "fontWeight": "bold",
+                      "fontSize": "28pt",
                       "color": "#6c47ff"
                     }
                   }

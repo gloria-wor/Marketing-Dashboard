@@ -1778,6 +1778,51 @@ table _Measures
 
 		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
 
+	measure 'Underperforming Count' =
+						
+			COUNTROWS (
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] )
+			)
+		formatString: 0
+		lineageTag: 87a6cf13-98db-4353-bf99-a81f1f5112a6
+
+	measure 'Underperforming Spend' =
+						
+			SUMX (
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] ),
+			    [Total Campaign Spend]
+			)
+					lineageTag: db261eb0-92ad-4270-ba9b-e1d03c76c37a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Underperforming Share' = DIVIDE ( [Underperforming Spend], [Total Campaign Spend] )
+		lineageTag: 599bbcf7-1741-46ed-8866-4a091eb96f7d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Underperforming Bar' =
+						
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
+			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
+			"<rect width='" & ROUND ( 300 * [Underperforming Share], 0 ) & "' height='8' rx='4' fill='#EF4444'/></svg>"
+		lineageTag: 965a5772-d9b1-485f-bd57-46ec0449f2a4
+
+	measure 'Bar Color' =
+						
+			VAR _rank =
+			    RANKX (
+			        ALLSELECTED ( dim_campaign[campaign_name (groups)] ),
+			        [Total Revenue],
+			        ,
+			        DESC,
+			        DENSE
+			    )
+			RETURN
+			    spendText & " spend · " & FORMAT ( [Steady Share], "0%" ) & " of budget"
+		lineageTag: 5d442c5a-e650-4be6-a0e3-7c2d3f0bfa81
+
 	column Value
 		formatString: 0
 		lineageTag: 77acfa64-3739-4565-87a6-5b1c67a34a52
@@ -1792,4 +1837,3 @@ table _Measures
 		source = {BLANK()}
 
 	annotation PBI_Id = 41f82e12b56547e5b6346afb16d41b07
-
