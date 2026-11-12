@@ -744,19 +744,19 @@ table _Measures
 			
 			// The SVG (Platform name removed, bar shifted to start at x='0')
 			VAR _SVG = 
-			"<svg xmlns='http://www.w3.org/2000/svg' width='500' height='40' viewBox='0 0 500 40'>
+			"<svg xmlns='http://www.w3.org/2000/svg' width='500' height='48' viewBox='0 0 500 48'>
 			    
 			    <!-- Background track -->
-			    <rect x='0' y='15' width='250' height='8' rx='4' fill='#F3F4F6' />
+			    <rect x='0' y='19' width='250' height='12' rx='6' fill='#F3F4F6' />
 			    
 			    <!-- Filled track -->
-			    <rect x='0' y='15' width='" & _FillWidth & "' height='8' rx='4' fill='" & _Color & "' />
+			    <rect x='0' y='19' width='" & _FillWidth & "' height='12' rx='6' fill='" & _Color & "' />
 			    
 			    <!-- Spent / Budget Text -->
-			    <text x='260' y='23' font-family='Segoe UI, sans-serif' font-size='12' fill='#6B7280'>" & _SpentFormatted & " / " & _BudgetFormatted & "</text>
+			    <text x='260' y='34' font-family='Segoe UI, sans-serif' font-size='17' fill='#4B5563'>" & _SpentFormatted & " / " & _BudgetFormatted & "</text>
 			    
 			    <!-- Percentage Text -->
-			    <text x='480' y='23' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='13' font-weight='bold' fill='#111827'>" & _PercText & "</text>
+			    <text x='480' y='34' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='15' font-weight='bold' fill='#111827'>" & _PercText & "</text>
 			</svg>"
 			RETURN "data:image/svg+xml;utf8," & _SVG
 			```
@@ -827,18 +827,11 @@ table _Measures
 		displayFolder: Filters
 		lineageTag: e2eea146-c678-44a6-9ae8-399a37ee6987
 
-	measure 'Chart Subtitle' =
-			
-			VAR DateLast = MAX('dim_date'[full_date])
-			VAR FormattedDate = FORMAT(DateLast, "MMM YYYY")
-			RETURN "Rolling 12 months to " & FormattedDate
+	measure 'Chart Subtitle' = "Actual monthly totals in KES; period follows the selected date filters"
 		displayFolder: Filters
 		lineageTag: c92fa549-c1a4-4c65-aecb-9897387a18df
 
-	measure 'Chart Title' =
-			
-			VAR SelectedYear = SELECTEDVALUE('dim_date'[Year], "All Years")
-			RETURN "Spend & Revenue Trend — YTD " & SelectedYear
+	measure 'Chart Title' = "Monthly Advertising Spend and Revenue"
 		displayFolder: Filters
 		lineageTag: 1b0e656b-4a10-4ab4-bc90-b61694922d1d
 
@@ -861,38 +854,6 @@ table _Measures
 			```
 		displayFolder: Filters
 		lineageTag: 042e86ab-c902-4282-b299-71d2d8c8818a
-
-	measure 'Rolling 12M Revenue Chart' =
-			
-			VAR CurrentDate = EOMONTH(MAX('dim_date'[full_date]), 0) // Finds the END of the month
-			VAR StartDate = EDATE(CurrentDate, -11)
-			VAR StartMonth = DATE(YEAR(StartDate), MONTH(StartDate), 1)
-			
-			RETURN
-			CALCULATE(
-			    [Total Revenue],
-			    'dim_date'[full_date] >= StartMonth && 'dim_date'[full_date] <= CurrentDate
-			)
-		displayFolder: Filters
-		lineageTag: 771d7803-3b58-4244-ae38-82900d6db451
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Rolling 12M Spend Chart' =
-			
-			VAR CurrentDate = EOMONTH(MAX('dim_date'[full_date]), 0) // Finds the END of the month
-			VAR StartDate = EDATE(CurrentDate, -11)
-			VAR StartMonth = DATE(YEAR(StartDate), MONTH(StartDate), 1)
-			
-			RETURN
-			CALCULATE(
-			    [Total Spend],
-			    'dim_date'[full_date] >= StartMonth && 'dim_date'[full_date] <= CurrentDate
-			)
-		displayFolder: Filters
-		lineageTag: 6da1f3c4-59ce-4af9-a7f6-2a307629ec8f
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Selected Period Value' =
 			
@@ -1732,7 +1693,7 @@ table _Measures
 		lineageTag: 2f388cca-14d9-425f-ad17-0993a8c1f12c
 
 	measure 'Top Count' =
-
+			
 			COUNTROWS (
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] >= [Top Threshold] )
 			)
@@ -1740,12 +1701,12 @@ table _Measures
 		lineageTag: 1d1bb73a-4352-42da-948f-c8aa5bf54956
 
 	measure 'Top Spend' = ```
-
+			
 			SUMX (
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] >= [Top Threshold] ),
 			    [Total Campaign Spend]
 			)
-
+			
 			```
 		lineageTag: a05952b9-4c84-47e5-808e-6c6ce47964af
 
@@ -1763,7 +1724,7 @@ table _Measures
 		lineageTag: 4466463d-3afc-4a2b-9361-da54b2cfb062
 
 	measure 'Steady Spend' =
-
+			
 			SUMX (
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold]),
 			    [Total Campaign Spend]
@@ -1778,7 +1739,7 @@ table _Measures
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Top Label' =
-
+			
 			VAR s = [Top Spend]
 			VAR spendText =
 			    SWITCH (
@@ -1792,7 +1753,7 @@ table _Measures
 		lineageTag: 3b5ec194-8ea4-4f2d-a9fa-5314759f51bc
 
 	measure 'Top Bar' =
-
+			
 			"data:image/svg+xml;utf8," &
 			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
 			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
@@ -1801,7 +1762,7 @@ table _Measures
 		dataCategory: ImageUrl
 
 	measure 'Steady Label' =
-
+			
 			VAR s = [Steady Spend]
 			VAR spendText =
 			    SWITCH (
@@ -1815,7 +1776,7 @@ table _Measures
 		lineageTag: bb0aec2d-a23f-461c-a1fd-e4b2cd293b88
 
 	measure 'Steady Bar' =
-
+			
 			"data:image/svg+xml;utf8," &
 			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
 			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &

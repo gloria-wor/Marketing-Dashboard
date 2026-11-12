@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "a2f4cd4203b062541c0c",
   "position": {
-    "x": 1406.6848211629558,
-    "y": 523.02524085219341,
-    "z": 6000,
-    "height": 428.12146731046477,
-    "width": 542.00599556053919,
-    "tabOrder": 5000
+    "x": 8.1407245632465361,
+    "y": 8.7880057930439843,
+    "z": 4000,
+    "height": 472.40989496327148,
+    "width": 525.13421359756524,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "donutChart",
@@ -340,8 +340,22 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "5f027119c8922d43d443"
 }

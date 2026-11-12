@@ -2556,6 +2556,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "ad group key": {
@@ -2681,10 +2684,7 @@ cultureInfo en-US
 			            "Weight": 0.582
 			          }
 			        }
-			      ],
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      ]
 			    },
 			    "dim_ad.creative_type": {
 			      "Definition": {
@@ -3091,6 +3091,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "campaign key": {
@@ -3210,10 +3213,7 @@ cultureInfo en-US
 			            "Weight": 0.475
 			          }
 			        }
-			      ],
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      ]
 			    },
 			    "dim_ad_group.ad_group_name": {
 			      "Definition": {
@@ -3594,6 +3594,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "account key": {
@@ -3713,10 +3716,7 @@ cultureInfo en-US
 			            "Weight": 0.475
 			          }
 			        }
-			      ],
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      ]
 			    },
 			    "dim_campaign.source_campaign_id": {
 			      "Definition": {
@@ -3726,6 +3726,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "source campaign id": {
@@ -3851,10 +3854,7 @@ cultureInfo en-US
 			            "Weight": 0.5
 			          }
 			        }
-			      ],
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      ]
 			    },
 			    "dim_campaign.campaign_name": {
 			      "Definition": {
@@ -3915,6 +3915,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Campaign": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -4046,6 +4056,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.476
 			          }
+			        },
+			        {
+			          "Objective": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4057,6 +4077,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "first report date": {
@@ -4183,10 +4206,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.first_report_date.date_hierarchy": {
 			      "Definition": {
@@ -4198,6 +4218,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "first report date hierarchy": {
@@ -4217,10 +4240,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.first_report_date.year": {
 			      "Definition": {
@@ -4233,6 +4253,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "first report year": {
@@ -4368,10 +4391,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.first_report_date.quarter": {
 			      "Definition": {
@@ -4384,6 +4404,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "first report quarter": {
@@ -4519,10 +4542,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.first_report_date.month": {
 			      "Definition": {
@@ -4535,6 +4555,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "first report month": {
@@ -4670,10 +4693,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.first_report_date.day": {
 			      "Definition": {
@@ -4686,6 +4706,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "first report day": {
@@ -4821,10 +4844,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.last_report_date": {
 			      "Definition": {
@@ -4834,6 +4854,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "last report date": {
@@ -4960,10 +4983,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.last_report_date.date_hierarchy": {
 			      "Definition": {
@@ -4975,6 +4995,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "last report date hierarchy": {
@@ -4994,10 +5017,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.last_report_date.year": {
 			      "Definition": {
@@ -5010,6 +5030,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "last report year": {
@@ -5145,10 +5168,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.last_report_date.quarter": {
 			      "Definition": {
@@ -5161,6 +5181,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "last report quarter": {
@@ -5296,10 +5319,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.last_report_date.month": {
 			      "Definition": {
@@ -5312,6 +5332,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "last report month": {
@@ -5447,10 +5470,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.last_report_date.day": {
 			      "Definition": {
@@ -5463,6 +5483,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "last report day": {
@@ -5598,10 +5621,7 @@ cultureInfo en-US
 			          }
 			        }
 			      ],
-			      "SemanticType": "Time",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      }
+			      "SemanticType": "Time"
 			    },
 			    "dim_campaign.campaign_name_groups": {
 			      "Definition": {
@@ -7224,6 +7244,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "Month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -12883,6 +12913,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
+			        },
+			        {
+			          "Spend": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -14414,6 +14454,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Campaign Spend": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -17875,19 +17925,7 @@ cultureInfo en-US
 			          "ConceptualProperty": "Avg Cost"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Avg Cost /  Acquisition": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    },
 			    "gold_dim_platform.platform_name": {
 			      "Definition": {
@@ -17896,19 +17934,7 @@ cultureInfo en-US
 			          "ConceptualProperty": "platform_name"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Platform": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    },
 			    "table_measures.remaining_budget": {
 			      "Definition": {
@@ -17942,48 +17968,6 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "ROAS": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "table_measures.rolling_12m_spend_chart": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Rolling 12M Spend Chart"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Spend": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "table_measures.rolling_12m_revenue_chart": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Rolling 12M Revenue Chart"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Revenue": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

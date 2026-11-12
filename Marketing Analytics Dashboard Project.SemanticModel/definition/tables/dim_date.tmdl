@@ -117,7 +117,7 @@ table dim_date
 
 	column month_start_date
 		dataType: dateTime
-		formatString: Long Date
+		formatString: MMM yyyy
 		lineageTag: 84bbdd21-c77e-45a2-adec-426d97fe3537
 		summarizeBy: none
 		sourceColumn: month_start_date
