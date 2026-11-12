@@ -1819,41 +1819,6 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Steady Count' =
-			COUNTROWS (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold] ))
-		formatString: 0
-		lineageTag: 4466463d-3afc-4a2b-9361-da54b2cfb062
-
-	measure 'Steady Spend' =
-
-			SUMX (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold]),
-			    [Total Campaign Spend]
-			)
-		lineageTag: 918d2d13-6754-4e82-bfa0-1b3696fa2aeb
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Steady Share' = DIVIDE ( [Steady Spend], [Total Campaign Spend] )
-		lineageTag: d9caf538-6da8-400d-ab79-c2f1f5745706
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Top Label' =
-
-			VAR s = [Top Spend]
-			VAR spendText =
-			    SWITCH (
-			        TRUE (),
-			        s >= 1000000, FORMAT ( s / 1000000, "##0.0" ) & "M",
-			        s >= 1000, FORMAT ( s / 1000, "##0.0" ) & "K",
-			        FORMAT ( s, "##0" )
-			    )
-			RETURN
-			    spendText & " spend · " & FORMAT ( [Underperforming Share], "0%" ) & " of budget"
-		lineageTag: acce68c6-335b-4309-9419-1254b2202654
-
 	measure 'Underperforming Bar' =
 						
 			"data:image/svg+xml;utf8," &
@@ -1874,16 +1839,7 @@ table _Measures
 			    )
 			RETURN
 			    spendText & " spend · " & FORMAT ( [Steady Share], "0%" ) & " of budget"
-		lineageTag: bb0aec2d-a23f-461c-a1fd-e4b2cd293b88
-
-	measure 'Steady Bar' =
-
-			"data:image/svg+xml;utf8," &
-			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
-			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
-			"<rect width='" & ROUND ( 300 * [Steady Share], 0 ) & "' height='8' rx='4' fill='#10B981'/></svg>"
-		lineageTag: 85b51423-f350-4349-8266-88027a1cad64
-		dataCategory: ImageUrl
+		lineageTag: 5d442c5a-e650-4be6-a0e3-7c2d3f0bfa81
 
 	column Value
 		formatString: 0
@@ -1899,4 +1855,3 @@ table _Measures
 		source = {BLANK()}
 
 	annotation PBI_Id = 41f82e12b56547e5b6346afb16d41b07
-
