@@ -4,10 +4,10 @@
   "position": {
     "x": 120.93057586123687,
     "y": 1386.6318434088939,
-    "z": 18000,
+    "z": 17000,
     "height": 44.186171949298092,
     "width": 744.18815914607308,
-    "tabOrder": 15000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Marketing Ads Analytics",
+                    "value": "Built for cross-channel decisions",
                     "textStyle": {
-                      "fontSize": "18pt",
+                      "fontSize": "16pt",
                       "color": "#7a7fa6"
                     }
                   }

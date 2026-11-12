@@ -2,15 +2,16 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "b36d9889a85811163b4b",
   "position": {
-    "x": 983.3613193311561,
-    "y": 580,
+    "x": 0,
+    "y": 0,
     "z": 11000,
-    "height": 748.83933514073613,
-    "width": 651.16463925281414,
-    "tabOrder": 19000
+    "height": 518.36080795921509,
+    "width": 647.45463282912658,
+    "tabOrder": 1000
   },
   "visualGroup": {
     "displayName": "Group 2",
     "groupMode": "ScaleMode"
-  }
+  },
+  "parentGroupName": "2c31ff6a50b110be7966"
 }

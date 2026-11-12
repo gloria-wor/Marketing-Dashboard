@@ -3,11 +3,11 @@
   "name": "72eecb07061d2705cd30",
   "position": {
     "x": 0,
-    "y": 289.22094383650722,
+    "y": 265.12847907463851,
     "z": 2000,
-    "height": 92.898926380830147,
-    "width": 650.00963264898439,
-    "tabOrder": 3000
+    "height": 85.160330134803132,
+    "width": 647.01994730215426,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Meta, Google, and TikTok compared month by month on spend, mix and growth.",
+                    "value": "Compare Meta, Google and TikTok on spend, revenue and efficiency.",
                     "textStyle": {
-                      "fontSize": "20pt",
+                      "fontSize": "18pt",
                       "color": "#5b6086"
                     }
                   }
