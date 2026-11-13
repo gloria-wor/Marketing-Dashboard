@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "9f01176065cd30ab0c76",
-  "displayName": "Page 1",
+  "displayName": "Campaign Performance",
   "displayOption": "FitToPage",
   "height": 1440,
   "width": 2560

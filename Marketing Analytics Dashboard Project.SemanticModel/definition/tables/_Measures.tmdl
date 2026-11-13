@@ -1779,7 +1779,7 @@ table _Measures
 		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
 
 	measure 'Underperforming Count' =
-						
+			
 			COUNTROWS (
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] )
 			)
@@ -1787,12 +1787,13 @@ table _Measures
 		lineageTag: 87a6cf13-98db-4353-bf99-a81f1f5112a6
 
 	measure 'Underperforming Spend' =
-						
+			
 			SUMX (
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] ),
 			    [Total Campaign Spend]
 			)
 					lineageTag: db261eb0-92ad-4270-ba9b-e1d03c76c37a
+		lineageTag: d08a2228-8bda-4921-abc1-6c28722d3288
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -1802,7 +1803,7 @@ table _Measures
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Underperforming Bar' =
-						
+			
 			"data:image/svg+xml;utf8," &
 			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
 			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
@@ -1810,7 +1811,7 @@ table _Measures
 		lineageTag: 965a5772-d9b1-485f-bd57-46ec0449f2a4
 
 	measure 'Bar Color' =
-						
+			
 			VAR _rank =
 			    RANKX (
 			        ALLSELECTED ( dim_campaign[campaign_name (groups)] ),
@@ -1822,6 +1823,15 @@ table _Measures
 			RETURN
 			    spendText & " spend · " & FORMAT ( [Steady Share], "0%" ) & " of budget"
 		lineageTag: 5d442c5a-e650-4be6-a0e3-7c2d3f0bfa81
+
+	measure 'Steady Count' =
+			
+			COUNTROWS (
+			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold] )
+			)
+		formatString: 0
+		displayFolder: Budget Status
+		lineageTag: 0ec470f4-4533-4196-8a35-551c33031a5f
 
 	column Value
 		formatString: 0
@@ -1837,3 +1847,4 @@ table _Measures
 		source = {BLANK()}
 
 	annotation PBI_Id = 41f82e12b56547e5b6346afb16d41b07
+
