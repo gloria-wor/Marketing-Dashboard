@@ -765,7 +765,7 @@ table _Measures
 			"data:image/svg+xml;utf8," &
 			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
 			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
-			"<rect width='" & ROUND ( 300 * [Steady Share], 0 ) & "' height='8' rx='4' fill='#10B981'/></svg>"
+			"<rect width='" & ROUND ( 300 * [Steady Share], 0 ) & "' height='8' rx='4' fill='#F59E0B'/></svg>"
 		lineageTag: 85b51423-f350-4349-8266-88027a1cad64
 		dataCategory: ImageUrl
 
@@ -1786,13 +1786,14 @@ table _Measures
 		formatString: 0
 		lineageTag: 87a6cf13-98db-4353-bf99-a81f1f5112a6
 
-	measure 'Underperforming Spend' =
+	measure 'Underperforming Spend' = ```
 			
 			SUMX (
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] ),
 			    [Total Campaign Spend]
 			)
-					lineageTag: db261eb0-92ad-4270-ba9b-e1d03c76c37a
+			
+			```
 		lineageTag: d08a2228-8bda-4921-abc1-6c28722d3288
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1814,14 +1815,19 @@ table _Measures
 			
 			VAR _rank =
 			    RANKX (
-			        ALLSELECTED ( dim_campaign[campaign_name (groups)] ),
+			        ALLSELECTED ( dim_campaign[campaign_name (groups)]),
 			        [Total Revenue],
 			        ,
 			        DESC,
 			        DENSE
 			    )
 			RETURN
-			    spendText & " spend · " & FORMAT ( [Steady Share], "0%" ) & " of budget"
+			    SWITCH (
+			        MOD ( _rank - 1, 3 ),
+			        0, "#EC3026",
+			        1, "#2983D6",
+			        "#259F13"
+			    )
 		lineageTag: 5d442c5a-e650-4be6-a0e3-7c2d3f0bfa81
 
 	measure 'Steady Count' =
@@ -1832,6 +1838,20 @@ table _Measures
 		formatString: 0
 		displayFolder: Budget Status
 		lineageTag: 0ec470f4-4533-4196-8a35-551c33031a5f
+
+	measure 'Underperforming Label' =
+			
+			VAR s = [Underperforming Spend]
+			VAR spendText =
+			    SWITCH (
+			        TRUE (),
+			        s >= 1000000, FORMAT ( s / 1000000, "##0.0" ) & "M",
+			        s >= 1000, FORMAT ( s / 1000, "##0.0" ) & "K",
+			        FORMAT ( s, "##0" )
+			    )
+			RETURN
+			    spendText & " spend · " & FORMAT ( [Underperforming Share], "0%" ) & " of budget"
+		lineageTag: 02f33bf4-e15f-4be9-83ae-3a58d22e54d5
 
 	column Value
 		formatString: 0

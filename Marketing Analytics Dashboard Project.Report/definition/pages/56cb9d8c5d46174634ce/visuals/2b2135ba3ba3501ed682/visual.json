@@ -3,10 +3,10 @@
   "name": "2b2135ba3ba3501ed682",
   "position": {
     "x": 0,
-    "y": 1226.3610631687955,
+    "y": 833.48015188125646,
     "z": 11000,
-    "height": 935.27925440110459,
-    "width": 1994.6261649982741,
+    "height": 607.61339316534338,
+    "width": 1304.301001035554,
     "tabOrder": 11000
   },
   "visual": {
@@ -240,7 +240,7 @@
             "columnAdjustment": {
               "expr": {
                 "Literal": {
-                  "Value": "'growToFit'"
+                  "Value": "'fixedWidth'"
                 }
               }
             },
@@ -398,6 +398,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
                 }
               }
             }
