@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "96c265568e46400c7b81",
   "position": {
-    "x": 1888.7621677597515,
-    "y": 181.32965136347946,
+    "x": 10,
+    "y": 0,
     "z": 4000,
-    "height": 206.77942699344146,
-    "width": 671.23783224024851,
-    "tabOrder": 4000
+    "height": 194.0625,
+    "width": 666
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +22,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Steady Count"
+                  "Property": "Underperforming Count"
                 }
               },
-              "queryRef": "_Measures.Steady Count",
-              "nativeQueryRef": "Steady Count"
+              "queryRef": "_Measures.Underperforming Count",
+              "nativeQueryRef": "Underperforming Count"
             }
           ]
         }
@@ -42,7 +41,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Steady Count"
+                "Property": "Underperforming Count"
               }
             },
             "direction": "Descending"
@@ -81,7 +80,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "weight": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
                 }
               }
             }
@@ -200,7 +206,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Steady Label"
+                  "Property": "Underperforming Label"
                 }
               }
             }
@@ -213,8 +219,8 @@
                 }
               }
             ],
-            "metadata": "_Measures.Steady Count",
-            "id": "field-9c1e2332-c7ab-e7a4-74b7-477ee3fbe91e",
+            "metadata": "_Measures.Underperforming Count",
+            "id": "field-8f5b5e2a-c119-08f2-0ff9-23dea7621cc4",
             "order": 0
           }
         }
@@ -301,7 +307,7 @@
             "rectangleRoundedCurve": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "30L"
                 }
               }
             },
@@ -395,6 +401,13 @@
                 }
               }
             },
+            "padding": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
             "imageData": {
               "expr": {
                 "Measure": {
@@ -403,14 +416,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Steady Bar"
-                }
-              }
-            },
-            "padding": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
+                  "Property": "Underperforming Bar"
                 }
               }
             }
@@ -426,7 +432,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -434,18 +440,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'imageData'"
-                }
-              }
-            },
-            "imageData": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Top Bar"
                 }
               }
             },
@@ -459,6 +453,55 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "imageType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'image'"
+                }
+              }
+            },
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'warning_icon.svg'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "warning_icon7949657275577064.svg"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Normal'"
+                    }
+                  }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Underperforming Count",
+            "id": "interaction:default"
           }
         }
       ],
@@ -476,6 +519,13 @@
               "expr": {
                 "Literal": {
                   "Value": "8L"
+                }
+              }
+            },
+            "contentOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "'image_callout_referenceLabel'"
                 }
               }
             }
@@ -510,7 +560,7 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Steady Count"
+            "metadata": "_Measures.Underperforming Count"
           }
         }
       ],
@@ -526,7 +576,7 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Steady Count"
+            "metadata": "_Measures.Underperforming Count"
           }
         }
       ]
@@ -608,5 +658,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "f02b2158c5937d26587e"
 }

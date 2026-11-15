@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "d3fa56cb0d3d08c66558",
+  "position": {
+    "x": 30,
+    "y": 13.333333333333334,
+    "z": 7010,
+    "height": 130,
+    "width": 646.66666666666674,
+    "tabOrder": 8018
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "MARKETING ANALYTICS",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "28pt",
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "        CAMPAIGN PERFORMANCE",
+                    "textStyle": {
+                      "fontFamily": "Comic Sans MS",
+                      "fontSize": "20pt",
+                      "color": "#c7b8e7"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -50,6 +50,17 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "warning_icon7949657275577064.svg",
+          "path": "warning_icon7949657275577064.svg",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {
