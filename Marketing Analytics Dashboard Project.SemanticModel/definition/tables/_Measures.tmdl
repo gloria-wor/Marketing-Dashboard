@@ -634,6 +634,7 @@ table _Measures
 			    ISINSCOPE ( dim_platform[platform_name] ) && SELECTEDVALUE ( 'Matrix Cols'[Type] ) = "M",
 			    [Matrix Value]
 			)
+		displayFolder: matrix
 		lineageTag: 1e751388-6f42-468e-8e3f-8c33ae53f2b9
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -671,6 +672,7 @@ table _Measures
 		lineageTag: cdde0e62-118e-492e-99bb-5fe957e451da
 
 	measure 'Matrix Title' = "Revenue Performance Matrix: MTD " & YEAR ( [Latest Date] )
+		displayFolder: matrix
 		lineageTag: e2725e53-aef4-4e4a-ac93-9c19527e59af
 
 	measure 'Top threshold' = 5
@@ -689,6 +691,7 @@ table _Measures
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] >= [Top Threshold] )
 			)
 		formatString: 0
+		displayFolder: Budget Status
 		lineageTag: 1d1bb73a-4352-42da-948f-c8aa5bf54956
 
 	measure 'Top Spend' = ```
@@ -699,11 +702,13 @@ table _Measures
 			)
 			
 			```
+		displayFolder: Budget Status
 		lineageTag: a05952b9-4c84-47e5-808e-6c6ce47964af
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Top Share' = DIVIDE ( [Top Spend], [Total Campaign Spend] )
+		displayFolder: Budget Status
 		lineageTag: 6221981e-06eb-4ca5-aeb9-7f1b5aa9740c
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -714,11 +719,13 @@ table _Measures
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold]),
 			    [Total Campaign Spend]
 			)
+		displayFolder: Budget Status
 		lineageTag: 918d2d13-6754-4e82-bfa0-1b3696fa2aeb
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Steady Share' = DIVIDE ( [Steady Spend], [Total Campaign Spend] )
+		displayFolder: Budget Status
 		lineageTag: d9caf538-6da8-400d-ab79-c2f1f5745706
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -735,6 +742,7 @@ table _Measures
 			    )
 			RETURN
 			    spendText & " spend · " & FORMAT ( [Top Share], "0%" ) & " of budget"
+		displayFolder: Budget Status
 		lineageTag: 3b5ec194-8ea4-4f2d-a9fa-5314759f51bc
 
 	measure 'Top Bar' =
@@ -743,6 +751,7 @@ table _Measures
 			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
 			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
 			"<rect width='" & ROUND ( 300 * [Top Share], 0 ) & "' height='8' rx='4' fill='#10B981'/></svg>"
+		displayFolder: Budget Status
 		lineageTag: e39f916d-3c00-4667-bdb2-bd18e3c1f1c8
 		dataCategory: ImageUrl
 
@@ -758,6 +767,7 @@ table _Measures
 			    )
 			RETURN
 			    spendText & " spend · " & FORMAT ( [Steady Share], "0%" ) & " of budget"
+		displayFolder: Budget Status
 		lineageTag: bb0aec2d-a23f-461c-a1fd-e4b2cd293b88
 
 	measure 'Steady Bar' =
@@ -766,6 +776,7 @@ table _Measures
 			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
 			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
 			"<rect width='" & ROUND ( 300 * [Steady Share], 0 ) & "' height='8' rx='4' fill='#F59E0B'/></svg>"
+		displayFolder: Budget Status
 		lineageTag: 85b51423-f350-4349-8266-88027a1cad64
 		dataCategory: ImageUrl
 
@@ -1031,6 +1042,7 @@ table _Measures
 		dataCategory: ImageUrl
 
 	measure 'Last Refreshed' = FORMAT(MAX(RefreshLog[Refreshed]), "dd mmm yyyy · HH:mm") & " EAT"
+		displayFolder: matrix
 		lineageTag: 6cd916ff-c2b8-4f8c-8672-e1f4a78d3c8f
 
 	measure 'Conversions Change %' = ```
@@ -1784,6 +1796,7 @@ table _Measures
 			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] )
 			)
 		formatString: 0
+		displayFolder: Budget Status
 		lineageTag: 87a6cf13-98db-4353-bf99-a81f1f5112a6
 
 	measure 'Underperforming Spend' = ```
@@ -1794,11 +1807,13 @@ table _Measures
 			)
 			
 			```
+		displayFolder: Budget Status
 		lineageTag: d08a2228-8bda-4921-abc1-6c28722d3288
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Underperforming Share' = DIVIDE ( [Underperforming Spend], [Total Campaign Spend] )
+		displayFolder: Budget Status
 		lineageTag: 599bbcf7-1741-46ed-8866-4a091eb96f7d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1809,6 +1824,7 @@ table _Measures
 			"<svg xmlns='http://www.w3.org/2000/svg' width='300' height='8'>" &
 			"<rect width='300' height='8' rx='4' fill='#E5E7EB'/>" &
 			"<rect width='" & ROUND ( 300 * [Underperforming Share], 0 ) & "' height='8' rx='4' fill='#EF4444'/></svg>"
+		displayFolder: Budget Status
 		lineageTag: 965a5772-d9b1-485f-bd57-46ec0449f2a4
 
 	measure 'Bar Color' =
@@ -1851,6 +1867,7 @@ table _Measures
 			    )
 			RETURN
 			    spendText & " spend · " & FORMAT ( [Underperforming Share], "0%" ) & " of budget"
+		displayFolder: Budget Status
 		lineageTag: 02f33bf4-e15f-4be9-83ae-3a58d22e54d5
 
 	column Value
