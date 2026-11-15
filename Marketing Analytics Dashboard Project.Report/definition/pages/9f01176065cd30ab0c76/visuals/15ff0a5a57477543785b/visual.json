@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "15ff0a5a57477543785b",
   "position": {
-    "x": 10,
+    "x": 9.99014778325123,
     "y": 0,
     "z": 3000,
-    "height": 193,
-    "width": 666.66666666666674
+    "height": 192.99999999999997,
+    "width": 666.00985221674875
   },
   "visual": {
     "visualType": "cardVisual",
@@ -26,7 +26,8 @@
                 }
               },
               "queryRef": "_Measures.Steady Count",
-              "nativeQueryRef": "Steady Count"
+              "nativeQueryRef": "Steady Performers",
+              "displayName": "Steady Performers"
             }
           ]
         }

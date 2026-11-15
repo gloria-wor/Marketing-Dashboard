@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "96c265568e46400c7b81",
   "position": {
-    "x": 10,
+    "x": 8.8888888888883848,
     "y": 0,
     "z": 4000,
     "height": 194.0625,
@@ -26,7 +26,8 @@
                 }
               },
               "queryRef": "_Measures.Underperforming Count",
-              "nativeQueryRef": "Underperforming Count"
+              "nativeQueryRef": "Underperformers",
+              "displayName": "Underperformers"
             }
           ]
         }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "68b2f4450755b0017a60",
   "position": {
-    "x": 22.268553676216776,
-    "y": 12.724887814981013,
+    "x": 23.333333333333336,
+    "y": 13.333333333333334,
     "z": 20006,
-    "height": 79.530548843631337,
-    "width": 572.61995167414557,
+    "height": 100,
+    "width": 856.66666666666674,
     "tabOrder": 12019
   },
   "visual": {
@@ -24,6 +24,18 @@
                       "fontWeight": "bold",
                       "fontSize": "28pt",
                       "color": "#ffffff"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "     PLATFORM ANALYSIS",
+                    "textStyle": {
+                      "fontFamily": "Comic Sans MS",
+                      "fontSize": "20pt",
+                      "color": "#c7b8e7"
                     }
                   }
                 ]
