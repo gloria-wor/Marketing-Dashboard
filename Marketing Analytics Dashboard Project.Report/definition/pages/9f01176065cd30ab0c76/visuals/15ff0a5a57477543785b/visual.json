@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "15ff0a5a57477543785b",
   "position": {
-    "x": 9.99014778325123,
-    "y": 0,
+    "x": 10.905302947539035,
+    "y": 0.1042660887001588,
     "z": 3000,
-    "height": 192.99999999999997,
-    "width": 666.00985221674875
+    "height": 200.31271699725082,
+    "width": 567.094697052461,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -118,14 +119,7 @@
             "paddingLeft": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
-                }
-              }
-            },
-            "paddingTop": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
+                  "Value": "65L"
                 }
               }
             },
@@ -137,6 +131,13 @@
               }
             },
             "paddingBottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "paddingTop": {
               "expr": {
                 "Literal": {
                   "Value": "0L"
@@ -188,7 +189,7 @@
             "paddingTop": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "9L"
                 }
               }
             }
@@ -249,6 +250,13 @@
                   "Value": "'middle'"
                 }
               }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'below'"
+                }
+              }
             }
           },
           "selector": {
@@ -285,7 +293,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "20D"
                 }
               }
             },
@@ -293,6 +301,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'belowValue'"
+                }
+              }
+            },
+            "matchValueAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -370,7 +385,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -402,18 +417,6 @@
                 }
               }
             },
-            "imageData": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Steady Bar"
-                }
-              }
-            },
             "padding": {
               "expr": {
                 "Literal": {
@@ -433,39 +436,95 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "imageType": {
               "expr": {
                 "Literal": {
-                  "Value": "'imageData'"
-                }
-              }
-            },
-            "imageData": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Top Bar"
+                  "Value": "'image'"
                 }
               }
             },
             "imageDataFit": {
               "expr": {
                 "Literal": {
-                  "Value": "'Normal'"
+                  "Value": "'Fit'"
+                }
+              }
+            },
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Steady_icon.svg'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "Steady_icon2341217394620091.svg"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Normal'"
+                    }
+                  }
                 }
               }
             }
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Steady_icon.svg'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "Steady_icon5241377839943462.svg"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Fill'"
+                    }
+                  }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Steady Count"
           }
         }
       ],
@@ -485,6 +544,13 @@
                   "Value": "8L"
                 }
               }
+            },
+            "autoGrid": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -495,7 +561,21 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "50D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -527,13 +607,29 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "24D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "_Measures.Steady Count"
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
@@ -616,5 +712,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "968228dbb79b8a71364b"
+  "parentGroupName": "68f9a43b115479249698"
 }

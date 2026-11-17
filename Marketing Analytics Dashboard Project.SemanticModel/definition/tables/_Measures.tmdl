@@ -602,11 +602,14 @@ table _Measures
 			VAR t  = SELECTEDVALUE ( 'Matrix Cols'[Type] )
 			VAR ms = SELECTEDVALUE ( 'Matrix Cols'[MonthStart] )
 			RETURN
-			SWITCH (
-			    t,
-			    "YTD", DIVIDE ( [YTD Spend], 1000000 ),
-			    "YoY", [YoY%],
-			    "M",   DIVIDE ( CALCULATE ( [Total Spend], dim_date[month_start_date] = ms ), 1000000 )
+			IF (
+			    [Show Col] = 1,
+			    SWITCH (
+			        t,
+			        "YTD", DIVIDE ( [YTD Spend], 1000000 ),
+			        "YoY", [YoY%],
+			        "M",   DIVIDE ( CALCULATE ( [Total Spend], dim_date[month_start_date] = ms ), 1000000 )
+			    )
 			)
 		displayFolder: Matrix
 		lineageTag: 29d7f3de-3052-4c99-bb13-fedccfc2b116
@@ -615,7 +618,7 @@ table _Measures
 				SWITCH (
 				    SELECTEDVALUE ( 'Matrix Cols'[Type] ),
 				    "YoY", "+0%;-0%;0%",
-				    """Ksh""#,0.0""M"""
+				    "#,0.0""M"""
 				)
 
 	measure 'Show Col' =

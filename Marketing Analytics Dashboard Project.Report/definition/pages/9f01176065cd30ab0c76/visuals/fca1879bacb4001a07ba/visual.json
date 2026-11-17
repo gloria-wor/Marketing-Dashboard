@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "cd09ef382cb70dd24404",
+  "name": "fca1879bacb4001a07ba",
   "position": {
-    "x": 1340,
-    "y": 186.66666666666669,
-    "z": 7012,
-    "height": 166.66666666666669,
-    "width": 233.33333333333334,
-    "tabOrder": 8020
+    "x": 13.446267021937864,
+    "y": 29.928570260932258,
+    "z": 13006,
+    "height": 87.278363601946381,
+    "width": 64.542081705301754,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Steady_icon.svg'"
+                      "Value": "'Trophy_icon.svg'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "Steady_icon692289817456129.svg"
+                      "ItemName": "Trophy_icon5457187640622313.svg"
                     }
                   }
                 },
@@ -41,11 +41,26 @@
                   }
                 }
               }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
+            },
+            "height": {
+              "expr": {
+                "Literal": {
+                  "Value": "50L"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "aaed1cbf923a4e0e301d"
 }
