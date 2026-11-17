@@ -4,10 +4,10 @@
   "position": {
     "x": 23.333333333333336,
     "y": 190,
-    "z": 9000,
+    "z": 1000,
     "height": 620,
     "width": 1280,
-    "tabOrder": 9000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -23,11 +23,11 @@
                       "Entity": "dim_date"
                     }
                   },
-                  "Property": "full_date"
+                  "Property": "month_short"
                 }
               },
-              "queryRef": "dim_date.full_date",
-              "nativeQueryRef": "full_date",
+              "queryRef": "dim_date.month_short",
+              "nativeQueryRef": "month_short",
               "active": true
             }
           ]
@@ -64,24 +64,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_date"
-                  }
-                },
-                "Property": "full_date"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -186,6 +168,26 @@
             }
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopRight'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -243,6 +245,33 @@
               "expr": {
                 "Literal": {
                   "Value": "30D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "shadowBlur": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }

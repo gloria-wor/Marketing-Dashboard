@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "96c265568e46400c7b81",
   "position": {
-    "x": 8.8888888888883848,
+    "x": 14.492988224950066,
     "y": 0,
     "z": 4000,
-    "height": 194.0625,
-    "width": 666
+    "height": 200.41698308595096,
+    "width": 567.82934756314694,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -115,20 +116,6 @@
                 }
               }
             },
-            "paddingLeft": {
-              "expr": {
-                "Literal": {
-                  "Value": "2L"
-                }
-              }
-            },
-            "paddingTop": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -137,6 +124,20 @@
               }
             },
             "paddingBottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "paddingLeft": {
+              "expr": {
+                "Literal": {
+                  "Value": "65L"
+                }
+              }
+            },
+            "paddingTop": {
               "expr": {
                 "Literal": {
                   "Value": "0L"
@@ -249,6 +250,27 @@
                   "Value": "'middle'"
                 }
               }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'below'"
+                }
+              }
+            },
+            "arrangement": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rows'"
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'sentence'"
+                }
+              }
             }
           },
           "selector": {
@@ -285,7 +307,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "20D"
                 }
               }
             },
@@ -370,7 +392,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -529,6 +551,13 @@
                   "Value": "'image_callout_referenceLabel'"
                 }
               }
+            },
+            "calloutSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
             }
           }
         }
@@ -539,7 +568,21 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "50D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -563,6 +606,21 @@
           "selector": {
             "metadata": "_Measures.Underperforming Count"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Underperforming Count",
+            "id": "field-8f5b5e2a-c119-08f2-0ff9-23dea7621cc4"
+          }
         }
       ],
       "referenceLabelValue": [
@@ -578,6 +636,21 @@
           },
           "selector": {
             "metadata": "_Measures.Underperforming Count"
+          }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "24D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Underperforming Count",
+            "id": "field-8f5b5e2a-c119-08f2-0ff9-23dea7621cc4"
           }
         }
       ]
@@ -660,5 +733,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "f02b2158c5937d26587e"
+  "parentGroupName": "ebf87acfbb0520eac342"
 }

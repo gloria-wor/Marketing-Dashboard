@@ -4,10 +4,10 @@
   "position": {
     "x": 1313.3333333333335,
     "y": 833.33333333333337,
-    "z": 10000,
+    "z": 2000,
     "height": 606.66666666666674,
     "width": 1230,
-    "tabOrder": 10000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "stackedAreaChart",
@@ -23,11 +23,11 @@
                       "Entity": "dim_date"
                     }
                   },
-                  "Property": "Month Start"
+                  "Property": "month_short"
                 }
               },
-              "queryRef": "dim_date.Month Start",
-              "nativeQueryRef": "Month Start",
+              "queryRef": "dim_date.month_short",
+              "nativeQueryRef": "month_short",
               "active": true
             }
           ]
@@ -68,24 +68,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_date"
-                  }
-                },
-                "Property": "Month Start"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -97,7 +79,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#5B9B5B'"
+                      "Value": "'#1F78D4'"
                     }
                   }
                 }
@@ -200,7 +182,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1F78D4'"
+                      "Value": "'#5B9B5B'"
                     }
                   }
                 }
@@ -257,7 +239,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#5B9B5B'"
+                      "Value": "'#1F78D4'"
                     }
                   }
                 }
@@ -334,7 +316,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1F78D4'"
+                      "Value": "'#5B9B5B'"
                     }
                   }
                 }
@@ -569,6 +551,33 @@
               "expr": {
                 "Literal": {
                   "Value": "30D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "shadowBlur": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }

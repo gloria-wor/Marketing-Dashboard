@@ -4,5 +4,24 @@
   "displayName": "Campaign Performance",
   "displayOption": "FitToPage",
   "height": 1440,
-  "width": 2560
+  "width": 2560,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F0F3F7'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
 }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "5b1259185262124786a3",
   "position": {
-    "x": 413.35865809286258,
-    "y": 115.99350099544613,
-    "z": 20004,
+    "x": 477.183293061788,
+    "y": 114.52399033482912,
+    "z": 10000,
     "height": 56.942264125037191,
     "width": 261.5126204260967,
-    "tabOrder": 12017
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "actionButton",

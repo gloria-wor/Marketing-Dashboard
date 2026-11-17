@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "d897a80e7c595925be24",
   "position": {
-    "x": 13.333333333333343,
+    "x": 11.396151059936772,
     "y": 0,
     "z": 2000,
-    "height": 192.99999999999994,
-    "width": 663.33333333333337
+    "height": 200.41698308595096,
+    "width": 566.60384894006313,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -200,7 +201,7 @@
             "paddingLeft": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "65L"
                 }
               }
             },
@@ -345,6 +346,20 @@
                   "Value": "'middle'"
                 }
               }
+            },
+            "arrangement": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rows'"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'below'"
+                }
+              }
             }
           },
           "selector": {
@@ -374,7 +389,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "24D"
                 }
               }
             }
@@ -427,7 +442,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "20D"
                 }
               }
             },
@@ -552,7 +567,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -677,7 +692,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "50D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -766,5 +788,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "78bd3b9159716c252c27"
+  "parentGroupName": "aaed1cbf923a4e0e301d"
 }

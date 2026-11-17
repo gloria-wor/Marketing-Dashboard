@@ -56,18 +56,33 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Steady_icon692289817456129.svg",
-          "path": "Steady_icon692289817456129.svg",
+          "name": "arrow_escalation4077808239694908.svg",
+          "path": "arrow_escalation4077808239694908.svg",
           "type": "Image"
         },
         {
-          "name": "Trophy_icon5550935002689651.svg",
-          "path": "Trophy_icon5550935002689651.svg",
+          "name": "Steady_icon20266392986368853.svg",
+          "path": "Steady_icon20266392986368853.svg",
           "type": "Image"
         },
         {
-          "name": "warning_icon6890718837952813.svg",
-          "path": "warning_icon6890718837952813.svg",
+          "name": "Steady_icon2341217394620091.svg",
+          "path": "Steady_icon2341217394620091.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Steady_icon5241377839943462.svg",
+          "path": "Steady_icon5241377839943462.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Trophy_icon5457187640622313.svg",
+          "path": "Trophy_icon5457187640622313.svg",
+          "type": "Image"
+        },
+        {
+          "name": "warning_icon16719922969374434.svg",
+          "path": "warning_icon16719922969374434.svg",
           "type": "Image"
         },
         {
