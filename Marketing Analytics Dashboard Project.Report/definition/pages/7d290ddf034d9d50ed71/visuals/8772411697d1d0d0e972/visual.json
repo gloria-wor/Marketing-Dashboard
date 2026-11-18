@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "4375f125db83c020a86d",
+  "name": "8772411697d1d0d0e972",
   "position": {
-    "x": 120.93057586123687,
-    "y": 1386.6318434088939,
-    "z": 17000,
-    "height": 44.186171949298092,
-    "width": 744.18815914607308,
-    "tabOrder": 14000
+    "x": 86.995125746584591,
+    "y": 1023.3790246916406,
+    "z": 6000,
+    "height": 33.216320739605024,
+    "width": 338.49012563216553,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Built for cross-channel decisions",
+                    "value": "Built for cross-channel decisions",
                     "textStyle": {
-                      "fontSize": "16pt",
-                      "color": "#7a7fa6"
+                      "fontSize": "14pt",
+                      "color": "#5b6086"
                     }
                   }
                 ]

@@ -3,10 +3,10 @@
   "name": "72eecb07061d2705cd30",
   "position": {
     "x": 0,
-    "y": 265.12847907463851,
+    "y": 236.55007788910876,
     "z": 2000,
-    "height": 85.160330134803132,
-    "width": 647.01994730215426,
+    "height": 82.8102605143071,
+    "width": 493.499622416989,
     "tabOrder": 1000
   },
   "visual": {
@@ -34,5 +34,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "d50336c2e8799ab68745"
+  "parentGroupName": "b36d9889a85811163b4b"
 }

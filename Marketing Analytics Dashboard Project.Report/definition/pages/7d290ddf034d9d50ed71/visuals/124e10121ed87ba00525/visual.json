@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "124e10121ed87ba00525",
   "position": {
-    "x": 94.90377354172864,
-    "y": 444.5467618712039,
+    "x": 65.60462149265787,
+    "y": 357.22814987933708,
     "z": 5000,
-    "height": 73.814046088011168,
-    "width": 415.4676308382343,
+    "height": 68.014371038238863,
+    "width": 351.143962104396,
     "tabOrder": 0
   },
   "visual": {
@@ -25,7 +25,7 @@
             "lineWeight": {
               "expr": {
                 "Literal": {
-                  "Value": "6L"
+                  "Value": "4L"
                 }
               }
             },
@@ -71,7 +71,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FF6B4A'"
+                      "Value": "'#FF0000'"
                     }
                   }
                 }
@@ -134,14 +134,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Compare Channels'"
+                  "Value": "'Platform Analysis'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             },

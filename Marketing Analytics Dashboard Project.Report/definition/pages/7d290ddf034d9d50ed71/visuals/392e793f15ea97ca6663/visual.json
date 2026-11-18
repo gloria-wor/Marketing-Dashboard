@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "392e793f15ea97ca6663",
   "position": {
-    "x": 2095.3547855956622,
-    "y": 1390.1202254048912,
-    "z": 18000,
-    "height": 37.209407957303654,
-    "width": 393.02437154901986,
-    "tabOrder": 15000
+    "x": 1526.3690244628024,
+    "y": 1023.3790246916406,
+    "z": 4000,
+    "height": 33.216320739605024,
+    "width": 346.39877342730955,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "textbox",
@@ -21,40 +21,40 @@
                   {
                     "value": " ●",
                     "textStyle": {
-                      "fontSize": "18pt",
+                      "fontSize": "14pt",
                       "color": "#1d6ff2"
                     }
                   },
                   {
                     "value": " Meta   ",
                     "textStyle": {
-                      "fontSize": "18pt"
+                      "fontSize": "14pt"
                     }
                   },
                   {
                     "value": "●",
                     "textStyle": {
-                      "fontSize": "18pt",
+                      "fontSize": "14pt",
                       "color": "#34a853"
                     }
                   },
                   {
                     "value": " Google   ",
                     "textStyle": {
-                      "fontSize": "18pt"
+                      "fontSize": "14pt"
                     }
                   },
                   {
                     "value": "●",
                     "textStyle": {
-                      "fontSize": "18pt",
+                      "fontSize": "14pt",
                       "color": "#ff0000"
                     }
                   },
                   {
                     "value": " TikTok ",
                     "textStyle": {
-                      "fontSize": "18pt"
+                      "fontSize": "14pt"
                     }
                   }
                 ]
