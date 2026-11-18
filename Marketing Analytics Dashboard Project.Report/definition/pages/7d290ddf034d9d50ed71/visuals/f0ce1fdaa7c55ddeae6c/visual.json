@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "f0ce1fdaa7c55ddeae6c",
   "position": {
-    "x": 0,
-    "y": 166.41991460020765,
+    "x": 1.3545963638566465,
+    "y": 151.65529695926975,
     "z": 1000,
-    "height": 81.289406037766625,
-    "width": 647.01994730215426,
+    "height": 77.148288326790308,
+    "width": 491.58763097142497,
     "tabOrder": 3000
   },
   "visual": {
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Channel Performance",
+                    "value": "Platform Analysis",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "44pt",
+                      "fontSize": "32pt",
                       "color": "#14163b"
                     }
                   }
@@ -35,5 +35,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "d50336c2e8799ab68745"
+  "parentGroupName": "b36d9889a85811163b4b"
 }

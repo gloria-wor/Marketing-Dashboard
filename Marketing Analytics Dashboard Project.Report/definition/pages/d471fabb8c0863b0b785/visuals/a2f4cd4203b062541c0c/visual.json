@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "a2f4cd4203b062541c0c",
   "position": {
-    "x": 8.11059527045789,
-    "y": 8.6439091507807557,
+    "x": 8.29083072091251,
+    "y": 8.5842959842236475,
     "z": 4000,
-    "height": 464.66380543633767,
-    "width": 523.19066147859928,
-    "tabOrder": 0
+    "height": 466.75862068965512,
+    "width": 541.77777777777783
   },
   "visual": {
     "visualType": "donutChart",
@@ -27,8 +26,9 @@
                 }
               },
               "queryRef": "dim_platform.platform_name",
-              "nativeQueryRef": "platform_name",
-              "active": true
+              "nativeQueryRef": "Platform",
+              "active": true,
+              "displayName": "Platform"
             }
           ]
         },
@@ -84,7 +84,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'BottomCenter'"
+                  "Value": "'TopCenter'"
                 }
               }
             },
@@ -92,6 +92,13 @@
               "expr": {
                 "Literal": {
                   "Value": "14D"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -104,7 +111,28 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data value, percent of total'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'outside'"
                 }
               }
             }
@@ -117,7 +145,7 @@
             "innerRadiusRatio": {
               "expr": {
                 "Literal": {
-                  "Value": "70L"
+                  "Value": "58L"
                 }
               }
             }
@@ -221,7 +249,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1877F2'"
+                      "Value": "'#12239E'"
                     }
                   }
                 }
@@ -266,6 +294,32 @@
             }
           }
         }
+      ],
+      "centerValue": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -275,7 +329,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Spend by Platform'"
+                  "Value": "'Spend by Platform (KES)'"
                 }
               }
             },
@@ -348,6 +402,40 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }

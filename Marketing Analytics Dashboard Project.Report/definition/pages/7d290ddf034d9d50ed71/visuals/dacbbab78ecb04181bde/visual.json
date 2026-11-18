@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "dacbbab78ecb04181bde",
   "position": {
-    "x": 0.30275863448066093,
-    "y": 176.29562434633814,
+    "x": 0.036338497419591706,
+    "y": 137.0303159756032,
     "z": 1000,
-    "height": 88.5768553056134,
-    "width": 649.5636055744983,
+    "height": 75.293144855256756,
+    "width": 487.11023787354,
     "tabOrder": 2000
   },
   "visual": {
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Campaign Intelligence",
+                    "value": "Campaign Performance",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "44pt",
+                      "fontSize": "32pt",
                       "color": "#14163b"
                     }
                   }

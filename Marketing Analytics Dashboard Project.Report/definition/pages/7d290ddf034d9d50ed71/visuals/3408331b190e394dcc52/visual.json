@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "3408331b190e394dcc52",
   "position": {
-    "x": 135.36905812001265,
-    "y": 459.36517931802655,
+    "x": 53.366468747538292,
+    "y": 344.37990462288855,
     "z": 5000,
-    "height": 74.8872752289599,
-    "width": 398.59584887526034,
+    "height": 69.541558198680463,
+    "width": 344.81704386828073,
     "tabOrder": 0
   },
   "visual": {
@@ -25,7 +25,7 @@
             "lineWeight": {
               "expr": {
                 "Literal": {
-                  "Value": "6L"
+                  "Value": "4L"
                 }
               }
             },
@@ -71,7 +71,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0EA5A0'"
+                      "Value": "'#34A853'"
                     }
                   }
                 }
@@ -134,14 +134,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Explore Campaigns'"
+                  "Value": "'Campaign Performance'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             },

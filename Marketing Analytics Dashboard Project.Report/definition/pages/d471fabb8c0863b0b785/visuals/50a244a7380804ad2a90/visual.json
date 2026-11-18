@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "50a244a7380804ad2a90",
   "position": {
-    "x": 2106.3840746269666,
+    "x": 2040,
     "y": 0,
     "z": 4000,
-    "height": 188.70076266015329,
-    "width": 382.20376491169588,
-    "tabOrder": 3000
+    "height": 192,
+    "width": 456
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,8 +26,8 @@
                 }
               },
               "queryRef": "fact_ad_performance_daily.CPA",
-              "nativeQueryRef": "Avg Cost /  Acquisition",
-              "displayName": "Avg Cost /  Acquisition"
+              "nativeQueryRef": "Avg Cost / Acquisition (KES)",
+              "displayName": "Avg Cost / Acquisition (KES)"
             }
           ]
         }

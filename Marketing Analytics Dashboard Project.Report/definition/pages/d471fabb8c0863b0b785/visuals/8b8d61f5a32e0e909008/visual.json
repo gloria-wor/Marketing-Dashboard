@@ -3,11 +3,10 @@
   "name": "8b8d61f5a32e0e909008",
   "position": {
     "x": 0,
-    "y": 115.7846574318676,
+    "y": 115.78465743186761,
     "z": 19000,
     "height": 105.91362847299101,
-    "width": 233.96498264027812,
-    "tabOrder": 3000
+    "width": 226.16614988560215
   },
   "visual": {
     "visualType": "cardVisual",
@@ -63,6 +62,54 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "22D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

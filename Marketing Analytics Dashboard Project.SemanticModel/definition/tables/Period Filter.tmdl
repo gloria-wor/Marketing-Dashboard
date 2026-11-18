@@ -1,0 +1,125 @@
+table 'Period Filter'
+	lineageTag: ebf0e17f-7317-4c1d-9907-631b661b51da
+
+	/// Applies WTD / MTD / QTD / YTD to every measure, anchored on the last date with data inside the selected Year/Month. Date-axis visuals (trend charts) bypass it so they keep their full axis.
+	calculationGroup
+		precedence: 10
+
+		calculationItem WTD =
+				
+				IF (
+				    ISINSCOPE ( dim_date[full_date] ) || ISINSCOPE ( dim_date[year_month] ) || ISINSCOPE ( dim_date[month_name] )
+				        || ISINSCOPE ( dim_date[month_short] ) || ISINSCOPE ( dim_date[Month Start] ) || ISINSCOPE ( dim_date[month_start_date] )
+				        || ISINSCOPE ( dim_date[Week Start] ) || ISINSCOPE ( dim_date[week_start_date] ),
+				    SELECTEDMEASURE (),
+				    VAR _Anchor =
+				        CALCULATE (
+				            MAX ( dim_date[full_date] ),
+				            REMOVEFILTERS ( dim_platform ),
+				            REMOVEFILTERS ( dim_geo ),
+				            REMOVEFILTERS ( dim_campaign ),
+				            'fact_ad_performance_daily'
+				        )
+				    VAR _Start = _Anchor - WEEKDAY ( _Anchor, 2 ) + 1
+				    RETURN
+				        IF (
+				            ISBLANK ( _Anchor ),
+				            BLANK (),
+				            CALCULATE (
+				                SELECTEDMEASURE (),
+				                REMOVEFILTERS ( dim_date ),
+				                DATESBETWEEN ( dim_date[full_date], _Start, _Anchor )
+				            )
+				        )
+				)
+
+		calculationItem MTD =
+				
+				IF (
+				    ISINSCOPE ( dim_date[full_date] ) || ISINSCOPE ( dim_date[year_month] ) || ISINSCOPE ( dim_date[month_name] )
+				        || ISINSCOPE ( dim_date[month_short] ) || ISINSCOPE ( dim_date[Month Start] ) || ISINSCOPE ( dim_date[month_start_date] )
+				        || ISINSCOPE ( dim_date[Week Start] ) || ISINSCOPE ( dim_date[week_start_date] ),
+				    SELECTEDMEASURE (),
+				    VAR _Anchor =
+				        CALCULATE (
+				            MAX ( dim_date[full_date] ),
+				            REMOVEFILTERS ( dim_platform ),
+				            REMOVEFILTERS ( dim_geo ),
+				            REMOVEFILTERS ( dim_campaign ),
+				            'fact_ad_performance_daily'
+				        )
+				    VAR _Start = DATE ( YEAR ( _Anchor ), MONTH ( _Anchor ), 1 )
+				    RETURN
+				        IF (
+				            ISBLANK ( _Anchor ),
+				            BLANK (),
+				            CALCULATE (
+				                SELECTEDMEASURE (),
+				                REMOVEFILTERS ( dim_date ),
+				                DATESBETWEEN ( dim_date[full_date], _Start, _Anchor )
+				            )
+				        )
+				)
+
+		calculationItem QTD =
+				
+				IF (
+				    ISINSCOPE ( dim_date[full_date] ) || ISINSCOPE ( dim_date[year_month] ) || ISINSCOPE ( dim_date[month_name] )
+				        || ISINSCOPE ( dim_date[month_short] ) || ISINSCOPE ( dim_date[Month Start] ) || ISINSCOPE ( dim_date[month_start_date] )
+				        || ISINSCOPE ( dim_date[Week Start] ) || ISINSCOPE ( dim_date[week_start_date] ),
+				    SELECTEDMEASURE (),
+				    VAR _Anchor =
+				        CALCULATE (
+				            MAX ( dim_date[full_date] ),
+				            REMOVEFILTERS ( dim_platform ),
+				            REMOVEFILTERS ( dim_geo ),
+				            REMOVEFILTERS ( dim_campaign ),
+				            'fact_ad_performance_daily'
+				        )
+				    VAR _Start = DATE ( YEAR ( _Anchor ), 3 * INT ( ( MONTH ( _Anchor ) - 1 ) / 3 ) + 1, 1 )
+				    RETURN
+				        IF (
+				            ISBLANK ( _Anchor ),
+				            BLANK (),
+				            CALCULATE (
+				                SELECTEDMEASURE (),
+				                REMOVEFILTERS ( dim_date ),
+				                DATESBETWEEN ( dim_date[full_date], _Start, _Anchor )
+				            )
+				        )
+				)
+
+		calculationItem YTD =
+				
+				IF (
+				    ISINSCOPE ( dim_date[full_date] ) || ISINSCOPE ( dim_date[year_month] ) || ISINSCOPE ( dim_date[month_name] )
+				        || ISINSCOPE ( dim_date[month_short] ) || ISINSCOPE ( dim_date[Month Start] ) || ISINSCOPE ( dim_date[month_start_date] )
+				        || ISINSCOPE ( dim_date[Week Start] ) || ISINSCOPE ( dim_date[week_start_date] ),
+				    SELECTEDMEASURE (),
+				    VAR _Anchor =
+				        CALCULATE (
+				            MAX ( dim_date[full_date] ),
+				            REMOVEFILTERS ( dim_platform ),
+				            REMOVEFILTERS ( dim_geo ),
+				            REMOVEFILTERS ( dim_campaign ),
+				            'fact_ad_performance_daily'
+				        )
+				    VAR _Start = DATE ( YEAR ( _Anchor ), 1, 1 )
+				    RETURN
+				        IF (
+				            ISBLANK ( _Anchor ),
+				            BLANK (),
+				            CALCULATE (
+				                SELECTEDMEASURE (),
+				                REMOVEFILTERS ( dim_date ),
+				                DATESBETWEEN ( dim_date[full_date], _Start, _Anchor )
+				            )
+				        )
+				)
+
+	column 'Period Filter'
+		dataType: string
+		lineageTag: f23d65cc-ea2f-4db4-95f4-e93e603aa626
+
+	partition 'Partition_Period Filter' = calculationGroup
+
