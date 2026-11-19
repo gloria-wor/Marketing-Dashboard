@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 892.22218831380212,
-        "y": 62.222220102945968
+        "x": 290.66665649414063,
+        "y": 106.66666666666667
       },
       "nodes": [
         {
@@ -199,6 +199,19 @@
           },
           "nodeIndex": "RefreshLog",
           "nodeLineageTag": "c12542f2-44cc-4997-848f-bdfaa42de93c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3264.3469084185508,
+            "y": 597.735927722412
+          },
+          "nodeIndex": "Period Filter",
+          "nodeLineageTag": "ebf0e17f-7317-4c1d-9907-631b661b51da",
           "size": {
             "height": 104,
             "width": 234

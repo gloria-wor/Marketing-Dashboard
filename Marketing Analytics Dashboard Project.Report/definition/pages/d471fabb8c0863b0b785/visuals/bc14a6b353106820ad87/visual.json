@@ -6,7 +6,8 @@
     "y": 0,
     "z": 4000,
     "height": 480,
-    "width": 576
+    "width": 576,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -77,7 +78,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#12239E'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }

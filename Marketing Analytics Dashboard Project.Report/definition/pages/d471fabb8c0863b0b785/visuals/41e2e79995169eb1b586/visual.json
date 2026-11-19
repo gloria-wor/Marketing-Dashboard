@@ -4,10 +4,10 @@
   "position": {
     "x": 792,
     "y": 887.99999999999989,
-    "z": 9000,
+    "z": 7000,
     "height": 528,
     "width": 960,
-    "tabOrder": 15000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -79,7 +79,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#34A853'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }

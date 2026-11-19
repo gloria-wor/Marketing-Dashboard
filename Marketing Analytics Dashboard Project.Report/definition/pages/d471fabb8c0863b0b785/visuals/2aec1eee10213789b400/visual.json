@@ -6,7 +6,8 @@
     "y": 6.6424048003758909,
     "z": 7000,
     "height": 472.94387505156766,
-    "width": 1308.8303728975477
+    "width": 1308.8303728975477,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineChart",
@@ -368,7 +369,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#12239E'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -386,7 +387,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#34A853'"
+                      "Value": "'#FB5607'"
                     }
                   }
                 }
