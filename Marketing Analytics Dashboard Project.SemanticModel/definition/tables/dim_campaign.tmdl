@@ -426,6 +426,13 @@ table dim_campaign
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Campaign name + platform. Campaign names repeat across platforms (153 names for 160 campaigns), so use this on visual axes instead of campaign_name to avoid merging different campaigns.
+	column campaign_label = dim_campaign[campaign_name] & " · " & LOOKUPVALUE(dim_platform[platform_name], dim_platform[platform_key], LOOKUPVALUE(dim_account[platform_key], dim_account[account_key], dim_campaign[account_key]))
+		dataType: string
+		displayFolder: Labels
+		lineageTag: 2941f89b-ffb7-49e3-8676-735f99f5958b
+		summarizeBy: none
+
 	partition dim_campaign = m
 		mode: import
 		source =

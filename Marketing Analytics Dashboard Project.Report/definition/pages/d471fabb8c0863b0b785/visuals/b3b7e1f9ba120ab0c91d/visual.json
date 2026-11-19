@@ -4,10 +4,10 @@
   "position": {
     "x": 1775.9999999999998,
     "y": 912,
-    "z": 6000,
+    "z": 4000,
     "height": 504,
     "width": 720,
-    "tabOrder": 12000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -107,7 +107,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Dynamic Current Formatted"
+                "Property": "Dynamic Change"
               }
             },
             "direction": "Ascending"

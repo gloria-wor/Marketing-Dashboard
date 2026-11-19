@@ -4,10 +4,10 @@
   "position": {
     "x": 23.333333333333336,
     "y": 13.333333333333334,
-    "z": 19000,
+    "z": 16000,
     "height": 100,
     "width": 690,
-    "tabOrder": 17000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "textbox",
@@ -31,11 +31,19 @@
               {
                 "textRuns": [
                   {
-                    "value": "   ",
+                    "value": " ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "28pt",
                       "color": "#ffffff"
+                    }
+                  },
+                  {
+                    "value": "  ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "28pt",
+                      "color": "#8338ec"
                     }
                   },
                   {
