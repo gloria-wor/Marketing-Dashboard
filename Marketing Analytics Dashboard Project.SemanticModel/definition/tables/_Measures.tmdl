@@ -481,7 +481,7 @@ table _Measures
 		lineageTag: c36862b7-b0cf-4260-9692-481417bf67cc
 
 	measure CPC = DIVIDE('fact_ad_performance_daily'[Total Spend],'fact_ad_performance_daily'[Total clicks])
-		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
+		formatString: #,0.00;-#,0.00;#,0.00
 		displayFolder: Ad measures
 		lineageTag: efdef6f5-d1e3-41c2-b104-a18787a3cdd8
 
@@ -491,7 +491,7 @@ table _Measures
 		displayFolder: Matrix
 		lineageTag: 133f6e9c-0748-4b0d-b1b9-a9074d30f86c
 
-	measure 'Chip Period' = SELECTEDVALUE(PeriodTable[PeriodName], "YTD")
+	measure 'Chip Period' = SELECTEDVALUE('Period Filter'[Period Filter], "YTD")
 		displayFolder: Chip
 		lineageTag: 19a60241-7404-44d8-a7ed-b79ebefd6069
 
@@ -792,7 +792,7 @@ table _Measures
 			    ),
 			    'fact_campaign_budget_daily'[daily_budget_kes]
 			)
-		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
+		formatString: #,0.00;-#,0.00;#,0.00
 		displayFolder: Budget
 		lineageTag: 8c0e2a81-bdab-4609-986f-fa7cf7c2754b
 
@@ -826,9 +826,9 @@ table _Measures
 			VAR _SVG = 
 			"<svg xmlns='http://www.w3.org/2000/svg' width='150' height='70' viewBox='0 0 150 70'>
 			    <!-- The Big Number -->
-			    <text x='75' y='35' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='28' font-weight='bold' fill='" & _Color & "'>" & _PercText & "</text>
+			    <text x='75' y='35' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='36' font-weight='bold' fill='" & _Color & "'>" & _PercText & "</text>
 			    <!-- The Small Status Text -->
-			    <text x='75' y='55' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='12' font-weight='600' fill='" & _Color & "'>" & _StatusText & "</text>
+			    <text x='75' y='55' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='24' font-weight='600' fill='" & _Color & "'>" & _StatusText & "</text>
 			</svg>"
 			
 			RETURN "data:image/svg+xml;utf8," & _SVG
@@ -837,45 +837,37 @@ table _Measures
 		lineageTag: 95f33d03-1b7e-4850-a3ed-6716351c3d69
 		dataCategory: ImageUrl
 
-	measure 'Platform Pacing Bar' = ```
+	measure 'Platform Pacing Bar' =
 			
 			VAR _Spent = [Spent Filtered]
 			VAR _Budget = [Budget Filtered]
 			VAR _Perc = DIVIDE(_Spent, _Budget, 0)
 			VAR _PercText = FORMAT(_Perc, "0%")
 			
-			// Shorter number format to save space
-			VAR _SpentFormatted = FORMAT(_Spent / 1000000000, "Ksh 0.0B")
-			VAR _BudgetFormatted = FORMAT(_Budget / 1000000000, "Ksh 0.0B")
+			// Compact amounts: M below 1bn, bn from 1bn (same units as the rest of the page). Unit letters are kept OUTSIDE FORMAT().
+			VAR _SpentFormatted = IF(_Spent >= 1000000000, FORMAT(_Spent / 1000000000, "0.00") & "bn", FORMAT(_Spent / 1000000, "#,##0") & "M")
+			VAR _BudgetFormatted = IF(_Budget >= 1000000000, FORMAT(_Budget / 1000000000, "0.00") & "bn", FORMAT(_Budget / 1000000, "#,##0") & "M")
 			
 			// Width of the progress bar fill (max 250)
-			VAR _FillWidth = IF(_Perc > 1, 250, _Perc * 250) 
-			VAR _Color = IF(_Perc > 1, "#EF4444", "#10B981") // Red if >100%, Green if under
+			VAR _FillWidth = IF(_Perc > 1, 250, _Perc * 250)
+			// Over budget (>100%) = red, within budget = green. Used for the bar AND the value text.
+			VAR _Color = IF(_Perc > 1, "#FF0000", "#34A853")
+			VAR _TextColor = IF(_Perc > 1, "#DC2626", "#15803D")
 			
-			// The SVG (Platform name removed, bar shifted to start at x='0')
-			VAR _SVG = 
+			VAR _SVG =
 			"<svg xmlns='http://www.w3.org/2000/svg' width='500' height='48' viewBox='0 0 500 48'>
-			    
-			    <!-- Background track -->
 			    <rect x='0' y='19' width='250' height='12' rx='6' fill='#F3F4F6' />
-			    
-			    <!-- Filled track -->
 			    <rect x='0' y='19' width='" & _FillWidth & "' height='12' rx='6' fill='" & _Color & "' />
-			    
-			    <!-- Spent / Budget Text -->
-			    <text x='260' y='34' font-family='Segoe UI, sans-serif' font-size='17' fill='#4B5563'>" & _SpentFormatted & " / " & _BudgetFormatted & "</text>
-			    
-			    <!-- Percentage Text -->
-			    <text x='480' y='34' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='15' font-weight='bold' fill='#111827'>" & _PercText & "</text>
+			    <text x='260' y='34' font-family='Segoe UI, sans-serif' font-size='17' font-weight='600' fill='" & _TextColor & "'>" & _SpentFormatted & " / " & _BudgetFormatted & "</text>
+			    <text x='480' y='34' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='15' font-weight='bold' fill='" & _TextColor & "'>" & _PercText & "</text>
 			</svg>"
 			RETURN "data:image/svg+xml;utf8," & _SVG
-			```
 		displayFolder: Budget
 		lineageTag: f46b7c6e-9a31-42d9-8d46-87cd3b0431fb
 		dataCategory: ImageUrl
 
 	measure 'Remaining Budget' = [Budget Filtered] - [Spent Filtered]
-		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
+		formatString: #,0.00;-#,0.00;#,0.00
 		displayFolder: Budget
 		lineageTag: 7d2843ba-a159-433c-97d7-15d13c429c82
 
@@ -890,7 +882,7 @@ table _Measures
 			    ),
 			    'fact_campaign_budget_daily'[spend_kes]
 			)
-		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
+		formatString: #,0.00;-#,0.00;#,0.00
 		displayFolder: Budget
 		lineageTag: 3c4a5c46-5239-4f9b-8341-dbcd2a62f8e7
 
@@ -932,12 +924,12 @@ table _Measures
 	measure 'BarChart Subtitle' =
 			
 			VAR SelectedYear = SELECTEDVALUE('dim_date'[Year], "All Years")
-			VAR SelectedPeriod = SELECTEDVALUE('PeriodTable'[PeriodName], "YTD")
+			VAR SelectedPeriod = SELECTEDVALUE('Period Filter'[Period Filter], "YTD")
 			RETURN SelectedPeriod & " " & SelectedYear
 		displayFolder: Filters
 		lineageTag: e2eea146-c678-44a6-9ae8-399a37ee6987
 
-	measure 'Chart Subtitle' = "Actual monthly totals in KES; period follows the selected date filters"
+	measure 'Chart Subtitle' = "Actual monthly totals in KES for the selected year (not affected by WTD / MTD / QTD / YTD)"
 		displayFolder: Filters
 		lineageTag: c92fa549-c1a4-4c65-aecb-9897387a18df
 
@@ -945,23 +937,19 @@ table _Measures
 		displayFolder: Filters
 		lineageTag: 1b0e656b-4a10-4ab4-bc90-b61694922d1d
 
-	measure 'Dynamic Title' = ```
+	measure 'Dynamic Title' =
 			
-			VAR SelectedPeriod = SELECTEDVALUE('PeriodTable'[PeriodName], "YTD")
+			VAR SelectedPeriod = SELECTEDVALUE('Period Filter'[Period Filter], "YTD")
 			VAR SelectedYear = SELECTEDVALUE('dim_date'[Year], "All Years")
 			VAR SelectedMonth = SELECTEDVALUE('dim_date'[month_name], "")
-			
-			// If a specific month is selected, show it (e.g., "Aug 2025"). Otherwise, just show the year.
-			VAR DateText = 
+			VAR DateText =
 			    IF(
-			        ISBLANK(SelectedMonth) || SelectedMonth = "All", 
-			        SelectedYear, 
+			        ISBLANK(SelectedMonth) || SelectedMonth = "All",
+			        SelectedYear,
 			        SelectedMonth & " " & SelectedYear
 			    )
-			
-			RETURN 
+			RETURN
 			    "Executive Summary — " & SelectedPeriod & " " & DateText
-			```
 		displayFolder: Filters
 		lineageTag: 042e86ab-c902-4282-b299-71d2d8c8818a
 
@@ -988,7 +976,7 @@ table _Measures
 			VAR _SVG = 
 			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
 			    <!-- The purple background box -->
-			    <rect width='56' height='56' rx='16' fill='#0EA5A0' />
+			    <rect width='56' height='56' rx='16' fill='#34a853' />
 			    
 			    <!-- The white target icon centered inside -->
 			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
@@ -1008,7 +996,7 @@ table _Measures
 			VAR _SVG = 
 			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
 			    <!-- The purple background box -->
-			    <rect width='56' height='56' rx='16' fill='#FF6B4A' />
+			    <rect width='56' height='56' rx='16' fill='#FF0000' />
 			    
 			    <!-- The white layers icon centered inside -->
 			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
@@ -1028,7 +1016,7 @@ table _Measures
 			VAR _SVG = 
 			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
 			    <!-- The purple background box with rounded corners -->
-			    <rect width='56' height='56' rx='16' fill='#6C47FF' />
+			    <rect width='56' height='56' rx='16' fill='#12239E' />
 			    
 			    <!-- The white icon centered inside, scaled to fit nicely -->
 			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
@@ -1117,17 +1105,19 @@ table _Measures
 			
 			VAR MetricName = SELECTEDVALUE('Metrics Table'[Metric])
 			VAR Val = [Dynamic Current]
-			
+			VAR _Abs = ABS(Val)
+			// One compact scale for every count / amount: bn, M, K. Unit letters kept OUTSIDE FORMAT().
+			VAR _Compact =
+			    IF(_Abs >= 1000000000, FORMAT(Val / 1000000000, "#,##0.00") & "bn",
+			    IF(_Abs >= 1000000, FORMAT(Val / 1000000, "#,##0.00") & "M",
+			    IF(_Abs >= 1000, FORMAT(Val / 1000, "#,##0.00") & "K",
+			    FORMAT(Val, "#,##0.00"))))
 			RETURN
 			SWITCH(
 			    MetricName,
-			    "Ad Spend", "Ksh " & FORMAT(Val / 1000000, "#,##0.0") & "M",
-			    "Impressions", FORMAT(Val / 1000000, "#,##0.0") & "M",
-			    "Conversions", FORMAT(Val / 1000, "#,##0.0") & "K",
 			    "Return on Ad Spend", FORMAT(Val, "0.00") & "x",
 			    "Click-through Rate", FORMAT(Val, "0.00%"),
-			    "Cost / Acquisition", "Ksh " & FORMAT(Val, "#,##0.00"),
-			    FORMAT(Val, "#,##0.00") // Default fallback
+			    _Compact
 			)
 		displayFolder: Matrix Visuals
 		lineageTag: d4481005-cc79-4a44-bec9-b19443c176b7
@@ -1152,30 +1142,31 @@ table _Measures
 			
 			VAR MetricName = SELECTEDVALUE('Metrics Table'[Metric])
 			VAR Val = [Dynamic Prior]
-			
+			VAR _Abs = ABS(Val)
+			// One compact scale for every count / amount: bn, M, K. Unit letters kept OUTSIDE FORMAT().
+			VAR _Compact =
+			    IF(_Abs >= 1000000000, FORMAT(Val / 1000000000, "#,##0.00") & "bn",
+			    IF(_Abs >= 1000000, FORMAT(Val / 1000000, "#,##0.00") & "M",
+			    IF(_Abs >= 1000, FORMAT(Val / 1000, "#,##0.00") & "K",
+			    FORMAT(Val, "#,##0.00"))))
 			RETURN
 			SWITCH(
 			    MetricName,
-			    "Ad Spend", "Ksh " & FORMAT(Val / 1000000, "#,##0.0") & "M",
-			    "Impressions", FORMAT(Val / 1000000, "#,##0.0") & "M",
-			    "Conversions", FORMAT(Val / 1000, "#,##0.0") & "K",
 			    "Return on Ad Spend", FORMAT(Val, "0.00") & "x",
 			    "Click-through Rate", FORMAT(Val, "0.00%"),
-			    "Cost / Acquisition", "Ksh " & FORMAT(Val, "#,##0.00"),
-			    FORMAT(Val, "#,##0.00")
+			    _Compact
 			)
 		displayFolder: Matrix Visuals
 		lineageTag: b4adbd23-f47d-48ea-b263-98603798f277
 
-	measure 'Dynamic Status' = ```
+	measure 'Dynamic Status' =
 			
-			// This forces the SVG to only show if a metric is selected
+			// Shows the performance badge only when a metric row is in context
 			IF(
-			    ISBLANK([Dynamic Current]), 
-			    BLANK(), 
-			    [Status Healthy] 
+			    ISBLANK([Dynamic Current]),
+			    BLANK(),
+			    [Status Badge]
 			)
-			```
 		displayFolder: Matrix Visuals
 		lineageTag: 01ffad41-4845-4b3c-bdef-c49aff210d42
 		dataCategory: ImageUrl
@@ -1326,9 +1317,9 @@ table _Measures
 			VAR PriorCPA   = [CPA PY]
 			VAR _perc = DIVIDE(CurrentCPA - PriorCPA, PriorCPA)
 			
-			// 2. Get your CPC measure formatted
+			// 2. Get your CPC measure formatted (no currency prefix - currency is stated in the visual title)
 			VAR _CPC = [CPC]
-			VAR _FormattedCPC = "CPC Ksh " & FORMAT(_CPC, "#,##0.00")
+			VAR _FormattedCPC = "CPC " & FORMAT(_CPC, "#,##0.00")
 			
 			// 3. Determine color and arrow
 			// Note: For costs, a negative % is GOOD (Green), a positive % is BAD (Red)
@@ -1371,14 +1362,14 @@ table _Measures
 			VAR PriorROAS   = [ROAS PY] 
 			VAR _perc = DIVIDE(CurrentROAS - PriorROAS, PriorROAS)
 			
-			// 2. Get Revenue formatted in Millions/Billions
+			// 2. Get Revenue formatted in Millions/Billions (no currency prefix - currency is stated in the visual title)
 			VAR _Rev = [Total Revenue]
 			VAR _FormattedRev = 
 			    SWITCH(
 			        TRUE(),
-			        _Rev >= 1000000000, "Ksh " & FORMAT(_Rev / 1000000000, "#,##0.00,,,bn") & " revenue",
-			        _Rev >= 1000000, "Ksh " & FORMAT(_Rev / 1000000, "#,##0.00,,.M") & " revenue",
-			        "Ksh " & FORMAT(_Rev, "#,##0.00") & " revenue"
+			        _Rev >= 1000000000, FORMAT(_Rev / 1000000000, "#,##0.00,,,bn") & " revenue",
+			        _Rev >= 1000000, FORMAT(_Rev / 1000000, "#,##0.00,,.M") & " revenue",
+			        FORMAT(_Rev, "#,##0.00") & " revenue"
 			    )
 			
 			// 3. Determine color and arrow
@@ -1421,12 +1412,13 @@ table _Measures
 			VAR PriorSpend   = [Spend PY]
 			VAR _perc = DIVIDE ( CurrentSpend - PriorSpend, PriorSpend )
 			
+			// No currency prefix - currency is stated in the visual title
 			VAR _FormattedPY = 
 			    SWITCH(
 			        TRUE(),
-			        PriorSpend >= 1000000000, "Ksh " & FORMAT(PriorSpend / 1000000000, "#,##0.00,,,") & "bn",
-			        PriorSpend >= 1000000, "Ksh " & FORMAT(PriorSpend / 1000000, "#,##0.00,,") & "M",
-			        "Ksh " & FORMAT(PriorSpend, "#,##0.00")
+			        PriorSpend >= 1000000000, FORMAT(PriorSpend / 1000000000, "#,##0.00,,,") & "bn",
+			        PriorSpend >= 1000000, FORMAT(PriorSpend / 1000000, "#,##0.00,,") & "M",
+			        FORMAT(PriorSpend, "#,##0.00")
 			    )
 			
 			VAR _Color = 
@@ -1445,7 +1437,6 @@ table _Measures
 			    )
 			VAR _PercText = FORMAT(ABS(_perc), "0.0%")
 			
-			// FIXED SVG: Removed bold, size 12, and adjusted x coordinates so they don't overlap
 			VAR _SVG = 
 			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
 			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' fill='" & _Color & "'>" & 
@@ -1469,8 +1460,9 @@ table _Measures
 			VAR PriorImpressions   = [Impressions PY]
 			VAR _perc = DIVIDE(CurrentImpressions - PriorImpressions, PriorImpressions)
 			
-			// 2. Get your CPM measure
+			// 2. Get CPM and format it (no currency prefix - currency is stated in the visual title)
 			VAR _CPM = [CPM]
+			VAR _FormattedCPM = "CPM " & FORMAT(_CPM, "#,##0.00")
 			
 			// 3. Determine color and arrow
 			VAR _Color = 
@@ -1496,7 +1488,7 @@ table _Measures
 			        _Arrow & " " & _PercText & 
 			    "</text>" &
 			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
-			        " · " & _CPM & 
+			        " · " & _FormattedCPM & 
 			    "</text>" &
 			    "</svg>"
 			
@@ -1787,7 +1779,7 @@ table _Measures
 		dataCategory: ImageUrl
 
 	measure 'CPA PY' = DIVIDE([Spend PY], [Conversions PY])
-		formatString: "Ksh"#,0.00;-"Ksh"#,0.00;"Ksh"#,0.00
+		formatString: #,0.00;-#,0.00;#,0.00
 		displayFolder: Ad measures
 		lineageTag: 448b07ad-3906-4b54-a13c-8a7bcd291aee
 
@@ -1872,6 +1864,147 @@ table _Measures
 			    spendText & " spend · " & FORMAT ( [Underperforming Share], "0%" ) & " of budget"
 		displayFolder: Budget Status
 		lineageTag: 02f33bf4-e15f-4be9-83ae-3a58d22e54d5
+
+	measure 'Scorecard ROAS BG' =
+			
+			IF(
+			    NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([ROAS]),
+			    BLANK(),
+			    VAR _All = ALLSELECTED(dim_platform[platform_name])
+			    VAR _Max = MAXX(_All, [ROAS])
+			    VAR _Min = MINX(_All, [ROAS])
+			    VAR _Score = DIVIDE([ROAS] - _Min, _Max - _Min, 0.5) // 1 = best platform, 0 = worst
+			    RETURN SWITCH(TRUE(), _Score >= 0.67, "#D1FAE5", _Score >= 0.34, "#FEF3C7", "#FEE2E2")
+			)
+		displayFolder: Platform Scorecard
+		lineageTag: dcc229b3-df4c-4e4c-b9a7-108f7b08433a
+
+	measure 'Scorecard CPA BG' =
+			
+			// Cost metric: LOWER is better, so the score is inverted
+			IF(
+			    NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([CPA]),
+			    BLANK(),
+			    VAR _All = ALLSELECTED(dim_platform[platform_name])
+			    VAR _Max = MAXX(_All, [CPA])
+			    VAR _Min = MINX(_All, [CPA])
+			    VAR _Score = 1 - DIVIDE([CPA] - _Min, _Max - _Min, 0.5)
+			    RETURN SWITCH(TRUE(), _Score >= 0.67, "#D1FAE5", _Score >= 0.34, "#FEF3C7", "#FEE2E2")
+			)
+		displayFolder: Platform Scorecard
+		lineageTag: 256d776d-3469-4ebe-a837-698a39e1bcf0
+
+	measure 'Scorecard CTR BG' =
+			
+			IF(
+			    NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([CTR]),
+			    BLANK(),
+			    VAR _All = ALLSELECTED(dim_platform[platform_name])
+			    VAR _Max = MAXX(_All, [CTR])
+			    VAR _Min = MINX(_All, [CTR])
+			    VAR _Score = DIVIDE([CTR] - _Min, _Max - _Min, 0.5)
+			    RETURN SWITCH(TRUE(), _Score >= 0.67, "#D1FAE5", _Score >= 0.34, "#FEF3C7", "#FEE2E2")
+			)
+		displayFolder: Platform Scorecard
+		lineageTag: e0538727-50aa-4294-bf57-f0183e44f57c
+
+	measure 'Scorecard CVR BG' =
+			
+			IF(
+			    NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([CVR]),
+			    BLANK(),
+			    VAR _All = ALLSELECTED(dim_platform[platform_name])
+			    VAR _Max = MAXX(_All, [CVR])
+			    VAR _Min = MINX(_All, [CVR])
+			    VAR _Score = DIVIDE([CVR] - _Min, _Max - _Min, 0.5)
+			    RETURN SWITCH(TRUE(), _Score >= 0.67, "#D1FAE5", _Score >= 0.34, "#FEF3C7", "#FEE2E2")
+			)
+		displayFolder: Platform Scorecard
+		lineageTag: bf063e87-7a60-4431-8692-7946b5103765
+
+	measure 'Scorecard Subtitle' =
+			
+			VAR _T =
+			    FILTER(
+			        ADDCOLUMNS(ALLSELECTED(dim_platform[platform_name]), "@roas", [ROAS], "@cpa", [CPA]),
+			        NOT ISBLANK([@cpa])
+			    )
+			VAR _BestRoas = TOPN(1, _T, [@roas], DESC)
+			VAR _BestCpa  = TOPN(1, _T, [@cpa], ASC)
+			RETURN
+			    "Best ROAS: " & MAXX(_BestRoas, dim_platform[platform_name]) & " (" & FORMAT(MAXX(_BestRoas, [@roas]), "0.00") & "x)  |  Lowest cost / acquisition: " & MAXX(_BestCpa, dim_platform[platform_name]) & " (" & FORMAT(MAXX(_BestCpa, [@cpa]), "#,##0") & ")"
+		displayFolder: Platform Scorecard
+		lineageTag: 6c73ea5d-3688-42d5-9575-f17916ac8bbf
+
+	measure 'Status Badge' =
+			
+			// Status follows performance vs prior year. Plain coloured text - no pill / rectangle.
+			// Cost / Acquisition is a cost metric, so an INCREASE is unfavourable.
+			VAR _Metric = SELECTEDVALUE('Metrics Table'[Metric])
+			VAR _Cur = [Dynamic Current]
+			VAR _Pri = [Dynamic Prior]
+			VAR _Chg = DIVIDE(_Cur - _Pri, _Pri)
+			VAR _Adj = IF(_Metric = "Cost / Acquisition", -_Chg, _Chg) // positive = favourable
+			VAR _Text =
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(_Chg), "No PY",
+			        _Adj >= 0, "Healthy",
+			        _Adj >= -0.05, "Watch",
+			        "At Risk"
+			    )
+			VAR _TextColor = SWITCH(_Text, "Healthy", "#059669", "Watch", "#D97706", "At Risk", "#DC2626", "#6B7280")
+			VAR _SVG =
+			"<svg xmlns='http://www.w3.org/2000/svg' width='80' height='24' viewBox='0 0 80 24'>
+			    <text x='40' y='17' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='13' font-weight='700' fill='" & _TextColor & "'>" & _Text & "</text>
+			</svg>"
+			RETURN "data:image/svg+xml;utf8," & _SVG
+		displayFolder: Matrix Visuals
+		lineageTag: cdf13bbf-7702-46b2-9e76-b47b31a13670
+		dataCategory: ImageUrl
+
+	measure 'Dynamic Change Color' =
+			
+			// Font colour for the change column. Green = favourable, red = unfavourable.
+			// Cost / Acquisition is inverted (an increase is bad).
+			VAR _Metric = SELECTEDVALUE('Metrics Table'[Metric])
+			VAR _Chg = DIVIDE([Dynamic Current] - [Dynamic Prior], [Dynamic Prior])
+			VAR _Adj = IF(_Metric = "Cost / Acquisition", -_Chg, _Chg)
+			RETURN
+			    SWITCH(TRUE(), ISBLANK(_Chg), "#6B7280", _Adj > 0, "#10B981", _Adj < 0, "#EF4444", "#6B7280")
+		displayFolder: Matrix Visuals
+		lineageTag: 77455946-483b-47bc-8615-41336f8bc3e7
+
+	measure 'Dynamic Change Bar' =
+			
+			// Diverging data bar for the change vs prior year. Bar points right for an increase, left for a decrease.
+			// Colour = favourable (green) / unfavourable (red); Cost / Acquisition is inverted (an increase is bad).
+			// Length uses square-root scaling against the largest change across all metrics so small changes stay visible.
+			VAR _Metric = SELECTEDVALUE('Metrics Table'[Metric])
+			VAR _Chg = DIVIDE([Dynamic Current] - [Dynamic Prior], [Dynamic Prior])
+			VAR _MaxAbs =
+			    MAXX(
+			        ALL('Metrics Table'[Metric]),
+			        ABS(DIVIDE([Dynamic Current] - [Dynamic Prior], [Dynamic Prior]))
+			    )
+			VAR _Adj = IF(_Metric = "Cost / Acquisition", -_Chg, _Chg)
+			VAR _Color = IF(_Adj >= 0, "#10B981", "#EF4444")
+			VAR _W = MAX(2, SQRT(DIVIDE(ABS(_Chg), _MaxAbs, 0)) * 76)
+			VAR _X = IF(_Chg >= 0, 80, 80 - _W)
+			VAR _SVG =
+			"<svg xmlns='http://www.w3.org/2000/svg' width='160' height='24' viewBox='0 0 160 24'>
+			    <rect x='" & _X & "' y='6' width='" & _W & "' height='12' rx='2' fill='" & _Color & "' />
+			    <line x1='80' y1='2' x2='80' y2='22' stroke='#9CA3AF' stroke-width='1' />
+			</svg>"
+			RETURN IF(ISBLANK(_Chg), BLANK(), "data:image/svg+xml;utf8," & _SVG)
+		displayFolder: Matrix Visuals
+		lineageTag: 0e872187-f0b0-4d0a-b715-42a5e7beb8d5
+		dataCategory: ImageUrl
+
+	measure 'Spend by Region' = COALESCE([Total Spend], 0)
+		formatString: #,0
+		displayFolder: Region
+		lineageTag: c0af3c42-2ae7-4270-9023-9662b982c5b5
 
 	column Value
 		formatString: 0

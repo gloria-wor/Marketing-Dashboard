@@ -3,11 +3,10 @@
   "name": "c0586e025a233b6658d1",
   "position": {
     "x": 0,
-    "y": 0.53308105792807148,
+    "y": 0.533081057928058,
     "z": 0,
     "height": 189.27446602552922,
-    "width": 369.85837994381694,
-    "tabOrder": 4000
+    "width": 369.85837994381694
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,7 +26,8 @@
                 }
               },
               "queryRef": "fact_ad_performance_daily.Total Spend",
-              "nativeQueryRef": "Total Spend"
+              "nativeQueryRef": "Total Spend (KES)",
+              "displayName": "Total Spend (KES)"
             }
           ]
         }
@@ -631,7 +631,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "16D"
                 }
               }
             },
@@ -699,7 +699,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "20D"
                 }
               }
             }

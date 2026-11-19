@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "b3b7e1f9ba120ab0c91d",
   "position": {
-    "x": 1782.0819698391269,
-    "y": 906.85828050985151,
+    "x": 1775.9999999999998,
+    "y": 912,
     "z": 6000,
-    "height": 512.48037712533471,
-    "width": 723.37765166250949,
-    "tabOrder": 9000
+    "height": 504,
+    "width": 720,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -76,8 +76,8 @@
                 }
               },
               "queryRef": "_Measures.Dynamic Change",
-              "nativeQueryRef": "Δ",
-              "displayName": "Δ"
+              "nativeQueryRef": "CHANGE RATE",
+              "displayName": "CHANGE RATE"
             },
             {
               "field": {
@@ -142,20 +142,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "92.8811550416169D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Dynamic Change"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "117.39542614299037D"
                 }
               }
@@ -211,7 +197,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "15D"
                 }
               }
             },
@@ -240,6 +226,13 @@
                   "Value": "90D"
                 }
               }
+            },
+            "expandCollapseButtonsSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
             }
           }
         }
@@ -250,7 +243,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "18D"
                 }
               }
             },
@@ -283,69 +276,13 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Contains": {
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "_Measures"
-                                    }
-                                  },
-                                  "Property": "Dynamic Change"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "'-'"
-                                }
-                              }
-                            },
-                            "Annotations": {
-                              "PowerBI.SQExprEvaluationKind": 1,
-                              "PowerBI.SQExprTextOperatorOption": 6
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#C1281F'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Contains": {
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "_Measures"
-                                    }
-                                  },
-                                  "Property": "Dynamic Change"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "'+'"
-                                }
-                              }
-                            },
-                            "Annotations": {
-                              "PowerBI.SQExprEvaluationKind": 1,
-                              "PowerBI.SQExprTextOperatorOption": 6
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#10B981'"
-                            }
-                          }
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
                         }
-                      ]
+                      },
+                      "Property": "Dynamic Change Color"
                     }
                   }
                 }
@@ -391,7 +328,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "15D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
                 }
               }
             }
@@ -399,27 +343,6 @@
         }
       ],
       "columnFormatting": [
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Dynamic Change"
-          }
-        },
         {
           "properties": {
             "alignment": {
@@ -439,6 +362,34 @@
           },
           "selector": {
             "metadata": "_Measures.Dynamic Status"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Dynamic Change"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Dynamic Prior Formatted"
           }
         }
       ],

@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "c48cdfd118bed61bb495",
   "position": {
-    "x": 0.21422381511988792,
-    "y": 17.320986894784021,
+    "x": 0.20708302128255829,
+    "y": 17.320986894784024,
     "z": 16000,
     "height": 74.297758354080145,
-    "width": 368.50706424448657,
-    "tabOrder": 4000
+    "width": 356.223495436337
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +18,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Budget Pacing",
+                    "value": "Budget Pacing (KES)",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "14pt"
+                      "fontSize": "18pt"
                     }
                   }
                 ]
@@ -32,7 +31,7 @@
                   {
                     "value": "Actual spend vs allocated budget",
                     "textStyle": {
-                      "fontSize": "12pt"
+                      "fontSize": "16pt"
                     }
                   }
                 ]

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "1b9693c2d861d3bea96d",
   "position": {
-    "x": 0.74213733613147337,
-    "y": 162.84099170557951,
+    "x": 0,
+    "y": 125.72520881558913,
     "z": 1000,
-    "height": 79.541246768137228,
-    "width": 671.56899019848561,
+    "height": 71.086926158651139,
+    "width": 510.8986475663059,
     "tabOrder": 1000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "Executive Summary",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "44pt",
+                      "fontSize": "32pt",
                       "color": "#14163b"
                     }
                   }

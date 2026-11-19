@@ -12675,6 +12675,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Total Spend (KES)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -12725,7 +12735,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Avg Cost /  Acquisition": {
+			          "Avg Cost / Acquisition (KES)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -18146,7 +18156,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Δ": {
+			          "CHANGE RATE": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -22155,108 +22165,1110 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "period_filter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Period Filter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period filter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "filter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "period sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "period sieve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period mesh": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period riddle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period screen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sieve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mesh": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "period_filter.period_filter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Period Filter",
+			          "ConceptualProperty": "Period Filter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "period filter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "period filter name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "filter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "period strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "period sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "period sieve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period mesh": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period riddle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "period screen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sieve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mesh": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "entity__measure.scorecard_ROAS_BG": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Scorecard ROAS BG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "scorecard ROAS BG": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ROAS BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "scoreboard roa bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "card roa bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "tally roa bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "score card roa bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.484
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.scorecard_CPA_BG": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Scorecard CPA BG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "scorecard CPA BG": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "CPA BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "scoreboard cpa bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "card cpa bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "tally cpa bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "score card cpa bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.484
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.scorecard_CTR_BG": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Scorecard CTR BG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "scorecard CTR BG": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "CTR BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "scoreboard ctr bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "card ctr bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "tally ctr bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "score card ctr bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.484
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.scorecard_CVR_BG": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Scorecard CVR BG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "scorecard CVR BG": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "CVR BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "scoreboard cvr bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "card cvr bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "tally cvr bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "score card cvr bg": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.484
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.scorecard_subtitle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Scorecard Subtitle"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "scorecard subtitle": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "subtitle": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "scoreboard subtitle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "card subtitle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "tally subtitle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "scorecard slogan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "scorecard description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "scorecard legend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "scorecard header": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "scorecard footer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "scorecard surtitle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "scorecard supertitle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.status_badge": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Status Badge"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status badge": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "badge": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "importance badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prestige badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prominence badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "condition badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "class badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "level badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "position badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank badge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.dynamic_change_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Dynamic Change Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic change color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "change color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic change hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "change hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dynamic change tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "dynamic change shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "dynamic change dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "dynamic change paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "dynamic change pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "change tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "change shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.dynamic_change_bar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Dynamic Change Bar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic change bar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "change bar": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic alteration bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dynamic modification bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dynamic variation bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dynamic transformation bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dynamic revolution bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dynamic conversion bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dynamic adjustment bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "dynamic amendment bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "alteration bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "modification bar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.spend_by_region": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Spend by Region"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend by region": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "spend by location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "spend by province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "spend by area": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "spend by district": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "spend by section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "spend by zone": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "spend by continent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fact_ad_performance_daily_gold_built_at_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily.gold_built_at": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.gold_built_at"
-			          }
-			        },
-			        "fact_ad_performance_daily.gold_built_at.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.gold_built_at.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily.gold_built_at"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily.gold_built_at.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "gold_built_at_have_gold_built_at_date_hierarchy"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_day": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
-			          }
-			        },
-			        "fact_ad_performance_daily.source_ingested_at.day": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_day"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_month": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
-			          }
-			        },
-			        "fact_ad_performance_daily.source_ingested_at.month": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_month"
-			        }
-			      ]
-			    },
 			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
@@ -22991,6 +24003,642 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_accounts_have_fact_ad_performance_daily"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_spend_by_region": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.spend_by_region": {
+			          "Target": {
+			            "Entity": "entity__measure.spend_by_region"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.spend_by_region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_spend_by_region"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_dynamic_change_bar": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.dynamic_change_bar": {
+			          "Target": {
+			            "Entity": "entity__measure.dynamic_change_bar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.dynamic_change_bar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dynamic_change_bar"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Verbs": [
+			              {
+			                "change": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "bar": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "entity__measure.dynamic_change_bar"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "fact_ad_performance_daily_change_bar_dynamic_change_bar"
+			        }
+			      ]
+			    },
+			    "metrics_table_has_entity__measure_dynamic_change_bar": {
+			      "Binding": {
+			        "ConceptualEntity": "Metrics Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics_table": {
+			          "Target": {
+			            "Entity": "metrics_table"
+			          }
+			        },
+			        "entity__measure.dynamic_change_bar": {
+			          "Target": {
+			            "Entity": "entity__measure.dynamic_change_bar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics_table"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.dynamic_change_bar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_tables_have_dynamic_change_bar"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "metrics_table"
+			            },
+			            "Verbs": [
+			              {
+			                "change": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "bar": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "entity__measure.dynamic_change_bar"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "metrics_tables_change_bar_dynamic_change_bar"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_dynamic_change_color": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.dynamic_change_color": {
+			          "Target": {
+			            "Entity": "entity__measure.dynamic_change_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.dynamic_change_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dynamic_change_color"
+			        }
+			      ]
+			    },
+			    "metrics_table_has_entity__measure_dynamic_change_color": {
+			      "Binding": {
+			        "ConceptualEntity": "Metrics Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics_table": {
+			          "Target": {
+			            "Entity": "metrics_table"
+			          }
+			        },
+			        "entity__measure.dynamic_change_color": {
+			          "Target": {
+			            "Entity": "entity__measure.dynamic_change_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics_table"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.dynamic_change_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_tables_have_dynamic_change_color"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_status_badge": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.status_badge": {
+			          "Target": {
+			            "Entity": "entity__measure.status_badge"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.status_badge"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_status_badge"
+			        }
+			      ]
+			    },
+			    "metrics_table_has_entity__measure_status_badge": {
+			      "Binding": {
+			        "ConceptualEntity": "Metrics Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics_table": {
+			          "Target": {
+			            "Entity": "metrics_table"
+			          }
+			        },
+			        "entity__measure.status_badge": {
+			          "Target": {
+			            "Entity": "entity__measure.status_badge"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics_table"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.status_badge"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_tables_have_status_badge"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_scorecard_subtitle": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.scorecard_subtitle": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_subtitle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_subtitle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_scorecard_subtitle"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_scorecard_CVR_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.scorecard_CVR_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_CVR_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_CVR_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_scorecard_CVR_BG"
+			        }
+			      ]
+			    },
+			    "dim_platform_has_entity__measure_scorecard_CVR_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_platform"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_platform": {
+			          "Target": {
+			            "Entity": "dim_platform"
+			          }
+			        },
+			        "entity__measure.scorecard_CVR_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_CVR_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_platform"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_CVR_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_platforms_have_scorecard_CVR_BG"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_scorecard_CTR_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.scorecard_CTR_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_CTR_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_CTR_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_scorecard_CTR_BG"
+			        }
+			      ]
+			    },
+			    "dim_platform_has_entity__measure_scorecard_CTR_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_platform"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_platform": {
+			          "Target": {
+			            "Entity": "dim_platform"
+			          }
+			        },
+			        "entity__measure.scorecard_CTR_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_CTR_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_platform"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_CTR_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_platforms_have_scorecard_CTR_BG"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_scorecard_CPA_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.scorecard_CPA_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_CPA_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_CPA_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_scorecard_CPA_BG"
+			        }
+			      ]
+			    },
+			    "dim_platform_has_entity__measure_scorecard_CPA_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_platform"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_platform": {
+			          "Target": {
+			            "Entity": "dim_platform"
+			          }
+			        },
+			        "entity__measure.scorecard_CPA_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_CPA_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_platform"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_CPA_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_platforms_have_scorecard_CPA_BG"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_scorecard_ROAS_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.scorecard_ROAS_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_ROAS_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_ROAS_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_scorecard_ROAS_BG"
+			        }
+			      ]
+			    },
+			    "dim_platform_has_entity__measure_scorecard_ROAS_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_platform"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_platform": {
+			          "Target": {
+			            "Entity": "dim_platform"
+			          }
+			        },
+			        "entity__measure.scorecard_ROAS_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.scorecard_ROAS_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_platform"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scorecard_ROAS_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_platforms_have_scorecard_ROAS_BG"
+			        }
+			      ]
+			    },
+			    "period_filter_has_period_filter": {
+			      "Binding": {
+			        "ConceptualEntity": "Period Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "period_filter": {
+			          "Target": {
+			            "Entity": "period_filter"
+			          }
+			        },
+			        "period_filter.period_filter": {
+			          "Target": {
+			            "Entity": "period_filter.period_filter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "period_filter"
+			            },
+			            "Object": {
+			              "Role": "period_filter.period_filter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "period_filters_have_period_filters"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "period_filter"
+			            },
+			            "Name": {
+			              "Role": "period_filter.period_filter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "period_filters_are_names_IDs_of_period_filters"
 			        }
 			      ]
 			    },
@@ -26980,15 +28628,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "period_table_has_entity__measure_chip_period": {
+			    "period_filter_has_entity__measure_chip_period": {
 			      "Binding": {
-			        "ConceptualEntity": "PeriodTable"
+			        "ConceptualEntity": "Period Filter"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "period_table": {
+			        "period_filter": {
 			          "Target": {
-			            "Entity": "period_table"
+			            "Entity": "period_filter"
 			          }
 			        },
 			        "entity__measure.chip_period": {
@@ -27001,7 +28649,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "period_table"
+			              "Role": "period_filter"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.chip_period"
@@ -27009,7 +28657,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "period_tables_have_chip_period"
+			          "ID": "period_filters_have_chip_period"
 			        }
 			      ]
 			    },
@@ -30722,15 +32370,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "period_table_has_entity__measure_BarChart_subtitle": {
+			    "period_filter_has_entity__measure_BarChart_subtitle": {
 			      "Binding": {
-			        "ConceptualEntity": "PeriodTable"
+			        "ConceptualEntity": "Period Filter"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "period_table": {
+			        "period_filter": {
 			          "Target": {
-			            "Entity": "period_table"
+			            "Entity": "period_filter"
 			          }
 			        },
 			        "entity__measure.BarChart_subtitle": {
@@ -30743,7 +32391,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "period_table"
+			              "Role": "period_filter"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.BarChart_subtitle"
@@ -30751,7 +32399,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "period_tables_have_BarChart_subtitle"
+			          "ID": "period_filters_have_BarChart_subtitle"
 			        }
 			      ]
 			    },
@@ -30854,15 +32502,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "period_table_has_entity__measure_dynamic_title": {
+			    "period_filter_has_entity__measure_dynamic_title": {
 			      "Binding": {
-			        "ConceptualEntity": "PeriodTable"
+			        "ConceptualEntity": "Period Filter"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "period_table": {
+			        "period_filter": {
 			          "Target": {
-			            "Entity": "period_table"
+			            "Entity": "period_filter"
 			          }
 			        },
 			        "entity__measure.dynamic_title": {
@@ -30875,7 +32523,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "period_table"
+			              "Role": "period_filter"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.dynamic_title"
@@ -30883,7 +32531,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "period_tables_have_dynamic_title"
+			          "ID": "period_filters_have_dynamic_title"
 			        }
 			      ]
 			    },
@@ -31796,6 +33444,105 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_dates_are_weekend_dim_dates"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_month": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			          }
+			        },
+			        "fact_ad_performance_daily.source_ingested_at.month": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_month"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_day": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			          }
+			        },
+			        "fact_ad_performance_daily.source_ingested_at.day": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_day"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_gold_built_at_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily.gold_built_at": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.gold_built_at"
+			          }
+			        },
+			        "fact_ad_performance_daily.gold_built_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.gold_built_at.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily.gold_built_at"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily.gold_built_at.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "gold_built_at_have_gold_built_at_date_hierarchy"
 			        }
 			      ]
 			    },

@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "2aec1eee10213789b400",
   "position": {
-    "x": 10.060287950081833,
+    "x": 9.8806399509732277,
     "y": 6.6424048003758909,
     "z": 7000,
     "height": 472.94387505156766,
-    "width": 1332.6272887684122,
-    "tabOrder": 0
+    "width": 1308.8303728975477
   },
   "visual": {
     "visualType": "lineChart",
@@ -139,14 +138,7 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Month'"
+                  "Value": "false"
                 }
               }
             }
@@ -246,7 +238,21 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "910000000D"
                 }
               }
             },
@@ -362,7 +368,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7C3AED'"
+                      "Value": "'#12239E'"
                     }
                   }
                 }
@@ -380,7 +386,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#10B981'"
+                      "Value": "'#34A853'"
                     }
                   }
                 }
@@ -516,6 +522,40 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             }
