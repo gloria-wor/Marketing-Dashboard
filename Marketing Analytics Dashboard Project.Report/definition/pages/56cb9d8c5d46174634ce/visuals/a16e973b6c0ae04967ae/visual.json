@@ -3,10 +3,10 @@
   "name": "a16e973b6c0ae04967ae",
   "position": {
     "x": 0,
-    "y": 12.653836472230484,
+    "y": 7.4400320567775777,
     "z": 19000,
-    "height": 25.307672944460972,
-    "width": 170.82679237511158,
+    "height": 28.630997583707284,
+    "width": 171.7859855022437,
     "tabOrder": 0
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "LAST REFRESHED",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "14pt",
+                      "fontSize": "12pt",
                       "color": "#e0e2f2"
                     }
                   }

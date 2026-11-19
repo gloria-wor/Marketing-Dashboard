@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "38cc4932e818bb36e6b8",
   "position": {
-    "x": 23.333333333333336,
-    "y": 190,
+    "x": 9.54366586123576,
+    "y": 157.47048671039008,
     "z": 1000,
-    "height": 620,
-    "width": 1280,
-    "tabOrder": 2000
+    "height": 398.44804970659305,
+    "width": 1080.82015878495,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -133,6 +133,13 @@
                   }
                 }
               }
+            },
+            "autoExpand": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -218,7 +225,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "18D"
                 }
               }
             }
@@ -231,7 +238,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Monthly total revenue and total spend, January to December'"
                 }
               }
             }
