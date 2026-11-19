@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "b106df297ec07007b17e",
   "position": {
-    "x": 9.9451253555799166,
+    "x": 11.929582326544704,
     "y": 0,
-    "z": 2000,
-    "height": 199.99999999999997,
-    "width": 499.41252726836524,
-    "tabOrder": 0
+    "z": 3000,
+    "height": 188.48740075940628,
+    "width": 312.44979593494287,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -115,13 +115,6 @@
                 }
               }
             },
-            "paddingLeft": {
-              "expr": {
-                "Literal": {
-                  "Value": "65L"
-                }
-              }
-            },
             "paddingTop": {
               "expr": {
                 "Literal": {
@@ -140,6 +133,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0L"
+                }
+              }
+            },
+            "paddingLeft": {
+              "expr": {
+                "Literal": {
+                  "Value": "65L"
                 }
               }
             }
@@ -224,6 +224,21 @@
             "id": "field-69949c8c-487c-2167-ea01-5c612af7fcda",
             "order": 0
           }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "fact_ad_performance_daily.ROAS",
+            "id": "field-7f29aefd-7ccd-46a8-38c8-7893e3bb2d60",
+            "order": 1
+          }
         }
       ],
       "referenceLabelLayout": [
@@ -306,7 +321,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'belowValue'"
+                  "Value": "'aboveValue'"
                 }
               }
             }
@@ -384,7 +399,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -458,18 +473,6 @@
                 }
               }
             },
-            "imageData": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Top Bar"
-                }
-              }
-            },
             "imageDataFit": {
               "expr": {
                 "Literal": {
@@ -499,6 +502,20 @@
                   "Value": "8L"
                 }
               }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cards'"
+                }
+              }
+            },
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
             }
           }
         }
@@ -506,17 +523,17 @@
       "value": [
         {
           "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "60D"
-                }
-              }
-            },
             "fontFamily": {
               "expr": {
                 "Literal": {
                   "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
                 }
               }
             }
@@ -589,7 +606,7 @@
             "detailFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "22D"
+                  "Value": "16D"
                 }
               }
             },
@@ -625,7 +642,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "20D"
                 }
               }
             },
@@ -661,11 +678,33 @@
                   }
                 }
               }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PY'"
+                }
+              }
             }
           },
           "selector": {
             "metadata": "fact_ad_performance_daily.ROAS",
             "id": "field-69949c8c-487c-2167-ea01-5c612af7fcda"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_ad_performance_daily.ROAS",
+            "id": "field-7f29aefd-7ccd-46a8-38c8-7893e3bb2d60"
           }
         }
       ],
@@ -675,7 +714,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "20D"
                 }
               }
             }
@@ -765,5 +804,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "534b1201b0ba34d7e3e1"
+  "parentGroupName": "944a21cba1b40cae1100"
 }

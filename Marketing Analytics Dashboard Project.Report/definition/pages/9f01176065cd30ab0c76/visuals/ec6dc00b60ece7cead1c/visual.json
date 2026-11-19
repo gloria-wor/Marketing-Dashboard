@@ -5,8 +5,8 @@
     "x": 0,
     "y": 384,
     "z": 0,
-    "height": 516.66666666666674,
-    "width": 1356.6666666666667,
+    "height": 322.098722816707,
+    "width": 842.228512254056,
     "tabOrder": 0
   },
   "visual": {
@@ -39,8 +39,9 @@
                 }
               },
               "queryRef": "dim_campaign.campaign_name (groups)",
-              "nativeQueryRef": "campaign_name (groups)",
-              "active": true
+              "nativeQueryRef": "Campaigns",
+              "active": true,
+              "displayName": "Campaigns"
             }
           ]
         },
@@ -182,7 +183,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "18D"
                 }
               }
             },
@@ -214,7 +215,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'The five highest-earning campaigns ranked by total revenue'"
                 }
               }
             }
@@ -352,7 +360,7 @@
                         }
                       }
                     ],
-                    "Top": 10
+                    "Top": 5
                   }
                 }
               },

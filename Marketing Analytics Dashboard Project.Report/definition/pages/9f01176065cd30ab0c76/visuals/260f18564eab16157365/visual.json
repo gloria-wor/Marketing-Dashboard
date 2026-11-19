@@ -112,7 +112,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "18D"
                 }
               }
             },
@@ -139,7 +139,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Monthly revenue by campaign objective (Awareness, Consideration and Conversion), January to December'"
                 }
               }
             }

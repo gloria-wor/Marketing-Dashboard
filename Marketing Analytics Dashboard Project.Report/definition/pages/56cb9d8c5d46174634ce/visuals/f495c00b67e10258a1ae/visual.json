@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "f495c00b67e10258a1ae",
   "position": {
-    "x": 1313.3333333333335,
-    "y": 190,
+    "x": 1116.6089057645841,
+    "y": 157.47048671039008,
     "z": 4000,
-    "height": 620,
-    "width": 1230,
-    "tabOrder": 5000
+    "height": 398.44804970659305,
+    "width": 794.51018294787718,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "dim_date.month_short",
-              "nativeQueryRef": "month_short",
-              "active": true
+              "nativeQueryRef": "Month",
+              "active": true,
+              "displayName": "Month"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "dim_platform.platform_name",
-              "nativeQueryRef": "platform_name"
+              "nativeQueryRef": "Platform",
+              "displayName": "Platform"
             }
           ]
         },
@@ -222,7 +224,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "12D"
                 }
               }
             }
@@ -235,7 +237,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "12D"
                 }
               }
             }
@@ -284,7 +286,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "18D"
                 }
               }
             },
@@ -311,21 +313,28 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "12D"
                 }
               }
             },
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Monthly ad spend by platform for Google Ads, Meta Ads and TikTok Ads.'"
                 }
               }
             }

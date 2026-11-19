@@ -131,7 +131,8 @@
                 }
               },
               "queryRef": "fact_ad_performance_daily.Total Revenue",
-              "nativeQueryRef": "Total Revenue"
+              "nativeQueryRef": "Revenue",
+              "displayName": "Revenue"
             }
           ]
         }
@@ -175,7 +176,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "18D"
                 }
               }
             },
@@ -218,7 +219,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "397.71312223753137D"
+                  "Value": "235.3994239825974D"
                 }
               }
             }
@@ -232,7 +233,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "241.9781406496477D"
+                  "Value": "213.32367851993487D"
                 }
               }
             }
@@ -246,7 +247,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "162.12013219798922D"
+                  "Value": "138.2778347495619D"
                 }
               }
             }
@@ -260,7 +261,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "176.3013136774751D"
+                  "Value": "142.95374745786722D"
                 }
               }
             }
@@ -274,7 +275,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "203.15736424637487D"
+                  "Value": "126.80179005552161D"
                 }
               }
             }
@@ -288,7 +289,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "178.15945718358978D"
+                  "Value": "163.85651808247118D"
                 }
               }
             }
@@ -302,7 +303,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "146.79176049295538D"
+                  "Value": "96.61639204056178D"
                 }
               }
             }
@@ -316,7 +317,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "197.1285351544609D"
+                  "Value": "118.44321472451225D"
                 }
               }
             }
@@ -481,7 +482,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "12D"
                 }
               }
             }
@@ -729,7 +730,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "18D"
                 }
               }
             }

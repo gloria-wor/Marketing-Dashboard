@@ -3,11 +3,11 @@
   "name": "f1aeb42170a430628a79",
   "position": {
     "x": 0,
-    "y": 0,
-    "z": 0,
-    "height": 195.81083292423492,
-    "width": 503.47197112623292,
-    "tabOrder": 1000
+    "y": 2.3859164653089522,
+    "z": 2000,
+    "height": 181.41912323092856,
+    "width": 325.53492086568264,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "shape",
@@ -68,6 +68,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "534b1201b0ba34d7e3e1",
+  "parentGroupName": "944a21cba1b40cae1100",
   "howCreated": "InsertVisualButton"
 }
