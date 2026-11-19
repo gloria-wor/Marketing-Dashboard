@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "68b2f4450755b0017a60",
   "position": {
-    "x": 23.333333333333336,
-    "y": 13.333333333333334,
+    "x": 23.859164653089405,
+    "y": 14.315498791853642,
     "z": 12000,
-    "height": 100,
-    "width": 856.66666666666674,
-    "tabOrder": 12000
+    "height": 50.104245771487747,
+    "width": 362.65930272695897,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "textbox",
@@ -22,20 +22,8 @@
                     "value": "MARKETING ANALYTICS",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "28pt",
-                      "color": "#ffffff"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "     PLATFORM ANALYSIS",
-                    "textStyle": {
-                      "fontFamily": "Comic Sans MS",
                       "fontSize": "20pt",
-                      "color": "#c7b8e7"
+                      "color": "#ffffff"
                     }
                   }
                 ]

@@ -3,11 +3,11 @@
   "name": "88d7b372a8c5b0a91990",
   "position": {
     "x": 0,
-    "y": 7.4246173278174767,
+    "y": 5.584578660044194,
     "z": 22000,
-    "height": 103.85445314610166,
-    "width": 155,
-    "tabOrder": 7000
+    "height": 88.673430836678733,
+    "width": 102.06526258236057,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -235,7 +235,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "12D"
                 }
               }
             }

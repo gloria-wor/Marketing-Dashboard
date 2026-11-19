@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "885824b7e3e9a255acbc",
   "position": {
-    "x": 1393.375215740421,
-    "y": 903.467034863652,
-    "z": 11000,
-    "height": 537.62651018294787,
-    "width": 1151.6023472557818,
+    "x": 1343.2709699689335,
+    "y": 663.28477735588547,
+    "z": 8000,
+    "height": 417.53538142906456,
+    "width": 565.46220227821891,
     "tabOrder": 11000
   },
   "visual": {
@@ -202,7 +202,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "12D"
                 }
               }
             }
@@ -224,7 +224,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "18D"
                 }
               }
             }
@@ -237,7 +237,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total revenue by campaign objective for the selected period'"
                 }
               }
             }

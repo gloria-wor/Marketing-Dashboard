@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "15ff0a5a57477543785b",
   "position": {
-    "x": 10.905302947539035,
-    "y": 0.1042660887001588,
+    "x": 6.1318744947235553,
+    "y": 0.097806205710735866,
     "z": 3000,
-    "height": 200.31271699725082,
-    "width": 567.094697052461,
-    "tabOrder": 1000
+    "height": 187.90219379428927,
+    "width": 318.86812550527651
   },
   "visual": {
     "visualType": "cardVisual",
@@ -293,14 +292,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "13D"
                 }
               }
             },
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'belowValue'"
+                  "Value": "'aboveValue'"
                 }
               }
             },
@@ -561,7 +560,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "50D"
+                  "Value": "38D"
                 }
               }
             },
@@ -607,7 +606,14 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "15D"
+                }
+              }
+            },
+            "valueFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -712,5 +718,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "68f9a43b115479249698"
+  "parentGroupName": "859e4f9e09c4a2870331"
 }

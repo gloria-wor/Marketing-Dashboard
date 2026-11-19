@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "aa3dea5da802d9cc13ac",
   "position": {
-    "x": 1313.3333333333335,
-    "y": 833.33333333333337,
+    "x": 1245.4483948912668,
+    "y": 575.00586813945461,
     "z": 2000,
-    "height": 606.66666666666674,
-    "width": 1230,
-    "tabOrder": 3000
+    "height": 505.81429064549536,
+    "width": 665.67069382119439,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "stackedAreaChart",
@@ -484,6 +484,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopRight'"
+                }
+              }
             }
           }
         }
@@ -510,7 +517,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "18D"
                 }
               }
             }
@@ -537,7 +544,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "16D"
                 }
               }
             }
