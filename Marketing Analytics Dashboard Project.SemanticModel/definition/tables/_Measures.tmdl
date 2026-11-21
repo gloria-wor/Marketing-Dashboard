@@ -2154,6 +2154,28 @@ table _Measures
 		displayFolder: Campaign Analysis
 		lineageTag: f81f15cb-9373-4a8e-a37a-3aaa625bb557
 
+	measure 'Campaign count' = COUNT(dim_campaign[campaign_name])
+		formatString: 0
+		lineageTag: 621a462d-5f49-4ecc-9a1f-771942ee9cd7
+
+	measure 'Platform Font Color' =
+			
+			SWITCH(
+			    SELECTEDVALUE('dim_platform'[platform_name]),
+			    "Meta", "#8338EC",
+			    "Google", "#FFBE0B",
+			    "TikTok", "#FF006E"
+			)
+		lineageTag: 91c9497c-0384-4431-b2f1-d4de0b777f7f
+
+	measure 'Campaign Platform Name' =
+			
+			LOOKUPVALUE (
+			    dim_platform[platform_name],
+			    dim_platform[platform_key], SELECTEDVALUE ( fact_ad_performance_daily[platform_key] )
+			)
+		lineageTag: 12311a45-5143-4d09-9469-c55851c44200
+
 	column Value
 		formatString: 0
 		lineageTag: 77acfa64-3739-4565-87a6-5b1c67a34a52
