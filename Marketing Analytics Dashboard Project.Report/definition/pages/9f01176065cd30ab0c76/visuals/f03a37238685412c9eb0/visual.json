@@ -3,11 +3,11 @@
   "name": "f03a37238685412c9eb0",
   "position": {
     "x": 11.929582326544702,
-    "y": 663.28477735588547,
-    "z": 2000,
-    "height": 417.53538142906456,
-    "width": 1312.2540559199172,
-    "tabOrder": 5000
+    "y": 131.22540559199172,
+    "z": 1000,
+    "height": 493.88470831895069,
+    "width": 1307.4822229892993,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "tableEx",
@@ -247,20 +247,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "138.2778347495619D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "dim_platform.platform_name"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "142.95374745786722D"
                 }
               }
@@ -360,20 +346,6 @@
             }
           },
           "selector": {
-            "metadata": "dim_platform.platform_name"
-          }
-        },
-        {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
             "metadata": "dim_campaign.objective"
           }
         },
@@ -474,6 +446,27 @@
           "selector": {
             "metadata": "fact_ad_performance_daily.Total Revenue"
           }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_platform.platform_name"
+          }
         }
       ],
       "values": [
@@ -553,117 +546,13 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "dim_platform"
-                                        }
-                                      },
-                                      "Property": "platform_name"
-                                    }
-                                  },
-                                  "Function": 3
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "'TikTok Ads'"
-                                }
-                              }
-                            },
-                            "Annotations": {
-                              "PowerBI.SQExprEvaluationKind": 1,
-                              "PowerBI.SQExprTextOperatorOption": 2
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#EC3026'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "dim_platform"
-                                        }
-                                      },
-                                      "Property": "platform_name"
-                                    }
-                                  },
-                                  "Function": 3
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "'Meta Ads'"
-                                }
-                              }
-                            },
-                            "Annotations": {
-                              "PowerBI.SQExprEvaluationKind": 1,
-                              "PowerBI.SQExprTextOperatorOption": 2
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#259F13'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "dim_platform"
-                                        }
-                                      },
-                                      "Property": "platform_name"
-                                    }
-                                  },
-                                  "Function": 3
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "'Google Ads'"
-                                }
-                              }
-                            },
-                            "Annotations": {
-                              "PowerBI.SQExprEvaluationKind": 1,
-                              "PowerBI.SQExprTextOperatorOption": 2
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#2983D6'"
-                            }
-                          }
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
                         }
-                      ]
+                      },
+                      "Property": "Platform Font Color"
                     }
                   }
                 }

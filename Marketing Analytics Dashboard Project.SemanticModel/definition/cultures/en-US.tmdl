@@ -3654,16 +3654,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "campaign label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
 			          "campaign tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -11667,16 +11657,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.491
 			          }
-			        },
-			        {
-			          "rate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
 			      ]
 			    },
@@ -15288,16 +15268,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "rate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
 			          "importance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -15335,6 +15305,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "use": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
 			          }
 			        }
 			      ]
@@ -19664,16 +19644,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.582
 			          }
-			        },
-			        {
-			          "Top Performer": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -21594,16 +21564,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
-			        },
-			        {
-			          "Underperformers": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -21905,16 +21865,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "Steady Performers": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -23266,23 +23216,2142 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "dim_campaign.campaign_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_campaign",
+			          "ConceptualProperty": "campaign_label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaign label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "campaign_label": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "campaign sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "campaign tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "campaign decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "campaign name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.spend_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Spend Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "spend share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "spend share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "spend part %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "spend portion %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "spend segment %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "spend cut %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "spend stake %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "spend bit %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "spend piece %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.revenue_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Revenue Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "revenue share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "revenue share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "income share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "profit share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "turnover share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yield share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.ROAS_vs_blended_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "ROAS vs Blended %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ROAS vs blended %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "roa vs blended percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "roa vs blended pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.CPA_vs_blended_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "CPA vs Blended %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CPA vs blended %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cpa vs blended percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "cpa vs blended pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.engagement_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Engagement Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "engagement rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "engagement degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "engagement frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "engagement percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "engagement ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "engagement quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "engagement amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "engagement proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.platform_ROAS_rank": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Platform ROAS Rank"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "platform ROAS rank": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ROAS rank": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.budget_used_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Budget Used %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "budget used %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "budget used percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "budget used pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "account used %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "cost used %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finance used %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.budget_variance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Budget Variance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "budget variance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "account variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "cost variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finance variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "budget alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "budget modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "budget adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "budget change": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.share_gap_pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Share Gap (pp)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "share gap (pp)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "share gap": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.platform_verdict": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Platform Verdict"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "platform verdict": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "verdict": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "platform decision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform judgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform judgment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform outcome": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform conclusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "decision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "judgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "judgment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "outcome": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "conclusion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.platform_insight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Platform Insight"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "platform insight": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "insight": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "platform awareness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform intuition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform perception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform acumen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform comprehension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform discernment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "platform perceptiveness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "awareness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "intuition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "perception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.peer_ROAS": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Peer ROAS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "peer ROAS": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.campaigns_running": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Campaigns Running"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaigns running": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "running": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "campaign organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "campaign administration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "campaign operation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "administration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "operation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "campaign management": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "campaign controlling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "campaign overseeing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "management": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.campaign_spend_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Campaign Spend Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaign spend share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "campaign spend share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "campaign spend share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "movement spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "operation spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "promotion spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "crusade spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "drive spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "fight spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "battle spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "war spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.budget_pacing_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Budget Pacing Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "budget pacing status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pacing status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "budget pacing category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "budget pacing importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "budget pacing prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "budget pacing prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "pacing category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "pacing importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "pacing prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "pacing prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "budget pacing condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "budget pacing class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.ROAS_index_vs_peers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "ROAS Index vs Peers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ROAS index vs peers": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.campaign_tier": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Campaign Tier"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaign tier": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tier": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "campaign row": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaign level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaign layer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaign stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaign rank": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaign step": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaign story": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "row": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "layer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.campaign_tier_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Campaign Tier Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaign tier color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tier color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "campaign tier hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "tier hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "campaign tier tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "campaign tier shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "campaign tier dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "campaign tier paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "campaign tier pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "tier tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "tier shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.campaign_tier_BG": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Campaign Tier BG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaign tier BG": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tier BG": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.review_campaigns": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Review Campaigns"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "review campaigns": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.scale_campaigns": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Scale Campaigns"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "scale campaigns": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.review_spend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Review Spend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "review spend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "appraisal spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "evaluation spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "assessment spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "examination spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "analysis spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "criticism spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "journal spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "publication spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "periodical spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "magazine spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.scale_spend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Scale Spend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "scale spend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ruler spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "weighbridge spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "gage spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "gauge spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rule spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "balance spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "gradation spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "hierarchy spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "gamut spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.revenue_gap_in_review_campaigns": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Revenue Gap in Review Campaigns"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue gap in review campaigns": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "in review campaigns": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "gap in review campaigns": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income gap in review campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "profit gap in review campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "turnover gap in review campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "yield gap in review campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "revenue cavity in review campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "revenue aperture in review campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "cavity in review campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "aperture in review campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "in appraisal campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "in evaluation campaign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.review_spend_share_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Review Spend Share %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "review spend share %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "review spend share percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "review spend share pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "appraisal spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "evaluation spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "assessment spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "examination spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "analysis spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "criticism spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "journal spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "publication spend share %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.campaign_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Campaign count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaign count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "campaign amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_quarter": {
+			    "fact_ad_performance_daily_has_entity__measure_campaign_spend_share_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			        "fact_ad_performance_daily": {
 			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            "Entity": "fact_ad_performance_daily"
 			          }
 			        },
-			        "fact_ad_performance_daily.source_ingested_at.quarter": {
+			        "entity__measure.campaign_spend_share_": {
 			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.quarter"
+			            "Entity": "entity__measure.campaign_spend_share_"
 			          }
 			        }
 			      },
@@ -23290,32 +25359,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			              "Role": "fact_ad_performance_daily"
 			            },
 			            "Object": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.quarter"
+			              "Role": "entity__measure.campaign_spend_share_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_quarter"
+			          "ID": "fact_ad_performance_daily_have_campaign_spend_share_"
 			        }
 			      ]
 			    },
-			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_year": {
+			    "fact_ad_performance_daily_has_entity__measure_campaigns_running": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			        "fact_ad_performance_daily": {
 			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            "Entity": "fact_ad_performance_daily"
 			          }
 			        },
-			        "fact_ad_performance_daily.source_ingested_at.year": {
+			        "entity__measure.campaigns_running": {
 			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.year"
+			            "Entity": "entity__measure.campaigns_running"
 			          }
 			        }
 			      },
@@ -23323,32 +25392,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			              "Role": "fact_ad_performance_daily"
 			            },
 			            "Object": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.year"
+			              "Role": "entity__measure.campaigns_running"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_year"
+			          "ID": "fact_ad_performance_daily_have_campaigns_running"
 			        }
 			      ]
 			    },
-			    "fact_ad_performance_daily_source_ingested_at_has_date_hierarchy": {
+			    "fact_ad_performance_daily_has_entity__measure_peer_ROAS": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_ad_performance_daily.source_ingested_at": {
+			        "fact_ad_performance_daily": {
 			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at"
+			            "Entity": "fact_ad_performance_daily"
 			          }
 			        },
-			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			        "entity__measure.peer_ROAS": {
 			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            "Entity": "entity__measure.peer_ROAS"
 			          }
 			        }
 			      },
@@ -23356,157 +25425,151 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at"
+			              "Role": "fact_ad_performance_daily"
 			            },
 			            "Object": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			              "Role": "entity__measure.peer_ROAS"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "source_ingested_at_have_source_ingested_at_date_hierarchy"
+			          "ID": "fact_ad_performance_daily_have_peer_ROAS"
 			        }
 			      ]
 			    },
-			    "fact_campaign_budget_daily_has_dim_geo": {
+			    "dim_campaign_has_entity__measure_peer_ROAS": {
 			      "Binding": {
-			        "ConceptualEntity": "fact_campaign_budget_daily"
+			        "ConceptualEntity": "dim_campaign"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_campaign_budget_daily": {
-			          "Target": {
-			            "Entity": "fact_campaign_budget_daily"
-			          }
-			        },
-			        "dim_geo": {
-			          "Target": {
-			            "Entity": "dim_geo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_campaign_budget_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_geo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_campaign_budget_dailies_have_dim_geos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_geo"
-			            },
-			            "Object": {
-			              "Role": "fact_campaign_budget_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_geos_have_fact_campaign_budget_dailies"
-			        }
-			      ]
-			    },
-			    "fact_campaign_budget_daily_has_dim_date": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_campaign_budget_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_campaign_budget_daily": {
-			          "Target": {
-			            "Entity": "fact_campaign_budget_daily"
-			          }
-			        },
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_campaign_budget_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_campaign_budget_dailies_have_dim_dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "fact_campaign_budget_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_fact_campaign_budget_dailies"
-			        }
-			      ]
-			    },
-			    "fact_campaign_budget_daily_has_dim_campaign": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_campaign_budget_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_campaign_budget_daily": {
-			          "Target": {
-			            "Entity": "fact_campaign_budget_daily"
-			          }
-			        },
 			        "dim_campaign": {
 			          "Target": {
 			            "Entity": "dim_campaign"
 			          }
+			        },
+			        "entity__measure.peer_ROAS": {
+			          "Target": {
+			            "Entity": "entity__measure.peer_ROAS"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_campaign_budget_daily"
+			              "Role": "dim_campaign"
 			            },
 			            "Object": {
-			              "Role": "dim_campaign"
+			              "Role": "entity__measure.peer_ROAS"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_campaign_budget_dailies_have_dim_campaigns"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_campaign"
-			            },
-			            "Object": {
-			              "Role": "fact_campaign_budget_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_campaigns_have_fact_campaign_budget_dailies"
+			          "ID": "dim_campaigns_have_peer_ROAS"
 			        }
 			      ]
 			    },
-			    "fact_campaign_budget_daily_has_dim_platform": {
+			    "entity__measure_has_platform_insight": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.platform_insight": {
+			          "Target": {
+			            "Entity": "entity__measure.platform_insight"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.platform_insight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_platform_insight"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_platform_verdict": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.platform_verdict": {
+			          "Target": {
+			            "Entity": "entity__measure.platform_verdict"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.platform_verdict"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_platform_verdict"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_share_gap_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.share_gap_pp": {
+			          "Target": {
+			            "Entity": "entity__measure.share_gap_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.share_gap_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_share_gap_pp"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_budget_variance": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_campaign_budget_daily"
 			      },
@@ -23517,9 +25580,9 @@ cultureInfo en-US
 			            "Entity": "fact_campaign_budget_daily"
 			          }
 			        },
-			        "dim_platform": {
+			        "entity__measure.budget_variance": {
 			          "Target": {
-			            "Entity": "dim_platform"
+			            "Entity": "entity__measure.budget_variance"
 			          }
 			        }
 			      },
@@ -23530,29 +25593,16 @@ cultureInfo en-US
 			              "Role": "fact_campaign_budget_daily"
 			            },
 			            "Object": {
-			              "Role": "dim_platform"
+			              "Role": "entity__measure.budget_variance"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_campaign_budget_dailies_have_dim_platforms"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_platform"
-			            },
-			            "Object": {
-			              "Role": "fact_campaign_budget_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_platforms_have_fact_campaign_budget_dailies"
+			          "ID": "fact_campaign_budget_dailies_have_budget_variance"
 			        }
 			      ]
 			    },
-			    "fact_campaign_budget_daily_has_dim_account": {
+			    "fact_campaign_budget_daily_has_entity__measure_budget_used_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_campaign_budget_daily"
 			      },
@@ -23563,9 +25613,9 @@ cultureInfo en-US
 			            "Entity": "fact_campaign_budget_daily"
 			          }
 			        },
-			        "dim_account": {
+			        "entity__measure.budget_used_": {
 			          "Target": {
-			            "Entity": "dim_account"
+			            "Entity": "entity__measure.budget_used_"
 			          }
 			        }
 			      },
@@ -23576,29 +25626,49 @@ cultureInfo en-US
 			              "Role": "fact_campaign_budget_daily"
 			            },
 			            "Object": {
-			              "Role": "dim_account"
+			              "Role": "entity__measure.budget_used_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_campaign_budget_dailies_have_dim_accounts"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_account"
-			            },
-			            "Object": {
-			              "Role": "fact_campaign_budget_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_accounts_have_fact_campaign_budget_dailies"
+			          "ID": "fact_campaign_budget_dailies_have_budget_used_"
 			        }
 			      ]
 			    },
-			    "fact_ad_performance_daily_has_dim_geo": {
+			    "entity__measure_has_platform_ROAS_rank": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.platform_ROAS_rank": {
+			          "Target": {
+			            "Entity": "entity__measure.platform_ROAS_rank"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.platform_ROAS_rank"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_platform_ROAS_rank"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_engagement_rate": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
 			      },
@@ -23609,9 +25679,9 @@ cultureInfo en-US
 			            "Entity": "fact_ad_performance_daily"
 			          }
 			        },
-			        "dim_geo": {
+			        "entity__measure.engagement_rate": {
 			          "Target": {
-			            "Entity": "dim_geo"
+			            "Entity": "entity__measure.engagement_rate"
 			          }
 			        }
 			      },
@@ -23622,29 +25692,82 @@ cultureInfo en-US
 			              "Role": "fact_ad_performance_daily"
 			            },
 			            "Object": {
-			              "Role": "dim_geo"
+			              "Role": "entity__measure.engagement_rate"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_dim_geos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_geo"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_geos_have_fact_ad_performance_daily"
+			          "ID": "fact_ad_performance_daily_have_engagement_rate"
 			        }
 			      ]
 			    },
-			    "fact_ad_performance_daily_has_dim_date": {
+			    "entity__measure_has_CPA_vs_blended_": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.CPA_vs_blended_": {
+			          "Target": {
+			            "Entity": "entity__measure.CPA_vs_blended_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.CPA_vs_blended_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_CPA_vs_blended_"
+			        }
+			      ]
+			    },
+			    "entity__measure_has_ROAS_vs_blended_": {
+			      "Binding": {
+			        "ConceptualEntity": "_Measures"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__measure": {
+			          "Target": {
+			            "Entity": "entity__measure"
+			          }
+			        },
+			        "entity__measure.ROAS_vs_blended_": {
+			          "Target": {
+			            "Entity": "entity__measure.ROAS_vs_blended_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__measure"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ROAS_vs_blended_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_measures_have_ROAS_vs_blended_"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_revenue_share_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
 			      },
@@ -23655,9 +25778,9 @@ cultureInfo en-US
 			            "Entity": "fact_ad_performance_daily"
 			          }
 			        },
-			        "dim_date": {
+			        "entity__measure.revenue_share_": {
 			          "Target": {
-			            "Entity": "dim_date"
+			            "Entity": "entity__measure.revenue_share_"
 			          }
 			        }
 			      },
@@ -23668,29 +25791,16 @@ cultureInfo en-US
 			              "Role": "fact_ad_performance_daily"
 			            },
 			            "Object": {
-			              "Role": "dim_date"
+			              "Role": "entity__measure.revenue_share_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_dim_dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_fact_ad_performance_daily"
+			          "ID": "fact_ad_performance_daily_have_revenue_share_"
 			        }
 			      ]
 			    },
-			    "fact_ad_performance_daily_has_dim_campaign": {
+			    "fact_ad_performance_daily_has_entity__measure_spend_share_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
 			      },
@@ -23701,308 +25811,58 @@ cultureInfo en-US
 			            "Entity": "fact_ad_performance_daily"
 			          }
 			        },
+			        "entity__measure.spend_share_": {
+			          "Target": {
+			            "Entity": "entity__measure.spend_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.spend_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_spend_share_"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_campaign_label": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
 			        "dim_campaign": {
 			          "Target": {
 			            "Entity": "dim_campaign"
 			          }
+			        },
+			        "dim_campaign.campaign_label": {
+			          "Target": {
+			            "Entity": "dim_campaign.campaign_label"
+			          }
 			        }
 			      },
 			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_campaign"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_dim_campaigns"
-			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "dim_campaign"
 			            },
 			            "Object": {
-			              "Role": "fact_ad_performance_daily"
+			              "Role": "dim_campaign.campaign_label"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_campaigns_have_fact_ad_performance_daily"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_dim_ad_group": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "dim_ad_group": {
-			          "Target": {
-			            "Entity": "dim_ad_group"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_ad_group"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_dim_ad_group"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_ad_group"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_ad_group_have_fact_ad_performance_daily"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Prepositions": [
-			              {
-			                "ad": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_ad_group"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_are_ad_dim_ad_group"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_dim_ad": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "dim_ad": {
-			          "Target": {
-			            "Entity": "dim_ad"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_ad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_dim_ad"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_ad"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_ad_have_fact_ad_performance_daily"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Prepositions": [
-			              {
-			                "ad": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_ad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_are_ad_dim_ad"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_dim_client": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "dim_client": {
-			          "Target": {
-			            "Entity": "dim_client"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_client"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_dim_clients"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_client"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_clients_have_fact_ad_performance_daily"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_dim_platform": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "dim_platform": {
-			          "Target": {
-			            "Entity": "dim_platform"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_platform"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_dim_platforms"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_platform"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_platforms_have_fact_ad_performance_daily"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_dim_account": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "dim_account": {
-			          "Target": {
-			            "Entity": "dim_account"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_account"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_dim_accounts"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_account"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_accounts_have_fact_ad_performance_daily"
+			          "ID": "dim_campaigns_have_campaign_labels"
 			        }
 			      ]
 			    },
@@ -33444,6 +35304,1403 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_dates_are_weekend_dim_dates"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_entity__measure_budget_pacing_status": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "entity__measure.budget_pacing_status": {
+			          "Target": {
+			            "Entity": "entity__measure.budget_pacing_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.budget_pacing_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_budget_pacing_status"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_ROAS_index_vs_peers": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.ROAS_index_vs_peers": {
+			          "Target": {
+			            "Entity": "entity__measure.ROAS_index_vs_peers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ROAS_index_vs_peers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_ROAS_index_vs_peers"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_ROAS_index_vs_peers": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.ROAS_index_vs_peers": {
+			          "Target": {
+			            "Entity": "entity__measure.ROAS_index_vs_peers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.ROAS_index_vs_peers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_ROAS_index_vs_peers"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_campaign_tier": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.campaign_tier": {
+			          "Target": {
+			            "Entity": "entity__measure.campaign_tier"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.campaign_tier"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_campaign_tier"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_campaign_tier": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.campaign_tier": {
+			          "Target": {
+			            "Entity": "entity__measure.campaign_tier"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.campaign_tier"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_campaign_tier"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_campaign_tier_color": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.campaign_tier_color": {
+			          "Target": {
+			            "Entity": "entity__measure.campaign_tier_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.campaign_tier_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_campaign_tier_color"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_campaign_tier_color": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.campaign_tier_color": {
+			          "Target": {
+			            "Entity": "entity__measure.campaign_tier_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.campaign_tier_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_campaign_tier_color"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_campaign_tier_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.campaign_tier_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.campaign_tier_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.campaign_tier_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_campaign_tier_BG"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_campaign_tier_BG": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.campaign_tier_BG": {
+			          "Target": {
+			            "Entity": "entity__measure.campaign_tier_BG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.campaign_tier_BG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_campaign_tier_BG"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_review_campaigns": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.review_campaigns": {
+			          "Target": {
+			            "Entity": "entity__measure.review_campaigns"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.review_campaigns"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_review_campaigns"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_scale_campaigns": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.scale_campaigns": {
+			          "Target": {
+			            "Entity": "entity__measure.scale_campaigns"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scale_campaigns"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_scale_campaigns"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_review_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.review_spend": {
+			          "Target": {
+			            "Entity": "entity__measure.review_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.review_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_review_spend"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_review_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.review_spend": {
+			          "Target": {
+			            "Entity": "entity__measure.review_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.review_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_review_spend"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_scale_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.scale_spend": {
+			          "Target": {
+			            "Entity": "entity__measure.scale_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scale_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_scale_spend"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_scale_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.scale_spend": {
+			          "Target": {
+			            "Entity": "entity__measure.scale_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scale_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_scale_spend"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_revenue_gap_in_review_campaigns": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.revenue_gap_in_review_campaigns": {
+			          "Target": {
+			            "Entity": "entity__measure.revenue_gap_in_review_campaigns"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.revenue_gap_in_review_campaigns"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_revenue_gap_in_review_campaigns"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_revenue_gap_in_review_campaigns": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.revenue_gap_in_review_campaigns": {
+			          "Target": {
+			            "Entity": "entity__measure.revenue_gap_in_review_campaigns"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.revenue_gap_in_review_campaigns"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_revenue_gap_in_review_campaigns"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_review_spend_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.review_spend_share_": {
+			          "Target": {
+			            "Entity": "entity__measure.review_spend_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.review_spend_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_review_spend_share_"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_review_spend_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.review_spend_share_": {
+			          "Target": {
+			            "Entity": "entity__measure.review_spend_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.review_spend_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_review_spend_share_"
+			        }
+			      ]
+			    },
+			    "dim_campaign_has_entity__measure_campaign_count": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_campaign"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        },
+			        "entity__measure.campaign_count": {
+			          "Target": {
+			            "Entity": "entity__measure.campaign_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.campaign_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_campaign_count"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_dim_account": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "dim_account": {
+			          "Target": {
+			            "Entity": "dim_account"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_account"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dim_accounts"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_account"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_accounts_have_fact_ad_performance_daily"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_dim_platform": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "dim_platform": {
+			          "Target": {
+			            "Entity": "dim_platform"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_platform"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dim_platforms"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_platform"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_platforms_have_fact_ad_performance_daily"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_dim_client": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "dim_client": {
+			          "Target": {
+			            "Entity": "dim_client"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_client"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dim_clients"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_client"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clients_have_fact_ad_performance_daily"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_dim_ad": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "dim_ad": {
+			          "Target": {
+			            "Entity": "dim_ad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_ad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dim_ad"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ad"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ad_have_fact_ad_performance_daily"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Prepositions": [
+			              {
+			                "ad": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_ad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_are_ad_dim_ad"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_dim_ad_group": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "dim_ad_group": {
+			          "Target": {
+			            "Entity": "dim_ad_group"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_ad_group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dim_ad_group"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_ad_group"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_ad_group_have_fact_ad_performance_daily"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Prepositions": [
+			              {
+			                "ad": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_ad_group"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_are_ad_dim_ad_group"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_dim_campaign": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_campaign"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dim_campaigns"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_fact_ad_performance_daily"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_dim_date": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dim_dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_fact_ad_performance_daily"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_dim_geo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "dim_geo": {
+			          "Target": {
+			            "Entity": "dim_geo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_geo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_dim_geos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geo"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geos_have_fact_ad_performance_daily"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_dim_account": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "dim_account": {
+			          "Target": {
+			            "Entity": "dim_account"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_account"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_dim_accounts"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_account"
+			            },
+			            "Object": {
+			              "Role": "fact_campaign_budget_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_accounts_have_fact_campaign_budget_dailies"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_dim_platform": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "dim_platform": {
+			          "Target": {
+			            "Entity": "dim_platform"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_platform"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_dim_platforms"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_platform"
+			            },
+			            "Object": {
+			              "Role": "fact_campaign_budget_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_platforms_have_fact_campaign_budget_dailies"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_dim_campaign": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "dim_campaign": {
+			          "Target": {
+			            "Entity": "dim_campaign"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_campaign"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_dim_campaigns"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_campaign"
+			            },
+			            "Object": {
+			              "Role": "fact_campaign_budget_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_campaigns_have_fact_campaign_budget_dailies"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_dim_date": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_dim_dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "fact_campaign_budget_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_fact_campaign_budget_dailies"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_dim_geo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "dim_geo": {
+			          "Target": {
+			            "Entity": "dim_geo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_geo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_dim_geos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geo"
+			            },
+			            "Object": {
+			              "Role": "fact_campaign_budget_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geos_have_fact_campaign_budget_dailies"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_source_ingested_at_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily.source_ingested_at": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at"
+			          }
+			        },
+			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "source_ingested_at_have_source_ingested_at_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_year": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			          }
+			        },
+			        "fact_ad_performance_daily.source_ingested_at.year": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_year"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			          }
+			        },
+			        "fact_ad_performance_daily.source_ingested_at.quarter": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_quarter"
 			        }
 			      ]
 			    },

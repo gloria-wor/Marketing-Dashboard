@@ -39,6 +39,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "htmlContent443BE3AD55E043BF878BED274D3A6855"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -48,47 +51,6 @@
           "name": "Fluent2-CY26SU09",
           "path": "BaseThemes/Fluent2-CY26SU09.json",
           "type": "BaseTheme"
-        }
-      ]
-    },
-    {
-      "name": "RegisteredResources",
-      "type": "RegisteredResources",
-      "items": [
-        {
-          "name": "arrow_escalation4077808239694908.svg",
-          "path": "arrow_escalation4077808239694908.svg",
-          "type": "Image"
-        },
-        {
-          "name": "Steady_icon20266392986368853.svg",
-          "path": "Steady_icon20266392986368853.svg",
-          "type": "Image"
-        },
-        {
-          "name": "Steady_icon2341217394620091.svg",
-          "path": "Steady_icon2341217394620091.svg",
-          "type": "Image"
-        },
-        {
-          "name": "Steady_icon5241377839943462.svg",
-          "path": "Steady_icon5241377839943462.svg",
-          "type": "Image"
-        },
-        {
-          "name": "Trophy_icon5457187640622313.svg",
-          "path": "Trophy_icon5457187640622313.svg",
-          "type": "Image"
-        },
-        {
-          "name": "warning_icon16719922969374434.svg",
-          "path": "warning_icon16719922969374434.svg",
-          "type": "Image"
-        },
-        {
-          "name": "warning_icon7949657275577064.svg",
-          "path": "warning_icon7949657275577064.svg",
-          "type": "Image"
         }
       ]
     }

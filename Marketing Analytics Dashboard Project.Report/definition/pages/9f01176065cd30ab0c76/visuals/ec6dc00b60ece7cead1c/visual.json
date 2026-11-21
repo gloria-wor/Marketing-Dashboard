@@ -2,50 +2,56 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ec6dc00b60ece7cead1c",
   "position": {
-    "x": 11.929582326544702,
-    "y": 324.48463928201591,
+    "x": 1228.7469796341043,
+    "y": 646.58336209872289,
     "z": 0,
-    "height": 322.098722816707,
-    "width": 842.228512254056,
+    "height": 429.46496375560929,
+    "width": 679.986192613048,
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Category": {
+        "Columns": {
           "projections": [
             {
               "field": {
-                "GroupRef": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "dim_campaign"
                     }
                   },
-                  "Property": "campaign_name (groups)",
-                  "GroupedColumns": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "dim_campaign"
-                          }
-                        },
-                        "Property": "campaign_name"
-                      }
-                    }
-                  ]
+                  "Property": "objective"
                 }
               },
-              "queryRef": "dim_campaign.campaign_name (groups)",
-              "nativeQueryRef": "Campaigns",
-              "active": true,
-              "displayName": "Campaigns"
+              "queryRef": "dim_campaign.objective",
+              "nativeQueryRef": "objective",
+              "active": true
             }
           ]
         },
-        "Y": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_platform"
+                    }
+                  },
+                  "Property": "platform_name"
+                }
+              },
+              "queryRef": "dim_platform.platform_name",
+              "nativeQueryRef": "platform_name",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
           "projections": [
             {
               "field": {
@@ -55,103 +61,48 @@
                       "Entity": "fact_ad_performance_daily"
                     }
                   },
-                  "Property": "Total Revenue"
+                  "Property": "ROAS"
                 }
               },
-              "queryRef": "fact_ad_performance_daily.Total Revenue",
-              "nativeQueryRef": "Total Revenue"
+              "queryRef": "fact_ad_performance_daily.ROAS",
+              "nativeQueryRef": "ROAS"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_ad_performance_daily"
+                    }
+                  },
+                  "Property": "CPA"
+                }
+              },
+              "queryRef": "fact_ad_performance_daily.CPA",
+              "nativeQueryRef": "CPA"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fact_ad_performance_daily"
-                  }
-                },
-                "Property": "Total Revenue"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "categoryAxis": [
+      "values": [
         {
           "properties": {
-            "fontSize": {
+            "valuesOnRow": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "false"
                 }
               }
             }
           }
         }
       ],
-      "dataPoint": [
+      "blankRows": [
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Bar Color"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "show": {
+            "showBlankRows": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -200,6 +151,13 @@
               }
             },
             "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -409,7 +367,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }

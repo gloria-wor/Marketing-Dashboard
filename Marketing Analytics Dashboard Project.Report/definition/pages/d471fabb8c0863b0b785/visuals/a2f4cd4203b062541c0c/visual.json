@@ -6,7 +6,8 @@
     "y": 8.5842959842236475,
     "z": 4000,
     "height": 466.75862068965512,
-    "width": 541.77777777777783
+    "width": 541.77777777777783,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "donutChart",
@@ -167,7 +168,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FF0000'"
+                      "Value": "'#FF006E'"
                     }
                   }
                 }
@@ -208,7 +209,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#34A853'"
+                      "Value": "'#FFBE0B'"
                     }
                   }
                 }
@@ -249,7 +250,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#12239E'"
+                      "Value": "'#8338EC'"
                     }
                   }
                 }

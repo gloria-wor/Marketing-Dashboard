@@ -2006,6 +2006,176 @@ table _Measures
 		displayFolder: Region
 		lineageTag: c0af3c42-2ae7-4270-9023-9662b982c5b5
 
+	measure 'Spend Share %' = DIVIDE([Total Spend], CALCULATE([Total Spend], ALLSELECTED(dim_platform)))
+		formatString: 0.0%
+		displayFolder: Platform Analysis
+		lineageTag: ebc7c9bd-d6b9-4381-8bea-048c6637b118
+
+	measure 'Revenue Share %' = DIVIDE([Total Revenue], CALCULATE([Total Revenue], ALLSELECTED(dim_platform)))
+		formatString: 0.0%
+		displayFolder: Platform Analysis
+		lineageTag: 9e295858-b2da-4ebd-be06-4ce807d3979d
+
+	/// Platform ROAS relative to the blended ROAS. Positive = better than average.
+	measure 'ROAS vs Blended %' = DIVIDE([ROAS], [Blended ROAS]) - 1
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Platform Analysis
+		lineageTag: 745e7459-b2f5-42ad-95a3-77ca4e1878ae
+
+	/// Platform CPA relative to blended CPA. Negative = cheaper than average (good).
+	measure 'CPA vs Blended %' = DIVIDE([CPA], [Blended CPA]) - 1
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Platform Analysis
+		lineageTag: 43508ed4-187c-4285-9e59-18b0f1a5153f
+
+	measure 'Engagement Rate' = DIVIDE([Total Engagements], [Total Impressions])
+		formatString: 0.00%
+		displayFolder: Platform Analysis
+		lineageTag: ef5e3dad-2578-45fd-b18b-7f82e082236a
+
+	measure 'Platform ROAS Rank' = IF(ISINSCOPE(dim_platform[platform_name]), RANKX(ALLSELECTED(dim_platform[platform_name]), [ROAS], , DESC, Dense))
+		formatString: 0
+		displayFolder: Platform Analysis
+		lineageTag: 94925980-ec94-408c-a766-66692542edeb
+
+	/// Like-for-like budget utilisation: spend and budget both from fact_campaign_budget_daily. Use instead of 'Budget Utilization %', which divides ad-fact spend by budget-table budget and over-states utilisation.
+	measure 'Budget Used %' = DIVIDE([Total Campaign Spend], [Total Campaign Budget])
+		formatString: 0.0%
+		displayFolder: Budget
+		lineageTag: a23fe4e5-ad75-44c6-9f65-55944c002ccb
+
+	/// Campaign-table spend minus budget (KES). Positive = overspent.
+	measure 'Budget Variance' = [Total Campaign Spend] - [Total Campaign Budget]
+		formatString: #,0;-#,0;0
+		displayFolder: Budget
+		lineageTag: cbba6025-b56b-478e-901e-1efe09c5d63a
+
+	/// Revenue share minus spend share. Positive = platform returns more revenue than the share of budget it consumes.
+	measure 'Share Gap (pp)' = [Revenue Share %] - [Spend Share %]
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Platform Analysis
+		lineageTag: 48cb0627-5971-4cfa-be32-a945ab5ff3ed
+
+	measure 'Platform Verdict' =
+			IF(ISINSCOPE(dim_platform[platform_name]) && NOT ISBLANK([ROAS]),
+			    SWITCH(TRUE(),
+			        [ROAS vs Blended %] >= 0.10, "Scale",
+			        [ROAS vs Blended %] <= -0.10, "Fix or cut",
+			        "Hold"))
+		displayFolder: Platform Analysis
+		lineageTag: b0cad3de-7591-4eff-bc68-c5e36d12de3c
+
+	/// Subtitle sentence naming the best ROAS and lowest CPA platform in scope.
+	measure 'Platform Insight' =
+			VAR t = ADDCOLUMNS(ALLSELECTED(dim_platform[platform_name]), "@r", [ROAS], "@c", [CPA])
+			VAR best = TOPN(1, t, [@r], DESC)
+			VAR cheap = TOPN(1, t, [@c], ASC)
+			RETURN
+			"Best ROAS: " & MAXX(best, dim_platform[platform_name]) & " (" & FORMAT(MAXX(best, [@r]), "0.00") & "x)  |  Lowest CPA: " & MAXX(cheap, dim_platform[platform_name]) & " (KES " & FORMAT(MINX(cheap, [@c]), "#,0") & ")"
+		displayFolder: Platform Analysis
+		lineageTag: 4c9bf19a-3802-4f4e-8b98-abb642bc4286
+
+	/// Median campaign ROAS on the campaign's own platform (campaigns in scope). Median rather than blended ROAS so a few outlier campaigns don't pull the benchmark up. Falls back to the overall median when no single platform is in context.
+	measure 'Peer ROAS' =
+			VAR p = SELECTEDVALUE(fact_ad_performance_daily[platform_key])
+			RETURN
+			IF(ISBLANK(p),
+			    CALCULATE(MEDIANX(FILTER(VALUES(dim_campaign[campaign_key]), NOT ISBLANK([ROAS])), [ROAS]), ALLSELECTED(dim_campaign)),
+			    CALCULATE(MEDIANX(FILTER(VALUES(dim_campaign[campaign_key]), NOT ISBLANK([ROAS])), [ROAS]), ALLSELECTED(dim_campaign), fact_ad_performance_daily[platform_key] = p))
+		formatString: 0.00"x"
+		displayFolder: Campaign Analysis
+		lineageTag: fddda93e-f29f-4db6-b69f-5755ca1876a4
+
+	measure 'Campaigns Running' = DISTINCTCOUNT(fact_ad_performance_daily[campaign_key])
+		formatString: #,0
+		displayFolder: Campaign Analysis
+		lineageTag: 9e894d42-f95b-471b-9df0-af32e3ffb267
+
+	measure 'Campaign Spend Share %' = DIVIDE([Total Spend], CALCULATE([Total Spend], ALLSELECTED(dim_campaign)))
+		formatString: 0.0%
+		displayFolder: Campaign Analysis
+		lineageTag: 7b91ba16-cd8d-4d4a-9396-d38bbd707ec7
+
+	measure 'Budget Pacing Status' =
+			VAR u = [Budget Used %]
+			RETURN IF(ISBLANK(u), BLANK(), SWITCH(TRUE(), u > 1.1, "Over budget", u < 0.7, "Under-delivering", "On track"))
+		displayFolder: Budget
+		lineageTag: 037ec7c2-629d-41fa-84db-e620d04f21c1
+
+	/// Campaign ROAS divided by the median campaign ROAS on its platform. 1.0 = on par.
+	measure 'ROAS Index vs Peers' = DIVIDE([ROAS], [Peer ROAS])
+		formatString: 0.00
+		displayFolder: Campaign Analysis
+		lineageTag: 4cbf5eb0-ebd0-440e-bf18-8da7fc813e31
+
+	/// Scale: ROAS >=15% above platform peers. Review: >10% below. Maintain: in between.
+	measure 'Campaign Tier' =
+			VAR i = [ROAS Index vs Peers]
+			RETURN IF(ISBLANK([ROAS]), BLANK(), SWITCH(TRUE(), i >= 1.15, "Scale", i < 0.9, "Review", "Maintain"))
+		displayFolder: Campaign Analysis
+		lineageTag: 4aa63e44-dccf-4d05-a043-0b4b41cb6cc8
+
+	measure 'Campaign Tier Color' = SWITCH([Campaign Tier], "Scale", "#059669", "Maintain", "#D97706", "Review", "#DC2626", BLANK())
+		displayFolder: Campaign Analysis
+		lineageTag: ea0fdaa4-c185-43da-bb93-68ed45243203
+
+	measure 'Campaign Tier BG' = SWITCH([Campaign Tier], "Scale", "#D1FAE5", "Maintain", "#FEF3C7", "Review", "#FEE2E2", BLANK())
+		displayFolder: Campaign Analysis
+		lineageTag: c43ad968-d147-45f5-9b7a-34f4ebbfc0f3
+
+	measure 'Review Campaigns' = COUNTROWS(FILTER(ALLSELECTED(dim_campaign[campaign_key]), [Campaign Tier] = "Review")) + 0
+		formatString: #,0
+		displayFolder: Campaign Analysis
+		lineageTag: 39924bf1-6535-4ffb-9d6e-1332c747cd0a
+
+	measure 'Scale Campaigns' = COUNTROWS(FILTER(ALLSELECTED(dim_campaign[campaign_key]), [Campaign Tier] = "Scale")) + 0
+		formatString: #,0
+		displayFolder: Campaign Analysis
+		lineageTag: 280fd85c-3321-4204-b39d-f891f0b68ab9
+
+	measure 'Review Spend' = COALESCE(SUMX(ALLSELECTED(dim_campaign[campaign_key]), IF([Campaign Tier] = "Review", [Total Spend])), 0)
+		formatString: #,0
+		displayFolder: Campaign Analysis
+		lineageTag: 8fe2a206-44e7-4639-bc36-e1dfaf30fad0
+
+	measure 'Scale Spend' = COALESCE(SUMX(ALLSELECTED(dim_campaign[campaign_key]), IF([Campaign Tier] = "Scale", [Total Spend])), 0)
+		formatString: #,0
+		displayFolder: Campaign Analysis
+		lineageTag: b6648e45-5feb-4a71-ad5b-ccb039e6e8c8
+
+	/// Revenue left on the table if Review campaigns matched their platform peers' ROAS at current spend. Indicative, not a forecast.
+	measure 'Revenue Gap in Review Campaigns' = COALESCE(SUMX(ALLSELECTED(dim_campaign[campaign_key]), IF([Campaign Tier] = "Review", MAX(0, [Total Spend] * ([Peer ROAS] - [ROAS])))), 0)
+		formatString: #,0
+		displayFolder: Campaign Analysis
+		lineageTag: 0e3beb9f-cc56-43bc-80e7-6a87d8083bad
+
+	measure 'Review Spend Share %' = DIVIDE([Review Spend], [Total Spend])
+		formatString: 0.0%
+		displayFolder: Campaign Analysis
+		lineageTag: f81f15cb-9373-4a8e-a37a-3aaa625bb557
+
+	measure 'Campaign count' = COUNT(dim_campaign[campaign_name])
+		formatString: 0
+		lineageTag: 621a462d-5f49-4ecc-9a1f-771942ee9cd7
+
+	measure 'Platform Font Color' =
+			
+			SWITCH(
+			    SELECTEDVALUE('dim_platform'[platform_name]),
+			    "Meta", "#8338EC",
+			    "Google", "#FFBE0B",
+			    "TikTok", "#FF006E"
+			)
+		lineageTag: 91c9497c-0384-4431-b2f1-d4de0b777f7f
+
+	measure 'Campaign Platform Name' =
+			
+			LOOKUPVALUE (
+			    dim_platform[platform_name],
+			    dim_platform[platform_key], SELECTEDVALUE ( fact_ad_performance_daily[platform_key] )
+			)
+		lineageTag: 12311a45-5143-4d09-9469-c55851c44200
+
 	column Value
 		formatString: 0
 		lineageTag: 77acfa64-3739-4565-87a6-5b1c67a34a52
