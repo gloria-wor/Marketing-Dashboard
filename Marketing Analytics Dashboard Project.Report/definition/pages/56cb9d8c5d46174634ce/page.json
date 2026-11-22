@@ -3,8 +3,8 @@
   "name": "56cb9d8c5d46174634ce",
   "displayName": "Platform Analysis",
   "displayOption": "FitToPage",
-  "height": 1080,
-  "width": 1920,
+  "height": 1440,
+  "width": 2560,
   "objects": {
     "background": [
       {
@@ -14,9 +14,16 @@
               "color": {
                 "expr": {
                   "Literal": {
-                    "Value": "'#F0F3F7'"
+                    "Value": "'#F3F4F6'"
                   }
                 }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
               }
             }
           }
