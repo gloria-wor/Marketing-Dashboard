@@ -10,6 +10,21 @@
   },
   "visualGroup": {
     "displayName": "Group 10",
-    "groupMode": "ScaleMode"
+    "groupMode": "ScaleMode",
+    "objects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 }

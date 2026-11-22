@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "48354dd0140664d076e1",
   "position": {
-    "x": 639.425612702796,
-    "y": 64.4197445633414,
+    "x": 632.9990764494612,
+    "y": 83.222986146741917,
     "z": 3000,
     "height": 56,
     "width": 273.58508802209178,
@@ -20,7 +20,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#8B6BFF'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -38,7 +38,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#8B6BFF'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -47,6 +47,24 @@
           },
           "selector": {
             "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3A86FF'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
           }
         }
       ],

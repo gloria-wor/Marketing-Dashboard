@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "aa3878dd7779d1f011f7",
   "position": {
-    "x": 19.087331722471522,
-    "y": 651.35519502934073,
+    "x": 12.609543355566958,
+    "y": 673.3496151872755,
     "z": 12504,
-    "height": 429.46496375560929,
-    "width": 620.3382809803245,
+    "height": 403.50538737814264,
+    "width": 620.38953309389433,
     "tabOrder": 9001
   },
   "visual": {
@@ -376,6 +376,31 @@
                   "Value": "18D"
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102A74'"
+                    }
+                  }
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Acquisition Cost vs. Return by Platform'"
+                }
+              }
             }
           }
         }
@@ -394,6 +419,31 @@
               "expr": {
                 "Literal": {
                   "Value": "'12'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#64748B'"
+                    }
+                  }
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Shows how acquisition cost trades off against return on ad spend by platform'"
                 }
               }
             }
