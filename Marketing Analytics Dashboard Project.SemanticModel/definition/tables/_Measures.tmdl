@@ -1919,6 +1919,129 @@ table _Measures
 		displayFolder: Campaign Analysis
 		lineageTag: f81f15cb-9373-4a8e-a37a-3aaa625bb557
 
+	/// Compact impressions for the funnel cell, e.g. 715.6M.
+	measure 'Impressions Label' =
+			VAR v = [Total Impressions]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.0") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: 76b7ffd3-5f00-471c-ad30-980d7c299070
+
+	/// Compact clicks, e.g. 11.6M.
+	measure 'Clicks Label' =
+			VAR v = [Total clicks]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.0") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: a8d32db0-1865-4cd5-9ed2-09700d58bba3
+
+	/// Compact conversions, e.g. 255K.
+	measure 'Conversions Label' =
+			VAR v = [Total Conversions]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.0") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: c3f92461-dc29-47e6-b2d1-edc8b4cd9053
+
+	measure 'CTR Label' = FORMAT([CTR], "0.00%") & " CTR"
+		displayFolder: Platform Analysis
+		lineageTag: 89f88de8-232f-471a-b9c9-54f0a235f48b
+
+	measure 'CVR Label' = FORMAT([CVR], "0.00%") & " CVR"
+		displayFolder: Platform Analysis
+		lineageTag: cf165a86-fcd3-4495-b2ed-800c6a84d789
+
+	/// Scorecard cell text, e.g. 3.04x · +44%.
+	measure 'ROAS vs Blended Label' = IF(ISBLANK([ROAS]), BLANK(), FORMAT([ROAS], "0.00") & "x · " & FORMAT([ROAS vs Blended %], "+0%;-0%;0%"))
+		displayFolder: Platform Analysis
+		lineageTag: bf57f9d5-de21-440f-8852-9d214653a73d
+
+	/// Constant blended ROAS across the selected period (ignores the year on the axis). Use as the reference line on ROAS by year.
+	measure 'Blended ROAS Line' = CALCULATE([ROAS], ALLSELECTED(dim_platform), ALLSELECTED(dim_date))
+		formatString: 0.00"x"
+		displayFolder: Platform Analysis
+		lineageTag: 03032f41-8bea-472a-8aa1-926e6ea14ad1
+
+	/// Platform brand colour. Use for revenue bars, ROAS lines, platform names and the funnel's last step.
+	measure 'Platform Color' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#F5B800", "TikTok Ads", "#F2177D", "Meta Ads", "#7C3AED", "#6B7280")
+		displayFolder: Platform Analysis
+		lineageTag: 8719b70e-19ca-42a5-a492-934f7b32e485
+
+	/// Light tint of the platform colour. Funnel: impressions step.
+	measure 'Platform Color Light' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#ffe59d", "TikTok Ads", "#FBD3E6", "Meta Ads", "#E9E3FB", "#F3F4F6")
+		displayFolder: Platform Analysis
+		lineageTag: 58f5ffbb-3aed-4c1e-ac76-a0284975f98e
+
+	/// Mid tint of the platform colour. Funnel: clicks step.
+	measure 'Platform Color Mid' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#FAD97A", "TikTok Ads", "#F7A1C8", "Meta Ads", "#C19BF5", "#E5E7EB")
+		displayFolder: Platform Analysis
+		lineageTag: 087ac811-ea86-438b-b6e7-2fd0e021cf83
+
+	/// Text colour that reads on the full platform colour (dark on amber, white on pink and purple).
+	measure 'Platform Color Text' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#111827", "#FFFFFF")
+		displayFolder: Platform Analysis
+		lineageTag: 2165f9f9-dff8-4823-8b97-a54e17d729e2
+
+	/// Blended CPA across the platforms in scope (ignores the platform on rows). Fixes the error in CPA vs Blended %.
+	measure 'Blended CPA' = CALCULATE([CPA], ALLSELECTED(dim_platform))
+		formatString: #,0
+		displayFolder: Platform Analysis
+		lineageTag: 8af91ba6-2fda-4b82-a607-28de0fb094b7
+
+	/// Compact spend with 2 decimals, e.g. 6.36B / 1.38B. Use in KPI card and scorecard.
+	measure 'Spend Label' =
+			VAR v = [Total Spend]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.00") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: 81f13ed7-df55-47ad-9109-2a3a2ce275d0
+
+	/// Compact revenue with 2 decimals, e.g. 13.39B.
+	measure 'Revenue Label' =
+			VAR v = [Total Revenue]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.00") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: 29e85af8-4949-4b4d-ae1d-819acc870560
+
+	/// Funnel cell text, 2 lines: Impressions / 715.6M.
+	measure 'Funnel Impressions Cell' = IF(ISBLANK([Total Impressions]), BLANK(), "Impressions" & UNICHAR(10) & [Impressions Label])
+		displayFolder: Platform Analysis
+		lineageTag: b70ab439-4101-4a53-ab75-f9578d6f6db9
+
+	/// Funnel cell text, 3 lines: Clicks / 11.6M / 1.62% CTR.
+	measure 'Funnel Clicks Cell' = IF(ISBLANK([Total clicks]), BLANK(), "Clicks" & UNICHAR(10) & [Clicks Label] & UNICHAR(10) & [CTR Label])
+		displayFolder: Platform Analysis
+		lineageTag: 489b1bf9-5d05-41a1-8146-498291281694
+
+	/// Funnel cell text, 3 lines: Conversions / 255K / 2.20% CVR.
+	measure 'Funnel Conversions Cell' = IF(ISBLANK([Total Conversions]), BLANK(), "Conversions" & UNICHAR(10) & [Conversions Label] & UNICHAR(10) & [CVR Label])
+		displayFolder: Platform Analysis
+		lineageTag: 2983b5f0-0241-4f93-9061-5265b9c1843f
+
+	/// Scorecard cell background for ROAS vs blended: amber tint if at/above blended, salmon tint if below.
+	measure 'ROAS vs Blended BG' = IF(NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([ROAS]), BLANK(), IF([ROAS vs Blended %] >= 0, "#FDE9B8", "#FBD5C8"))
+		displayFolder: Platform Analysis
+		lineageTag: 914a93d6-7c61-4c3d-9616-0e05f128624a
+
+	/// Font colour for Share Gap (pp): green positive, red negative.
+	measure 'Share Gap Color' = IF(NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([Share Gap (pp)]), BLANK(), IF([Share Gap (pp)] >= 0, "#15803D", "#B91C1C"))
+		displayFolder: Platform Analysis
+		lineageTag: ca26fb24-b0c6-4957-aa6a-bcfbb4afc8ed
+
+	/// Dark shade of the platform hue. Font colour for the light and mid tint funnel steps (impressions, clicks). Use Platform Color Text on the full colour step.
+	measure 'Platform Color Dark' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#5C4400", "TikTok Ads", "#7A0B3E", "Meta Ads", "#3B1A8A", "#374151")
+		displayFolder: Platform Analysis
+		lineageTag: fc0dff91-0516-4acb-bef2-902aeb99b3c3
+
+	/// Font colour for Platform Verdict: green for Scale, red for Review, grey for Hold.
+	measure 'Platform Verdict Color' =
+			
+			SWITCH(
+			    [Platform Verdict],
+			    "▲ SCALE", "#047857",
+			    "▼ REVIEW", "#B91C1C",
+			    "● HOLD", "#6B7280",
+			    BLANK()
+			)
+		displayFolder: Platform Analysis
+		lineageTag: 6c2491a7-260e-4444-bd24-592ed0777e05
+
 	measure 'Campaign count' = COUNT(dim_campaign[campaign_name])
 		formatString: 0
 		lineageTag: 621a462d-5f49-4ecc-9a1f-771942ee9cd7
