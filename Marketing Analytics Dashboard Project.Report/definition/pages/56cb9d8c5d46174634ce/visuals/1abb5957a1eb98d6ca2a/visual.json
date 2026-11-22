@@ -20,6 +20,13 @@
                   "Value": "'rectangleRoundedByPixel'"
                 }
               }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "30L"
+                }
+              }
             }
           }
         }
@@ -68,6 +75,73 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "shadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "shadowBlur": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.1
+                    }
+                  }
+                }
+              }
+            },
+            "shadowPositionPreset": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "angle": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            },
+            "shadowDistance": {
+              "expr": {
+                "Literal": {
+                  "Value": "27D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

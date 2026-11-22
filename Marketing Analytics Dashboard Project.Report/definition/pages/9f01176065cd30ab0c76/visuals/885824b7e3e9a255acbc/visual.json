@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "885824b7e3e9a255acbc",
   "position": {
-    "x": 660.89886089057654,
-    "y": 651.35519502934073,
+    "x": 655.6962544894817,
+    "y": 670.82770651616215,
     "z": 10000,
-    "height": 429.46496375560929,
-    "width": 551.14670348636525,
+    "height": 408.5492047203694,
+    "width": 552.2979989738327,
     "tabOrder": 8000
   },
   "visual": {
@@ -120,7 +120,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3A86FF'"
+                      "Value": "'#FFBE0B'"
                     }
                   }
                 }
@@ -227,6 +227,24 @@
                   "Value": "18D"
                 }
               }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#102A74'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -245,6 +263,24 @@
               "expr": {
                 "Literal": {
                   "Value": "'Total revenue by campaign objective for the selected period'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#64748B'"
+                    }
+                  }
                 }
               }
             }

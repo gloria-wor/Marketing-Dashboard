@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ec6dc00b60ece7cead1c",
   "position": {
-    "x": 1228.7469796341043,
-    "y": 646.58336209872289,
+    "x": 1233.2133401744484,
+    "y": 673.3496151872755,
     "z": 0,
-    "height": 429.46496375560929,
-    "width": 679.986192613048,
+    "height": 406.027296049256,
+    "width": 680.91534120061567,
     "tabOrder": 0
   },
   "visual": {
@@ -46,8 +46,9 @@
                 }
               },
               "queryRef": "dim_platform.platform_name",
-              "nativeQueryRef": "platform_name",
-              "active": true
+              "nativeQueryRef": " ",
+              "active": true,
+              "displayName": " "
             }
           ]
         },
@@ -65,7 +66,8 @@
                 }
               },
               "queryRef": "fact_ad_performance_daily.ROAS",
-              "nativeQueryRef": "ROAS"
+              "nativeQueryRef": "  ",
+              "displayName": "  "
             },
             {
               "field": {
@@ -79,7 +81,8 @@
                 }
               },
               "queryRef": "fact_ad_performance_daily.CPA",
-              "nativeQueryRef": "CPA"
+              "nativeQueryRef": "  1",
+              "displayName": "  "
             }
           ]
         }
@@ -92,10 +95,195 @@
             "valuesOnRow": {
               "expr": {
                 "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "bandedRowHeaders": {
+              "expr": {
+                "Literal": {
                   "Value": "false"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
             }
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_ad_performance_daily"
+                            }
+                          },
+                          "Property": "ROAS"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient3": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#F3EBFE'"
+                              }
+                            }
+                          },
+                          "mid": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#C4A3F6'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#8338EC'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "fact_ad_performance_daily.ROAS"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_ad_performance_daily"
+                            }
+                          },
+                          "Property": "ROAS"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient3": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#F3EBFE'"
+                              }
+                            }
+                          },
+                          "mid": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#C4A3F6'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#8338EC'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "fact_ad_performance_daily.CPA"
           }
         }
       ],
@@ -111,6 +299,208 @@
             }
           }
         }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "showExpandCollapseButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "showExpandCollapseButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "136.26290313783002D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_campaign"
+                          }
+                        },
+                        "Property": "objective"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Awareness'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "154.6533598713658D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_campaign"
+                          }
+                        },
+                        "Property": "objective"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Consideration'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#ffffff'"
+                    }
+                  }
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -120,14 +510,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top Campaigns by Revenue'"
+                  "Value": "'ROAS by platform and objective'"
                 }
               }
             },
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -142,9 +532,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.2
+                    "Literal": {
+                      "Value": "'#102A74'"
                     }
                   }
                 }
@@ -160,7 +549,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -180,7 +569,25 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'The five highest-earning campaigns ranked by total revenue'"
+                  "Value": "'darker = higher'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#64748B'"
+                    }
+                  }
                 }
               }
             }
@@ -233,142 +640,60 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "08325f6853e20500b8c4",
+        "name": "98e16bec6e987aa0fc36",
         "field": {
-          "GroupRef": {
+          "Column": {
             "Expression": {
               "SourceRef": {
                 "Entity": "dim_campaign"
               }
             },
-            "Property": "campaign_name (groups)",
-            "GroupedColumns": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_campaign"
-                    }
-                  },
-                  "Property": "campaign_name"
-                }
-              }
-            ]
+            "Property": "objective"
           }
         },
-        "type": "TopN",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "d",
-                        "Entity": "dim_campaign",
-                        "Type": 0
-                      },
-                      {
-                        "Name": "f",
-                        "Entity": "fact_ad_performance_daily",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "GroupRef": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "d"
-                            }
-                          },
-                          "Property": "campaign_name (groups)",
-                          "GroupedColumns": [
-                            {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "d"
-                                  }
-                                },
-                                "Property": "campaign_name"
-                              }
-                            }
-                          ]
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Measure": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "f"
-                              }
-                            },
-                            "Property": "Total Revenue"
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 5
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "d",
-              "Entity": "dim_campaign",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "GroupRef": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "campaign_name (groups)",
-                        "GroupedColumns": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "d"
-                                }
-                              },
-                              "Property": "campaign_name"
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
-                }
+        "type": "Categorical"
+      },
+      {
+        "name": "d7d5e1514b020b45a038",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_ad_performance_daily"
               }
-            }
-          ]
+            },
+            "Property": "ROAS"
+          }
         },
-        "howCreated": "User"
+        "type": "Advanced"
+      },
+      {
+        "name": "2e0e1ca32aeaac157dd6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_ad_performance_daily"
+              }
+            },
+            "Property": "CPA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "da896f36aa8f41958abb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_platform"
+              }
+            },
+            "Property": "platform_name"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

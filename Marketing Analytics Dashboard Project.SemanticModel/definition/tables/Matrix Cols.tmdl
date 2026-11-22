@@ -1,6 +1,10 @@
 table 'Matrix Cols'
 	lineageTag: dab63f4b-bb20-4013-ac70-19ad13da5784
 
+	measure 'row count' = COUNTROWS(fact_ad_performance_daily)
+		formatString: 0
+		lineageTag: 6ff8340f-783a-4691-af1a-fbea11e2a62a
+
 	column Label
 		lineageTag: de917830-960e-4913-b15d-52b889931b28
 		summarizeBy: none
