@@ -186,6 +186,7 @@ table _Measures
 		lineageTag: 58bc7fad-ddb0-47cb-a9b9-f2beb09bf814
 
 	measure CPM = DIVIDE([Total Spend],[Total Impressions],0)*1000
+		formatString: #,0;-#,0;#,0
 		displayFolder: Ad measures
 		lineageTag: 81a1ce2b-a094-40a3-a43f-839d2a75c9b9
 
@@ -481,7 +482,7 @@ table _Measures
 		lineageTag: c36862b7-b0cf-4260-9692-481417bf67cc
 
 	measure CPC = DIVIDE('fact_ad_performance_daily'[Total Spend],'fact_ad_performance_daily'[Total clicks])
-		formatString: #,0.00;-#,0.00;#,0.00
+		formatString: #,0;-#,0;#,0
 		displayFolder: Ad measures
 		lineageTag: efdef6f5-d1e3-41c2-b104-a18787a3cdd8
 
@@ -490,50 +491,6 @@ table _Measures
 	measure Spacer = " "
 		displayFolder: Matrix
 		lineageTag: 133f6e9c-0748-4b0d-b1b9-a9074d30f86c
-
-	measure 'Chip Period' = SELECTEDVALUE('Period Filter'[Period Filter], "YTD")
-		displayFolder: Chip
-		lineageTag: 19a60241-7404-44d8-a7ed-b79ebefd6069
-
-	measure 'Chip Year' = IF(HASONEVALUE('dim_date'[year]), SELECTEDVALUE('dim_date'[year]), "All")
-		displayFolder: Chip
-		lineageTag: 730085e6-232d-42dd-baef-34406c814c99
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Chip Geography' =
-			
-			IF(
-			    ISFILTERED('dim_geo'[country_name]),
-			    CONCATENATEX(VALUES('dim_geo'[country_name]), 'dim_geo'[country_name], ", "),
-			    "All"
-			)
-		displayFolder: Chip
-		lineageTag: 913b6098-de5d-4cb8-bea5-b682afc015d2
-
-	measure 'Chip Platform' =
-			
-			IF(
-			    ISFILTERED(dim_platform[platform_name]),
-			    CONCATENATEX(VALUES(dim_platform[platform_name]), dim_platform[platform_name], ", "),
-			    "All"
-			)
-		displayFolder: Chip
-		lineageTag: 1e021580-1997-423c-a8e4-88683625fa60
-
-	measure 'Chip Month' = IF(HASONEVALUE(dim_date[month_short]), SELECTEDVALUE(dim_date[month_short]), "All")
-		displayFolder: Chip
-		lineageTag: c21b7cb6-886e-4444-9520-610d120530e4
-
-	measure 'Chip Objective' =
-			
-			IF(
-			    ISFILTERED('dim_campaign'[objective]),
-			    CONCATENATEX(VALUES('dim_campaign'[objective]), 'dim_campaign'[objective], ", "),
-			    "All"
-			)
-		displayFolder: Chip
-		lineageTag: f9b72ef9-1bd7-4f4f-9255-c35547f6b74e
 
 	measure 'Latest Date' =
 			
@@ -929,30 +886,6 @@ table _Measures
 		displayFolder: Filters
 		lineageTag: e2eea146-c678-44a6-9ae8-399a37ee6987
 
-	measure 'Chart Subtitle' = "Actual monthly totals in KES for the selected year (not affected by WTD / MTD / QTD / YTD)"
-		displayFolder: Filters
-		lineageTag: c92fa549-c1a4-4c65-aecb-9897387a18df
-
-	measure 'Chart Title' = "Monthly Advertising Spend and Revenue"
-		displayFolder: Filters
-		lineageTag: 1b0e656b-4a10-4ab4-bc90-b61694922d1d
-
-	measure 'Dynamic Title' =
-			
-			VAR SelectedPeriod = SELECTEDVALUE('Period Filter'[Period Filter], "YTD")
-			VAR SelectedYear = SELECTEDVALUE('dim_date'[Year], "All Years")
-			VAR SelectedMonth = SELECTEDVALUE('dim_date'[month_name], "")
-			VAR DateText =
-			    IF(
-			        ISBLANK(SelectedMonth) || SelectedMonth = "All",
-			        SelectedYear,
-			        SelectedMonth & " " & SelectedYear
-			    )
-			RETURN
-			    "Executive Summary — " & SelectedPeriod & " " & DateText
-		displayFolder: Filters
-		lineageTag: 042e86ab-c902-4282-b299-71d2d8c8818a
-
 	measure 'Selected Period Value' =
 			
 			VAR SelectedID = SELECTEDVALUE('PeriodTable'[PeriodID], 4) // Default to YTD
@@ -1075,10 +1008,10 @@ table _Measures
 			    SELECTEDVALUE('Metrics Table'[Metric]),
 			    "Ad Spend", [Spend Change %],
 			    "Impressions", [Impressions Change %],
-			    "Click-through Rate", [CTR Change %],
+			    "CTR", [CTR Change %],
 			    "Conversions", [Conversions Change %],
-			    "Return on Ad Spend", [ROAS Change %],
-			    "Cost / Acquisition", [Cost Change %]
+			    "ROAS", [ROAS Change %],
+			    "CPA", [Cost Change %]
 			)
 		displayFolder: Matrix Visuals
 		lineageTag: a512b82a-da87-4bd6-8193-75ffe1a74114
@@ -1091,10 +1024,10 @@ table _Measures
 			    SELECTEDVALUE('Metrics Table'[Metric]),
 			    "Ad Spend", [Total Spend],
 			    "Impressions", [Total Impressions],
-			    "Click-through Rate", [CTR],
+			    "CTR", [CTR],
 			    "Conversions", [Total Conversions],
-			    "Return on Ad Spend", [ROAS],
-			    "Cost / Acquisition", [CPA]
+			    "ROAS", [ROAS],
+			    "CPA", [CPA]
 			)
 		displayFolder: Matrix Visuals
 		lineageTag: 9f604a9e-d938-4a48-8e68-30595a55f613
@@ -1115,8 +1048,8 @@ table _Measures
 			RETURN
 			SWITCH(
 			    MetricName,
-			    "Return on Ad Spend", FORMAT(Val, "0.00") & "x",
-			    "Click-through Rate", FORMAT(Val, "0.00%"),
+			    "ROAS", FORMAT(Val, "0.00") & "x",
+			    "CTR", FORMAT(Val, "0.00%"),
 			    _Compact
 			)
 		displayFolder: Matrix Visuals
@@ -1128,10 +1061,10 @@ table _Measures
 			    SELECTEDVALUE('Metrics Table'[Metric]),
 			    "Ad Spend", [Spend PY],
 			    "Impressions", [Impressions PY],
-			    "Click-through Rate", [CTR PY],
+			    "CTR", [CTR PY],
 			    "Conversions", [Conversions PY],
-			    "Return on Ad Spend", [ROAS PY],
-			    "Cost / Acquisition", [CPA PY]
+			    "ROAS", [ROAS PY],
+			    "CPA", [CPA PY]
 			)
 		displayFolder: Matrix Visuals
 		lineageTag: 38ae11fc-a964-4dfc-a4e5-191d3fe98c95
@@ -1152,8 +1085,8 @@ table _Measures
 			RETURN
 			SWITCH(
 			    MetricName,
-			    "Return on Ad Spend", FORMAT(Val, "0.00") & "x",
-			    "Click-through Rate", FORMAT(Val, "0.00%"),
+			    "ROAS", FORMAT(Val, "0.00") & "x",
+			    "CTR", FORMAT(Val, "0.00%"),
 			    _Compact
 			)
 		displayFolder: Matrix Visuals
@@ -1251,10 +1184,10 @@ table _Measures
 			// The SVG Footer
 			VAR _SVG = 
 			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
-			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='20' font-weight='600' fill='" & _Color & "'>" & 
 			        _Arrow & " +" & _PercText & 
 			    "</text>" &
-			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='20' fill='#6B7280'>" & 
 			        " · CTR " & _FormattedCTR & 
 			    "</text>" &
 			    "</svg>"
@@ -1296,10 +1229,10 @@ table _Measures
 			// 4. Build the SVG Footer
 			VAR _SVG = 
 			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
-			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='20' font-weight='600' fill='" & _Color & "'>" & 
 			        _Arrow & " +" & _PercText & 
 			    "</text>" &
-			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='20' fill='#6B7280'>" & 
 			        " · CVR " & _FormattedCVR & 
 			    "</text>" &
 			    "</svg>"
@@ -1342,10 +1275,10 @@ table _Measures
 			// 4. Build the SVG (Centered properly)
 			VAR _SVG = 
 			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
-			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='20' font-weight='600' fill='" & _Color & "'>" & 
 			        _Arrow & " " & _PercText & 
 			    "</text>" &
-			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='20' fill='#6B7280'>" & 
 			        " · " & _FormattedCPC & 
 			    "</text>" &
 			    "</svg>"
@@ -1392,10 +1325,10 @@ table _Measures
 			// 4. Build the SVG (Centered properly)
 			VAR _SVG = 
 			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
-			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='20' font-weight='600' fill='" & _Color & "'>" & 
 			        _Arrow & " +" & _PercText & 
 			    "</text>" &
-			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='20' fill='#6B7280'>" & 
 			        " · " & _FormattedRev & 
 			    "</text>" &
 			    "</svg>"
@@ -1439,10 +1372,10 @@ table _Measures
 			
 			VAR _SVG = 
 			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
-			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' fill='" & _Color & "'>" & 
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='20' fill='" & _Color & "'>" & 
 			        _Arrow & " " & _PercText & 
 			    "</text>" &
-			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='20' fill='#6B7280'>" & 
 			        " · vs " & _FormattedPY & " PY" & 
 			    "</text>" &
 			    "</svg>"
@@ -1484,10 +1417,10 @@ table _Measures
 			// 4. Build the SVG (Centered properly)
 			VAR _SVG = 
 			    "<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='20'>" &
-			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='16' font-weight='600' fill='" & _Color & "'>" & 
+			    "<text x='40%' y='15' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='20' font-weight='600' fill='" & _Color & "'>" & 
 			        _Arrow & " " & _PercText & 
 			    "</text>" &
-			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='16' fill='#6B7280'>" & 
+			    "<text x='42%' y='15' text-anchor='start' font-family='Segoe UI, sans-serif' font-size='20' fill='#6B7280'>" & 
 			        " · " & _FormattedCPM & 
 			    "</text>" &
 			    "</svg>"
@@ -1551,125 +1484,6 @@ table _Measures
 		displayFolder: Monthly Comparisons
 		lineageTag: d725d5be-73c2-4b9f-ba7a-03a156f0a73f
 
-	measure 'Chip Month2' = ```
-			
-			VAR _Text = SELECTEDVALUE('dim_date'[month_name], "All")
-			VAR _Color = "#4A4458"
-			VAR _BgColor = "#FFFFFF"
-			VAR _IconColor = "#7C3AED"
-			
-			VAR _SVG = 
-			"<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40' viewBox='0 0 200 40'>
-			    <rect width='150' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
-			    
-			    <g transform='translate(24, 7) scale(1.4)'>
-			        <path d='M5 2h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z M4 5h10 M7 1v2 M11 1v2' fill='none' stroke='" & _IconColor & "' stroke-width='1.5' stroke-linecap='round'/>
-			    </g>
-			    
-			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
-			</svg>"
-			RETURN "data:image/svg+xml;utf8," & _SVG
-			```
-		displayFolder: status_chip
-		lineageTag: efbf26c2-63f4-46e0-ad7d-4ea344e4d499
-		dataCategory: ImageUrl
-
-	measure 'Chip Objective2' = ```
-			
-			VAR _Text = SELECTEDVALUE('dim_campaign'[objective], "All") // Replace with your Objective column
-			VAR _Color = "#4A4458"
-			VAR _BgColor = "#FFFFFF"
-			VAR _IconColor = "#7C3AED"
-			
-			VAR _SVG = 
-			"<svg xmlns='http://www.w3.org/2000/svg' width='200' height='40' viewBox='0 0 200 40'>
-			    <rect width='190' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
-			    
-			    <g transform='translate(24, 7) scale(1.4)'>
-			        <path d='M5 2L1 4l4 2 4-2-4-2z M1 7l4 2 4-2 M1 10l4 2 4-2' fill='none' stroke='" & _IconColor & "' stroke-width='1.5' stroke-linejoin='round'/>
-			    </g>
-			    
-			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
-			</svg>"
-			RETURN "data:image/svg+xml;utf8," & _SVG
-			```
-		displayFolder: status_chip
-		lineageTag: b25dfafa-6d63-49b7-83f0-f0858ace7df5
-		dataCategory: ImageUrl
-
-	measure 'Chip Period2' = ```
-			
-			VAR _Text = SELECTEDVALUE('PeriodTable'[PeriodName], "YTD")
-			VAR _Color = "#4A4458"
-			VAR _BgColor = "#FFFFFF"
-			VAR _IconColor = "#7C3AED"
-			
-			VAR _SVG = 
-			"<svg xmlns='http://www.w3.org/2000/svg' width='150' height='40' viewBox='0 0 200 40'>
-			    <rect width='140' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
-			    
-			    <g transform='translate(24, 7) scale(1.4)'>
-			        <path d='M5 2h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z M4 5h10 M7 1v2 M11 1v2' fill='none' stroke='" & _IconColor & "' stroke-width='1.5' stroke-linecap='round'/>
-			    </g>
-			    
-			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
-			</svg>"
-			RETURN "data:image/svg+xml;utf8," & _SVG
-			```
-		displayFolder: status_chip
-		lineageTag: 55495946-d736-4a44-b22a-1b27b0a91484
-		dataCategory: ImageUrl
-
-	measure 'Chip Region2' = ```
-			
-			VAR _Text = SELECTEDVALUE('dim_geo'[region], "All") 
-			VAR _Color = "#4A4458"
-			VAR _BgColor = "#FFFFFF"
-			VAR _IconColor = "#7C3AED"
-			
-			VAR _SVG = 
-			"<svg xmlns='http://www.w3.org/2000/svg' width='200' height='40' viewBox='0 0 200 40'>
-			    <rect width='190' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
-			    
-			    <!-- The <g> tag groups the icon and scales it by 1.4x. 
-			         translate(24, 7) moves the scaled icon into the right position -->
-			    <g transform='translate(24, 7) scale(1.4)'>
-			        <path d='M5 3a4 4 0 0 0-4 4c0 3 4 7 4 7s4-4 4-7a4 4 0 0 0-4-4z' fill='" & _IconColor & "'/>
-			        <circle cx='5' cy='7' r='1.5' fill='white'/>
-			    </g>
-			    
-			    <!-- Shifted text slightly to the right to accommodate the bigger icon -->
-			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
-			</svg>"
-			RETURN "data:image/svg+xml;utf8," & _SVG
-			```
-		displayFolder: status_chip
-		lineageTag: cd3b23f2-361a-4902-94f5-299062b7b15f
-		dataCategory: ImageUrl
-
-	measure 'Chip Year2' = ```
-			
-			VAR _Text = SELECTEDVALUE('dim_date'[Year], "All")
-			VAR _Color = "#4A4458"
-			VAR _BgColor = "#FFFFFF"
-			VAR _IconColor = "#7C3AED"
-			
-			VAR _SVG = 
-			"<svg xmlns='http://www.w3.org/2000/svg' width='160' height='40' viewBox='0 0 200 40'>
-			    <rect width='140' height='34' x='5' y='3' rx='17' fill='" & _BgColor & "' stroke='#E5E7EB' />
-			    
-			    <g transform='translate(24, 7) scale(1.4)'>
-			        <path d='M5 2h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z M4 5h10 M7 1v2 M11 1v2' fill='none' stroke='" & _IconColor & "' stroke-width='1.5' stroke-linecap='round'/>
-			    </g>
-			    
-			    <text x='52' y='24' font-family='Segoe UI, sans-serif' font-size='14' font-weight='600' fill='" & _Color & "'>" & _Text & "</text>
-			</svg>"
-			RETURN "data:image/svg+xml;utf8," & _SVG
-			```
-		displayFolder: status_chip
-		lineageTag: 9806cdc5-efca-4787-8a78-95a8c7a6a207
-		dataCategory: ImageUrl
-
 	measure 'Icon Avg Cost' = ```
 			
 			VAR _SVG = 
@@ -1732,8 +1546,26 @@ table _Measures
 
 	measure 'Icon Impressions' =
 			
-			VAR _SVG = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#0F2B84' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z'/><circle cx='12' cy='12' r='3'/></svg>"
-			RETURN "data:image/svg+xml;utf8," & _SVG
+			VAR _SVG =
+			"
+			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'>
+			    <rect width='40' height='40' rx='10' fill='#F3F0FF'/>
+			
+			    <path d='M8 20s4-8 12-8s12 8 12 8s-4 8-12 8s-12-8-12-8Z'
+			          fill='none'
+			          stroke='#0F2B84'
+			          stroke-width='2.5'
+			          stroke-linecap='round'
+			          stroke-linejoin='round'/>
+			
+			    <circle cx='20' cy='20' r='3.5'
+			            fill='none'
+			            stroke='#0F2B84'
+			            stroke-width='2.5'/>
+			</svg>
+			"
+			RETURN
+			"data:image/svg+xml;utf8," & _SVG
 		displayFolder: svg
 		lineageTag: ed822b9c-825d-4ea3-9930-9d6415a5b36d
 		dataCategory: ImageUrl
@@ -1865,113 +1697,39 @@ table _Measures
 		displayFolder: Budget Status
 		lineageTag: 02f33bf4-e15f-4be9-83ae-3a58d22e54d5
 
-	measure 'Scorecard ROAS BG' =
-			
-			IF(
-			    NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([ROAS]),
-			    BLANK(),
-			    VAR _All = ALLSELECTED(dim_platform[platform_name])
-			    VAR _Max = MAXX(_All, [ROAS])
-			    VAR _Min = MINX(_All, [ROAS])
-			    VAR _Score = DIVIDE([ROAS] - _Min, _Max - _Min, 0.5) // 1 = best platform, 0 = worst
-			    RETURN SWITCH(TRUE(), _Score >= 0.67, "#D1FAE5", _Score >= 0.34, "#FEF3C7", "#FEE2E2")
-			)
-		displayFolder: Platform Scorecard
-		lineageTag: dcc229b3-df4c-4e4c-b9a7-108f7b08433a
-
-	measure 'Scorecard CPA BG' =
-			
-			// Cost metric: LOWER is better, so the score is inverted
-			IF(
-			    NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([CPA]),
-			    BLANK(),
-			    VAR _All = ALLSELECTED(dim_platform[platform_name])
-			    VAR _Max = MAXX(_All, [CPA])
-			    VAR _Min = MINX(_All, [CPA])
-			    VAR _Score = 1 - DIVIDE([CPA] - _Min, _Max - _Min, 0.5)
-			    RETURN SWITCH(TRUE(), _Score >= 0.67, "#D1FAE5", _Score >= 0.34, "#FEF3C7", "#FEE2E2")
-			)
-		displayFolder: Platform Scorecard
-		lineageTag: 256d776d-3469-4ebe-a837-698a39e1bcf0
-
-	measure 'Scorecard CTR BG' =
-			
-			IF(
-			    NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([CTR]),
-			    BLANK(),
-			    VAR _All = ALLSELECTED(dim_platform[platform_name])
-			    VAR _Max = MAXX(_All, [CTR])
-			    VAR _Min = MINX(_All, [CTR])
-			    VAR _Score = DIVIDE([CTR] - _Min, _Max - _Min, 0.5)
-			    RETURN SWITCH(TRUE(), _Score >= 0.67, "#D1FAE5", _Score >= 0.34, "#FEF3C7", "#FEE2E2")
-			)
-		displayFolder: Platform Scorecard
-		lineageTag: e0538727-50aa-4294-bf57-f0183e44f57c
-
-	measure 'Scorecard CVR BG' =
-			
-			IF(
-			    NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([CVR]),
-			    BLANK(),
-			    VAR _All = ALLSELECTED(dim_platform[platform_name])
-			    VAR _Max = MAXX(_All, [CVR])
-			    VAR _Min = MINX(_All, [CVR])
-			    VAR _Score = DIVIDE([CVR] - _Min, _Max - _Min, 0.5)
-			    RETURN SWITCH(TRUE(), _Score >= 0.67, "#D1FAE5", _Score >= 0.34, "#FEF3C7", "#FEE2E2")
-			)
-		displayFolder: Platform Scorecard
-		lineageTag: bf063e87-7a60-4431-8692-7946b5103765
-
-	measure 'Scorecard Subtitle' =
-			
-			VAR _T =
-			    FILTER(
-			        ADDCOLUMNS(ALLSELECTED(dim_platform[platform_name]), "@roas", [ROAS], "@cpa", [CPA]),
-			        NOT ISBLANK([@cpa])
-			    )
-			VAR _BestRoas = TOPN(1, _T, [@roas], DESC)
-			VAR _BestCpa  = TOPN(1, _T, [@cpa], ASC)
-			RETURN
-			    "Best ROAS: " & MAXX(_BestRoas, dim_platform[platform_name]) & " (" & FORMAT(MAXX(_BestRoas, [@roas]), "0.00") & "x)  |  Lowest cost / acquisition: " & MAXX(_BestCpa, dim_platform[platform_name]) & " (" & FORMAT(MAXX(_BestCpa, [@cpa]), "#,##0") & ")"
-		displayFolder: Platform Scorecard
-		lineageTag: 6c73ea5d-3688-42d5-9575-f17916ac8bbf
-
 	measure 'Status Badge' =
 			
-			// Status follows performance vs prior year. Plain coloured text - no pill / rectangle.
-			// Cost / Acquisition is a cost metric, so an INCREASE is unfavourable.
+			// Status follows performance vs prior year, drawn as a rounded-rectangle pill with the text inside.
+			// Two states only: Healthy (green) and Watch (red).
+			// CPA is a cost metric, so an INCREASE is unfavourable.
 			VAR _Metric = SELECTEDVALUE('Metrics Table'[Metric])
 			VAR _Cur = [Dynamic Current]
 			VAR _Pri = [Dynamic Prior]
 			VAR _Chg = DIVIDE(_Cur - _Pri, _Pri)
-			VAR _Adj = IF(_Metric = "Cost / Acquisition", -_Chg, _Chg) // positive = favourable
-			VAR _Text =
-			    SWITCH(
-			        TRUE(),
-			        ISBLANK(_Chg), "No PY",
-			        _Adj >= 0, "Healthy",
-			        _Adj >= -0.05, "Watch",
-			        "At Risk"
-			    )
-			VAR _TextColor = SWITCH(_Text, "Healthy", "#059669", "Watch", "#D97706", "At Risk", "#DC2626", "#6B7280")
+			VAR _Adj = IF(_Metric = "CPA", -_Chg, _Chg) // positive = favourable
+			VAR _Text = IF(_Adj >= 0, "Healthy", "Watch")
+			// # is encoded as %23 so the colours survive inside the data URI
+			VAR _TextColor = IF(_Text = "Healthy", "%23065F46", "%23FF0000")
+			VAR _BgColor   = IF(_Text = "Healthy", "%23D1FAE5", "%23FEE2E2")
 			VAR _SVG =
 			"<svg xmlns='http://www.w3.org/2000/svg' width='80' height='24' viewBox='0 0 80 24'>
-			    <text x='40' y='17' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='13' font-weight='700' fill='" & _TextColor & "'>" & _Text & "</text>
+			    <rect x='2' y='2' width='76' height='20' rx='10' ry='10' fill='" & _BgColor & "'/>
+			    <text x='40' y='16' text-anchor='middle' font-family='Segoe UI, sans-serif' font-size='11' font-weight='600' fill='" & _TextColor & "'>" & _Text & "</text>
 			</svg>"
-			RETURN "data:image/svg+xml;utf8," & _SVG
+			RETURN IF(ISBLANK(_Chg), BLANK(), "data:image/svg+xml;utf8," & _SVG)
 		displayFolder: Matrix Visuals
 		lineageTag: cdf13bbf-7702-46b2-9e76-b47b31a13670
 		dataCategory: ImageUrl
 
 	measure 'Dynamic Change Color' =
 			
-			// Font colour for the change column. Green = favourable, red = unfavourable.
-			// Cost / Acquisition is inverted (an increase is bad).
+			// Font colour for the change column. Green = favourable, red (FF0000) = unfavourable.
+			// CPA is inverted (an increase is bad).
 			VAR _Metric = SELECTEDVALUE('Metrics Table'[Metric])
 			VAR _Chg = DIVIDE([Dynamic Current] - [Dynamic Prior], [Dynamic Prior])
-			VAR _Adj = IF(_Metric = "Cost / Acquisition", -_Chg, _Chg)
+			VAR _Adj = IF(_Metric = "CPA", -_Chg, _Chg)
 			RETURN
-			    SWITCH(TRUE(), ISBLANK(_Chg), "#6B7280", _Adj > 0, "#10B981", _Adj < 0, "#EF4444", "#6B7280")
+			    SWITCH(TRUE(), ISBLANK(_Chg), "#6B7280", _Adj > 0, "#10B981", _Adj < 0, "#FF0000", "#6B7280")
 		displayFolder: Matrix Visuals
 		lineageTag: 77455946-483b-47bc-8615-41336f8bc3e7
 
@@ -2017,7 +1775,7 @@ table _Measures
 		lineageTag: 9e295858-b2da-4ebd-be06-4ce807d3979d
 
 	/// Platform ROAS relative to the blended ROAS. Positive = better than average.
-	measure 'ROAS vs Blended %' = DIVIDE([ROAS], [Blended ROAS]) - 1
+	measure 'ROAS vs Blended %' = DIVIDE([ROAS], [Blended ROAS Line]) - 1
 		formatString: +0.0%;-0.0%;0.0%
 		displayFolder: Platform Analysis
 		lineageTag: 745e7459-b2f5-42ad-95a3-77ca4e1878ae
@@ -2050,18 +1808,25 @@ table _Measures
 		displayFolder: Budget
 		lineageTag: cbba6025-b56b-478e-901e-1efe09c5d63a
 
-	/// Revenue share minus spend share. Positive = platform returns more revenue than the share of budget it consumes.
-	measure 'Share Gap (pp)' = [Revenue Share %] - [Spend Share %]
-		formatString: +0.0%;-0.0%;0.0%
+	/// Revenue share minus spend share, in percentage points. Positive = platform returns more revenue than the share of budget it consumes.
+	measure 'Share Gap (pp)' = ([Revenue Share %] - [Spend Share %]) * 100
+		formatString: +0.0" pp";-0.0" pp";0.0" pp"
 		displayFolder: Platform Analysis
 		lineageTag: 48cb0627-5971-4cfa-be32-a945ab5ff3ed
 
+	/// Scale: ROAS 10%+ above blended. Review: 10%+ below. Hold: in between.
 	measure 'Platform Verdict' =
-			IF(ISINSCOPE(dim_platform[platform_name]) && NOT ISBLANK([ROAS]),
-			    SWITCH(TRUE(),
-			        [ROAS vs Blended %] >= 0.10, "Scale",
-			        [ROAS vs Blended %] <= -0.10, "Fix or cut",
-			        "Hold"))
+			
+			IF(
+			    ISINSCOPE(dim_platform[platform_name]) && NOT ISBLANK([ROAS]),
+			    SWITCH(
+			        TRUE(),
+			        [ROAS vs Blended %] >= 0.10, "▲ SCALE",
+			        [ROAS vs Blended %] <= -0.10, "▼ REVIEW",
+			        "● HOLD"
+			    ),
+			    BLANK()
+			)
 		displayFolder: Platform Analysis
 		lineageTag: b0cad3de-7591-4eff-bc68-c5e36d12de3c
 
@@ -2153,6 +1918,129 @@ table _Measures
 		formatString: 0.0%
 		displayFolder: Campaign Analysis
 		lineageTag: f81f15cb-9373-4a8e-a37a-3aaa625bb557
+
+	/// Compact impressions for the funnel cell, e.g. 715.6M.
+	measure 'Impressions Label' =
+			VAR v = [Total Impressions]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.0") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: 76b7ffd3-5f00-471c-ad30-980d7c299070
+
+	/// Compact clicks, e.g. 11.6M.
+	measure 'Clicks Label' =
+			VAR v = [Total clicks]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.0") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: a8d32db0-1865-4cd5-9ed2-09700d58bba3
+
+	/// Compact conversions, e.g. 255K.
+	measure 'Conversions Label' =
+			VAR v = [Total Conversions]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.0") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: c3f92461-dc29-47e6-b2d1-edc8b4cd9053
+
+	measure 'CTR Label' = FORMAT([CTR], "0.00%") & " CTR"
+		displayFolder: Platform Analysis
+		lineageTag: 89f88de8-232f-471a-b9c9-54f0a235f48b
+
+	measure 'CVR Label' = FORMAT([CVR], "0.00%") & " CVR"
+		displayFolder: Platform Analysis
+		lineageTag: cf165a86-fcd3-4495-b2ed-800c6a84d789
+
+	/// Scorecard cell text, e.g. 3.04x · +44%.
+	measure 'ROAS vs Blended Label' = IF(ISBLANK([ROAS]), BLANK(), FORMAT([ROAS], "0.00") & "x · " & FORMAT([ROAS vs Blended %], "+0%;-0%;0%"))
+		displayFolder: Platform Analysis
+		lineageTag: bf57f9d5-de21-440f-8852-9d214653a73d
+
+	/// Constant blended ROAS across the selected period (ignores the year on the axis). Use as the reference line on ROAS by year.
+	measure 'Blended ROAS Line' = CALCULATE([ROAS], ALLSELECTED(dim_platform), ALLSELECTED(dim_date))
+		formatString: 0.00"x"
+		displayFolder: Platform Analysis
+		lineageTag: 03032f41-8bea-472a-8aa1-926e6ea14ad1
+
+	/// Platform brand colour. Use for revenue bars, ROAS lines, platform names and the funnel's last step.
+	measure 'Platform Color' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#F5B800", "TikTok Ads", "#F2177D", "Meta Ads", "#7C3AED", "#6B7280")
+		displayFolder: Platform Analysis
+		lineageTag: 8719b70e-19ca-42a5-a492-934f7b32e485
+
+	/// Light tint of the platform colour. Funnel: impressions step.
+	measure 'Platform Color Light' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#ffe59d", "TikTok Ads", "#FBD3E6", "Meta Ads", "#E9E3FB", "#F3F4F6")
+		displayFolder: Platform Analysis
+		lineageTag: 58f5ffbb-3aed-4c1e-ac76-a0284975f98e
+
+	/// Mid tint of the platform colour. Funnel: clicks step.
+	measure 'Platform Color Mid' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#FAD97A", "TikTok Ads", "#F7A1C8", "Meta Ads", "#C19BF5", "#E5E7EB")
+		displayFolder: Platform Analysis
+		lineageTag: 087ac811-ea86-438b-b6e7-2fd0e021cf83
+
+	/// Text colour that reads on the full platform colour (dark on amber, white on pink and purple).
+	measure 'Platform Color Text' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#111827", "#FFFFFF")
+		displayFolder: Platform Analysis
+		lineageTag: 2165f9f9-dff8-4823-8b97-a54e17d729e2
+
+	/// Blended CPA across the platforms in scope (ignores the platform on rows). Fixes the error in CPA vs Blended %.
+	measure 'Blended CPA' = CALCULATE([CPA], ALLSELECTED(dim_platform))
+		formatString: #,0
+		displayFolder: Platform Analysis
+		lineageTag: 8af91ba6-2fda-4b82-a607-28de0fb094b7
+
+	/// Compact spend with 2 decimals, e.g. 6.36B / 1.38B. Use in KPI card and scorecard.
+	measure 'Spend Label' =
+			VAR v = [Total Spend]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.00") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: 81f13ed7-df55-47ad-9109-2a3a2ce275d0
+
+	/// Compact revenue with 2 decimals, e.g. 13.39B.
+	measure 'Revenue Label' =
+			VAR v = [Total Revenue]
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.00") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+		displayFolder: Platform Analysis
+		lineageTag: 29e85af8-4949-4b4d-ae1d-819acc870560
+
+	/// Funnel cell text, 2 lines: Impressions / 715.6M.
+	measure 'Funnel Impressions Cell' = IF(ISBLANK([Total Impressions]), BLANK(), "Impressions" & UNICHAR(10) & [Impressions Label])
+		displayFolder: Platform Analysis
+		lineageTag: b70ab439-4101-4a53-ab75-f9578d6f6db9
+
+	/// Funnel cell text, 3 lines: Clicks / 11.6M / 1.62% CTR.
+	measure 'Funnel Clicks Cell' = IF(ISBLANK([Total clicks]), BLANK(), "Clicks" & UNICHAR(10) & [Clicks Label] & UNICHAR(10) & [CTR Label])
+		displayFolder: Platform Analysis
+		lineageTag: 489b1bf9-5d05-41a1-8146-498291281694
+
+	/// Funnel cell text, 3 lines: Conversions / 255K / 2.20% CVR.
+	measure 'Funnel Conversions Cell' = IF(ISBLANK([Total Conversions]), BLANK(), "Conversions" & UNICHAR(10) & [Conversions Label] & UNICHAR(10) & [CVR Label])
+		displayFolder: Platform Analysis
+		lineageTag: 2983b5f0-0241-4f93-9061-5265b9c1843f
+
+	/// Scorecard cell background for ROAS vs blended: amber tint if at/above blended, salmon tint if below.
+	measure 'ROAS vs Blended BG' = IF(NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([ROAS]), BLANK(), IF([ROAS vs Blended %] >= 0, "#FDE9B8", "#FBD5C8"))
+		displayFolder: Platform Analysis
+		lineageTag: 914a93d6-7c61-4c3d-9616-0e05f128624a
+
+	/// Font colour for Share Gap (pp): green positive, red negative.
+	measure 'Share Gap Color' = IF(NOT ISINSCOPE(dim_platform[platform_name]) || ISBLANK([Share Gap (pp)]), BLANK(), IF([Share Gap (pp)] >= 0, "#15803D", "#B91C1C"))
+		displayFolder: Platform Analysis
+		lineageTag: ca26fb24-b0c6-4957-aa6a-bcfbb4afc8ed
+
+	/// Dark shade of the platform hue. Font colour for the light and mid tint funnel steps (impressions, clicks). Use Platform Color Text on the full colour step.
+	measure 'Platform Color Dark' = SWITCH(SELECTEDVALUE(dim_platform[platform_name]), "Google Ads", "#5C4400", "TikTok Ads", "#7A0B3E", "Meta Ads", "#3B1A8A", "#374151")
+		displayFolder: Platform Analysis
+		lineageTag: fc0dff91-0516-4acb-bef2-902aeb99b3c3
+
+	/// Font colour for Platform Verdict: green for Scale, red for Review, grey for Hold.
+	measure 'Platform Verdict Color' =
+			
+			SWITCH(
+			    [Platform Verdict],
+			    "▲ SCALE", "#047857",
+			    "▼ REVIEW", "#B91C1C",
+			    "● HOLD", "#6B7280",
+			    BLANK()
+			)
+		displayFolder: Platform Analysis
+		lineageTag: 6c2491a7-260e-4444-bd24-592ed0777e05
 
 	measure 'Campaign count' = COUNT(dim_campaign[campaign_name])
 		formatString: 0

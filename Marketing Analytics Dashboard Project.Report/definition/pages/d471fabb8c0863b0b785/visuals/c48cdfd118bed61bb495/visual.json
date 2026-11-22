@@ -22,7 +22,9 @@
                     "value": "Budget Pacing (KES)",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "18pt"
+                      "fontFamily": "Segoe (Bold)",
+                      "fontSize": "18pt",
+                      "color": "#0b2772"
                     }
                   }
                 ]
@@ -32,7 +34,9 @@
                   {
                     "value": "Actual spend vs allocated budget",
                     "textStyle": {
-                      "fontSize": "16pt"
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "16pt",
+                      "color": "#64748b"
                     }
                   }
                 ]

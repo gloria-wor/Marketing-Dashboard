@@ -2,6 +2,7 @@ table fact_ad_performance_daily
 	lineageTag: 2f7ea668-2484-4792-9948-d81f78baa0b7
 
 	measure ROAS = DIVIDE([Total Revenue],[Total Spend],0)
+		formatString: 0.00"x"
 		displayFolder: Main measures
 		lineageTag: 91857585-775a-43e7-9deb-e01d3a5bf7d3
 
@@ -54,7 +55,7 @@ table fact_ad_performance_daily
 		lineageTag: 46a08846-1399-4883-b139-c7481db3a28a
 
 	measure CPA = DIVIDE('fact_ad_performance_daily'[Total Spend],'fact_ad_performance_daily'[Total Conversions])
-		formatString: #,0.00;-#,0.00;#,0.00
+		formatString: #,0;-#,0;#,0
 		displayFolder: Main measures
 		lineageTag: cdddbf3f-2774-4a2f-a2c5-fafba4a9ba8b
 
@@ -82,6 +83,7 @@ table fact_ad_performance_daily
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Total Conversions' = SUM('fact_ad_performance_daily'[conversions])
+		formatString: #,0
 		displayFolder: Main measures
 		lineageTag: d505c84a-86b1-416e-af86-049b884a217a
 
@@ -100,6 +102,7 @@ table fact_ad_performance_daily
 			    0
 			)
 			```
+		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Main measures
 		lineageTag: fa807d80-342b-4048-803a-23bb989492d2
 

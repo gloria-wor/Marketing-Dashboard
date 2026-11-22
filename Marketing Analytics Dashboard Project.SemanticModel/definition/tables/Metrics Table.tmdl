@@ -13,9 +13,12 @@ table 'Metrics Table'
 		mode: import
 		source =
 				let
-				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("VYwxCoAwDAC/EjorvkGcXHUsHaQNWtSkNqnvV3QQxzuOs9a0AcaEFIyrrOn3lFEkMsnD3Rb9WuuSucwLDJPiq5lOzF82oJZMwAS/W8ei0EDrjxIl6p0b5y4=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Metric = _t])
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("VYwxCoAwDAC/EjorvkGcXHUsHaQNWtSkNqnvV3QQxzuOs9a0AcaEFIyrrOn3lFEkMsnD3Rb9WuuSucwLDJPiq5lOzF82oJZMwAS/W8ei0EDrjxIl6p0b5y4=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Metric = _t]),
+				  #"Replaced value" = Table.ReplaceValue(Source, "Return on Ad Spend", "ROAS", Replacer.ReplaceValue, {"Metric"}),
+				  #"Replaced value 1" = Table.ReplaceValue(#"Replaced value", "Click-through Rate", "CTR", Replacer.ReplaceValue, {"Metric"}),
+				  #"Replaced value 2" = Table.ReplaceValue(#"Replaced value 1", "Cost / Acquisition", "CPA", Replacer.ReplaceValue, {"Metric"})
 				in
-				  Source
+				  #"Replaced value 2"
 
 	annotation PBI_ResultType = Table
 
