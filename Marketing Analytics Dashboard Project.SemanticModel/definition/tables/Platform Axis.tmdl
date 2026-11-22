@@ -1,0 +1,39 @@
+table 'Platform Axis'
+	lineageTag: 4b1cc2f2-9334-4f6b-b2dd-a909c187cbdd
+
+	column 'Platform Axis'
+		lineageTag: 0df5f8e1-d7b6-4315-a57c-dca32203de56
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Platform Axis]
+		sortByColumn: Sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sort
+		isHidden
+		formatString: 0
+		lineageTag: 9a37113e-0c99-4246-8570-96a2d311a1f1
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Sort]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Platform Axis' = calculated
+		mode: import
+		source =
+				
+				DATATABLE (
+				    "Platform Axis", STRING,
+				    "Sort", INTEGER,
+				    {
+				        { "All", 0 },
+				        { "Google", 1 },
+				        { "TikTok", 2 },
+				        { "Meta", 3 }
+				    }
+				)
+
+	annotation PBI_Id = aba87fb2c5574ee292510e7ca71e7fa6
+

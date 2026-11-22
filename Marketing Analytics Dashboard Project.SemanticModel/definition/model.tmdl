@@ -43,6 +43,7 @@ ref table 'Metrics Table'
 ref table RefreshLog
 ref table LocalDateTable_f14454b3-7cd3-4df3-9534-96d52e700be4
 ref table 'Period Filter'
+ref table 'Platform Axis'
 
 ref cultureInfo en-US
 
