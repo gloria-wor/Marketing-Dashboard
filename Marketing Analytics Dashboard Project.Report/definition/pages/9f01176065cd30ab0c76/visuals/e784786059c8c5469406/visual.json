@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "e784786059c8c5469406",
   "position": {
-    "x": 114.98932997013483,
-    "y": 3.8733445026995312,
+    "x": 132.15933920123751,
+    "y": 4.3531947464397422,
     "z": 3000,
-    "height": 100.20849154297549,
-    "width": 114.52399033482914,
+    "height": 107.59873930610296,
+    "width": 119.76299442500928,
     "tabOrder": 7000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "dim_date"
                     }
                   },
-                  "Property": "month_name"
+                  "Property": "month_short"
                 }
               },
-              "queryRef": "dim_date.month_name",
-              "nativeQueryRef": "month_name",
+              "queryRef": "dim_date.month_short",
+              "nativeQueryRef": "month_short",
               "active": true
             }
           ]
@@ -194,7 +194,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "16D"
                 }
               }
             }

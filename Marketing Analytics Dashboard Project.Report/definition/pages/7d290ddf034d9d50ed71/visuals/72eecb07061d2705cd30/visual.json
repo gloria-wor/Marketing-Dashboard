@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "72eecb07061d2705cd30",
   "position": {
-    "x": 0,
-    "y": 236.55007788910876,
+    "x": 3.2554395413398547,
+    "y": 152.57459808122348,
     "z": 2000,
-    "height": 82.8102605143071,
-    "width": 493.499622416989,
-    "tabOrder": 1000
+    "height": 69.633951670582135,
+    "width": 477.25851729059713
   },
   "visual": {
     "visualType": "textbox",
@@ -21,7 +20,7 @@
                   {
                     "value": "Compare Meta, Google and TikTok on spend, revenue and efficiency.",
                     "textStyle": {
-                      "fontSize": "18pt",
+                      "fontSize": "14pt",
                       "color": "#5b6086"
                     }
                   }

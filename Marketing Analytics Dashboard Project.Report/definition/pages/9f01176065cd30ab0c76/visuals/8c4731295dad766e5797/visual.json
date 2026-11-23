@@ -3,10 +3,10 @@
   "name": "8c4731295dad766e5797",
   "position": {
     "x": 0,
-    "y": 7.4400320567775777,
+    "y": 0.29868566497021742,
     "z": 19000,
-    "height": 28.630997583707284,
-    "width": 171.7859855022437,
+    "height": 38.174663444943043,
+    "width": 181.32965136347946,
     "tabOrder": 0
   },
   "visual": {
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "LAST REFRESHED",
+                    "value": "Last Refreshed",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt",
+                      "fontSize": "14pt",
                       "color": "#e0e2f2"
                     }
                   }

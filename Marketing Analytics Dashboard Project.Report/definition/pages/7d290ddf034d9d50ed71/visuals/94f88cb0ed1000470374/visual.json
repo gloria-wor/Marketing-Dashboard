@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "94f88cb0ed1000470374",
   "position": {
-    "x": 0,
-    "y": 229.94526069060089,
+    "x": 1.0821570063604058,
+    "y": 141.08426930651871,
     "z": 2000,
-    "height": 67.28323582810178,
-    "width": 487.11023787354,
-    "tabOrder": 0
+    "height": 63.561830171516121,
+    "width": 486.6584072953267
   },
   "visual": {
     "visualType": "textbox",
@@ -21,7 +20,7 @@
                   {
                     "value": "Rank campaign results and quickly spot the strongest opportunities.",
                     "textStyle": {
-                      "fontSize": "18pt",
+                      "fontSize": "14pt",
                       "color": "#5b6086"
                     }
                   }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "1bb96e506999297b599c",
   "position": {
-    "x": 331.68675892974954,
-    "y": 48.428776607434664,
+    "x": 327.41101630627963,
+    "y": 49.856251338469761,
     "z": 12502,
-    "height": 104.92901598277508,
-    "width": 224.30615352083791,
+    "height": 103.15494445234276,
+    "width": 252.8959928509048,
     "tabOrder": 0
   },
   "visual": {
@@ -19,18 +19,18 @@
               {
                 "textRuns": [
                   {
-                    "value": "6",
+                    "value": "7 ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt",
+                      "fontSize": "14pt",
                       "color": "#ffbe0b"
                     }
                   },
                   {
-                    "value": "      Top performers ",
+                    "value": "     Top performers ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "14pt"
                     }
                   }
                 ],
@@ -39,10 +39,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "36",
+                    "value": "32",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt",
+                      "fontSize": "14pt",
                       "color": "#ff006e"
                     }
                   },
@@ -50,7 +50,7 @@
                     "value": "    Steady performers ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "14pt"
                     }
                   }
                 ],
@@ -59,18 +59,18 @@
               {
                 "textRuns": [
                   {
-                    "value": "111",
+                    "value": "121 ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt",
+                      "fontSize": "14pt",
                       "color": "#8338ec"
                     }
                   },
                   {
-                    "value": "  Under performers ",
+                    "value": " Under performers ",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "14pt"
                     }
                   }
                 ],

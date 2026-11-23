@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ec6dc00b60ece7cead1c",
   "position": {
-    "x": 1219.2033137728686,
-    "y": 675.21435968243009,
+    "x": 12.724887814981013,
+    "y": 878.01725923369,
     "z": 0,
-    "height": 406.027296049256,
-    "width": 680.91534120061567,
+    "height": 550.35139799792887,
+    "width": 607.61339316534338,
     "tabOrder": 0
   },
   "visual": {
@@ -109,7 +109,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "20D"
                 }
               }
             },
@@ -347,7 +347,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "18D"
                 }
               }
             },
@@ -367,7 +367,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "20D"
                 }
               }
             },
@@ -431,7 +431,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "154.6533598713658D"
+                  "Value": "176.97292394238005D"
                 }
               }
             }
@@ -488,7 +488,7 @@
             "rowPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "2D"
+                  "Value": "6D"
                 }
               }
             },
@@ -524,7 +524,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "20D"
                 }
               }
             },
@@ -588,6 +588,13 @@
                       "Value": "'#64748B'"
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }

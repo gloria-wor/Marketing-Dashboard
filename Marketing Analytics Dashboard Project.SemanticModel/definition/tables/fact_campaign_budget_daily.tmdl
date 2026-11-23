@@ -2,10 +2,11 @@ table fact_campaign_budget_daily
 	lineageTag: 5c1b1d3c-15de-43a3-ba5b-4b4da72e0d98
 
 	measure 'Total Campaign Spend' = SUM('fact_campaign_budget_daily'[spend_kes])
+		formatString: #,0
 		displayFolder: Main measures
 		lineageTag: f94e7cda-1d3f-4b33-89d3-0dc5228b1ffb
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Total Campaign Budget' = SUM('fact_campaign_budget_daily'[daily_budget_kes])
 		displayFolder: Main measures
