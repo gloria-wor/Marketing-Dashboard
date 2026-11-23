@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "ec6dc00b60ece7cead1c",
   "position": {
-    "x": 1233.2133401744484,
-    "y": 673.3496151872755,
+    "x": 1219.2033137728686,
+    "y": 675.21435968243009,
     "z": 0,
     "height": 406.027296049256,
     "width": 680.91534120061567,
@@ -488,7 +488,7 @@
             "rowPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "2D"
                 }
               }
             },
