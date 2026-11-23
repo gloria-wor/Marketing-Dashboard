@@ -6,7 +6,8 @@
     "y": 0,
     "z": 5000,
     "height": 528,
-    "width": 431.99999999999994
+    "width": 431.99999999999994,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "columnChart",

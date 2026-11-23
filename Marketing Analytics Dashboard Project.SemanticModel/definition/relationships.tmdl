@@ -100,11 +100,6 @@ relationship 0a37cca3-97c3-434f-92a0-2cb98efe39be
 	fromColumn: fact_ad_performance_daily.source_ingested_at
 	toColumn: LocalDateTable_cc42fcd2-7286-48af-94f0-5f499c01c303.Date
 
-relationship ad752336-0528-47c0-999e-60fa5dbcf30d
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 'Matrix Cols'.MonthStart
-	toColumn: LocalDateTable_9137a033-5fdf-4818-8b3c-5275b91352d6.Date
-
 relationship aa4365af-468e-4183-ad1e-73df1f2eede3
 	joinOnDateBehavior: datePartOnly
 	fromColumn: RefreshLog.Refreshed

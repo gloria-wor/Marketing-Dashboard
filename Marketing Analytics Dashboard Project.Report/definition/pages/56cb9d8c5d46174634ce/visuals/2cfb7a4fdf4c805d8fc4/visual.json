@@ -4,9 +4,10 @@
   "position": {
     "x": 24,
     "y": 192,
-    "z": 16004,
+    "z": 13000,
     "height": 168,
-    "width": 2520
+    "width": 2520,
+    "tabOrder": 12000
   },
   "visualGroup": {
     "displayName": "Group 1",
