@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "8c401d113b1b2a0b0b88",
   "position": {
-    "x": 2.0846872681689481,
-    "y": 216.51593726769011,
+    "x": 2.863390697017087,
+    "y": 152.06410590331751,
     "z": 2000,
-    "height": 73.738683730389354,
-    "width": 509.31691800727708,
-    "tabOrder": 3000
+    "height": 58.294843275884837,
+    "width": 510.36236576666084
   },
   "visual": {
     "visualType": "textbox",
@@ -21,7 +20,7 @@
                   {
                     "value": "Track spend, revenue, return and budget pacing at a glance.",
                     "textStyle": {
-                      "fontSize": "18pt",
+                      "fontSize": "14pt",
                       "color": "#5b6086"
                     }
                   }

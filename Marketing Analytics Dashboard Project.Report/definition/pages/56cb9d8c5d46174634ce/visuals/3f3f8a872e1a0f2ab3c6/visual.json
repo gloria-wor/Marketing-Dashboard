@@ -432,50 +432,6 @@
           }
         }
       ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "170.5256256230669D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Funnel Impressions Cell"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "171.6153684740474D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Funnel Clicks Cell"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "183.6153527607223D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Funnel Conversions Cell"
-          }
-        }
-      ],
       "total": [
         {
           "properties": {

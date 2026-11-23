@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "3fa9f42ddbc372a8a30b",
   "position": {
-    "x": 12.609543355566958,
-    "y": 0,
+    "x": 34.993441491197785,
+    "y": 15.906109768726267,
     "z": 9000,
-    "height": 70.613442791174961,
-    "width": 418.636839404823,
-    "tabOrder": 9000
+    "height": 95.4366586123576,
+    "width": 788.94304452882284,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "textbox",
@@ -22,7 +22,7 @@
                     "value": "MARKETING ANALYTICS",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "20pt",
+                      "fontSize": "28pt",
                       "color": "#ffffff"
                     }
                   }
@@ -31,10 +31,25 @@
               {
                 "textRuns": [
                   {
-                    "value": "      Campaign Performance",
+                    "value": "     ",
                     "textStyle": {
                       "fontFamily": "Comic Sans MS",
                       "fontSize": "16pt",
+                      "color": "#c7b8e7"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontFamily": "Comic Sans MS",
+                      "fontSize": "20pt",
+                      "color": "#c7b8e7"
+                    }
+                  },
+                  {
+                    "value": "Campaign Performance",
+                    "textStyle": {
+                      "fontSize": "20pt",
                       "color": "#c7b8e7"
                     }
                   }

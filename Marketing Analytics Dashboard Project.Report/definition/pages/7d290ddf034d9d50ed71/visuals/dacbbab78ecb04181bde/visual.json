@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "dacbbab78ecb04181bde",
   "position": {
-    "x": 0.036338497419591706,
-    "y": 137.0303159756032,
+    "x": 0,
+    "y": 83.049554802090938,
     "z": 1000,
-    "height": 75.293144855256756,
-    "width": 487.11023787354,
-    "tabOrder": 2000
+    "height": 66.3253880050603,
+    "width": 489.15409143530269
   },
   "visual": {
     "visualType": "textbox",
@@ -22,7 +21,7 @@
                     "value": "Campaign Performance",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "32pt",
+                      "fontSize": "28pt",
                       "color": "#14163b"
                     }
                   }

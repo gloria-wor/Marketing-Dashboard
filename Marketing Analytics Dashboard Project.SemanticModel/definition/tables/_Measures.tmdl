@@ -501,7 +501,7 @@ table _Measures
 	measure 'Top Count' =
 			
 			COUNTROWS (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] >= [Top Threshold] )
+			    FILTER ( VALUES ( dim_campaign[campaign_key] ), [ROAS] >= [Top Threshold] )
 			)
 		formatString: 0
 		displayFolder: Budget Status
@@ -654,20 +654,31 @@ table _Measures
 			VAR _Perc = DIVIDE(_Spent, _Budget, 0)
 			VAR _PercText = FORMAT(_Perc, "0%")
 			
-			// Compact amounts: M below 1bn, bn from 1bn (same units as the rest of the page). Unit letters are kept OUTSIDE FORMAT().
 			VAR _SpentFormatted = IF(_Spent >= 1000000000, FORMAT(_Spent / 1000000000, "0.00") & "bn", FORMAT(_Spent / 1000000, "#,##0") & "M")
 			VAR _BudgetFormatted = IF(_Budget >= 1000000000, FORMAT(_Budget / 1000000000, "0.00") & "bn", FORMAT(_Budget / 1000000, "#,##0") & "M")
 			
-			// Width of the progress bar fill (max 250)
-			VAR _FillWidth = IF(_Perc > 1, 250, _Perc * 250)
-			// Over budget (>100%) = red, within budget = green. Used for the bar AND the value text.
+			// The track now represents 0% to MaxPerc. Raise this if a platform can exceed 160%.
+			VAR _MaxPerc = 1.6
+			VAR _TrackWidth = 250
+			VAR _Scale = _TrackWidth / _MaxPerc
+			
+			// Where the 100% budget line sits on the track
+			VAR _MarkerX = 1 * _Scale
+			
+			// Fill is proportional, capped only at the end of the track
+			VAR _FillWidth = MIN(_Perc, _MaxPerc) * _Scale
+			VAR _OverWidth = MAX(_FillWidth - _MarkerX, 0)
+			
 			VAR _Color = IF(_Perc > 1, "#FF0000", "#34A853")
+			VAR _OverColor = "#991B1B"
 			VAR _TextColor = IF(_Perc > 1, "#DC2626", "#15803D")
 			
 			VAR _SVG =
 			"<svg xmlns='http://www.w3.org/2000/svg' width='500' height='48' viewBox='0 0 500 48'>
-			    <rect x='0' y='19' width='250' height='12' rx='6' fill='#F3F4F6' />
+			    <rect x='0' y='19' width='" & _TrackWidth & "' height='12' rx='6' fill='#F3F4F6' />
 			    <rect x='0' y='19' width='" & _FillWidth & "' height='12' rx='6' fill='" & _Color & "' />
+			    <rect x='" & _MarkerX & "' y='19' width='" & _OverWidth & "' height='12' rx='0' fill='" & _OverColor & "' />
+			    <line x1='" & _MarkerX & "' y1='14' x2='" & _MarkerX & "' y2='36' stroke='#374151' stroke-width='2' />
 			    <text x='260' y='34' font-family='Segoe UI, sans-serif' font-size='17' font-weight='600' fill='" & _TextColor & "'>" & _SpentFormatted & " / " & _BudgetFormatted & "</text>
 			    <text x='480' y='34' text-anchor='end' font-family='Segoe UI, sans-serif' font-size='15' font-weight='bold' fill='" & _TextColor & "'>" & _PercText & "</text>
 			</svg>"
@@ -690,7 +701,7 @@ table _Measures
 			        'fact_campaign_budget_daily',
 			        RELATED('dim_platform'[platform_name]) IN {"Google Ads", "Meta Ads", "TikTok Ads"}
 			    ),
-			    'fact_campaign_budget_daily'[spend_kes]
+			    'fact_campaign_budget_daily'[Total Campaign Spend]
 			)
 		formatString: #,0.00;-#,0.00;#,0.00
 		displayFolder: Budget
@@ -1473,7 +1484,7 @@ table _Measures
 	measure 'Underperforming Count' =
 			
 			COUNTROWS (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Lower threshold] )
+			    FILTER ( VALUES ( dim_campaign[campaign_key] ), [ROAS] < [Lower threshold] )
 			)
 		formatString: 0
 		displayFolder: Budget Status
@@ -1513,7 +1524,7 @@ table _Measures
 	measure 'Steady Count' =
 			
 			COUNTROWS (
-			    FILTER ( VALUES ( dim_campaign[campaign_name] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold] )
+			    FILTER ( VALUES ( dim_campaign[campaign_key] ), [ROAS] < [Top Threshold] && [ROAS] >= [Lower threshold] )
 			)
 		formatString: 0
 		displayFolder: Budget Status
@@ -1756,7 +1767,7 @@ table _Measures
 		displayFolder: Campaign Analysis
 		lineageTag: f81f15cb-9373-4a8e-a37a-3aaa625bb557
 
-	measure 'Campaign count' = COUNT(dim_campaign[campaign_name])
+	measure 'Campaign count' = COUNT(dim_campaign[campaign_key])
 		formatString: 0
 		lineageTag: 621a462d-5f49-4ecc-9a1f-771942ee9cd7
 

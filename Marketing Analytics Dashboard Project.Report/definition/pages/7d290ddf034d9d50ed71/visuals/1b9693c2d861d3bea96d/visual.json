@@ -3,11 +3,10 @@
   "name": "1b9693c2d861d3bea96d",
   "position": {
     "x": 0,
-    "y": 126.99602129915199,
+    "y": 99.598746955021127,
     "z": 1000,
-    "height": 71.086926158651139,
-    "width": 510.8986475663059,
-    "tabOrder": 1000
+    "height": 54.408520390825878,
+    "width": 512.86414206943857
   },
   "visual": {
     "visualType": "textbox",
@@ -22,7 +21,7 @@
                     "value": "Executive Summary",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "32pt",
+                      "fontSize": "28pt",
                       "color": "#14163b"
                     }
                   }

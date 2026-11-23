@@ -62,7 +62,7 @@ table fact_ad_performance_daily
 		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
 
 	measure 'Total Spend' = SUM('fact_ad_performance_daily'[spend_kes])
-		formatString: #,0
+		formatString: #,0.00
 		displayFolder: Main measures
 		lineageTag: 0eb4f829-2ac0-4306-94a8-f5793fea9d8b
 
@@ -72,7 +72,7 @@ table fact_ad_performance_daily
 		lineageTag: 0077606f-812b-4db7-97c2-f0169930a5ff
 
 	measure 'Total Impressions' = SUM('fact_ad_performance_daily'[impressions])
-		formatString: #,0
+		formatString: #,0.00
 		displayFolder: Main measures
 		lineageTag: 28024c16-1bb7-4585-97fe-228f15831df8
 
@@ -90,7 +90,7 @@ table fact_ad_performance_daily
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Total clicks' = SUM('fact_ad_performance_daily'[clicks])
-		formatString: #,0
+		formatString: #,0.00
 		displayFolder: Main measures
 		lineageTag: 42b98881-46e1-4301-9fbb-b750afe2479a
 

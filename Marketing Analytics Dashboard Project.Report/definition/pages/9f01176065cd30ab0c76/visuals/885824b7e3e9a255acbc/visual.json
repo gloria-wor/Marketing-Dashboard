@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "885824b7e3e9a255acbc",
   "position": {
-    "x": 655.6962544894817,
-    "y": 670.82770651616215,
+    "x": 1247.8420699880171,
+    "y": 878.48081727156409,
     "z": 10000,
-    "height": 408.5492047203694,
-    "width": 552.2979989738327,
-    "tabOrder": 8000
+    "height": 549.05051079472753,
+    "width": 572.34356276783717,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "columnChart",
@@ -79,7 +79,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FF006E'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -120,7 +120,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFBE0B'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -161,7 +161,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#8338EC'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -194,6 +194,21 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3A86FF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       ],
       "categoryAxis": [
@@ -202,7 +217,20 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }
@@ -224,7 +252,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "20D"
                 }
               }
             },
@@ -281,6 +309,13 @@
                       "Value": "'#64748B'"
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }

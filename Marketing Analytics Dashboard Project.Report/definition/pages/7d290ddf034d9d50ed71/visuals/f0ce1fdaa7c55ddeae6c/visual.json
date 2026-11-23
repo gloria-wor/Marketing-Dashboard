@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "f0ce1fdaa7c55ddeae6c",
   "position": {
-    "x": 1.3545963638566465,
-    "y": 151.65529695926975,
+    "x": 0,
+    "y": 99.01001987308338,
     "z": 1000,
-    "height": 77.148288326790308,
-    "width": 491.58763097142497,
-    "tabOrder": 3000
+    "height": 58.921036028954106,
+    "width": 474.75978159797614
   },
   "visual": {
     "visualType": "textbox",
@@ -22,7 +21,7 @@
                     "value": "Platform Analysis",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "32pt",
+                      "fontSize": "28pt",
                       "color": "#14163b"
                     }
                   }
