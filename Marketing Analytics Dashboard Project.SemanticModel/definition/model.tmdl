@@ -37,13 +37,10 @@ ref table 'Trend Granularity '
 ref table LocalDateTable_cc42fcd2-7286-48af-94f0-5f499c01c303
 ref table _Measures
 ref table PeriodTable
-ref table 'Matrix Cols'
-ref table LocalDateTable_9137a033-5fdf-4818-8b3c-5275b91352d6
 ref table 'Metrics Table'
 ref table RefreshLog
 ref table LocalDateTable_f14454b3-7cd3-4df3-9534-96d52e700be4
 ref table 'Period Filter'
-ref table 'Platform Axis'
 
 ref cultureInfo en-US
 

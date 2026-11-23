@@ -488,153 +488,6 @@ table _Measures
 
 		annotation PBI_FormatHint = {"currencyCulture":"ebu-KE"}
 
-	measure Spacer = " "
-		displayFolder: Matrix
-		lineageTag: 133f6e9c-0748-4b0d-b1b9-a9074d30f86c
-
-	measure 'Latest Date' =
-			
-			CALCULATE (
-			    MAXX ( FILTER ( VALUES ( dim_date[full_date] ), [Total Spend] > 0 ), dim_date[full_date] ),
-			    ALLSELECTED ( dim_date ),
-			    REMOVEFILTERS ( dim_platform )
-			)
-		formatString: General Date
-		displayFolder: Matrix
-		lineageTag: 3b0c5483-e346-4a4a-adb3-2e3fb1e94bc3
-
-	measure 'Spend Prev Period' =
-			
-			VAR g = SELECTEDVALUE ( 'Trend Granularity '[Trend Granularity ], "Monthly" )
-			RETURN
-			SWITCH (
-			    g,
-			    "Daily",  CALCULATE ( [Total Spend], DATEADD ( dim_date[full_date], -1, DAY ) ),
-			    "Weekly", CALCULATE ( [Total Spend], DATEADD ( dim_date[full_date], -7, DAY ) ),
-			    CALCULATE ( [Total Spend], DATEADD ( dim_date[full_date], -1, MONTH ) )
-			)
-		displayFolder: Matrix
-		lineageTag: 0ca4d7e3-3a7c-466d-b21b-2db6d1ea42a5
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Growth %' = DIVIDE ( [Total Spend] - [Spend Prev Period], [Spend Prev Period] )
-		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: Matrix
-		lineageTag: 641b27f9-aba7-46b5-9785-ec7e974bb852
-
-	measure 'YTD Spend' = ```
-			
-			VAR ld = [Latest Date]
-			RETURN
-			CALCULATE (
-			    [Total Spend],
-			    REMOVEFILTERS ( dim_date ),
-			    DATESBETWEEN ( dim_date[full_date], DATE ( YEAR ( ld ), 1, 1 ), ld )
-			)
-			
-			```
-		displayFolder: Matrix
-		lineageTag: 8dee01b6-4a62-4933-a4c7-b508e089143c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure YoY% =
-			
-			VAR ld = [Latest Date]
-			VAR cur = [YTD Spend]
-			VAR py =
-			    CALCULATE (
-			        [Total Spend],
-			        REMOVEFILTERS ( dim_date ),
-			        DATESBETWEEN ( dim_date[full_date], DATE ( YEAR ( ld ) - 1, 1, 1 ), EDATE ( ld, -12 ) )
-			    )
-			RETURN DIVIDE ( cur - py, py )
-		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: Matrix
-		lineageTag: b609f1d8-ce34-420d-bc97-f987af6c847a
-
-	measure 'Matrix Value' =
-			
-			VAR t  = SELECTEDVALUE ( 'Matrix Cols'[Type] )
-			VAR ms = SELECTEDVALUE ( 'Matrix Cols'[MonthStart] )
-			RETURN
-			IF (
-			    [Show Col] = 1,
-			    SWITCH (
-			        t,
-			        "YTD", DIVIDE ( [YTD Spend], 1000000 ),
-			        "YoY", [YoY%],
-			        "M",   DIVIDE ( CALCULATE ( [Total Spend], dim_date[month_start_date] = ms ), 1000000 )
-			    )
-			)
-		displayFolder: Matrix
-		lineageTag: 29d7f3de-3052-4c99-bb13-fedccfc2b116
-
-		formatStringDefinition =
-				SWITCH (
-				    SELECTEDVALUE ( 'Matrix Cols'[Type] ),
-				    "YoY", "+0%;-0%;0%",
-				    "#,0.0""M"""
-				)
-
-	measure 'Show Col' =
-			
-			VAR t = SELECTEDVALUE ( 'Matrix Cols'[Type] )
-			VAR ms = SELECTEDVALUE ( 'Matrix Cols'[MonthStart] )
-			VAR lm = DATE ( YEAR ( [Latest Date] ), MONTH ( [Latest Date] ), 1 )
-			RETURN IF ( t <> "M" || ( ms >= EDATE ( lm, -5 ) && ms <= lm ), 1, 0 )
-		formatString: 0
-		displayFolder: Matrix
-		lineageTag: f103a368-f530-4a1f-9485-9fd6c6871eb5
-
-	measure 'Heat Value' =
-			
-			IF (
-			    ISINSCOPE ( dim_platform[platform_name] ) && SELECTEDVALUE ( 'Matrix Cols'[Type] ) = "M",
-			    [Matrix Value]
-			)
-		displayFolder: matrix
-		lineageTag: 1e751388-6f42-468e-8e3f-8c33ae53f2b9
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Avg MoM 12M' =
-			
-			VAR ld = [Latest Date]
-			VAR m =
-			    CALCULATETABLE (
-			        VALUES ( dim_date[month_start_date] ),
-			        REMOVEFILTERS ( dim_date ),
-			        DATESBETWEEN ( dim_date[full_date], EDATE ( DATE ( YEAR ( ld ), MONTH ( ld ), 1 ), -11 ), ld )
-			    )
-			RETURN
-			CALCULATE (
-			    AVERAGEX (
-			        m,
-			        VAR cur  = [Total Spend]
-			        VAR prev = CALCULATE ( [Total Spend], DATEADD ( dim_date[full_date], -1, MONTH ) )
-			        RETURN DIVIDE ( cur - prev, prev )
-			    ),
-			    REMOVEFILTERS ( dim_date )
-			)
-		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: matrix
-		lineageTag: fcb52158-e288-4ef9-b2d9-b72f9be4e1e1
-
-	measure 'YoY Color' =
-			
-			IF (
-			    SELECTEDVALUE ( 'Matrix Cols'[Type] ) = "YoY",
-			    IF ( [YoY%] >= 0, "#12A06B", "#E5484D" )
-			)
-		displayFolder: Matrix
-		lineageTag: cdde0e62-118e-492e-99bb-5fe957e451da
-
-	measure 'Matrix Title' = "Revenue Performance Matrix: MTD " & YEAR ( [Latest Date] )
-		displayFolder: matrix
-		lineageTag: e2725e53-aef4-4e4a-ac93-9c19527e59af
-
 	measure 'Top threshold' = 5
 		formatString: 0
 		displayFolder: Budget Status
@@ -909,7 +762,7 @@ table _Measures
 			VAR _SVG = 
 			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
 			    <!-- The purple background box -->
-			    <rect width='56' height='56' rx='16' fill='#34a853' />
+			    <rect width='56' height='56' rx='16' fill='#8338EC' />
 			    
 			    <!-- The white target icon centered inside -->
 			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
@@ -929,7 +782,7 @@ table _Measures
 			VAR _SVG = 
 			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
 			    <!-- The purple background box -->
-			    <rect width='56' height='56' rx='16' fill='#FF0000' />
+			    <rect width='56' height='56' rx='16' fill='#FFBE0B' />
 			    
 			    <!-- The white layers icon centered inside -->
 			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
@@ -949,7 +802,7 @@ table _Measures
 			VAR _SVG = 
 			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
 			    <!-- The purple background box with rounded corners -->
-			    <rect width='56' height='56' rx='16' fill='#12239E' />
+			    <rect width='56' height='56' rx='16' fill='#FF006E' />
 			    
 			    <!-- The white icon centered inside, scaled to fit nicely -->
 			    <g transform='translate(14, 14) scale(1.16)' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
