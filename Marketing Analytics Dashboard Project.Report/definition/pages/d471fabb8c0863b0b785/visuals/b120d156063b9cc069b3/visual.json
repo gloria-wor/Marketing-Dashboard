@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "b120d156063b9cc069b3",
   "position": {
-    "x": 693.852033227305,
-    "y": 7.4246173278174767,
+    "x": 720.19688529637438,
+    "y": 5.8276647941063366,
     "z": 16000,
-    "height": 103.85445314610166,
-    "width": 155,
-    "tabOrder": 4000
+    "height": 101.79910251984811,
+    "width": 146.33620987228167
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +22,11 @@
                       "Entity": "dim_platform"
                     }
                   },
-                  "Property": "platform_name"
+                  "Property": "Platform_short"
                 }
               },
-              "queryRef": "dim_platform.platform_name",
-              "nativeQueryRef": "platform_name",
+              "queryRef": "dim_platform.Platform_short",
+              "nativeQueryRef": "Platform_short",
               "active": true
             }
           ]

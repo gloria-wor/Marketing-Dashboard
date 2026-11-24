@@ -25,6 +25,19 @@ table dim_platform
 
 		annotation SummarizationSetBy = Automatic
 
+	column Platform_short =
+			
+			SWITCH(
+			    'dim_platform'[platform_name],
+			    "Google Ads", "Google",
+			    "TikTok Ads", "TikTok",
+			    "Meta Ads", "Meta"
+			)
+		lineageTag: 7368f851-868a-42aa-960b-19e29e5f6100
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_platform = m
 		mode: import
 		source =
