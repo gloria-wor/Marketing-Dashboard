@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "1a8a3cbf419a09dd3670",
   "position": {
-    "x": 56.580308657763688,
-    "y": 207.24930031110839,
+    "x": 128.25105825683238,
+    "y": 203.49321404958721,
     "z": 6000,
-    "height": 64.8877876393769,
-    "width": 354.38714787659688
+    "height": 68.501262995631976,
+    "width": 235.18319443759555
   },
   "visual": {
     "visualType": "actionButton",
@@ -17,7 +17,7 @@
             "shapeType": {
               "expr": {
                 "Literal": {
-                  "Value": "'rightArrow'"
+                  "Value": "'blank'"
                 }
               }
             },
@@ -59,6 +59,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -133,7 +144,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'View Executive Summary'"
+                  "Value": "'Executive Summary'"
                 }
               }
             },

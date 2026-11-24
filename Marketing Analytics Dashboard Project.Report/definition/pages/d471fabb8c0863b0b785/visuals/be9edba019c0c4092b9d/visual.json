@@ -45,14 +45,6 @@
                       "fontSize": "28pt",
                       "color": "#8338ec"
                     }
-                  },
-                  {
-                    "value": "Executive Summary",
-                    "textStyle": {
-                      "fontFamily": "Comic Sans MS",
-                      "fontSize": "20pt",
-                      "color": "#c7b8e7"
-                    }
                   }
                 ]
               }

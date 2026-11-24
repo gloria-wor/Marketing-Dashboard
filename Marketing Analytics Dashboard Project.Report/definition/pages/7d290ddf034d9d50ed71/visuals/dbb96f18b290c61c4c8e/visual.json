@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "dbb96f18b290c61c4c8e",
   "position": {
-    "x": 19.979793240631196,
-    "y": 23.66967561678279,
+    "x": 38.470329309991676,
+    "y": 22.6769669280075,
     "z": 16005,
-    "height": 272.1370879504853,
-    "width": 513.225756463678
+    "height": 271.99447704521918,
+    "width": 493.88470831895069
   },
   "visualGroup": {
     "displayName": "Group 8",

@@ -45,13 +45,6 @@
                       "fontSize": "28pt",
                       "color": "#8338ec"
                     }
-                  },
-                  {
-                    "value": "Platform Analysis ",
-                    "textStyle": {
-                      "fontSize": "20pt",
-                      "color": "#c7b8e7"
-                    }
                   }
                 ]
               }

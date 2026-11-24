@@ -698,10 +698,10 @@ table _Measures
 			
 			SUMX(
 			    FILTER(
-			        'fact_campaign_budget_daily',
+			        'fact_ad_performance_daily',
 			        RELATED('dim_platform'[platform_name]) IN {"Google Ads", "Meta Ads", "TikTok Ads"}
 			    ),
-			    'fact_campaign_budget_daily'[Total Campaign Spend]
+			    'fact_ad_performance_daily'[Total Spend]
 			)
 		formatString: #,0.00;-#,0.00;#,0.00
 		displayFolder: Budget
@@ -1857,7 +1857,7 @@ table _Measures
 	/// Compact spend with 2 decimals, e.g. 6.36B / 1.38B. Use in KPI card and scorecard.
 	measure 'Spend Label' =
 			VAR v = [Total Spend]
-			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.00") & "B", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
+			RETURN IF(ISBLANK(v), BLANK(), SWITCH(TRUE(), v >= 1000000000, FORMAT(v / 1000000000, "0.00") & "bn", v >= 1000000, FORMAT(v / 1000000, "0.0") & "M", v >= 1000, FORMAT(v / 1000, "0") & "K", FORMAT(v, "0")))
 		displayFolder: Platform Analysis
 		lineageTag: 81f13ed7-df55-47ad-9109-2a3a2ce275d0
 
