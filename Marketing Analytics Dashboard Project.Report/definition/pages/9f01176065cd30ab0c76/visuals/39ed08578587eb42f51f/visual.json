@@ -6,8 +6,7 @@
     "y": 0,
     "z": 11000,
     "height": 550.35139799792887,
-    "width": 570,
-    "tabOrder": 1000
+    "width": 610.79461511908869
   },
   "visual": {
     "visualType": "donutChart",
@@ -27,7 +26,8 @@
                 }
               },
               "queryRef": "_Measures.Underperforming Count",
-              "nativeQueryRef": "Underperforming Count"
+              "nativeQueryRef": "Underperformers",
+              "displayName": "Underperformers"
             },
             {
               "field": {
@@ -41,7 +41,8 @@
                 }
               },
               "queryRef": "_Measures.Top Count",
-              "nativeQueryRef": "Top Count"
+              "nativeQueryRef": "Top performers",
+              "displayName": "Top performers"
             },
             {
               "field": {
@@ -55,7 +56,8 @@
                 }
               },
               "queryRef": "_Measures.Steady Count",
-              "nativeQueryRef": "Steady Count"
+              "nativeQueryRef": "Steady performers",
+              "displayName": "Steady performers"
             }
           ]
         }
@@ -268,6 +270,13 @@
                   "Value": "60L"
                 }
               }
+            },
+            "startAngle": {
+              "expr": {
+                "Literal": {
+                  "Value": "90L"
+                }
+              }
             }
           }
         }
@@ -291,7 +300,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "18D"
                 }
               }
             },
@@ -308,6 +317,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data value, percent of total'"
+                }
+              }
             }
           }
         }
@@ -318,7 +334,21 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopRight'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
                 }
               }
             }

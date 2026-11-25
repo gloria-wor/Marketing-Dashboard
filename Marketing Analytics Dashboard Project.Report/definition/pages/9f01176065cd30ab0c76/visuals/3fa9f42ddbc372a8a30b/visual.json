@@ -22,28 +22,8 @@
                     "value": "MARKETING ANALYTICS",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "28pt",
+                      "fontSize": "36pt",
                       "color": "#ffffff"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "     ",
-                    "textStyle": {
-                      "fontFamily": "Comic Sans MS",
-                      "fontSize": "16pt",
-                      "color": "#c7b8e7"
-                    }
-                  },
-                  {
-                    "value": " ",
-                    "textStyle": {
-                      "fontFamily": "Comic Sans MS",
-                      "fontSize": "20pt",
-                      "color": "#c7b8e7"
                     }
                   }
                 ]
