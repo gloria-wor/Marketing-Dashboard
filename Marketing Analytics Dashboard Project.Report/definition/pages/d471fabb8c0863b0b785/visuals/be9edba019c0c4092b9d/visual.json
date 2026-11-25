@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "be9edba019c0c4092b9d",
   "position": {
-    "x": 23.333333333333336,
-    "y": 13.333333333333334,
+    "x": 22.268553676216776,
+    "y": 12.724887814981013,
     "z": 15000,
-    "height": 100,
-    "width": 690,
+    "height": 101.79910251984811,
+    "width": 938.46047635484979,
     "tabOrder": 13000
   },
   "visual": {
@@ -22,7 +22,7 @@
                     "value": "MARKETING ADS ANALYTICS",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "28pt",
+                      "fontSize": "36pt",
                       "color": "#ffffff"
                     }
                   }
@@ -31,20 +31,7 @@
               {
                 "textRuns": [
                   {
-                    "value": " ",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "28pt",
-                      "color": "#ffffff"
-                    }
-                  },
-                  {
-                    "value": "  ",
-                    "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "28pt",
-                      "color": "#8338ec"
-                    }
+                    "value": ""
                   }
                 ]
               }

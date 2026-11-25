@@ -2098,6 +2098,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "creative category": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -2138,6 +2144,46 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
 			          "creative brand": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -2149,46 +2195,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "creative class": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "creative kind": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "creative style": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "creative form": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "creative grouping": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12349,6 +12355,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "clicks": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "aggregate click": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -12385,6 +12397,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "impressions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "aggregate impression": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -12415,6 +12433,16 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "impersonation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
 			          "total imitation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -12435,6 +12463,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "imitation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "parody": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
 			          "total depression": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -12445,43 +12493,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "total imprint": {
+			          "depression": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "total impress": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "total dint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "total brand": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
+			            "Weight": 0.466
 			          }
 			        }
 			      ]
@@ -14915,21 +14933,131 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity__matrix_value_FormatString": {
+			    "dim_platform.platform_short": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_Matrix Value FormatString"
+			          "ConceptualEntity": "dim_platform",
+			          "ConceptualProperty": "Platform_short"
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
-			          "_matrix value FormatString": {
+			          "platform short": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Platform_short": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "small": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "little": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "petite": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "squat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "diminutive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "brief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "quick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "rapid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "fleeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "passing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
 			          }
 			        }
 			      ]
@@ -16611,6 +16739,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "top sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -16618,6 +16752,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -16638,6 +16782,26 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
 			          }
 			        },
 			        {
@@ -16672,36 +16836,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "leading label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "maximum label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "peak label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "upper label": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -17131,6 +17265,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "Top performers": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -17409,6 +17553,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "steady sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -17416,6 +17566,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -17439,6 +17599,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
 			          "steady name tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -17446,6 +17626,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
 			          }
 			        }
 			      ]
@@ -17946,6 +18136,12 @@ cultureInfo en-US
 			        {
 			          "card footer clicks": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clicks": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -18615,6 +18811,12 @@ cultureInfo en-US
 			          "icon clicks": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "clicks": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
 			        }
 			      ]
 			    },
@@ -18749,6 +18951,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "impressions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "icon impersonation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -18756,6 +18964,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "impersonation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
 			          }
 			        },
 			        {
@@ -18779,6 +18997,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "imitation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "parody": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
 			          "icon depression": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -18786,6 +19024,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "depression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
 			          }
 			        },
 			        {
@@ -18800,46 +19048,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "icon impress": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "icon dint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "icon brand": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "icon hollow": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "icon dip": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -18940,6 +19148,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Underperformers": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -19243,6 +19461,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
+			        },
+			        {
+			          "Steady performers": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -19261,6 +19489,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "underperforming sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -19268,6 +19502,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -19291,6 +19535,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
 			          "underperforming name tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -19298,6 +19562,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
 			          }
 			        }
 			      ]
@@ -20222,6 +20496,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "campaign sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -20229,6 +20509,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -20252,6 +20542,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
 			          "campaign name tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -20259,6 +20569,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
 			          }
 			        }
 			      ]
@@ -22372,6 +22692,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "impression sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22379,6 +22705,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -22402,6 +22738,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
 			          "impression name tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22409,6 +22765,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
 			          }
 			        }
 			      ]
@@ -22428,6 +22794,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "click sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22435,6 +22807,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -22458,6 +22840,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
 			          "click name tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22465,6 +22867,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
 			          }
 			        }
 			      ]
@@ -22484,6 +22896,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "conversion sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22491,6 +22909,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -22514,6 +22942,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
 			          "conversion name tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22521,6 +22969,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
 			          }
 			        }
 			      ]
@@ -22540,6 +22998,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "ctr sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22547,6 +23011,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -22570,6 +23044,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
 			          "ctr name tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22577,6 +23071,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
 			          }
 			        }
 			      ]
@@ -22596,6 +23100,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "cvr sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22603,6 +23113,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -22626,6 +23146,26 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
 			          "cvr name tag": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -22633,6 +23173,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
 			          }
 			        }
 			      ]
@@ -23296,6 +23846,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "revenue sticker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -23303,6 +23859,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -23323,6 +23889,26 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
 			          }
 			        },
 			        {
@@ -23357,16 +23943,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "turnover label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "yield label": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -23502,16 +24078,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.466
 			          }
-			        },
-			        {
-			          "Impressions": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -23640,16 +24206,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.466
 			          }
-			        },
-			        {
-			          "Clicks": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -23777,16 +24333,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "Conversions": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -24423,164 +24969,6 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
-			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_year": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
-			          }
-			        },
-			        "fact_ad_performance_daily.source_ingested_at.year": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_year"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_source_ingested_at_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily.source_ingested_at": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at"
-			          }
-			        },
-			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at"
-			            },
-			            "Object": {
-			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "source_ingested_at_have_source_ingested_at_date_hierarchy"
-			        }
-			      ]
-			    },
-			    "fact_campaign_budget_daily_has_dim_geo": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_campaign_budget_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_campaign_budget_daily": {
-			          "Target": {
-			            "Entity": "fact_campaign_budget_daily"
-			          }
-			        },
-			        "dim_geo": {
-			          "Target": {
-			            "Entity": "dim_geo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_campaign_budget_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_geo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_campaign_budget_dailies_have_dim_geos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_geo"
-			            },
-			            "Object": {
-			              "Role": "fact_campaign_budget_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_geos_have_fact_campaign_budget_dailies"
-			        }
-			      ]
-			    },
-			    "fact_campaign_budget_daily_has_dim_date": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_campaign_budget_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_campaign_budget_daily": {
-			          "Target": {
-			            "Entity": "fact_campaign_budget_daily"
-			          }
-			        },
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_campaign_budget_daily"
-			            },
-			            "Object": {
-			              "Role": "dim_date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_campaign_budget_dailies_have_dim_dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "fact_campaign_budget_daily"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_fact_campaign_budget_dailies"
-			        }
-			      ]
-			    },
 			    "fact_campaign_budget_daily_has_dim_campaign": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_campaign_budget_daily"
@@ -25124,39 +25512,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_accounts_have_fact_ad_performance_daily"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_matrix_col_row_count": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "matrix_col.row_count": {
-			          "Target": {
-			            "Entity": "matrix_col.row_count"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "matrix_col.row_count"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_row_count"
 			        }
 			      ]
 			    },
@@ -29841,6 +30196,70 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "fact_ad_performance_daily_has_entity__measure_platform_pacing_bar": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.platform_pacing_bar": {
+			          "Target": {
+			            "Entity": "entity__measure.platform_pacing_bar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.platform_pacing_bar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_platform_pacing_bar"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Verbs": [
+			              {
+			                "pace": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "bar": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "entity__measure.platform_pacing_bar"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "fact_ad_performance_daily_pace_bar_platform_pacing_bar"
+			        }
+			      ]
+			    },
 			    "fact_ad_performance_daily_has_entity__measure_dynamic_status": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
@@ -30105,15 +30524,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_campaign_budget_daily_has_entity__measure_spent_filtered": {
+			    "fact_ad_performance_daily_has_entity__measure_spent_filtered": {
 			      "Binding": {
-			        "ConceptualEntity": "fact_campaign_budget_daily"
+			        "ConceptualEntity": "fact_ad_performance_daily"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_campaign_budget_daily": {
+			        "fact_ad_performance_daily": {
 			          "Target": {
-			            "Entity": "fact_campaign_budget_daily"
+			            "Entity": "fact_ad_performance_daily"
 			          }
 			        },
 			        "entity__measure.spent_filtered": {
@@ -30126,7 +30545,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_campaign_budget_daily"
+			              "Role": "fact_ad_performance_daily"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.spent_filtered"
@@ -30134,12 +30553,12 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_campaign_budget_dailies_have_spent_filtered"
+			          "ID": "fact_ad_performance_daily_have_spent_filtered"
 			        },
 			        {
 			          "Adjective": {
 			            "Subject": {
-			              "Role": "fact_campaign_budget_daily"
+			              "Role": "fact_ad_performance_daily"
 			            },
 			            "Adjectives": [
 			              {
@@ -30154,7 +30573,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "spent_filtered_indicates_how_Spent_fact_campaign_budget_dailies_are"
+			          "ID": "spent_filtered_indicates_how_Spent_fact_ad_performance_daily_are"
 			        }
 			      ]
 			    },
@@ -30221,6 +30640,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_campaign_budget_dailies_have_remaining_budget"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_has_entity__measure_remaining_budget": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.remaining_budget": {
+			          "Target": {
+			            "Entity": "entity__measure.remaining_budget"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.remaining_budget"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_remaining_budget"
 			        }
 			      ]
 			    },
@@ -30422,40 +30874,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_date_has_entity__measure_matrix_title": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "entity__measure.matrix_title": {
-			          "Target": {
-			            "Entity": "entity__measure.matrix_title"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.matrix_title"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_matrix_title"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_entity__measure_YoY_color": {
+			    "fact_ad_performance_daily_has_entity__measure_pacing_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_ad_performance_daily"
 			      },
@@ -30466,9 +30885,9 @@ cultureInfo en-US
 			            "Entity": "fact_ad_performance_daily"
 			          }
 			        },
-			        "entity__measure.YoY_color": {
+			        "entity__measure.pacing_": {
 			          "Target": {
-			            "Entity": "entity__measure.YoY_color"
+			            "Entity": "entity__measure.pacing_"
 			          }
 			        }
 			      },
@@ -30479,115 +30898,16 @@ cultureInfo en-US
 			              "Role": "fact_ad_performance_daily"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.YoY_color"
+			              "Role": "entity__measure.pacing_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_YoY_color"
+			          "ID": "fact_ad_performance_daily_have_pacing_"
 			        }
 			      ]
 			    },
-			    "fact_ad_performance_daily_has_entity__measure_avg_MoM_12M": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "entity__measure.avg_MoM_12M": {
-			          "Target": {
-			            "Entity": "entity__measure.avg_MoM_12M"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.avg_MoM_12M"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_avg_MoM_12M"
-			        }
-			      ]
-			    },
-			    "dim_date_has_entity__measure_avg_MoM_12M": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "entity__measure.avg_MoM_12M": {
-			          "Target": {
-			            "Entity": "entity__measure.avg_MoM_12M"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.avg_MoM_12M"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_avg_MoM_12M"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_entity__measure_heat_value": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "entity__measure.heat_value": {
-			          "Target": {
-			            "Entity": "entity__measure.heat_value"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.heat_value"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_heat_value"
-			        }
-			      ]
-			    },
-			    "dim_platform_has_entity__measure_heat_value": {
+			    "dim_platform_has_platform_short": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_platform"
 			      },
@@ -30598,9 +30918,9 @@ cultureInfo en-US
 			            "Entity": "dim_platform"
 			          }
 			        },
-			        "entity__measure.heat_value": {
+			        "dim_platform.platform_short": {
 			          "Target": {
-			            "Entity": "entity__measure.heat_value"
+			            "Entity": "dim_platform.platform_short"
 			          }
 			        }
 			      },
@@ -30611,441 +30931,12 @@ cultureInfo en-US
 			              "Role": "dim_platform"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.heat_value"
+			              "Role": "dim_platform.platform_short"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_platforms_have_heat_value"
-			        }
-			      ]
-			    },
-			    "dim_date_has_entity__measure_heat_value": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "entity__measure.heat_value": {
-			          "Target": {
-			            "Entity": "entity__measure.heat_value"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.heat_value"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_heat_value"
-			        }
-			      ]
-			    },
-			    "dim_date_has_entity__measure_show_col": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "entity__measure.show_col": {
-			          "Target": {
-			            "Entity": "entity__measure.show_col"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.show_col"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_show_col"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_entity__measure_matrix_value": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "entity__measure.matrix_value": {
-			          "Target": {
-			            "Entity": "entity__measure.matrix_value"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.matrix_value"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_matrix_value"
-			        }
-			      ]
-			    },
-			    "dim_date_has_entity__measure_matrix_value": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "entity__measure.matrix_value": {
-			          "Target": {
-			            "Entity": "entity__measure.matrix_value"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.matrix_value"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_matrix_value"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_entity__measure_YoY": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "entity__measure.YoY": {
-			          "Target": {
-			            "Entity": "entity__measure.YoY"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.YoY"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_YoY"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_entity__measure_YTD_spend": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "entity__measure.YTD_spend": {
-			          "Target": {
-			            "Entity": "entity__measure.YTD_spend"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.YTD_spend"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_YTD_spend"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_entity__measure_growth_": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "entity__measure.growth_": {
-			          "Target": {
-			            "Entity": "entity__measure.growth_"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.growth_"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_growth_"
-			        }
-			      ]
-			    },
-			    "trend_granularity_has_entity__measure_growth_": {
-			      "Binding": {
-			        "ConceptualEntity": "Trend Granularity "
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "trend_granularity": {
-			          "Target": {
-			            "Entity": "trend_granularity"
-			          }
-			        },
-			        "entity__measure.growth_": {
-			          "Target": {
-			            "Entity": "entity__measure.growth_"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "trend_granularity"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.growth_"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trend_granularities_have_growth_"
-			        }
-			      ]
-			    },
-			    "fact_ad_performance_daily_has_entity__measure_spend_prev_period": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_ad_performance_daily"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_ad_performance_daily": {
-			          "Target": {
-			            "Entity": "fact_ad_performance_daily"
-			          }
-			        },
-			        "entity__measure.spend_prev_period": {
-			          "Target": {
-			            "Entity": "entity__measure.spend_prev_period"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_ad_performance_daily"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.spend_prev_period"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_ad_performance_daily_have_spend_prev_period"
-			        }
-			      ]
-			    },
-			    "trend_granularity_has_entity__measure_spend_prev_period": {
-			      "Binding": {
-			        "ConceptualEntity": "Trend Granularity "
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "trend_granularity": {
-			          "Target": {
-			            "Entity": "trend_granularity"
-			          }
-			        },
-			        "entity__measure.spend_prev_period": {
-			          "Target": {
-			            "Entity": "entity__measure.spend_prev_period"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "trend_granularity"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.spend_prev_period"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trend_granularities_have_spend_prev_period"
-			        }
-			      ]
-			    },
-			    "dim_date_has_entity__measure_latest_date": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date": {
-			          "Target": {
-			            "Entity": "dim_date"
-			          }
-			        },
-			        "entity__measure.latest_date": {
-			          "Target": {
-			            "Entity": "entity__measure.latest_date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.latest_date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_dates_have_latest_date"
-			        }
-			      ]
-			    },
-			    "entity__measure_has_spacer": {
-			      "Binding": {
-			        "ConceptualEntity": "_Measures"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity__measure": {
-			          "Target": {
-			            "Entity": "entity__measure"
-			          }
-			        },
-			        "entity__measure.spacer": {
-			          "Target": {
-			            "Entity": "entity__measure.spacer"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity__measure"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.spacer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_measures_have_spacer"
-			        },
-			        {
-			          "Verb": {
-			            "Subject": {
-			              "Role": "entity__measure.spacer"
-			            },
-			            "Verbs": [
-			              {
-			                "space": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity__measure"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.75,
-			          "ID": "spacer_space__measures"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity__measure.spacer"
-			            },
-			            "Object": {
-			              "Role": "entity__measure"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "spacer_have__measures"
+			          "ID": "dim_platforms_have_platform_shorts"
 			        }
 			      ]
 			    },
@@ -34401,6 +34292,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "fact_ad_performance_daily_has_entity__measure_pacing_header_combined": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily"
+			          }
+			        },
+			        "entity__measure.pacing_header_combined": {
+			          "Target": {
+			            "Entity": "entity__measure.pacing_header_combined"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.pacing_header_combined"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ad_performance_daily_have_pacing_header_combined"
+			        }
+			      ]
+			    },
 			    "dim_campaign_has_campaign_name": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_campaign"
@@ -35634,6 +35558,164 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dim_dates_are_weekend_dim_dates"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_dim_date": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_dim_dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "fact_campaign_budget_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_fact_campaign_budget_dailies"
+			        }
+			      ]
+			    },
+			    "fact_campaign_budget_daily_has_dim_geo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_campaign_budget_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_campaign_budget_daily": {
+			          "Target": {
+			            "Entity": "fact_campaign_budget_daily"
+			          }
+			        },
+			        "dim_geo": {
+			          "Target": {
+			            "Entity": "dim_geo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_campaign_budget_daily"
+			            },
+			            "Object": {
+			              "Role": "dim_geo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_campaign_budget_dailies_have_dim_geos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geo"
+			            },
+			            "Object": {
+			              "Role": "fact_campaign_budget_daily"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geos_have_fact_campaign_budget_dailies"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_source_ingested_at_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily.source_ingested_at": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at"
+			          }
+			        },
+			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "source_ingested_at_have_source_ingested_at_date_hierarchy"
+			        }
+			      ]
+			    },
+			    "fact_ad_performance_daily_source_ingested_at_date_hierarchy_has_fact_ad_performance_daily_source_ingested_at_year": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ad_performance_daily"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ad_performance_daily.source_ingested_at.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			          }
+			        },
+			        "fact_ad_performance_daily.source_ingested_at.year": {
+			          "Target": {
+			            "Entity": "fact_ad_performance_daily.source_ingested_at.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact_ad_performance_daily.source_ingested_at.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "source_ingested_at_date_hierarchy_have_source_ingested_at_year"
 			        }
 			      ]
 			    },

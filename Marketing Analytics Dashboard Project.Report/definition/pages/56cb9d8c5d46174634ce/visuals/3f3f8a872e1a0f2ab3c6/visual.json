@@ -10,435 +10,173 @@
     "tabOrder": 10000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "funnel",
     "query": {
       "queryState": {
-        "Values": {
+        "Y": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_platform"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
-                  "Property": "platform_name"
+                  "Property": "Total Impressions"
                 }
               },
-              "queryRef": "dim_platform.platform_name",
-              "nativeQueryRef": "Platform",
-              "displayName": "Platform"
+              "queryRef": "fact_ad_performance_daily.Total Impressions",
+              "nativeQueryRef": "Total Impressions"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
-                  "Property": "Funnel Impressions Cell"
+                  "Property": "Total clicks"
                 }
               },
-              "queryRef": "_Measures.Funnel Impressions Cell",
-              "nativeQueryRef": "Impressions",
-              "displayName": "Impressions"
+              "queryRef": "fact_ad_performance_daily.Total clicks",
+              "nativeQueryRef": "Total clicks"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
-                  "Property": "Funnel Clicks Cell"
+                  "Property": "Total Engagements"
                 }
               },
-              "queryRef": "_Measures.Funnel Clicks Cell",
-              "nativeQueryRef": "Clicks",
-              "displayName": "Clicks"
+              "queryRef": "fact_ad_performance_daily.Total Engagements",
+              "nativeQueryRef": "Total Engagements"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "fact_ad_performance_daily"
                     }
                   },
-                  "Property": "Funnel Conversions Cell"
+                  "Property": "Total Conversions"
                 }
               },
-              "queryRef": "_Measures.Funnel Conversions Cell",
-              "nativeQueryRef": "Conversions",
-              "displayName": "Conversions"
+              "queryRef": "fact_ad_performance_daily.Total Conversions",
+              "nativeQueryRef": "Total Conversions"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_ad_performance_daily"
+                  }
+                },
+                "Property": "Total Impressions"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "values": [
-        {
-          "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Platform Color Light"
-                    }
-                  }
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Platform Color Dark"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "_Measures.Funnel Impressions Cell"
-          }
-        },
-        {
-          "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Platform Color Mid"
-                    }
-                  }
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Platform Color Dark"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "_Measures.Funnel Clicks Cell"
-          }
-        },
-        {
-          "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Platform Color"
-                    }
-                  }
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Platform Color Text"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "_Measures.Funnel Conversions Cell"
-          }
-        },
-        {
-          "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Platform Color"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "dim_platform.platform_name"
-          }
-        }
-      ],
-      "columnHeaders": [
-        {
-          "properties": {
-            "columnAdjustment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'growToFit'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "outlineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E5E7EB'"
-                    }
-                  }
-                }
-              }
-            },
-            "outlineWeight": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            },
-            "outlineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'wf_standard-font_light, helvetica, arial, sans-serif'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "general": [
         {
           "properties": {}
         }
       ],
-      "columnFormatting": [
+      "labels": [
         {
           "properties": {
-            "alignment": {
+            "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "'Left'"
+                  "Value": "1D"
                 }
               }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Funnel Impressions Cell"
-          }
-        }
-      ],
-      "grid": [
-        {
-          "properties": {
-            "rowPadding": {
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "percentageLabelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "fontSize": {
               "expr": {
                 "Literal": {
                   "Value": "16D"
                 }
               }
-            },
-            "gridHorizontal": {
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "gridHorizontalWeight": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "gridHorizontalColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "gridVertical": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "gridVerticalColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "gridVerticalWeight": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
+                  "Value": "14D"
                 }
               }
             }
           }
         }
       ],
-      "total": [
+      "percentBarLabel": [
         {
           "properties": {
-            "totals": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "13D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3A86FF'"
+                    }
+                  }
                 }
               }
             }
@@ -460,7 +198,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Platform performance metrics'"
+                  "Value": "'Funnel by Platform'"
                 }
               }
             },
@@ -572,5 +310,80 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6ed750f986acfd10096f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_ad_performance_daily"
+              }
+            },
+            "Property": "Total Impressions"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "49e464b6e92f639d0c24",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_ad_performance_daily"
+              }
+            },
+            "Property": "Total clicks"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "381e800852cc60fb1285",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_ad_performance_daily"
+              }
+            },
+            "Property": "Total Conversions"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a3f85efec21003974d63",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_platform"
+              }
+            },
+            "Property": "platform_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "80d4dfb20e84ede8616e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_ad_performance_daily"
+              }
+            },
+            "Property": "Total Engagements"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
