@@ -5834,28 +5834,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.clicks_CF": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Clicks CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "clicks CF": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CF": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.clicks_YoY_": {
 			      "Definition": {
 			        "Binding": {
@@ -6643,22 +6621,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.roas_cf": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "ROAS CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "roas cf": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.ROAS_YoY_": {
 			      "Definition": {
 			        "Binding": {
@@ -6706,22 +6668,6 @@ cultureInfo en-US
 			      "Terms": [
 			        {
 			          "roas py": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.ctr_cf": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "CTR CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ctr cf": {
 			            "State": "Generated"
 			          }
 			        }
@@ -6911,28 +6857,6 @@ cultureInfo en-US
 			        {
 			          "ctr py": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.conversions_CF": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Conversions CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "conversions CF": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CF": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]
@@ -7131,28 +7055,6 @@ cultureInfo en-US
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "entity__measure.impressions_CF": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Impressions CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "impressions CF": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CF": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.impressions_PY": {
 			      "Definition": {
 			        "Binding": {
@@ -7169,28 +7071,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "PY": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.engagements_CF": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Engagements CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "engagements CF": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CF": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -14476,68 +14356,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.revenue_CF": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Revenue CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "revenue CF": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CF": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "income cf": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "profit cf": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "turnover cf": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "yield cf": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.campaign_spend_PY": {
 			      "Definition": {
 			        "Binding": {
@@ -14666,22 +14484,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.739
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.CSpend_CF": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "CSpend CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "CSpend CF": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]

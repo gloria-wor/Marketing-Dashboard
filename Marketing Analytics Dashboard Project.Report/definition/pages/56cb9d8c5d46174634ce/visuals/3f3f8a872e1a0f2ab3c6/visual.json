@@ -7,7 +7,7 @@
     "z": 11000,
     "height": 552,
     "width": 720,
-    "tabOrder": 10000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "funnel",
@@ -314,48 +314,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6ed750f986acfd10096f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_ad_performance_daily"
-              }
-            },
-            "Property": "Total Impressions"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "49e464b6e92f639d0c24",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_ad_performance_daily"
-              }
-            },
-            "Property": "Total clicks"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "381e800852cc60fb1285",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_ad_performance_daily"
-              }
-            },
-            "Property": "Total Conversions"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "a3f85efec21003974d63",
         "field": {
           "Column": {
@@ -369,20 +327,6 @@
         },
         "type": "Categorical",
         "howCreated": "User"
-      },
-      {
-        "name": "80d4dfb20e84ede8616e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_ad_performance_daily"
-              }
-            },
-            "Property": "Total Engagements"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

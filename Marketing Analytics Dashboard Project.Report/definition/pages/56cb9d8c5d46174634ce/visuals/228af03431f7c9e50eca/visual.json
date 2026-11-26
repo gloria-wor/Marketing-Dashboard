@@ -245,18 +245,6 @@
                 }
               }
             },
-            "imageData": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Card Footer Spend"
-                }
-              }
-            },
             "imageDataFit": {
               "expr": {
                 "Literal": {
@@ -275,6 +263,18 @@
               "expr": {
                 "Literal": {
                   "Value": "'imageData'"
+                }
+              }
+            },
+            "imageData": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Card FooterImpressions"
                 }
               }
             }
