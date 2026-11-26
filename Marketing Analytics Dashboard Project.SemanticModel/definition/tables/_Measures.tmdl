@@ -87,16 +87,6 @@ table _Measures
 		displayFolder: Campaign measures
 		lineageTag: 3b48a3b8-6065-40c0-8b4a-3a2e50f75412
 
-	measure 'Clicks CF' =
-			
-			VAR _currentclicks = [Total clicks]
-			VAR _priorclicks = [Clicks PY]
-			VAR _change = DIVIDE(_currentclicks - _priorclicks,_priorclicks)
-			RETURN
-			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
-		displayFolder: Conditional formatting
-		lineageTag: 88d6a711-289a-4b59-aed2-f01729291292
-
 	measure 'Clicks PY' =
 			
 			VAR LastDataDate =
@@ -135,16 +125,6 @@ table _Measures
 			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
 		displayFolder: Ad measures
 		lineageTag: 40ffadb1-9d95-4e49-abb6-7d933de8e385
-
-	measure 'Conversions CF' =
-			
-			VAR _currentconv = [Total Conversions]
-			VAR _priorconv = [Conversions PY]
-			VAR _change = DIVIDE(_currentconv - _priorconv,_priorconv)
-			RETURN
-			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
-		displayFolder: Conditional formatting
-		lineageTag: c5ad64c0-b98c-4204-ac57-b19fc3b39b33
 
 	measure 'Conversions PY' =
 			
@@ -192,16 +172,6 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'CSpend CF' =
-			
-			VAR _currentcspend = [Total Campaign Spend]
-			VAR _priorcspend = [Campaign spend PY]
-			VAR _change = DIVIDE(_currentcspend - _priorcspend,_priorcspend)
-			RETURN
-			SWITCH(TRUE(), _change>0, "red",_change<0, "green", "grey")
-		displayFolder: Conditional formatting
-		lineageTag: aec169d3-7074-4fdc-b3d6-082466a598ca
-
 	measure 'CSpend YoY %' =
 			
 			VAR Currentcspend = [Total Campaign Spend]
@@ -212,16 +182,6 @@ table _Measures
 			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
 		displayFolder: Campaign measures
 		lineageTag: eb561d73-25f8-458c-8d07-90c545a19e62
-
-	measure 'CTR CF' =
-			
-			VAR _currentCTR = [CTR]
-			VAR _priorCTR = [CTR PY]
-			VAR _change = DIVIDE(_currentCTR - _priorCTR,_priorCTR)
-			RETURN
-			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
-		displayFolder: Conditional formatting
-		lineageTag: e836b4f9-fc53-4192-99b9-8c1b8583006f
 
 	measure 'CTR PY' =
 			
@@ -260,16 +220,6 @@ table _Measures
 			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
 		displayFolder: Ad measures
 		lineageTag: 63005f2d-1de8-4a94-bec5-3ce56f369dbc
-
-	measure 'Engagements CF' =
-			
-			VAR _currenteng = [Total Engagements]
-			VAR _prioreng = [Engagements PY]
-			VAR _change = DIVIDE(_currenteng - _prioreng,_prioreng)
-			RETURN
-			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
-		displayFolder: Conditional formatting
-		lineageTag: 865ac014-1c97-41ea-845a-b86cd5a9467b
 
 	measure 'Engagements PY' =
 			
@@ -310,16 +260,6 @@ table _Measures
 		displayFolder: Ad measures
 		lineageTag: 33ec363f-01a8-4c0f-a1e5-d0fe0cd08cf2
 
-	measure 'Impressions CF' =
-			
-			VAR _currentimp = [Total Impressions]
-			VAR _priorimp = [Impressions PY]
-			VAR _change = DIVIDE(_currentimp - _priorimp,_priorimp)
-			RETURN
-			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
-		displayFolder: Conditional formatting
-		lineageTag: dae0311b-0e62-4c76-89a8-ed706c79f1d2
-
 	measure 'Impressions PY' =
 			
 			VAR LastDataDate =
@@ -359,19 +299,6 @@ table _Measures
 		displayFolder: Ad measures
 		lineageTag: b5d20d9c-f039-4aae-a89b-e9368da9e542
 
-	measure 'Revenue CF' =
-			
-			VAR _currentrevenue = [Total Revenue]
-			VAR _priorrev = [Revenue PY]
-			VAR _change = DIVIDE(_currentrevenue - _priorrev,_priorrev)
-			RETURN
-			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
-		formatString: Text
-		displayFolder: Conditional formatting
-		lineageTag: 89fc466b-e856-4572-aab8-88476ba0c90f
-
-		annotation PBI_FormatHint = {"isCustom":true}
-
 	measure 'Revenue PY' =
 			
 			VAR LastDataDate =
@@ -410,16 +337,6 @@ table _Measures
 			IF(_perc > 0,UNICHAR(129157) & " " & _percformat,UNICHAR(129158) & " " & _percformat)
 		displayFolder: Ad measures
 		lineageTag: ce681e77-3adc-4887-92cc-79cf2f7d1755
-
-	measure 'ROAS CF' =
-			
-			VAR _currentROAS = [ROAS]
-			VAR _priorROAS = [ROAS PY]
-			VAR _change = DIVIDE(_currentROAS - _priorROAS,_priorROAS)
-			RETURN
-			SWITCH(TRUE(), _change>0, "green",_change<0, "red", "grey")
-		displayFolder: Conditional formatting
-		lineageTag: 746c9224-3ec7-48f0-927b-11844e940eb9
 
 	measure 'ROAS PY' =
 			

@@ -188,10 +188,10 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Platform ROAS Rank"
+                "Property": "Spend Share %"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
